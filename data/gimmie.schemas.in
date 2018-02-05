@@ -1,0 +1,104 @@
+
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/apps/gimmie/click_policy</key>
+      <applyto>/apps/gimmie/click_policy</applyto>
+      <owner>gimmie</owner>
+      <type>string</type>
+      <default>nautilus</default>
+      <locale name="C">
+         <short>Click policy</short>
+         <long>
+           Determine how to handle clicks on items in Gimmie.  The following
+           options are supported: "single" activates items with a single click,
+           "double" activates with a double click, and "nautilus" to follow
+           Nautilus' click policy.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/gimmie/prefs/button_style</key>
+      <owner>gimmie_applet</owner>
+      <type>string</type>
+      <default>both</default>
+      <locale name="C">
+         <short>Applet button style</short>
+         <long>
+	   Set how this applet's buttons are displayed.  The following options
+	   are supported: "icons" to show only Topic icons, "text" to show only
+	   Topic names, and "both" to include both.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/gimmie/prefs/use_colors</key>
+      <owner>gimmie_applet</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Display topic colors</short>
+         <long>
+	   Each topic in Gimmie has an associated color.  This key determines if
+           the color is displayed in panel buttons.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/gimmie/prefs/show_computer</key>
+      <owner>gimmie_applet</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Display "Computer" topic</short>
+         <long>
+	   Include the "Computer" topic in this applet's list of topics.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/gimmie/prefs/show_programs</key>
+      <owner>gimmie_applet</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Display Programs topic</short>
+         <long>
+	   Include the Programs topic in this applet's list of topics.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/gimmie/prefs/show_library</key>
+      <owner>gimmie_applet</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Display Library topic</short>
+         <long>
+	   Include the Library topic in this applet's list of topics.
+         </long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/gimmie/prefs/show_people</key>
+      <owner>gimmie_applet</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Display People topic</short>
+         <long>
+	   Include the People topic in this applet's list of topics.
+         </long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

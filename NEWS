@@ -1,0 +1,83 @@
+
+Gimmie NEWS
+
+Copyright (C) 2007 Alex Graveley <alex@beatniksoftware.com>
+
+Please send questions and suggestions to
+<gimmie-list@lists.beatniksoftware.com>.
+
+Please report bugs using
+http://bugzilla.gnome.org/enter_bug.cgi?product=gimmie.
+
+Gimmie is licensed under the LGPL, see COPYING for more details.
+
+----
+
+Version 0.2.8, October 30, 2007
+* Many code cleanups and bugs fixed
+* Hide experimental categories and features
+* Build known-good libgmenu bindings
+
+Version 0.2.7, June 8, 2007
+* Pidgin online status support (James Ogley)
+* Layout fixes for different panel orientations
+* Fix Gtk 2.10 recently used handling
+* List files downloaded by Epiphany (Tony Tsui)
+* Many code cleanups and bugs fixed
+
+Version 0.2.6, March 22, 2007
+* Place toplevel applications in Other category (Mads Villadsen)
+* New Administration category in Computer topic (Mads Villadsen)
+* Remove topic right-click menus
+* Parse Tomboy notes in main thread
+* Ignore missing ~/.tomboy directory
+* Support Compiz-style viewports in the pager (Tony Tsui)
+
+Version 0.2.5, March 16, 2007
+* Hordes of bug fixes and stability improvements
+* Improve async loading and memory pressure
+* Support marking Drives as Favorite
+* Improved sizing of applet menus
+* Open Tomboy note:// URLs correctly. (Sandy Armstrong)
+* Handle non-UTF8 filenames
+
+Version 0.2.4, March 1, 2007
+* Add applet preferences dialog (Johannes Schmid)
+* Make all file operations async
+* Discover files downloaded with Mozilla
+* Fiddle with topic names
+* Add Suspend to shutdown dialog (maxx@krakoa.dk)
+* Add history graph for Recently Used
+* Fix grabbing for toolbar submenus
+* Hint bug-buddy to file bugs in GNOME Bugzilla
+* Better support openSUSE (James Ogley)
+* Support newest dbus-python
+* Hordes of other bug fixes
+
+Version 0.2.3, February 6, 2007
+* Fix crash opening People pane (bug #404909)
+
+Version 0.2.2, February 6, 2007
+* Support different panel layouts (Markus Jonsson)
+* Favorite items get a heart
+* GTK 2.10 RecentManager support (James Bowes)
+* Install Gimmie icons from Drew Kerr
+* Remove devel package dependencies
+* "All Favorites" support in Computer
+* Fix bug with missing .gtk-bookmarks file
+* Give applet transparent background (Christian Hammond)
+* Support for running uninstalled build
+
+Version 0.2.0, January 18, 2007
+* Add panel applet version
+* GMail contacts support (Tony Tsui)
+
+Version 0.1.1, June 28, 2006
+* Include some default bookmarks: Firefox, Nautilus, Gimmie's README, and
+  orphennui AIM (me)
+
+Version 0.1, June 28, 2006
+* Initial release
+
+Version 0.0
+* This project does not exist yet.

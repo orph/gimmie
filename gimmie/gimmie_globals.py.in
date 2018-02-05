@@ -1,0 +1,8 @@
+
+name = "Gimmie"
+version = "@VERSION@"
+image_dir = "@prefix@/share/pixmaps"
+localedir = "@prefix@/@DATADIRNAME@/locale"
+
+def gimmie_is_panel_applet():
+    return False

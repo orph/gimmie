@@ -1,0 +1,11 @@
+<Root>
+  <popups>
+    <popup name="button3">
+      <menuitem name="Gimmie Preferences Item" verb="Prefs" _label="_Preferences"
+    		    pixtype="stock" pixname="gtk-properties"/>
+      <menuitem name="Gimmie Edit Menus Item" verb="EditMenus" _label="_Edit Menus" />
+      <menuitem name="Gimmie About Item" verb="About" _label="_About"
+    		    pixtype="stock" pixname="gnome-stock-about"/>
+    </popup>
+  </popups>
+</Root>

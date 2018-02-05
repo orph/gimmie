@@ -1,0 +1,31 @@
+<oaf_info>
+<oaf_server iid="OAFIID:GNOME_Gimmie_Factory"
+            type="exe" location="@libexecdir@/gimmie_applet">
+
+        <oaf_attribute name="repo_ids" type="stringv">
+                <item value="IDL:Bonobo/GenericFactory:1.0"/>
+                <item value="IDL:Bonobo/Unknown:1.0"/>
+        </oaf_attribute>
+        <oaf_attribute name="name" type="string" value="Gimmie"/>
+        <oaf_attribute name="description" type="string" value="Gimmie is an elegant way to think about how you use your desktop computer"/>
+</oaf_server>
+
+<oaf_server iid="OAFIID:GNOME_Gimmie"
+            type="factory" location="OAFIID:GNOME_Gimmie_Factory">
+
+        <oaf_attribute name="repo_ids" type="stringv">
+                <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+                <item value="IDL:Bonobo/Control:1.0"/>
+                <item value="IDL:Bonobo/Unknown:1.0"/>
+        </oaf_attribute>
+        <oaf_attribute name="name" type="string" value="Gimmie"/>
+        <oaf_attribute name="description" type="string" value="Gimmie is an elegant way to think about how you use your desktop computer"/>
+        <oaf_attribute name="panel:category" type="string" value="Utilities"/>
+        <oaf_attribute name="panel:icon" type="string" value="gimmie"/>
+        <oaf_attribute name="bugzilla:bugzilla" type="string" value="GNOME"/>
+        <oaf_attribute name="bugzilla:product" type="string" value="gimmie"/>
+        <oaf_attribute name="bugzilla:component" type="string" value="general"/>
+        <oaf_attribute name="bugzilla:other_binaries" type="string" value="gimmie_applet;gimmie"/>
+
+</oaf_server>
+</oaf_info>

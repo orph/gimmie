@@ -1,0 +1,585 @@
+# Vietnamese translation for Gimmie.
+# Copyright © 2006 Gnome i18n Project for Vietnamese.
+# Clytie Siddall <clytie@riverland.net.au>, 2006.
+# 
+msgid ""
+""
+msgstr "Project-Id-Version: gimmie HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-21 11:16+0200\n"
+"PO-Revision-Date: 2006-08-21 23:01+0930\n"
+"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
+"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: LocFactoryEditor 1.6fc1\n"
+
+#: ../gimmie_applications.py:423
+msgid "Applications"
+msgstr "Ứng dụng"
+
+#: ../gimmie_applications.py:441
+#: ../gimmie_computer.py:41
+#: ../gimmie_documents.py:30
+msgid "Recently Used"
+msgstr "Vừa dùng"
+
+#: ../gimmie_applications.py:463
+msgid "Install & Update"
+msgstr "Cài đặt và Cập nhật"
+
+#: ../gimmie_applications.py:464
+msgid "Manage applications on this computer"
+msgstr "Quản lý các ứng dụng trên máy này"
+
+#: ../gimmie_applications.py:471
+#: ../gimmie_computer.py:764
+#: ../gimmie_computer.py:956
+msgid "Settings"
+msgstr "Thiết lập"
+
+#: ../gimmie_applications.py:472
+msgid "Manage settings and preferences"
+msgstr "Quản lý thiết lập và tùy thích"
+
+#: ../gimmie_applications.py:498
+msgid "Show All"
+msgstr "Hiện hết"
+
+#: ../gimmie_applications.py:500
+msgid "Hide All"
+msgstr "Ẩn hết"
+
+#: ../gimmie_base.py:112
+msgid "Keep Around"
+msgstr "Giữ ở đây"
+
+#: ../gimmie_base.py:131
+msgid "%l:%M %p"
+msgstr "%l:%M %p"
+
+#: ../gimmie_base.py:133
+#, python-format
+msgid "Today, %s"
+msgstr "Hôm nay, %s"
+
+#: ../gimmie_base.py:135
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Hôm qua, %s"
+
+#: ../gimmie_base.py:137
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d ngày trước, %s"
+
+#: ../gimmie_base.py:141
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d ngày trước"
+
+#: ../gimmie_base.py:145
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie_base.py:147
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+# Name: don't translate / Tên: đừng dịch
+#: ../gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie_browser.py:508
+#: ../gimmie_topicwin.py:783
+msgid "Set the zoom level"
+msgstr "Đặt cấp thu phóng"
+
+#: ../gimmie_browser.py:528
+#: ../gimmie_topicwin.py:37
+#: ../gimmie_topicwin.py:803
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: ../gimmie_computer.py:132
+#, python-format
+msgid "Desk %d"
+msgstr "Bàn %d"
+
+#: ../gimmie_computer.py:190
+msgid "Use Compact Layout"
+msgstr "Dùng bố trí gọn"
+
+#: ../gimmie_computer.py:241
+msgid "Calendar"
+msgstr "Lịch"
+
+#: ../gimmie_computer.py:401
+msgid "Places"
+msgstr "Nơi"
+
+#.FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie_computer.py:432
+msgid "No disk inserted"
+msgstr "Chưa nạp đĩa"
+
+#: ../gimmie_computer.py:451
+#, python-format
+msgid "Free space: %s"
+msgstr "Chỗ rảnh: %s"
+
+#.FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie_computer.py:474
+msgid "_Eject"
+msgstr "Đẩy _ra"
+
+#: ../gimmie_computer.py:488
+msgid "Devices & Media"
+msgstr "Thiết bị và Vật chứa"
+
+#: ../gimmie_computer.py:492
+msgid "Add Bluetooth..."
+msgstr "Thêm Bluetooth..."
+
+#: ../gimmie_computer.py:493
+msgid "Access a wireless device"
+msgstr "Truy cập thiết bị vô tuyến"
+
+#: ../gimmie_computer.py:498
+msgid "Create CD/DVD..."
+msgstr "Tạo đĩa CD/DVD..."
+
+#: ../gimmie_computer.py:499
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Chép ra tập tin trên đĩa CD hay DVD"
+
+#: ../gimmie_computer.py:622
+#: ../gimmie_documents.py:459
+#: ../gimmie_documents.py:497
+msgid "Printers"
+msgstr "Máy in"
+
+#: ../gimmie_computer.py:627
+msgid "Add Printer..."
+msgstr "Thêm máy in..."
+
+#: ../gimmie_computer.py:628
+msgid "Setup attached or networked printer"
+msgstr "Thiết lập máy in được kết nối hay chạy trên mạng"
+
+#: ../gimmie_computer.py:682
+msgid "Nearby Computers"
+msgstr "Máy tính gần đây"
+
+#: ../gimmie_computer.py:687
+msgid "Connect to..."
+msgstr "Kết nối tới..."
+
+#: ../gimmie_computer.py:688
+msgid "Access a computer on the network"
+msgstr "Truy cập máy tính trên mạng"
+
+#: ../gimmie_computer.py:693
+msgid "Windows Network"
+msgstr "Mạng Windows"
+
+#: ../gimmie_computer.py:694
+msgid "Browse nearby Windows computers"
+msgstr "Duyệt qua các máy tính Windows gần đây"
+
+#: ../gimmie_computer.py:725
+msgid "Computer"
+msgstr "Máy tính"
+
+#: ../gimmie_computer.py:775
+msgid "Timeline"
+msgstr "Đường thời gian"
+
+#: ../gimmie_computer.py:820
+msgid "Computer, %l:%M %p"
+msgstr "Máy tính, %l:%M %p"
+
+#: ../gimmie_computer.py:843
+msgid "Switch to another user"
+msgstr "Chuyển đổi sang người dùng khác"
+
+#: ../gimmie_computer.py:866
+msgid "Volume: 75%"
+msgstr "Âm lượng: 75%"
+
+#: ../gimmie_computer.py:869
+msgid "Not Implemented"
+msgstr "Chưa thực hiện"
+
+#: ../gimmie_computer.py:879
+#: ../gimmie_computer.py:980
+msgid "Shutdown..."
+msgstr "Tắt máy..."
+
+#: ../gimmie_computer.py:880
+msgid "Shutdown or suspend this computer"
+msgstr "Tắt hay ngưng máy tính này"
+
+#: ../gimmie_computer.py:888
+msgid "About Me"
+msgstr "Về tôi"
+
+#: ../gimmie_computer.py:894
+msgid "Switch User"
+msgstr "Chuyển đổi người dùng"
+
+#: ../gimmie_computer.py:900
+msgid "Log Out..."
+msgstr "Đăng xuất..."
+
+#: ../gimmie_computer.py:972
+msgid "Network"
+msgstr "Mạng"
+
+#: ../gimmie_documents.py:65
+msgid "Recently Seen"
+msgstr "Vừa xem"
+
+#: ../gimmie_documents.py:187
+msgid "New Smart Folder"
+msgstr "Thư mục thông minh mới"
+
+#: ../gimmie_documents.py:202
+#: ../gimmie_documents.py:419
+#: ../gimmie_documents.py:477
+msgid "New Document"
+msgstr "Tài liệu mới"
+
+#: ../gimmie_documents.py:221
+msgid "Documents"
+msgstr "Tài liệu"
+
+#: ../gimmie_documents.py:239
+msgid "Attachments"
+msgstr "Đồ đính kèm"
+
+#: ../gimmie_documents.py:241
+msgid "Important Email"
+msgstr "Thư quan trọng"
+
+#.Tomboy
+#.RecentlyUsedOfMimeType(
+#._("Office Documents"),
+#."stock_new-presentation",
+#.["application/ms-powerpoint",
+#."application/vnd.oasis.opendocument.presentation",
+#."application/vnd.sun.xml.impress",
+#."application/x-abiword",
+#."text/plain",
+#."application/msword",
+#."application/vnd.ms-excel",
+#."application/x-gnumeric"]),
+#.RecentlyUsedOfMimeType(_("PDFs"),
+#."gnome-pdf",
+#.["application/pdf",
+#.application/ps
+#."application/x-dvi"]),
+#: ../gimmie_documents.py:259
+msgid "Music & Movies"
+msgstr "Nhạc và Phim"
+
+#: ../gimmie_documents.py:271
+msgid "Photos"
+msgstr "Ảnh chụp"
+
+#: ../gimmie_documents.py:315
+#: ../gimmie_documents.py:317
+#: ../gimmie_trash.py:146
+msgid "Trash"
+msgstr "Rác"
+
+#: ../gimmie_documents.py:354
+msgid "No templates available"
+msgstr "Không có biểu mẫu sẵn sàng"
+
+#: ../gimmie_documents.py:364
+msgid "Empty File"
+msgstr "Tập tin rỗng"
+
+#.Add a link to the templates directory
+#: ../gimmie_documents.py:373
+msgid "Templates"
+msgstr "Biểu mẫu"
+
+#: ../gimmie_documents.py:420
+msgid "Create a new document"
+msgstr "Tạo một tài liệu mới"
+
+#: ../gimmie_documents.py:438
+#: ../gimmie_documents.py:486
+msgid "Go"
+msgstr "Tới"
+
+#: ../gimmie_documents.py:439
+msgid "Open commonly used document locations"
+msgstr "Mở địa chỉ của các tài liệu thường dùng"
+
+#: ../gimmie_documents.py:460
+msgid "View printers available for document printing"
+msgstr "Xem các máy in sẵn sàng để in tài liệu"
+
+#: ../gimmie_gaim.py:95
+msgid "Idle"
+msgstr "Nghỉ"
+
+#: ../gimmie_gaim.py:97
+#: ../gimmie_people.py:291
+msgid "Away"
+msgstr "Vắng mặt"
+
+#: ../gimmie_gaim.py:100
+#: ../gimmie_people.py:282
+msgid "Offline"
+msgstr "Ngoại tuyến"
+
+#: ../gimmie_logout.py:51
+msgid "Shut down this computer now?"
+msgstr "Tắt ngay máy tính này không?"
+
+#: ../gimmie_logout.py:53
+msgid "_Restart"
+msgstr "Khởi động _lại"
+
+#: ../gimmie_logout.py:60
+msgid "_Shut Down"
+msgstr "_Tắt máy"
+
+#: ../gimmie_logout.py:67
+msgid "Log out of this computer now?"
+msgstr "Đăng xuất ngay ra máy tính này không?"
+
+#: ../gimmie_logout.py:69
+msgid "_Switch User"
+msgstr "Chu_yển đổi người dùng"
+
+#: ../gimmie_logout.py:72
+msgid "_Log Out"
+msgstr "Đăng _xuất"
+
+#: ../gimmie_logout.py:151
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Máy tính này sẽ bị tắt tự động trong vòng %d giây."
+
+#: ../gimmie_logout.py:155
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Bạn sẽ bị đăng xuất tự động trong vòng %d giây."
+
+#: ../gimmie_people.py:242
+msgid "People"
+msgstr "Người"
+
+#.FIXME: Prune for groups at the current zoom level?
+#: ../gimmie_people.py:250
+msgid "Recent People"
+msgstr "Người gần đây"
+
+#: ../gimmie_people.py:251
+msgid "Online Now"
+msgstr "Hiện thời trực tuyến"
+
+#: ../gimmie_people.py:252
+msgid "Everybody"
+msgstr "Mọi người"
+
+# Name: don't translate / Tên: đừng dịch
+#: ../gimmie_people.py:254
+msgid "GMail"
+msgstr "GMail"
+
+# Name: don't translate / Tên: đừng dịch
+#: ../gimmie_people.py:255
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie_people.py:277
+#: ../gimmie_people.py:360
+#: ../gimmie_people.py:372
+msgid "Available"
+msgstr "Sẵn sàng"
+
+#: ../gimmie_people.py:287
+msgid "Away Messages..."
+msgstr "Thông điệp vắng mặt..."
+
+#: ../gimmie_people.py:300
+msgid "Accounts..."
+msgstr "Tài khoản..."
+
+#: ../gimmie_people.py:346
+msgid "New Person"
+msgstr "Người mới"
+
+#: ../gimmie_people.py:347
+msgid "Add a new contact person"
+msgstr "Thêm một người liên hệ mới"
+
+#: ../gimmie_people.py:353
+msgid "New Group"
+msgstr "Nhóm mới"
+
+#: ../gimmie_people.py:354
+msgid "Add a new group of people to the sidebar"
+msgstr "Thêm một nhóm người mới vào ô lề"
+
+#: ../gimmie_people.py:361
+msgid "Set your online status"
+msgstr "Đặt trạng thái trực tuyến"
+
+#: ../gimmie_tomboy.py:77
+msgid "Notes"
+msgstr "Ghi chú"
+
+#: ../gimmie_tomboy.py:81
+msgid "Create New Note"
+msgstr "Tạo chú thích mới"
+
+#: ../gimmie_tomboy.py:82
+msgid "Make a new Tomboy note"
+msgstr "Tạo một chú thích Tomboy mới"
+
+#: ../gimmie_topicwin.py:158
+msgid "Today"
+msgstr "Hôm nay"
+
+#: ../gimmie_topicwin.py:159
+msgid "Last 3 days"
+msgstr "3 ngày trước"
+
+#: ../gimmie_topicwin.py:160
+msgid "Last week"
+msgstr "Tuần trước"
+
+#: ../gimmie_topicwin.py:161
+msgid "Last 2 weeks"
+msgstr "2 tuần trước"
+
+#: ../gimmie_topicwin.py:162
+msgid "Last month"
+msgstr "Tháng trước"
+
+#: ../gimmie_topicwin.py:163
+msgid "Forever"
+msgstr "Mãi mãi"
+
+#: ../gimmie_topicwin.py:185
+msgid "Show timeline"
+msgstr "Hiện đường thời gian"
+
+#: ../gimmie_trash.py:169
+#: ../gimmie_trash.py:205
+msgid "_Empty Trash"
+msgstr "Đổ _Rác"
+
+#: ../gimmie_trash.py:176
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d mục"
+
+#: ../gimmie_trash.py:197
+msgid "Empty all of the items from the trash?"
+msgstr "Đổ mọi mục ra Rác không?"
+
+#: ../gimmie_trash.py:198
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr "Nếu bạn chọn đổ Rác, mọi mục nằm trong nó sẽ bị mất hoàn toàn. Ghi chú rằng bạn cũng có khả năng xoá bỏ riêng mỗi mục."
+
+#: ../gimmie_trash.py:221
+msgid "Error while moving."
+msgstr "Gặp lỗi trong khi di chuyển."
+
+#: ../gimmie_trash.py:222
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr "Không thể di chuyển « %s » vào Rác vì bạn không có quyền thay đổi nó hay thư mục mẹ của nó."
+
+#: ../gimmie_trash.py:224
+msgid "Error while deleting."
+msgstr "Gặp lỗi trong khi xoá bỏ."
+
+#: ../gimmie_trash.py:225
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr "« %s » không thể bị xoá bỏ vì bạn không có quyền sửa đổi thư mục mẹ của nó."
+
+#: ../gimmie_trash.py:227
+msgid "Error while performing file operation."
+msgstr "Gặp lỗi trong khi thực hiện thao tác tập tin."
+
+#: ../gimmie_trash.py:228
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Không thể thực hiện thao tác tập tin %d trên « %s »."
+
+#: ../gimmie_trash.py:235
+msgid "_Skip"
+msgstr "Bỏ _qua"
+
+#: ../gimmie_trash.py:241
+msgid "_Retry"
+msgstr "Thử _lại"
+
+#: ../gimmie_trash.py:295
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Không thể di chuyển các mục vào Rác — bạn có muốn xoá bỏ ngay chúng không?"
+
+#: ../gimmie_trash.py:296
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Không có mục nào trong %d mục đã chọn có thể được di chuyển vào Rác."
+
+#: ../gimmie_trash.py:298
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Không thể di chuyển một số mục vào Rác — bạn có muốn xoá bỏ ngay những mục này không?"
+
+#: ../gimmie_trash.py:299
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "Trong những mục đã chọn, %d mục không thể được di chuyển vào Rác"
+
+#: ../gimmie_trash.py:309
+msgid "_Delete"
+msgstr "_Xoá bỏ"
+
+#: ../gimmie_util.py:693
+msgid "Home"
+msgstr "Nhà"
+
+#: ../gimmie_util.py:697
+msgid "Desktop"
+msgstr "Môi trường"
+
+#: ../gimmie_util.py:785
+msgid "Not Implemented..."
+msgstr "Chưa thực hiện..."
+
+#: ../gimmie_util.py:790
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr "Giúp đỡ chúng tôi tạo tính năng này bằng cách hiệu chỉnh tập tin « %s » tại số hiệu dòng %d."
+
+#: ../gimmie_util.py:795
+msgid "_Fix It!"
+msgstr "_Sửa đi !"

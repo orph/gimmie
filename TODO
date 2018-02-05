@@ -1,0 +1,96 @@
+
+* Fix GtkIconView bugs
+	* Doesn't sizerequest correctly in horizontal mode.
+		* Can't do good layout tuning without this.
+	* First double click doesn't activate.
+	X * Doesn't wrap column width correctly.
+	X * Wraps text by character instead of by word.
+
+* libwhatup
+	* Write it
+	* freedesktop.org specification
+
+* Metacity
+	* Alter border color based on new _NET_WM_BORDER_COLOR_BASE property
+	* Have Gimmie set _NET_WM_BORDER_COLOR_BASE property according to
+	  window's owning topic.
+
+* GConf Settings
+	* height, width
+	X * icons/buttons on edge
+	X * autohide floating windows
+	* edge for each topic
+		* left/bottom edge in short term
+
+* Applications to Hack
+	* Evolution
+		* Advertise emails being written as Documents.
+		* Advertise recipients in To/Cc as People?
+		* Query people info using e-d-s.
+
+	* Gaim
+		* Advertise currently opened conversations.
+
+	* Firefox
+		* Advertise currently visited URLs.  Reuse beagle firefox
+		  extension.
+
+	* Gedit/Evince/Abiword
+		* Use altered Egg Recent code.  
+		* Advertise opened/closed/active/edited documents.
+
+* Topic windows
+	* Make Right-click menu
+		* Copy nautilus menu for Documents.
+		X * "Keep Around" toggle.  Means keep in Gimmiebar as a
+		    "favorite", and always show in iconview.
+	* Figure out zooming approach
+		* Keep explicit +/- zooming?  or Add iconview item to "Show
+		  More..."?
+		* Rely on automatic usage pattern tuning?
+		* Show a timeline.  Ask me how.
+	* Searching
+		* Use beagle?  Has python bindings in latest release.
+
+* Gimmiebar
+	X * Make Right-click menu
+	X	* Same as for topic window icon views.
+	* Icon growing on mouse over
+	X * Separate icon lists into individual toplevel windows (so icon
+	    growing and raise-on-enter is less intrusive).
+	* Show currently active app/person/conversation icon larger.
+	X * Distinguish running apps as running vs. non-running favorites
+	X 	* Grey out favorites?
+	X * Custom tooltip widget with content matching the iconview label.
+	* DND
+		* Dropping documents/uris onto Applications to open.
+		* Dragging onto bar to keep as a favorite.
+		* Dragging documents onto people to email/send.
+		* Dragging documents into nautilus folders to
+		  copy/link/move?
+	* Minimized windows??
+
+* Applications
+	X * Hide document-centric app icons
+	X * gksudu apps don't bookmark well, new icon is created
+
+* Computer
+	X * Hook up Log out/Switch User.
+	* Show shared folders
+
+* Documents
+	* Figure out a better mime-type matching scheme for the sidebar.
+	* Use Nautlius templates for "New Document" toolbar menu.
+
+* People
+	* Double click to open a chat window requires gaim running.  Should
+	  start it.
+	* Everything is hardcoded to Gaim.  Use Telepathy instead.
+	* Show visible accounts in accounts drop-down in toolbar
+
+* Grand Webapp vision
+	* GMail icon in Applications when open in Firefox, clicking focuses
+	  gmail tab.
+	* Composing GMail message shows thumbnail in Documents.
+	* Reading a Friendster's profile shows the friend in People.
+	* Sponsor web standards for web apps to expose documents/people.

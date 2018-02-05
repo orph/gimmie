@@ -1,0 +1,189 @@
+/* -*- Mode: C; c-basic-offset: 4 -*- */
+%%
+headers
+#include <Python.h>
+
+#define NO_IMPORT_PYGOBJECT
+#include "pygobject.h"
+
+#include <libgnomecups/gnome-cups-init.h>
+#include <libgnomecups/gnome-cups-printer.h>
+#include <libgnomecups/gnome-cups-queue.h>
+#include <libgnomecups/gnome-cups-request.h>
+#include <libgnomecups/gnome-cups-util.h>
+
+#include "_gnomecupstypebuiltins.h"
+
+#define GNOME_TYPE_CUPS_PRINTER GNOME_CUPS_TYPE_PRINTER
+#define GNOME_TYPE_CUPS_QUEUE GNOME_CUPS_TYPE_QUEUE
+
+%%
+modulename _gnomecups
+%%
+import gobject.GObject as PyGObject_Type
+%%
+ignore-glob
+        *_get_type
+%%
+override gnome_cups_get_printers
+
+static PyObject *
+_wrap_gnome_cups_get_printers(PyObject *self)
+{
+    GList    *printer_list, *l;
+    PyObject *ret;
+    int       len, i;
+
+    printer_list = gnome_cups_get_printers();
+    len = g_list_length(printer_list);
+    ret = PyTuple_New(len);
+    for (l = printer_list, i = 0; l; l = l->next, ++i) {
+	PyTuple_SET_ITEM(ret, i, PyString_FromString((char*)l->data));
+    }
+    gnome_cups_printer_list_free(printer_list);
+    return ret;
+}
+
+%%
+override gnome_cups_printer_get_icon
+
+static PyObject *
+_wrap_gnome_cups_printer_get_icon(PyGObject *self)
+{
+    char     *icon_name;
+    GList    *emblems, *l;
+    PyObject *ret, *emblem_tuple;
+    int       len, i;
+    
+    gnome_cups_printer_get_icon(GNOME_CUPS_PRINTER(self->obj),
+				&icon_name,
+				&emblems);
+
+    ret = PyTuple_New(2);
+    if (icon_name)
+	PyTuple_SET_ITEM(ret, 0, PyString_FromString(icon_name));
+    else {
+	Py_INCREF(Py_None);
+	PyTuple_SET_ITEM(ret, 0, Py_None);
+    }
+
+    len = g_list_length(emblems);
+    emblem_tuple = PyTuple_New(len);
+    for (l = emblems, i = 0; l; l = l->next, ++i) {
+	PyTuple_SET_ITEM(emblem_tuple, i, PyString_FromString((char*)l->data));
+    }
+    PyTuple_SET_ITEM(ret, 1, emblem_tuple);
+
+    return ret;
+}
+
+%%
+override gnome_cups_printer_new_printer_notify_add kwargs
+
+typedef struct {
+    PyObject *func;
+    PyObject *data;
+} _GnomeCupsNotify;
+
+static void
+_gnomecups_notify_marshal(const char *printer_name,
+			  gpointer user_data)
+{
+    PyGILState_STATE state;
+    _GnomeCupsNotify *notify = user_data;
+    PyObject *retobj;
+    PyObject *args;
+
+    g_assert(notify->func);
+
+    state = pyg_gil_state_ensure();
+
+    args = PyTuple_New (notify->data ? 2 : 1);
+
+    PyTuple_SET_ITEM (args, 0, PyString_FromString(printer_name));
+
+    if (notify->data) {
+        Py_INCREF (notify->data);
+        PyTuple_SET_ITEM (args, 1, notify->data);
+    }
+
+    retobj = PyObject_CallObject (notify->func, args);
+
+    Py_XDECREF (retobj);
+    Py_DECREF (args);
+
+    pyg_gil_state_release(state);
+}
+
+static PyObject *
+_wrap_gnome_cups_printer_new_printer_notify_add(PyGObject *self, PyObject *args, PyObject *kwargs)
+{
+    static char *kwlist[] = { "func", "extra_data", NULL };
+    PyObject *callback;
+    PyObject *data = NULL;
+    _GnomeCupsNotify *notify;
+    int retval;
+
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs,
+                                     "O|O:new_printer_notify_add",
+                                     kwlist, &callback, &data)) {
+        return NULL;
+    }
+
+    if (!PyCallable_Check (callback)) {
+        PyErr_SetString (PyExc_TypeError, "second arg not callable");
+        return NULL;
+    }
+
+    /* FIXME: This struct is leaked. */
+    notify = notify = g_new0(_GnomeCupsNotify, 1);
+    notify->func = callback;
+    notify->data = data;
+    Py_INCREF(notify->func);
+    Py_XINCREF(notify->data);
+
+    pyg_begin_allow_threads;
+    retval = gnome_cups_printer_new_printer_notify_add(_gnomecups_notify_marshal, notify);
+    pyg_end_allow_threads;
+    return PyInt_FromLong (retval);
+}
+
+%%
+override gnome_cups_printer_printer_removed_notify_add kwargs
+
+static PyObject *
+_wrap_gnome_cups_printer_printer_removed_notify_add(PyGObject *self, 
+						    PyObject *args, 
+						    PyObject *kwargs)
+{
+    static char *kwlist[] = { "func", "extra_data", NULL };
+    PyObject *callback;
+    PyObject *data = NULL;
+    _GnomeCupsNotify *notify;
+    int retval;
+
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs,
+                                     "O|O:printer_removed_notify_add",
+                                     kwlist, &callback, &data)) {
+        return NULL;
+    }
+
+    if (!PyCallable_Check (callback)) {
+        PyErr_SetString (PyExc_TypeError, "second arg not callable");
+        return NULL;
+    }
+
+    /* FIXME: This struct is leaked. */
+    notify = g_new0(_GnomeCupsNotify, 1);
+    notify->func = callback;
+    notify->data = data;
+    Py_INCREF(notify->func);
+    Py_XINCREF(notify->data);
+
+    pyg_begin_allow_threads;
+    retval = gnome_cups_printer_printer_removed_notify_add(_gnomecups_notify_marshal, notify);
+    pyg_end_allow_threads;
+    return PyInt_FromLong (retval);
+}
+
+%%

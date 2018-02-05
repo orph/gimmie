@@ -1,0 +1,675 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object CupsPrinter
+  (in-module "Gnome")
+  (parent "GObject")
+  (c-name "GnomeCupsPrinter")
+  (gtype-id "GNOME_TYPE_CUPS_PRINTER")
+)
+
+(define-object CupsQueue
+  (in-module "Gnome")
+  (parent "GObject")
+  (c-name "GnomeCupsQueue")
+  (gtype-id "GNOME_TYPE_CUPS_QUEUE")
+)
+
+;; Enumerations and flags ...
+
+(define-enum CupsPrinterRefresh
+  (in-module "Gnome")
+  (c-name "GnomeCupsPrinterRefresh")
+  (gtype-id "GNOME_TYPE_CUPS_PRINTER_REFRESH")
+  (values
+    '("ppd" "GNOME_CUPS_PRINTER_REFRESH_PPD")
+    '("options" "GNOME_CUPS_PRINTER_REFRESH_OPTIONS")
+    '("all" "GNOME_CUPS_PRINTER_REFRESH_ALL")
+  )
+)
+
+(define-enum CupsUnsafeCharacterSet
+  (in-module "Gnome")
+  (c-name "GnomeCupsUnsafeCharacterSet")
+  (gtype-id "GNOME_TYPE_CUPS_UNSAFE_CHARACTER_SET")
+  (values
+    '("all" "GNOME_CUPS_UNSAFE_ALL")
+    '("allow-plus" "GNOME_CUPS_UNSAFE_ALLOW_PLUS")
+    '("path" "GNOME_CUPS_UNSAFE_PATH")
+    '("host" "GNOME_CUPS_UNSAFE_HOST")
+    '("slashes" "GNOME_CUPS_UNSAFE_SLASHES")
+  )
+)
+
+
+;; From /usr/include/libgnomecups-1/libgnomecups/gnome-cups-init.h
+
+(define-function init
+  (c-name "gnome_cups_init")
+  (return-type "none")
+  (parameters
+    '("GnomeCupsAuthFunction" "opt_auth_fn")
+  )
+)
+
+(define-function shutdown
+  (c-name "gnome_cups_shutdown")
+  (return-type "none")
+)
+
+
+
+;; From /usr/include/libgnomecups-1/libgnomecups/gnome-cups-printer.h
+
+(define-function get_printers
+  (c-name "gnome_cups_get_printers")
+  (return-type "GList*")
+)
+
+(define-function printer_list_free
+  (c-name "gnome_cups_printer_list_free")
+  (return-type "none")
+  (parameters
+    '("GList*" "printers")
+  )
+)
+
+(define-function get_default
+  (c-name "gnome_cups_get_default")
+  (return-type "char*")
+)
+
+(define-function new_printer_notify_add
+  (c-name "gnome_cups_printer_new_printer_notify_add")
+  (return-type "guint")
+  (parameters
+    '("gpointer" "user_data")
+  )
+)
+
+(define-function new_printer_notify_remove
+  (c-name "gnome_cups_printer_new_printer_notify_remove")
+  (return-type "none")
+  (parameters
+    '("guint" "id")
+  )
+)
+
+(define-function printer_removed_notify_add
+  (c-name "gnome_cups_printer_printer_removed_notify_add")
+  (return-type "guint")
+  (parameters
+    '("gpointer" "user_data")
+  )
+)
+
+(define-function printer_removed_notify_remove
+  (c-name "gnome_cups_printer_printer_removed_notify_remove")
+  (return-type "none")
+  (parameters
+    '("guint" "id")
+  )
+)
+
+(define-function printer_get_type
+  (c-name "gnome_cups_printer_get_type")
+  (return-type "GType")
+)
+
+(define-function printer_get
+  (c-name "gnome_cups_printer_get")
+  (return-type "GnomeCupsPrinter*")
+  (parameters
+    '("const-char*" "name")
+  )
+)
+
+(define-function printer_get_existing
+  (c-name "gnome_cups_printer_get_existing")
+  (return-type "GnomeCupsPrinter*")
+  (parameters
+    '("const-char*" "name")
+  )
+)
+
+(define-method unref
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_unref")
+  (return-type "none")
+)
+
+(define-method get_name
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_name")
+  (return-type "const-char*")
+)
+
+(define-method is_gone
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_is_gone")
+  (return-type "gboolean")
+)
+
+(define-method get_attributes_initialized
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_attributes_initialized")
+  (return-type "gboolean")
+)
+
+(define-method get_uri
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_uri")
+  (return-type "const-char*")
+)
+
+(define-method get_device_uri
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_device_uri")
+  (return-type "const-char*")
+)
+
+(define-method get_state
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_state")
+  (return-type "ipp_pstate_t")
+)
+
+(define-method get_state_name
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_state_name")
+  (return-type "const-char*")
+)
+
+(define-method get_full_state
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_full_state")
+  (return-type "const-char*")
+)
+
+(define-method get_state_reasons
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_state_reasons")
+  (return-type "GList*")
+)
+
+(define-function printer_free_reasons
+  (c-name "gnome_cups_printer_free_reasons")
+  (return-type "none")
+  (parameters
+    '("GList*" "reasons")
+  )
+)
+
+(define-method get_description
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_description")
+  (return-type "const-char*")
+)
+
+(define-method set_description
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_set_description")
+  (return-type "none")
+  (parameters
+    '("const-char*" "description")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_location
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_location")
+  (return-type "const-char*")
+)
+
+(define-method set_location
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_set_location")
+  (return-type "none")
+  (parameters
+    '("const-char*" "location")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_make_and_model
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_make_and_model")
+  (return-type "const-char*")
+)
+
+(define-method get_info
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_info")
+  (return-type "const-char*")
+)
+
+(define-method get_icon
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_icon")
+  (return-type "none")
+  (parameters
+    '("char**" "name")
+    '("GList**" "emblems")
+  )
+)
+
+(define-method pause
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_pause")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method resume
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_resume")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method delete
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_delete")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_is_default
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_is_default")
+  (return-type "gboolean")
+)
+
+(define-method set_default
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_set_default")
+  (return-type "none")
+  (parameters
+    '("GError**" "error")
+  )
+)
+
+(define-method get_is_local
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_is_local")
+  (return-type "gboolean")
+)
+
+(define-method get_job_count
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_job_count")
+  (return-type "int")
+)
+
+(define-method get_queue
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_queue")
+  (return-type "GnomeCupsQueue*")
+)
+
+(define-method get_ppd
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_ppd")
+  (return-type "ppd_file_t*")
+)
+
+(define-method get_ppd_async
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_ppd_async")
+  (return-type "guint")
+  (parameters
+    '("GnomeCupsPrinterGetPPDCallback" "cb")
+    '("gpointer" "user_data")
+    '("GDestroyNotify" "destroy_notify")
+  )
+)
+
+(define-method get_option_value
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_option_value")
+  (return-type "char*")
+  (parameters
+    '("const-char*" "id")
+  )
+)
+
+(define-method set_option_value
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_set_option_value")
+  (return-type "none")
+  (parameters
+    '("const-char*" "id")
+    '("const-char*" "value")
+  )
+)
+
+(define-method get_options
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_options")
+  (return-type "GList*")
+)
+
+(define-method get_option
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_option")
+  (return-type "GnomeCupsPrinterOption*")
+  (parameters
+    '("const-char*" "id")
+  )
+)
+
+(define-method free
+  (of-object "GnomeCupsPrinterOption")
+  (c-name "gnome_cups_printer_option_free")
+  (return-type "none")
+)
+
+(define-function printer_option_list_free
+  (c-name "gnome_cups_printer_option_list_free")
+  (return-type "none")
+  (parameters
+    '("GList*" "options")
+  )
+)
+
+(define-method force_refresh
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_force_refresh")
+  (return-type "none")
+  (parameters
+    '("GnomeCupsPrinterRefresh" "type")
+  )
+)
+
+(define-method print_file
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_print_file")
+  (return-type "gboolean")
+  (parameters
+    '("const-char*" "filename")
+    '("const-char*" "job_name")
+    '("GList*" "options")
+    '("GError**" "error")
+  )
+)
+
+(define-method get_ppd_file
+  (of-object "GnomeCupsPrinter")
+  (c-name "gnome_cups_printer_get_ppd_file")
+  (return-type "GnomeCupsPPDFile*")
+)
+
+(define-method get_name
+  (of-object "GnomeCupsPPDFile")
+  (c-name "gnome_cups_ppd_file_get_name")
+  (return-type "char*")
+)
+
+(define-method release
+  (of-object "GnomeCupsPPDFile")
+  (c-name "gnome_cups_ppd_file_release")
+  (return-type "none")
+)
+
+
+
+;; From /usr/include/libgnomecups-1/libgnomecups/gnome-cups-queue.h
+
+(define-method s_equal
+  (of-object "GnomeCupsJob")
+  (c-name "gnome_cups_jobs_equal")
+  (return-type "gboolean")
+  (parameters
+    '("GnomeCupsJob*" "b")
+  )
+)
+
+(define-method free
+  (of-object "GnomeCupsJob")
+  (c-name "gnome_cups_job_free")
+  (return-type "none")
+)
+
+(define-method dup
+  (of-object "GnomeCupsJob")
+  (c-name "gnome_cups_job_dup")
+  (return-type "GnomeCupsJob*")
+)
+
+(define-function job_list_free
+  (c-name "gnome_cups_job_list_free")
+  (return-type "none")
+  (parameters
+    '("GList*" "jobs")
+  )
+)
+
+(define-function queue_get_type
+  (c-name "gnome_cups_queue_get_type")
+  (return-type "GType")
+)
+
+(define-function queue_get
+  (c-name "gnome_cups_queue_get")
+  (return-type "GnomeCupsQueue*")
+  (parameters
+    '("const-char*" "name")
+  )
+)
+
+(define-function queue_get_existing
+  (c-name "gnome_cups_queue_get_existing")
+  (return-type "GnomeCupsQueue*")
+  (parameters
+    '("const-char*" "name")
+  )
+)
+
+(define-method get_name
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_get_name")
+  (return-type "const-char*")
+)
+
+(define-method is_gone
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_is_gone")
+  (return-type "gboolean")
+)
+
+(define-method get_jobs
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_get_jobs")
+  (return-type "const-GList*")
+)
+
+(define-method get_job_count
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_get_job_count")
+  (return-type "int")
+)
+
+(define-method get_job
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_get_job")
+  (return-type "GnomeCupsJob*")
+  (parameters
+    '("int" "job_id")
+    '("gboolean" "cache_ok")
+  )
+)
+
+(define-method pause_job
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_pause_job")
+  (return-type "none")
+  (parameters
+    '("int" "job_id")
+    '("GError**" "error")
+  )
+)
+
+(define-method resume_job
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_resume_job")
+  (return-type "none")
+  (parameters
+    '("int" "job_id")
+    '("GError**" "error")
+  )
+)
+
+(define-method cancel_job
+  (of-object "GnomeCupsQueue")
+  (c-name "gnome_cups_queue_cancel_job")
+  (return-type "none")
+  (parameters
+    '("int" "job_id")
+    '("GError**" "error")
+  )
+)
+
+
+
+;; From /usr/include/libgnomecups-1/libgnomecups/gnome-cups-request.h
+
+(define-function request_new
+  (c-name "gnome_cups_request_new")
+  (is-constructor-of "GnomeCupsRequest")
+  (return-type "ipp_t*")
+  (parameters
+    '("int" "operation_id")
+  )
+)
+
+(define-function request_new_for_printer
+  (c-name "gnome_cups_request_new_for_printer")
+  (return-type "ipp_t*")
+  (parameters
+    '("int" "operation_id")
+    '("GnomeCupsPrinter*" "printer")
+  )
+)
+
+(define-function request_new_for_job
+  (c-name "gnome_cups_request_new_for_job")
+  (return-type "ipp_t*")
+  (parameters
+    '("int" "operation_id")
+    '("int" "job_id")
+  )
+)
+
+(define-function request_add_requested_attributes
+  (c-name "gnome_cups_request_add_requested_attributes")
+  (return-type "none")
+  (parameters
+    '("ipp_t*" "request")
+    '("ipp_tag_t" "group")
+    '("int" "n_attributes")
+    '("char**" "attributes")
+  )
+)
+
+(define-function request_execute
+  (c-name "gnome_cups_request_execute")
+  (return-type "ipp_t*")
+  (parameters
+    '("ipp_t*" "request")
+    '("const-char*" "server")
+    '("const-char*" "path")
+    '("GError**" "err")
+  )
+)
+
+(define-function request_file
+  (c-name "gnome_cups_request_file")
+  (return-type "none")
+  (parameters
+    '("const-char*" "server")
+    '("const-char*" "path")
+    '("int" "fd")
+    '("GError**" "err")
+  )
+)
+
+(define-function request_execute_async
+  (c-name "gnome_cups_request_execute_async")
+  (return-type "guint")
+  (parameters
+    '("ipp_t*" "request")
+    '("const-char*" "server")
+    '("const-char*" "path")
+    '("GnomeCupsAsyncRequestCallback" "callback")
+    '("gpointer" "cb_data")
+    '("GDestroyNotify" "destroy_notify")
+  )
+)
+
+(define-function request_file_async
+  (c-name "gnome_cups_request_file_async")
+  (return-type "guint")
+  (parameters
+    '("const-char*" "server")
+    '("const-char*" "path")
+    '("int" "outfile_fd")
+    '("GnomeCupsAsyncRequestCallback" "callback")
+    '("gpointer" "cb_data")
+    '("GDestroyNotify" "destroy_notify")
+  )
+)
+
+(define-function request_cancel
+  (c-name "gnome_cups_request_cancel")
+  (return-type "none")
+  (parameters
+    '("guint" "request_id")
+  )
+)
+
+
+
+;; From /usr/include/libgnomecups-1/libgnomecups/gnome-cups-util.h
+
+(define-function error_quark
+  (c-name "gnome_cups_error_quark")
+  (return-type "GQuark")
+)
+
+(define-function check_daemon
+  (c-name "gnome_cups_check_daemon")
+  (return-type "gboolean")
+)
+
+(define-function get_printer_uri
+  (c-name "gnome_cups_get_printer_uri")
+  (return-type "char*")
+  (parameters
+    '("const-char*" "printer_name")
+  )
+)
+
+(define-function util_escape_uri_string
+  (c-name "gnome_cups_util_escape_uri_string")
+  (return-type "gchar*")
+  (parameters
+    '("const-gchar*" "string")
+    '("GnomeCupsUnsafeCharacterSet" "mask")
+  )
+)
+
+(define-function util_unescape_uri_string
+  (c-name "gnome_cups_util_unescape_uri_string")
+  (return-type "gchar*")
+  (parameters
+    '("const-gchar*" "escaped")
+  )
+)
+
+

@@ -1,0 +1,595 @@
+# Greek translation of Gimmie.
+# Copyright (C) 2006
+# This file is distributed under the same license as the gimmie package.
+#
+# Simos Xenitellis <simos74@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-26 15:51+0200\n"
+"PO-Revision-Date: 2006-06-28 15:08+0100\n"
+"Last-Translator: Simos Xenitellis <simos74@gmail.com>\n"
+"Language-Team: Greek <team@gnome.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../gimmie_applications.py:420
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+#: ../gimmie_applications.py:438 ../gimmie_computer.py:41
+#: ../gimmie_documents.py:29
+msgid "Recently Used"
+msgstr "Χρησιμοποιήθηκαν πρόσφατα"
+
+#: ../gimmie_applications.py:460
+msgid "Install & Update"
+msgstr "Εγκατάσταση & Ενημέρωση"
+
+#: ../gimmie_applications.py:461
+msgid "Manage applications on this computer"
+msgstr "Διαχείριση εφαρμογών στον υπολογιστή αυτό"
+
+#: ../gimmie_applications.py:468 ../gimmie_computer.py:758
+#: ../gimmie_computer.py:950
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ../gimmie_applications.py:469
+msgid "Manage settings and preferences"
+msgstr "Διαχείριση ρυθμίσεων και προτιμήσεων"
+
+#: ../gimmie_applications.py:495
+msgid "Show All"
+msgstr "Εμφάνιση όλων"
+
+#: ../gimmie_applications.py:497
+msgid "Hide All"
+msgstr "Απόκρυψη όλων"
+
+#: ../gimmie_base.py:112
+msgid "Keep Around"
+msgstr "Διατήρηση εδώ γύρω"
+
+#: ../gimmie_base.py:131
+msgid "%l:%M %p"
+msgstr "%l:%M %p"
+
+#: ../gimmie_base.py:133
+#, python-format
+msgid "Today, %s"
+msgstr "Σήμερα, %s"
+
+#
+#: ../gimmie_base.py:135
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Χθες, %s"
+
+#: ../gimmie_base.py:137
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d ημέρα πριν, %s"
+msgstr[1] "%d ημέρες πριν, %s"
+
+#: ../gimmie_base.py:141
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d ημέρα πριν"
+msgstr[1] "%d ημέρες πριν"
+
+#: ../gimmie_base.py:145
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie_base.py:147
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie_browser.py:508 ../gimmie_topicwin.py:735
+msgid "Set the zoom level"
+msgstr "Προσαρμογή του επιπέδου μεγέθυνσης"
+
+#: ../gimmie_browser.py:528 ../gimmie_topicwin.py:36 ../gimmie_topicwin.py:755
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: ../gimmie_computer.py:132
+#, python-format
+msgid "Desk %d"
+msgstr "Γραφείο %d"
+
+#: ../gimmie_computer.py:184
+msgid "Use Compact Layout"
+msgstr "Χρήση συμπιεσμένης διάταξης"
+
+#: ../gimmie_computer.py:235
+msgid "Calendar"
+msgstr "Ημερολόγιο"
+
+#: ../gimmie_computer.py:395
+msgid "Places"
+msgstr "Τοποθεσίες"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie_computer.py:426
+msgid "No disk inserted"
+msgstr "Δεν έχει εισαχθεί δίσκος"
+
+#: ../gimmie_computer.py:445
+#, python-format
+msgid "Free space: %s"
+msgstr "Ελεύθερος χώρος: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie_computer.py:468
+msgid "_Eject"
+msgstr "Ε_ξαγωγή"
+
+#: ../gimmie_computer.py:482
+msgid "Devices & Media"
+msgstr "Συσκευές & Δίσκοι"
+
+#: ../gimmie_computer.py:486
+msgid "Add Bluetooth..."
+msgstr "Προσθήκη Bluetooth..."
+
+#: ../gimmie_computer.py:487
+msgid "Access a wireless device"
+msgstr "Πρόσβαση σε ασύρματη συσκευή"
+
+#: ../gimmie_computer.py:492
+msgid "Create CD/DVD..."
+msgstr "Δημιουργία CD/DVD..."
+
+#: ../gimmie_computer.py:493
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Εγγραφή αρχείων σε ένα δίσκο CD ή DVD"
+
+#: ../gimmie_computer.py:616 ../gimmie_documents.py:348
+#: ../gimmie_documents.py:385
+msgid "Printers"
+msgstr "Εκτυπωτές"
+
+#: ../gimmie_computer.py:621
+msgid "Add Printer..."
+msgstr "Προσθήκη εκτυπωτή..."
+
+#: ../gimmie_computer.py:622
+msgid "Setup attached or networked printer"
+msgstr "Ρύθμιση τοπικού εκτυπωτή, ή εκτυπωτή δικτύου"
+
+#: ../gimmie_computer.py:676
+msgid "Nearby Computers"
+msgstr "Κοντινοί υπολογιστές"
+
+#: ../gimmie_computer.py:681
+msgid "Connect to..."
+msgstr "Σύνδεση σε..."
+
+#: ../gimmie_computer.py:682
+msgid "Access a computer on the network"
+msgstr "Πρόσβαση υπολογιστή στο δίκτυο"
+
+#: ../gimmie_computer.py:687
+msgid "Windows Network"
+msgstr "Δίκτυο Windows"
+
+#: ../gimmie_computer.py:688
+msgid "Browse nearby Windows computers"
+msgstr "Περιήγηση σε κοντινούς υπολογιστές Windows"
+
+#: ../gimmie_computer.py:719
+msgid "Computer"
+msgstr "Υπολογιστής"
+
+#: ../gimmie_computer.py:769
+msgid "Timeline"
+msgstr "Αναδρομή γεγονότων"
+
+#: ../gimmie_computer.py:814
+msgid "Computer, %l:%M %p"
+msgstr "Υπολογιστής, %l:%M %p"
+
+#: ../gimmie_computer.py:837
+msgid "Switch to another user"
+msgstr "Αλλαγή σε άλλο χρήστη"
+
+#: ../gimmie_computer.py:860
+msgid "Volume: 75%"
+msgstr "Τόμος: 75%"
+
+#: ../gimmie_computer.py:863
+msgid "Not Implemented"
+msgstr "Δεν υλοποιήθηκε"
+
+#: ../gimmie_computer.py:873 ../gimmie_computer.py:974
+msgid "Shutdown..."
+msgstr "Κλείσιμο..."
+
+#: ../gimmie_computer.py:874
+msgid "Shutdown or suspend this computer"
+msgstr "Κλείσιμο ή αναστολή του υπολογιστή"
+
+#: ../gimmie_computer.py:882
+msgid "About Me"
+msgstr "Περί εμένα"
+
+#: ../gimmie_computer.py:888
+msgid "Switch User"
+msgstr "Αλλαγή χρήστη"
+
+#: ../gimmie_computer.py:894
+msgid "Log Out..."
+msgstr "Αποσύνδεση..."
+
+#: ../gimmie_computer.py:966
+msgid "Network"
+msgstr "Δίκτυο"
+
+#: ../gimmie_documents.py:61
+msgid "Recently Seen"
+msgstr "Πρόσφατα έγγραφα"
+
+#: ../gimmie_documents.py:183
+msgid "New Smart Folder"
+msgstr "Νέος έξυπνος φάκελος"
+
+# #-#-#-#-#  gnome-icon-theme.gnome-2-14.el.po (el)  #-#-#-#-#
+# 48x48/emblems/emblem-documents.icon.in.h:1
+# 48x48/emblems/emblem-documents.icon.in.h:1
+# 48x48/emblems/emblem-documents.icon.in.h:1
+#: ../gimmie_documents.py:201
+msgid "Documents"
+msgstr "Έγγραφα"
+
+#: ../gimmie_documents.py:215
+msgid "Attachments"
+msgstr "Συνημμένα"
+
+# #-#-#-#-#  gnome-icon-theme.gnome-2-14.el.po (el)  #-#-#-#-#
+# 48x48/emblems/emblem-important.icon.in.h:1
+#: ../gimmie_documents.py:217
+msgid "Important Email"
+msgstr "Σημαντική αλληλογραφία"
+
+#. Tomboy
+#. RecentlyUsedOfMimeType(
+#. _("Office Documents"),
+#. "stock_new-presentation",
+#. ["application/ms-powerpoint",
+#. "application/vnd.oasis.opendocument.presentation",
+#. "application/vnd.sun.xml.impress",
+#. "application/x-abiword",
+#. "text/plain",
+#. "application/msword",
+#. "application/vnd.ms-excel",
+#. "application/x-gnumeric"]),
+#. RecentlyUsedOfMimeType(_("PDFs"),
+#. "gnome-pdf",
+#. ["application/pdf",
+#. "application/ps"
+#. "application/x-dvi"]),
+#: ../gimmie_documents.py:235
+msgid "Music & Movies"
+msgstr "Μουσική & Ταινίες"
+
+#: ../gimmie_documents.py:247
+msgid "Photos"
+msgstr "Φωτογραφίες"
+
+# #-#-#-#-#  nautilus.gnome-2-14.el.po (el)  #-#-#-#-#
+#: ../gimmie_documents.py:291 ../gimmie_documents.py:293
+#: ../gimmie_trash.py:146
+msgid "Trash"
+msgstr "Απορρίμματα"
+
+#: ../gimmie_documents.py:311 ../gimmie_documents.py:367
+msgid "New Document"
+msgstr "Νέο έγγραφο"
+
+#: ../gimmie_documents.py:312
+msgid "Create a new document"
+msgstr "Δημιουργία νέου εγγράφου"
+
+#: ../gimmie_documents.py:327 ../gimmie_documents.py:374
+msgid "Go"
+msgstr "Μετάβαση"
+
+#: ../gimmie_documents.py:328
+msgid "Open commonly used document locations"
+msgstr "Άνοιγμα τοποθεσίας συχνά χρησιμοποιούμενων εγγράφων"
+
+#: ../gimmie_documents.py:349
+msgid "View printers available for document printing"
+msgstr "Εμφάνιση διαθέσιμων εκτυπωτών για εκτύπωση εγγράφων"
+
+#: ../gimmie_gaim.py:95
+msgid "Idle"
+msgstr "Αδρανής"
+
+#: ../gimmie_gaim.py:97 ../gimmie_people.py:291
+msgid "Away"
+msgstr "Μακριά"
+
+#: ../gimmie_gaim.py:100 ../gimmie_people.py:282
+msgid "Offline"
+msgstr "Εκτός σύνδεσης"
+
+#: ../gimmie_logout.py:51
+msgid "Shut down this computer now?"
+msgstr "Κλείσιμο του υπολογιστή τώρα;"
+
+# #-#-#-#-#  gdm2.gnome-2-14.el.po (el)  #-#-#-#-#
+#: ../gimmie_logout.py:53
+msgid "_Restart"
+msgstr "_Επανεκκίνηση"
+
+#: ../gimmie_logout.py:60
+msgid "_Shut Down"
+msgstr "_Κλείσιμο"
+
+#: ../gimmie_logout.py:67
+msgid "Log out of this computer now?"
+msgstr "Να γίνει αποσύνδεση από το σύστημα τώρα;"
+
+#: ../gimmie_logout.py:69
+msgid "_Switch User"
+msgstr "Α_λλαγή χρήστη"
+
+#: ../gimmie_logout.py:72
+msgid "_Log Out"
+msgstr "Απο_σύνδεση"
+
+#: ../gimmie_logout.py:151
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Το σύστημα θα κλείσει αυτόματα σε %d δευτερόλεπτο."
+msgstr[1] "Το σύστημα θα κλείσει αυτόματα σε %d δευτερόλεπτα."
+
+#: ../gimmie_logout.py:155
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Θα αποσυνδεθείτε αυτόματα σε %d δευτερόλεπτο."
+msgstr[1] "Θα σποσυνδεθείτε αυτόματα σε %d δευτερόλεπτα."
+
+# #-#-#-#-#  gnome-icon-theme.gnome-2-14.el.po (el)  #-#-#-#-#
+# 48x48/emblems/emblem-people.icon.in.h:1
+# 48x48/emblems/emblem-people.icon.in.h:1
+#: ../gimmie_people.py:242
+msgid "People"
+msgstr "Άνθρωποι"
+
+#. FIXME: Prune for groups at the current zoom level?
+#: ../gimmie_people.py:250
+msgid "Recent People"
+msgstr "Πρόσβατοι άνθρωποι"
+
+#: ../gimmie_people.py:251
+msgid "Online Now"
+msgstr "Σε σύνδεση τώρα"
+
+#: ../gimmie_people.py:252
+msgid "Everybody"
+msgstr "Όλοι"
+
+# #-#-#-#-#  gnome-icon-theme.gnome-2-14.el.po (el)  #-#-#-#-#
+# 48x48/emblems/emblem-mail.icon.in.h:1
+# 48x48/emblems/emblem-mail.icon.in.h:1
+# 48x48/emblems/emblem-mail.icon.in.h:1
+#: ../gimmie_people.py:254
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie_people.py:255
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie_people.py:277 ../gimmie_people.py:360 ../gimmie_people.py:372
+msgid "Available"
+msgstr "Διαθέσιμα"
+
+#: ../gimmie_people.py:287
+msgid "Away Messages..."
+msgstr "Μηνύματα εκτός..."
+
+#: ../gimmie_people.py:300
+msgid "Accounts..."
+msgstr "Λογαριασμοί..."
+
+#: ../gimmie_people.py:346
+msgid "New Person"
+msgstr "Νέος άνθρωπος"
+
+#: ../gimmie_people.py:347
+msgid "Add a new contact person"
+msgstr "Προσθήκη νέας επαφής"
+
+#: ../gimmie_people.py:353
+msgid "New Group"
+msgstr "Νέα ομάδα"
+
+#: ../gimmie_people.py:354
+msgid "Add a new group of people to the sidebar"
+msgstr "Προσθήκη νέας ομάδας ανθρώπων στη πλευρική στήλη"
+
+#: ../gimmie_people.py:361
+msgid "Set your online status"
+msgstr "Καθορισμός της κατάστασης συνδεδεμένου χρήστη"
+
+#: ../gimmie_tomboy.py:77
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+#: ../gimmie_tomboy.py:81
+msgid "Create New Note"
+msgstr "Δημιουργία νέας σημείωσης"
+
+#: ../gimmie_tomboy.py:82
+msgid "Make a new Tomboy note"
+msgstr "Δημιουργία νέας σημείωσης Tomboy"
+
+#: ../gimmie_topicwin.py:157
+msgid "Today"
+msgstr "Σήμερα"
+
+#: ../gimmie_topicwin.py:158
+msgid "Last 3 days"
+msgstr "Τελευταίες 3 ημέρες"
+
+#: ../gimmie_topicwin.py:159
+msgid "Last week"
+msgstr "Τελευταία εβδομάδα"
+
+#: ../gimmie_topicwin.py:160
+msgid "Last 2 weeks"
+msgstr "Τελευτέες 2 εβδομάδες"
+
+#: ../gimmie_topicwin.py:161
+msgid "Last month"
+msgstr "Τελευταίος μήνας"
+
+#: ../gimmie_topicwin.py:162
+msgid "Forever"
+msgstr "Για πάντα"
+
+#: ../gimmie_topicwin.py:184
+msgid "Show timeline"
+msgstr "Εμφάνιση αναδρομής γεγονότων"
+
+# #-#-#-#-#  nautilus.gnome-2-14.el.po (el)  #-#-#-#-#
+#: ../gimmie_trash.py:169 ../gimmie_trash.py:208
+msgid "_Empty Trash"
+msgstr "Ά_δειασμα Απορριμμάτων"
+
+#: ../gimmie_trash.py:176
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d αντικείμενο"
+msgstr[1] "%d αντικείμενα"
+
+#: ../gimmie_trash.py:197
+msgid "Empty all of the items from the trash?"
+msgstr "Άδειασμα όλων των αντικειμένων από τον κάδο;"
+
+#: ../gimmie_trash.py:198
+msgid "If you choose to empty the trash, all "
+msgstr "Αν επιλέξετε να απομακρυνθούν τα απορρίμματα, τότε τα "
+
+#: ../gimmie_trash.py:199
+msgid "items in it will be permanently lost.  "
+msgstr "αντικείμενα θα χαθούν οριστικά.  "
+
+#
+#: ../gimmie_trash.py:200
+msgid "Please note that you can also delete "
+msgstr "Παρακαλώ σημειώστε ότι μπορείτε ακόμα και να διαγράψετε"
+
+#: ../gimmie_trash.py:201
+msgid "them separately."
+msgstr "ξεχωριστά."
+
+#: ../gimmie_trash.py:224
+msgid "Error while moving."
+msgstr "Σφάλμα κατά τη μεταφορά."
+
+#: ../gimmie_trash.py:225
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"Το \"%s\" δε μπορεί να μετακινηθεί στα απορρίμματα διότι δεν έχετε δικαίωμα "
+"τροποποίησης στο γονικό φάκελο."
+
+#: ../gimmie_trash.py:227
+msgid "Error while deleting."
+msgstr "Σφάλμα κατά τη διαγραφή."
+
+#: ../gimmie_trash.py:228
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"Το \"%s\" δε μπορεί να μετακινηθεί διότι δεν έχετε δικαίωματα τροποποίησης "
+"στο γονικό φάκελο."
+
+#: ../gimmie_trash.py:230
+msgid "Error while performing file operation."
+msgstr "Σφάλμα κατά την εκτέλεση της λειτουργίας αρχείων."
+
+#: ../gimmie_trash.py:231
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Αδυναμία εκτέλεσης της λειτουργίας αρχείων %d για \"%s\"."
+
+#: ../gimmie_trash.py:238
+msgid "_Skip"
+msgstr "_Προσπέραση"
+
+#: ../gimmie_trash.py:244
+msgid "_Retry"
+msgstr "Επα_νάληψη"
+
+#: ../gimmie_trash.py:298
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Τα αντικείμενα δε μπορούν να μετακινηθούν στα απορρίμματα. Θέλετε να τα διαγράψετε αμέσως;"
+
+#: ../gimmie_trash.py:299
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Κανένα από %d επιλεγμένα αντικείμενα δεν μπορεί να μετακινηθεί στα Απορρίμματα"
+
+#: ../gimmie_trash.py:301
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Μερικά αρχεία δε μπορούν να μετακινηθούν στα απορρίμματα. Θέλετε να τα διαγράψετε αμέσως;"
+
+#: ../gimmie_trash.py:302
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d από τα επιλεγμένα αντικείμενα δε μπορούν να μετακινηθούν στα απορρίμματα."
+
+# #-#-#-#-#  ekiga.gnome-2-14.el.po (el)  #-#-#-#-#
+#
+# #-#-#-#-#  gnome-system-tools.gnome-2-14.el.po (el)  #-#-#-#-#
+#
+# #-#-#-#-#  nautilus.gnome-2-14.el.po (el)  #-#-#-#-#
+#
+#: ../gimmie_trash.py:312
+msgid "_Delete"
+msgstr "_Διαγραφή"
+
+#: ../gimmie_util.py:686
+msgid "Home"
+msgstr "Αρχικός Κατάλογος"
+
+#: ../gimmie_util.py:690
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: ../gimmie_util.py:775
+msgid "Not Implemented..."
+msgstr "Δεν έχει υλοποιηθεί..."
+
+#: ../gimmie_util.py:780
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr "Βοηθήστε μας να γράψουμε τη λειτουργία με την επεξεργασία του αρχείου \"%s\" στη γραμμή %d."
+
+#: ../gimmie_util.py:785
+msgid "_Fix It!"
+msgstr "_Φτιάξτο!"
+

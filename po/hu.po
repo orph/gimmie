@@ -1,0 +1,711 @@
+# translation of hu.po to Hungarian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Szilveszter Farkas <szilveszter.farkas@gmail.com>, 2007.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: hu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-21 03:23+0100\n"
+"PO-Revision-Date: 2007-07-23 10:04+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "Kisalkalmazás gombjainak stílusa"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr "Kattintási szabály"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr "Beállíthatja, hogy a Gimmie hogyan reagáljon a különböző elemekre való kattintásra. A következő beállítások támogatottak: a \"single\" egy kattintásra aktiválja az elemeket, a \"double\" dupla kattintásra, a \"nautilus\" pedig a Nautilus kattintási szabályát alkalmazza."
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr "Számítógép téma megjelenítése"
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr "Könyvtár téma megjelenítése"
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr "Emberek téma megjelenítése"
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr "Alkalmazások téma megjelenítése"
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr "Témák színeinek megjelenítése"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr "A Gimmie minden témához rendel egy színt. Ez a kulcs azt állítja be, hogy ezek a színek megjelenjenek-e a panelgombokon."
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr "A Számítógép téma listázása a kisalkalmazások témái között."
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr "A Könyvtár téma listázása a kisalkalmazások témái között."
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr "Az Emberek téma listázása a kisalkalmazások témái között."
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr "Az Alkalmazások téma listázása a kisalkalmazások témái között."
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr "A kisalkalmazás gombjainak megjelenítési módja. A következő beállítások támogatottak: az \"icons\" csak a témaikonokat, a \"text\" csak a témák neveit, a \"both\" pedig mindkettőt mutatja."
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "_Névjegy"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: ../gimmie/gimmie_applet.py:372
+msgid "Favorite"
+msgstr "Kedvencek"
+
+#: ../gimmie/gimmie_applet.py:376 ../gimmie/gimmie_base.py:128
+msgid "Add to Favorites"
+msgstr "Hozzáadás a Kedvencekhez"
+
+#: ../gimmie/gimmie_applications.py:244
+msgid "Other"
+msgstr "Egyéb"
+
+#: ../gimmie/gimmie_applications.py:316
+msgid "Install & Update"
+msgstr "Telepítés és frissítés"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Manage software on this computer"
+msgstr "A számítógépen található szoftverek kezelése"
+
+#: ../gimmie/gimmie_applications.py:350 ../gimmie/gimmie_computer.py:422
+#: ../gimmie/gimmie_computer.py:687
+msgid "Settings"
+msgstr "Beállítások"
+
+#: ../gimmie/gimmie_applications.py:351
+msgid "Manage settings and preferences"
+msgstr "Beállítások és tulajdonságok kezelése"
+
+#: ../gimmie/gimmie_applications.py:367
+msgid "Show Desktop"
+msgstr "Asztal mutatása"
+
+#: ../gimmie/gimmie_applications.py:385 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "Alkalmazások"
+
+#: ../gimmie/gimmie_applications.py:405 ../gimmie/gimmie_recent.py:163
+msgid "Recently Used"
+msgstr "Legutóbbi dokumentumok"
+
+#: ../gimmie/gimmie_base.py:153
+msgid "%l:%M %p"
+msgstr "%H:%M"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "Today, %s"
+msgstr "Ma, %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Tegnap, %s"
+
+#: ../gimmie/gimmie_base.py:162
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d nappal ezelőtt, %s"
+msgstr[1] "%d nappal ezelőtt, %s"
+
+#: ../gimmie/gimmie_base.py:166
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d nappal ezelőtt"
+msgstr[1] "%d nappal ezelőtt"
+
+#: ../gimmie/gimmie_base.py:170
+msgid "%B %e"
+msgstr "%B %e."
+
+#: ../gimmie/gimmie_base.py:172
+msgid "%B %e, %G"
+msgstr "%G. %B %e."
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "Minden kedvenc"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_documents.py:402
+msgid "Places"
+msgstr "Helyek"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "Nincs behelyezve lemez"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "Szabad hely: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "_Kiadás"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "Eszközök és média"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Bluetooth hozzáadása..."
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "Vezeték nélküli eszköz elérése"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "CD/DVD készítése..."
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Fájlok kiírása CD vagy DVD lemezre"
+
+#: ../gimmie/gimmie_computer.py:322 ../gimmie/gimmie_documents.py:422
+msgid "Printers"
+msgstr "Nyomtatók"
+
+#: ../gimmie/gimmie_computer.py:327
+msgid "Add Printer..."
+msgstr "Nyomtató hozzáadása..."
+
+#: ../gimmie/gimmie_computer.py:328
+msgid "Setup attached or networked printer"
+msgstr "Helyi vagy hálózati nyomtató beállítása"
+
+#: ../gimmie/gimmie_computer.py:384
+msgid "Nearby Computers"
+msgstr "Közeli számítógépek"
+
+#: ../gimmie/gimmie_computer.py:389
+msgid "Connect to..."
+msgstr "Kapcsolódás..."
+
+#: ../gimmie/gimmie_computer.py:390
+msgid "Access a computer on the network"
+msgstr "Hozzáférés egy hálózaton lévő számítógéphez"
+
+#: ../gimmie/gimmie_computer.py:395
+msgid "Windows Network"
+msgstr "Windows hálózat"
+
+#: ../gimmie/gimmie_computer.py:396
+msgid "Browse nearby Windows computers"
+msgstr "Közeli Windows számítógépek tallózása"
+
+#: ../gimmie/gimmie_computer.py:481
+msgid "Administration"
+msgstr "Adminisztráció"
+
+#: ../gimmie/gimmie_computer.py:520
+msgid "About Me"
+msgstr "A névjegyem"
+
+#: ../gimmie/gimmie_computer.py:526
+msgid "Switch User"
+msgstr "Felhasználóváltás"
+
+#: ../gimmie/gimmie_computer.py:532
+msgid "Log Out..."
+msgstr "Kijelentkezés..."
+
+#: ../gimmie/gimmie_computer.py:560
+msgid "Switch to another user"
+msgstr "Átváltás egy másik felhasználóra"
+
+#: ../gimmie/gimmie_computer.py:577
+msgid "Shutdown..."
+msgstr "Leállítás..."
+
+#: ../gimmie/gimmie_computer.py:578
+msgid "Shutdown or suspend this computer"
+msgstr "Számítógép leállítása vagy felfüggesztése"
+
+#: ../gimmie/gimmie_computer.py:588
+msgid "Help"
+msgstr "Súgó"
+
+#: ../gimmie/gimmie_computer.py:593
+msgid "About Gnome"
+msgstr "A GNOME névjegye"
+
+#: ../gimmie/gimmie_computer.py:605
+msgid "Volume: 75%"
+msgstr "Hangerő: 75%"
+
+#: ../gimmie/gimmie_computer.py:610 ../gimmie/gimmie_computer.py:626
+msgid "Not Implemented"
+msgstr "Nincs implementálva"
+
+#: ../gimmie/gimmie_computer.py:621
+msgid "Change the network location"
+msgstr "Hálózati hely módosítása"
+
+#: ../gimmie/gimmie_computer.py:688
+msgid "Preferences & Administration"
+msgstr "Beállítások és adminisztráció"
+
+#: ../gimmie/gimmie_computer.py:706 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "Számítógép"
+
+#: ../gimmie/gimmie_computer.py:791
+msgid "Computer, %l:%M %p"
+msgstr "Számítógép, %H:%M"
+
+#: ../gimmie/gimmie_documents.py:139
+msgid "Attachments"
+msgstr "Mellékletek"
+
+#: ../gimmie/gimmie_documents.py:151
+msgid "Downloads"
+msgstr "Letöltések"
+
+#: ../gimmie/gimmie_documents.py:209
+msgid "Documents"
+msgstr "Dokumentumok"
+
+#: ../gimmie/gimmie_documents.py:228
+msgid "Music & Movies"
+msgstr "Zenék és filmek"
+
+#: ../gimmie/gimmie_documents.py:259 ../gimmie/gimmie_documents.py:296
+msgid "New Document"
+msgstr "Új dokumentum"
+
+#: ../gimmie/gimmie_documents.py:297
+msgid "Create a new document"
+msgstr "Új dokumentum létrehozása"
+
+#: ../gimmie/gimmie_documents.py:333
+msgid "No templates available"
+msgstr "Nincs elérhető sablon"
+
+#: ../gimmie/gimmie_documents.py:342
+msgid "Empty File"
+msgstr "Üres fájl"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_documents.py:349
+msgid "Templates"
+msgstr "Sablonok"
+
+#: ../gimmie/gimmie_documents.py:387 ../gimmie/gimmie_documents.py:389
+#: ../gimmie/gimmie_documents.py:410 ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "Kuka"
+
+#: ../gimmie/gimmie_documents.py:403
+msgid "Open commonly used locations"
+msgstr "Gyakran használt helyek megnyitása"
+
+#: ../gimmie/gimmie_documents.py:411
+msgid "Open the deleted files trashcan"
+msgstr "A törölt fájlokat tartalmazó Kuka megnyitása"
+
+#: ../gimmie/gimmie_documents.py:423
+msgid "View printers available for document printing"
+msgstr "Dokumentumok nyomtatására szolgáló nyomtatók megtekintése"
+
+#: ../gimmie/gimmie_documents.py:444 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "Könyvtár"
+
+#: ../gimmie/gimmie_documents.py:454
+msgid "Flickr Photos"
+msgstr "Flickr fotók"
+
+#: ../gimmie/gimmie_documents.py:455
+msgid "Google Office"
+msgstr "Google Office"
+
+#: ../gimmie/gimmie_gaim.py:101
+#, python-format
+msgid "Idle since %s"
+msgstr "%s óta tétlen"
+
+#: ../gimmie/gimmie_gaim.py:104
+msgid "Idle"
+msgstr "Tétlen"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:98
+msgid "Away"
+msgstr "Nincs a gépnél"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:89
+msgid "Offline"
+msgstr "Kapcsolat nélkül"
+
+#: ../gimmie/gimmie_gmail.py:36
+msgid "Gmail Account Settings"
+msgstr "Gmail fiókbeállítások"
+
+#: ../gimmie/gimmie_gmail.py:48 ../gimmie/gimmie_gmail.py:156
+msgid "Account Settings"
+msgstr "Fiókbeállítások"
+
+#: ../gimmie/gimmie_gmail.py:62
+msgid "Sign in to Gmail with your Google Account"
+msgstr "Jelentkezzen be a Gmailbe a Google fiókjával"
+
+#: ../gimmie/gimmie_gmail.py:72
+msgid "Username:"
+msgstr "Felhasználó:"
+
+#: ../gimmie/gimmie_gmail.py:77
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: ../gimmie/gimmie_gmail.py:277
+#, python-format
+msgid "Failed to login account %s."
+msgstr "Nem sikerült bejelentkezni a következő fiókba: %s."
+
+#: ../gimmie/gimmie_gmail.py:281 ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "_Kihagyás"
+
+#: ../gimmie/gimmie_gmail.py:283 ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "_Újra"
+
+#: ../gimmie/gimmie_gui.py:691
+msgid "Calendar"
+msgstr "Naptár"
+
+#: ../gimmie/gimmie_gui.py:792
+#, python-format
+msgid "Desk %d"
+msgstr "%d. asztal"
+
+#: ../gimmie/gimmie_gui.py:875
+msgid "Use Compact Layout"
+msgstr "Tömör elrendezés használata"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "Kikapcsolja most a számítógépet?"
+
+#: ../gimmie/gimmie_logout.py:57
+msgid "_Sleep"
+msgstr "_Felfüggesztés"
+
+#: ../gimmie/gimmie_logout.py:62
+msgid "_Hibernate"
+msgstr "_Hibernálás"
+
+#: ../gimmie/gimmie_logout.py:68
+msgid "_Reboot"
+msgstr "_Újraindítás"
+
+#: ../gimmie/gimmie_logout.py:74
+msgid "Shut _Down"
+msgstr "_Leállítás"
+
+#: ../gimmie/gimmie_logout.py:81
+msgid "Log out of this computer now?"
+msgstr "Kijelentkezik most a számítógépből?"
+
+#: ../gimmie/gimmie_logout.py:85
+msgid "_Log Out"
+msgstr "_Kijelentkezés"
+
+#: ../gimmie/gimmie_logout.py:175
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "A számítógép automatikusan kikapcsol %d másodperc múlva."
+msgstr[1] "A számítógép automatikusan kikapcsol %d másodperc múlva."
+
+#: ../gimmie/gimmie_logout.py:179
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Automatikus kijelentkezés %d másodperc múlva."
+msgstr[1] "Automatikus kijelentkezés %d másodperc múlva."
+
+#: ../gimmie/gimmie_people.py:84 ../gimmie/gimmie_people.py:175
+msgid "Available"
+msgstr "Elérhető"
+
+#: ../gimmie/gimmie_people.py:94
+msgid "Away Messages..."
+msgstr "Távolléti üzenetek..."
+
+#: ../gimmie/gimmie_people.py:107
+msgid "Accounts..."
+msgstr "Fiókok..."
+
+#: ../gimmie/gimmie_people.py:145
+msgid "New Person"
+msgstr "Új személy"
+
+#: ../gimmie/gimmie_people.py:146
+msgid "Add a new contact person"
+msgstr "Új személy hozzáadása"
+
+#: ../gimmie/gimmie_people.py:176
+msgid "Set your online status"
+msgstr "Kapcsolati állapotának megadása"
+
+#: ../gimmie/gimmie_people.py:191 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "Emberek"
+
+#: ../gimmie/gimmie_people.py:203
+msgid "Recent People"
+msgstr "Legutóbbi személyek"
+
+#: ../gimmie/gimmie_people.py:204
+msgid "Online Now"
+msgstr "Kapcsolódik"
+
+#: ../gimmie/gimmie_people.py:205
+msgid "Everybody"
+msgstr "Mindenki"
+
+#: ../gimmie/gimmie_people.py:210
+msgid "Gmail"
+msgstr "Gmail"
+
+#: ../gimmie/gimmie_people.py:213
+msgid "GMail"
+msgstr "Gmail"
+
+#: ../gimmie/gimmie_people.py:215
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr "A Gimmie beállításai"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "Csak szöveg"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "Csak ikonok"
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr "Szöveg és ikonok"
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr "Téma_gombok feliratai:"
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "Témák"
+
+#: ../gimmie/gimmie_tomboy.py:89
+msgid "Notes"
+msgstr "Jegyzetek"
+
+#: ../gimmie/gimmie_tomboy.py:93
+msgid "Create New Note"
+msgstr "Új jegyzet"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Make a new Tomboy note"
+msgstr "Új Tomboy jegyzet létrehozása"
+
+#: ../gimmie/gimmie_topicwin.py:44 ../gimmie/gimmie_topicwin.py:1233
+msgid "Search"
+msgstr "Keresés"
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:488
+msgid "Today"
+msgstr "Ma"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:489
+msgid "This week"
+msgstr "Aktuális hét"
+
+#: ../gimmie/gimmie_topicwin.py:167 ../gimmie/gimmie_topicwin.py:490
+msgid "Last 2 weeks"
+msgstr "Utolsó két hét"
+
+#: ../gimmie/gimmie_topicwin.py:168 ../gimmie/gimmie_topicwin.py:491
+msgid "This month"
+msgstr "Aktuális hónap"
+
+#: ../gimmie/gimmie_topicwin.py:169 ../gimmie/gimmie_topicwin.py:492
+msgid "Last 2 months"
+msgstr "Utolsó két hónap"
+
+#: ../gimmie/gimmie_topicwin.py:170 ../gimmie/gimmie_topicwin.py:493
+msgid "Last 3 months"
+msgstr "Utolsó három hónap"
+
+#: ../gimmie/gimmie_topicwin.py:171 ../gimmie/gimmie_topicwin.py:494
+msgid "Last 6 months"
+msgstr "Utolsó 6 hónap"
+
+#: ../gimmie/gimmie_topicwin.py:193
+msgid "Show timeline"
+msgstr "Idővonal mutatása"
+
+#: ../gimmie/gimmie_topicwin.py:1288
+msgid "Set the zoom level"
+msgstr "Nagyítási mérték beállítása"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "_Kuka ürítése"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d elem"
+msgstr[1] "%d elem"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "Minden elemet törölni akar a Kukából?"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr "Amennyiben a Kuka ürítését választja, minden benne lévő elem véglegesen törlésre kerül. Vegye figyelembe, hogy egyesével is lehet őket törölni."
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "Hiba történt a mozgatás közben."
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr "Nem sikerült \"%s\" mozgatása a Kukába, mivel nincs hozzá jogosultsága."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "Hiba történt a törlés közben."
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr "Nem sikerült \"%s\" törlése, mivel nincs hozzá jogosultsága."
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "Hiba történt a fájlművelet közben."
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Nem sikerült a fájlművelet (%d) végrehajtása a fájlon: \"%s\"."
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Nem lehet az elemeket a Kukába mozgatni. Törölni kívánja őket azonnal?"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "A kiválasztott %d elem egyike sem mozgatható a Kukába"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Nem lehet néhány elemet a Kukába mozgatni. Törölni kívánja őket azonnal?"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d kiválasztott elem nem mozgatható a Kukába"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_Törlés"
+
+#: ../gimmie/gimmie_util.py:831
+msgid "Home"
+msgstr "Otthon"
+
+#: ../gimmie/gimmie_util.py:835
+msgid "Desktop"
+msgstr "Munkaasztal"
+
+#: ../gimmie/gimmie_util.py:892
+msgid "Not Implemented..."
+msgstr "Nincs implementálva..."
+
+#: ../gimmie/gimmie_util.py:897
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+
+#: ../gimmie/gimmie_util.py:902
+msgid "_Fix It!"
+msgstr "_Javítás"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr "Elhelyezkedés"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr "A tálca elhelyezkedése."
+

@@ -1,0 +1,795 @@
+# Finnish messages for gimmie.
+# Copyright (C) 2006 Ilkka Tuohela.
+# Copyright (C) 2007 Timo Jyrinki.
+# Suomennos: http://gnome-fi.sourceforge.net/
+# Ilkka Tuohela <hile@iki.fi>, 2006.
+# Timo Jyrinki <timo.jyrinki@iki.fi>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-31 17:44+0300\n"
+"PO-Revision-Date: 2007-07-26 19:08+0300\n"
+"Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
+"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "Sovelman painiketyyli"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr "Napsautusten käsittely"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr ""
+"Määrittelee miten Gimmie toimii kun kohdetta napsautetaan. Seuraavat "
+"valinnat ovat mahdollisia: \"single\" aktivoi kohteen yhdellä "
+"napsautuksella, \"double\" kaksoisnapsautuksella, ja \"nautilus\" seuraa "
+"Nautiluksen toimintatapaa."
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr "Näytä \"Tietokone\"-osio"
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr "Näytä Kirjasto-osio"
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr "Näytä Ihmiset-osio"
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr "Näytä Sovellukset-osio"
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr "Käytä värejä osioiden teksteissä"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr ""
+"Jokaisella Gimmien osiolla on oma värinsä. Tämä avain määrittelee, "
+"käytetäänkö värejä paneelipainikkeissa."
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr "Sisällytä \"Tietokone\"-osio tämän sovelman osioluetteloon."
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr "Sisällytä Kirjasto-osio tämän sovelman osioluetteloon."
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr "Sisällytä Ihmiset-osio tämän sovelman osioluetteloon."
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr "Sisällytä Sovellukset-osio tämän sovelman osioluetteloon."
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr ""
+"Aseta kuinka tämän sovelman painikkeet näytetään. Seuraavat valinnat ovat "
+"mahdollisia: \"icons\" näyttää vain osion kuvakkeen, \"text\" näyttää vain "
+"osion nimen, ja \"both\" näyttää molemmat."
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Preferences"
+msgstr "_Asetukset"
+
+#: ../gimmie/gimmie_applet.py:372
+msgid "Favorite"
+msgstr "Suosikki"
+
+#: ../gimmie/gimmie_applet.py:376 ../gimmie/gimmie_base.py:128
+msgid "Add to Favorites"
+msgstr "Lisää suosikkeihin"
+
+#: ../gimmie/gimmie_applications.py:244
+msgid "Other"
+msgstr "Muut"
+
+#: ../gimmie/gimmie_applications.py:316
+msgid "Install & Update"
+msgstr "Asenna ja päivitä"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Manage software on this computer"
+msgstr "Hallitse tietokoneelle asennettuja sovelluksia"
+
+#: ../gimmie/gimmie_applications.py:350 ../gimmie/gimmie_computer.py:422
+#: ../gimmie/gimmie_computer.py:687
+msgid "Settings"
+msgstr "Asetukset"
+
+#: ../gimmie/gimmie_applications.py:351
+msgid "Manage settings and preferences"
+msgstr "Hallitse asetuksia"
+
+#: ../gimmie/gimmie_applications.py:367
+msgid "Show Desktop"
+msgstr "Näytä työpöytä"
+
+#: ../gimmie/gimmie_applications.py:385 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "Sovellukset"
+
+#: ../gimmie/gimmie_applications.py:405 ../gimmie/gimmie_recent.py:163
+msgid "Recently Used"
+msgstr "Äskettäin käytetyt"
+
+#: ../gimmie/gimmie_base.py:153
+msgid "%l:%M %p"
+msgstr "%H.%M"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "Today, %s"
+msgstr "Tänään, %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Eilen, %s"
+
+#: ../gimmie/gimmie_base.py:162
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d päivä sitten, %s"
+msgstr[1] "%d päivää sitten, %s"
+
+#: ../gimmie/gimmie_base.py:166
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d päivä sitten"
+msgstr[1] "%d päivää sitten"
+
+#: ../gimmie/gimmie_base.py:170
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie/gimmie_base.py:172
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "Kaikki suosikit"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_documents.py:402
+msgid "Places"
+msgstr "Sijainnit"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "Ei levyä kelkassa"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "Vapaa tila: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "_Avaa kelkka"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "Laitteet ja media"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Lisää Bluetooth..."
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "Lisää langaton laite"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "Luo CD tai DVD..."
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Kirjoita tiedostoja CD- tai DVD-levylle"
+
+#: ../gimmie/gimmie_computer.py:322 ../gimmie/gimmie_documents.py:422
+msgid "Printers"
+msgstr "Tulostimet"
+
+#: ../gimmie/gimmie_computer.py:327
+msgid "Add Printer..."
+msgstr "Lisää tulostin..."
+
+#: ../gimmie/gimmie_computer.py:328
+msgid "Setup attached or networked printer"
+msgstr "Määrittele liitetty tai verkkotulostin"
+
+#: ../gimmie/gimmie_computer.py:384
+msgid "Nearby Computers"
+msgstr "Lähellä olevat tietokoneet"
+
+#: ../gimmie/gimmie_computer.py:389
+msgid "Connect to..."
+msgstr "Yhdistä..."
+
+#: ../gimmie/gimmie_computer.py:390
+msgid "Access a computer on the network"
+msgstr "Ota yhteyttä verkon tietokoneeseen"
+
+#: ../gimmie/gimmie_computer.py:395
+msgid "Windows Network"
+msgstr "Windows-verkko"
+
+#: ../gimmie/gimmie_computer.py:396
+msgid "Browse nearby Windows computers"
+msgstr "Selaa lähellä olevia Windows-tietokoneita"
+
+#: ../gimmie/gimmie_computer.py:481
+msgid "Administration"
+msgstr "Ylläpito"
+
+#: ../gimmie/gimmie_computer.py:520
+msgid "About Me"
+msgstr "Omat tiedot"
+
+#: ../gimmie/gimmie_computer.py:526
+msgid "Switch User"
+msgstr "Vaihda käyttäjää"
+
+#: ../gimmie/gimmie_computer.py:532
+msgid "Log Out..."
+msgstr "Kirjaudu ulos..."
+
+#: ../gimmie/gimmie_computer.py:560
+msgid "Switch to another user"
+msgstr "Vaihda käyttäjää"
+
+#: ../gimmie/gimmie_computer.py:577
+msgid "Shutdown..."
+msgstr "Sammuta..."
+
+#: ../gimmie/gimmie_computer.py:578
+msgid "Shutdown or suspend this computer"
+msgstr "Sammuta tietokone tai siirrä se virransäästötilaan"
+
+#: ../gimmie/gimmie_computer.py:588
+msgid "Help"
+msgstr "Ohje"
+
+#: ../gimmie/gimmie_computer.py:593
+msgid "About Gnome"
+msgstr "Tietoja Gnomesta"
+
+#: ../gimmie/gimmie_computer.py:605
+msgid "Volume: 75%"
+msgstr "Äänenvoimakkuus: 75%"
+
+#: ../gimmie/gimmie_computer.py:610 ../gimmie/gimmie_computer.py:626
+msgid "Not Implemented"
+msgstr "Ei toteutettu"
+
+#: ../gimmie/gimmie_computer.py:621
+msgid "Change the network location"
+msgstr "Vaihda verkkosijaintia"
+
+#: ../gimmie/gimmie_computer.py:688
+msgid "Preferences & Administration"
+msgstr "Asetukset ja ylläpito"
+
+#: ../gimmie/gimmie_computer.py:706 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "Tietokone"
+
+#: ../gimmie/gimmie_computer.py:791
+msgid "Computer, %l:%M %p"
+msgstr "Tietokone, %H%.%M"
+
+#: ../gimmie/gimmie_documents.py:139
+msgid "Attachments"
+msgstr "Liitteet"
+
+#: ../gimmie/gimmie_documents.py:151
+msgid "Downloads"
+msgstr "Lataukset"
+
+#: ../gimmie/gimmie_documents.py:209
+msgid "Documents"
+msgstr "Asiakirjat"
+
+#: ../gimmie/gimmie_documents.py:228
+msgid "Music & Movies"
+msgstr "Musiikki ja elokuvat"
+
+#: ../gimmie/gimmie_documents.py:259 ../gimmie/gimmie_documents.py:296
+msgid "New Document"
+msgstr "Uusi asiakirja"
+
+#: ../gimmie/gimmie_documents.py:297
+msgid "Create a new document"
+msgstr "Luo uusi asiakirja"
+
+#: ../gimmie/gimmie_documents.py:333
+msgid "No templates available"
+msgstr "Pohjia ei ole saatavilla"
+
+#: ../gimmie/gimmie_documents.py:342
+msgid "Empty File"
+msgstr "Tyhjä tiedosto"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_documents.py:349
+msgid "Templates"
+msgstr "Pohjat"
+
+#: ../gimmie/gimmie_documents.py:387 ../gimmie/gimmie_documents.py:389
+#: ../gimmie/gimmie_documents.py:410 ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "Roskakori"
+
+#: ../gimmie/gimmie_documents.py:403
+msgid "Open commonly used locations"
+msgstr "Avaa yleisesti käytettyjä asiakirjojen sijainteja"
+
+#: ../gimmie/gimmie_documents.py:411
+msgid "Open the deleted files trashcan"
+msgstr "Avaa poistettujen tiedostojen roskakori"
+
+#: ../gimmie/gimmie_documents.py:423
+msgid "View printers available for document printing"
+msgstr "Näytä asiakirjojen tulostukseen käytettävissä olevat tulostimet"
+
+#: ../gimmie/gimmie_documents.py:444 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "Kirjasto"
+
+#: ../gimmie/gimmie_documents.py:454
+msgid "Flickr Photos"
+msgstr "Flickr-valokuvat"
+
+#: ../gimmie/gimmie_documents.py:455
+msgid "Google Office"
+msgstr "Google-dokumentit"
+
+#: ../gimmie/gimmie_gaim.py:101
+#, python-format
+msgid "Idle since %s"
+msgstr "Jouten (%s)"
+
+#: ../gimmie/gimmie_gaim.py:104
+msgid "Idle"
+msgstr "Jouten"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:98
+msgid "Away"
+msgstr "Poissa"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:89
+msgid "Offline"
+msgstr "Ei linjoilla"
+
+#: ../gimmie/gimmie_gmail.py:36
+msgid "Gmail Account Settings"
+msgstr "Gmail-käyttäjätiliasetukset"
+
+#: ../gimmie/gimmie_gmail.py:48 ../gimmie/gimmie_gmail.py:156
+msgid "Account Settings"
+msgstr "Käyttäjätilin asetukset"
+
+#: ../gimmie/gimmie_gmail.py:62
+msgid "Sign in to Gmail with your Google Account"
+msgstr "Kirjaudu Gmail-sähköpostiin Google-käyttäjätililläsi"
+
+#: ../gimmie/gimmie_gmail.py:72
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+#: ../gimmie/gimmie_gmail.py:77
+msgid "Password:"
+msgstr "Salasana:"
+
+#: ../gimmie/gimmie_gmail.py:277
+#, python-format
+msgid "Failed to login account %s."
+msgstr "Tiliin %s kirjautuminen epäonnistui."
+
+#: ../gimmie/gimmie_gmail.py:281 ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "_Ohita"
+
+#: ../gimmie/gimmie_gmail.py:283 ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "_Yritä uudestaan"
+
+#: ../gimmie/gimmie_gui.py:691
+msgid "Calendar"
+msgstr "Kalenteri"
+
+#: ../gimmie/gimmie_gui.py:792
+#, python-format
+msgid "Desk %d"
+msgstr "Työtila %d"
+
+#: ../gimmie/gimmie_gui.py:875
+msgid "Use Compact Layout"
+msgstr "Käytä tiivistä asettelua"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "Sammutetaanko tietokone nyt?"
+
+#: ../gimmie/gimmie_logout.py:57
+msgid "_Sleep"
+msgstr "_Keskeytystila"
+
+#: ../gimmie/gimmie_logout.py:62
+msgid "_Hibernate"
+msgstr "_Lepotila"
+
+#: ../gimmie/gimmie_logout.py:68
+msgid "_Reboot"
+msgstr "_Käynnistä uudelleen"
+
+#: ../gimmie/gimmie_logout.py:74
+msgid "Shut _Down"
+msgstr "_Sammuta"
+
+#: ../gimmie/gimmie_logout.py:81
+msgid "Log out of this computer now?"
+msgstr "Kirjaudutaanko ulos tietokoneesta?"
+
+#: ../gimmie/gimmie_logout.py:85
+msgid "_Log Out"
+msgstr "_Kirjaudu ulos"
+
+#: ../gimmie/gimmie_logout.py:175
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Tietokone sammutetaan automaattisesti %d sekunnin päästä."
+msgstr[1] "Tietokone sammutetaan automaattisesti %d sekunnin päästä."
+
+#: ../gimmie/gimmie_logout.py:179
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Sinut kirjataan ulos automaattisesti %d sekunnin päästä."
+msgstr[1] "Sinut kirjataan ulos automaattisesti %d sekunnin päästä."
+
+#: ../gimmie/gimmie_people.py:84 ../gimmie/gimmie_people.py:175
+msgid "Available"
+msgstr "Saavutettavissa"
+
+#: ../gimmie/gimmie_people.py:94
+msgid "Away Messages..."
+msgstr "Poissaoloviesti..."
+
+#: ../gimmie/gimmie_people.py:107
+msgid "Accounts..."
+msgstr "Tilit..."
+
+#: ../gimmie/gimmie_people.py:145
+msgid "New Person"
+msgstr "Uusi henkilö"
+
+#: ../gimmie/gimmie_people.py:146
+msgid "Add a new contact person"
+msgstr "Lisää uusi yhteystieto henkilölle"
+
+#: ../gimmie/gimmie_people.py:176
+msgid "Set your online status"
+msgstr "Aseta linjoillaolosi tila"
+
+#: ../gimmie/gimmie_people.py:191 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "Ihmiset"
+
+#: ../gimmie/gimmie_people.py:203
+msgid "Recent People"
+msgstr "Äskettäiset ihmiset"
+
+#: ../gimmie/gimmie_people.py:204
+msgid "Online Now"
+msgstr "Linjoilla nyt"
+
+#: ../gimmie/gimmie_people.py:205
+msgid "Everybody"
+msgstr "Kaikki"
+
+#: ../gimmie/gimmie_people.py:210
+msgid "Gmail"
+msgstr "Gmail"
+
+#: ../gimmie/gimmie_people.py:213
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:215
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr "Gimmien asetukset"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "Vain teksti"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "Vain kuvakkeet"
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr "Teksti ja kuvakkeet"
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr "Osio_painikkeiden nimiöt:"
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr "Ulkoasu"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "Osiot"
+
+#: ../gimmie/gimmie_tomboy.py:89
+msgid "Notes"
+msgstr "Muistilaput"
+
+#: ../gimmie/gimmie_tomboy.py:93
+msgid "Create New Note"
+msgstr "Luo uusi muistilappu"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Make a new Tomboy note"
+msgstr "Luo uusi Tomboyn muistilappu"
+
+#: ../gimmie/gimmie_topicwin.py:44 ../gimmie/gimmie_topicwin.py:1233
+msgid "Search"
+msgstr "Etsi"
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:488
+msgid "Today"
+msgstr "Tänään"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:489
+msgid "This week"
+msgstr "Viime viikon kuluessa"
+
+#: ../gimmie/gimmie_topicwin.py:167 ../gimmie/gimmie_topicwin.py:490
+msgid "Last 2 weeks"
+msgstr "Viimeisten kahden viikon kuluessa"
+
+#: ../gimmie/gimmie_topicwin.py:168 ../gimmie/gimmie_topicwin.py:491
+msgid "This month"
+msgstr "Viimeisen kuukauden aikana"
+
+#: ../gimmie/gimmie_topicwin.py:169 ../gimmie/gimmie_topicwin.py:492
+msgid "Last 2 months"
+msgstr "Viimeisen 2 kuukauden aikana"
+
+#: ../gimmie/gimmie_topicwin.py:170 ../gimmie/gimmie_topicwin.py:493
+msgid "Last 3 months"
+msgstr "Viimeisen 3 kuukauden aikana"
+
+#: ../gimmie/gimmie_topicwin.py:171 ../gimmie/gimmie_topicwin.py:494
+msgid "Last 6 months"
+msgstr "Viimeisen 6 kuukauden aikana"
+
+#: ../gimmie/gimmie_topicwin.py:193
+msgid "Show timeline"
+msgstr "Näytä aikajana"
+
+#: ../gimmie/gimmie_topicwin.py:1288
+msgid "Set the zoom level"
+msgstr "Aseta suurennuskerroin"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "_Tyhjennä roskakori"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d kohta"
+msgstr[1] "%d kohtaa"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "Tyhjennetäänkö koko roskakori?"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"Jos päätät tyhjentä roskakorin, menetetään kaikki siellä olevat tiedostot "
+"pysyvästi. Huomioi että voit poistaa niitä myös yksitellen."
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "Virhe siirrettäessä"
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"Kohdetta \"%s\" ei voi siirtää roskakoriin, koska sinulla ei ole oikeuksia "
+"muokata kansiota jossa kohde on."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "Virhe poistettaessa"
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"Kohdetta \"%s\" ei vo poistaa, koska sinulla ei ole oikeuksia muokata "
+"kansiota jossa kohde on."
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "Virhe suoritettaessa toimienpidettä tiedostolle."
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Tiedostotoimenpidettä %d ei voi suorittaa kohteelle \"%s\"."
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr ""
+"Kohteita ei voi siirtää roskakoriin, haluatko poistaa ne heti pysyvästi?"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Yhtäkään %d valitusta kohteesta ei voi siirtää roskakoriin"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr ""
+"Joitain kohteita ei voi siirtää roskakoriin, haluatko poistaa ne heti "
+"pysyvästi?"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "Valituista kohteista %d ei voida siirtää roskakoriin"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_Poista"
+
+#: ../gimmie/gimmie_util.py:831
+msgid "Home"
+msgstr "Koti"
+
+#: ../gimmie/gimmie_util.py:835
+msgid "Desktop"
+msgstr "Työpöytä"
+
+#: ../gimmie/gimmie_util.py:892
+msgid "Not Implemented..."
+msgstr "Ei toteutettu..."
+
+#: ../gimmie/gimmie_util.py:897
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+"Auta meitä toteuttamaan tämä ominaisuus muokkaamalla tiedostoa \"%s\" "
+"riviltä %d."
+
+#: ../gimmie/gimmie_util.py:902
+msgid "_Fix It!"
+msgstr "_Korjaa se!"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr "Asento"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr "Ilmoitusalueen asento."
+
+#~ msgid "Applications"
+#~ msgstr "Sovellukset"
+
+#~ msgid "Show All"
+#~ msgstr "Näytä kaikki"
+
+#~ msgid "Hide All"
+#~ msgstr "Piilota kaikki"
+
+#~ msgid "Keep Around"
+#~ msgstr "Pidä näkyvillä"
+
+#~ msgid "Gimmie"
+#~ msgstr "Gimmie"
+
+#~ msgid "Timeline"
+#~ msgstr "Aikajana"
+
+#~ msgid "Network"
+#~ msgstr "Verkko"
+
+#~ msgid "Recently Seen"
+#~ msgstr "Äskettäin nähdyt"
+
+#~ msgid "New Smart Folder"
+#~ msgstr "Uusi älykansio"
+
+#~ msgid "Important Email"
+#~ msgstr "Tärkeät sähköpostit"
+
+#~ msgid "Go"
+#~ msgstr "Siirry"
+
+#~ msgid "_Restart"
+#~ msgstr "_Käynnistä uudestaan"
+
+#~ msgid "_Switch User"
+#~ msgstr "_Vaihda käyttäjää"
+
+#~ msgid "New Group"
+#~ msgstr "Uusi ryhm"
+
+#~ msgid "Add a new group of people to the sidebar"
+#~ msgstr "Lisää uusi ryhmä ihmisiä sivupalkkiin"
+
+#~ msgid "Last 3 days"
+#~ msgstr "Viimeiset 3 päivää"
+
+#~ msgid "Forever"
+#~ msgstr "Ikuisesti"
+
+#~ msgid "If you choose to empty the trash, all "
+#~ msgstr "Jos päätät tyhjentää roskakorin, kaikki "
+
+#~ msgid "items in it will be permanently lost.  "
+#~ msgstr "siellä olevat tiedostot tuhotaan pysyvästi.  "
+
+#~ msgid "Please note that you can also delete "
+#~ msgstr "Huomaa että voit poistaa tiedostoja "
+
+#~ msgid "them separately."
+#~ msgstr "roskakorista myös yksitellen"

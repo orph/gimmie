@@ -1,0 +1,26 @@
+
+Gimmie Build Instructions
+
+----
+
+1) Install devel headers for GTK+2, PyGTK, libgnome-menu and GConf.  
+   To do this on Ubuntu, run:
+	$ sudo apt-get install libgtk2.0-dev python-gtk2-dev \
+	  libgnome-menu-dev libgconf2-dev
+
+2) Optionally install libgnomecups devel headers to display printer status.
+
+3) Build Gimmie:
+	$ ./autogen.sh --prefix=/usr
+	$ make
+	$ sudo make install
+
+   If you have problems with Python packages, try installing python-gnome2,
+   python-gnome2-desktop and python-gnome2-extras packages for your 
+   distribution if they are not installed already.
+
+4) To add Gimmie to your Gnome panel, right click the panel and select 
+   "Add to Panel...".  Gimmie should be located in the Utilities section.
+
+   To start the standalone version just run `gimmie`.  
+

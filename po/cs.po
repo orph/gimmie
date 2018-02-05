@@ -1,0 +1,732 @@
+# translation of cs.po to Czech
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
+# Jakub Friedl <jfriedl@suse.cz>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-11 12:25+0200\n"
+"PO-Revision-Date: 2007-04-11 12:25+0200\n"
+"Last-Translator: \n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "Styl tlačítka appletu"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr ""
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "_O aplikaci"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Preferences"
+msgstr "_Předvolby"
+
+#: ../gimmie/gimmie_applet.py:344
+msgid "Favorite"
+msgstr "Oblíbené"
+
+#: ../gimmie/gimmie_applet.py:348 ../gimmie/gimmie_base.py:122
+msgid "Add to Favorites"
+msgstr "Přidat do oblíbených"
+
+#: ../gimmie/gimmie_applications.py:244
+msgid "Other"
+msgstr ""
+
+#: ../gimmie/gimmie_applications.py:316
+msgid "Install & Update"
+msgstr "Instalace a aktualizace"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Manage software on this computer"
+msgstr "Spravovat software na tomto počítači"
+
+#: ../gimmie/gimmie_applications.py:350 ../gimmie/gimmie_computer.py:425
+#: ../gimmie/gimmie_computer.py:690
+msgid "Settings"
+msgstr "Nastavení"
+
+#: ../gimmie/gimmie_applications.py:351
+msgid "Manage settings and preferences"
+msgstr "Spravovat nastavení a předvolby"
+
+#: ../gimmie/gimmie_applications.py:367
+msgid "Show Desktop"
+msgstr "Zobrazit plochu"
+
+#: ../gimmie/gimmie_applications.py:385 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "Programy"
+
+#: ../gimmie/gimmie_applications.py:405 ../gimmie/gimmie_recent.py:62
+msgid "Recently Used"
+msgstr "Naposledy použito"
+
+#: ../gimmie/gimmie_base.py:147
+msgid "%l:%M %p"
+msgstr "%l:%M %p"
+
+#: ../gimmie/gimmie_base.py:150
+#, python-format
+msgid "Today, %s"
+msgstr "Dnes, %s"
+
+#: ../gimmie/gimmie_base.py:154
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Včera, %s"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "Před %d dnem, %s"
+msgstr[1] "Před %d dny, %s"
+msgstr[2] "Před %d dny, %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Před %d dnem"
+msgstr[1] "Před %d dny"
+msgstr[2] "Před %d dny"
+
+#: ../gimmie/gimmie_base.py:164
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie/gimmie_base.py:166
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie/gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie/gimmie_browser.py:508 ../gimmie/gimmie_topicwin.py:1118
+msgid "Set the zoom level"
+msgstr "Nastavit stupeň přiblížení"
+
+#: ../gimmie/gimmie_browser.py:528 ../gimmie/gimmie_topicwin.py:39
+#: ../gimmie/gimmie_topicwin.py:1063
+msgid "Search"
+msgstr "Hledat"
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "Vše oblíbené"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_documents.py:281
+msgid "Places"
+msgstr "Místa"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "Není vložen disk"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "Volné místo: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "_Vysunout"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "Zařízení a média"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Přidat Bluetooth..."
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "Přistupovat k bezdrátovému zařízení"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "Vytvořit CD/DVD..."
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Vypálit soubory na CD či DVD disk"
+
+#: ../gimmie/gimmie_computer.py:324 ../gimmie/gimmie_documents.py:301
+msgid "Printers"
+msgstr "Tiskárny"
+
+#: ../gimmie/gimmie_computer.py:329
+msgid "Add Printer..."
+msgstr "Přidat tiskárnu..."
+
+#: ../gimmie/gimmie_computer.py:330
+msgid "Setup attached or networked printer"
+msgstr "Nastavit připojenou nebo síťovou tiskárnu"
+
+#: ../gimmie/gimmie_computer.py:387
+msgid "Nearby Computers"
+msgstr "Blízké počítače"
+
+#: ../gimmie/gimmie_computer.py:392
+msgid "Connect to..."
+msgstr "Připojit k..."
+
+#: ../gimmie/gimmie_computer.py:393
+msgid "Access a computer on the network"
+msgstr "Přistupovat k počítači na síti"
+
+#: ../gimmie/gimmie_computer.py:398
+msgid "Windows Network"
+msgstr "Síť Windows"
+
+#: ../gimmie/gimmie_computer.py:399
+msgid "Browse nearby Windows computers"
+msgstr "Procházet blízké počítače s Windows"
+
+#: ../gimmie/gimmie_computer.py:484
+msgid "Administration"
+msgstr "Administrace"
+
+#: ../gimmie/gimmie_computer.py:523
+msgid "About Me"
+msgstr "O této aplikaci"
+
+#: ../gimmie/gimmie_computer.py:529
+msgid "Switch User"
+msgstr "Přepnout uživatele"
+
+#: ../gimmie/gimmie_computer.py:535
+msgid "Log Out..."
+msgstr "Odhlásit se..."
+
+#: ../gimmie/gimmie_computer.py:563
+msgid "Switch to another user"
+msgstr "Přepnout na jiného uživatele"
+
+#: ../gimmie/gimmie_computer.py:580
+msgid "Shutdown..."
+msgstr "Vypnout..."
+
+#: ../gimmie/gimmie_computer.py:581
+msgid "Shutdown or suspend this computer"
+msgstr "Vypnout nebo uspat tento počítač"
+
+#: ../gimmie/gimmie_computer.py:591
+msgid "Help"
+msgstr "Nápověda"
+
+#: ../gimmie/gimmie_computer.py:596
+msgid "About Gnome"
+msgstr "O GNOME"
+
+#: ../gimmie/gimmie_computer.py:608
+msgid "Volume: 75%"
+msgstr "Hlasitost: 75%"
+
+#: ../gimmie/gimmie_computer.py:613 ../gimmie/gimmie_computer.py:629
+msgid "Not Implemented"
+msgstr "Neimplementováno"
+
+#: ../gimmie/gimmie_computer.py:624
+msgid "Change the network location"
+msgstr ""
+
+#: ../gimmie/gimmie_computer.py:691
+msgid "Preferences & Administration"
+msgstr "Předvolby a administrace"
+
+#: ../gimmie/gimmie_computer.py:709 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "Počítač"
+
+#: ../gimmie/gimmie_computer.py:794
+msgid "Computer, %l:%M %p"
+msgstr "Počítač, %l:%M %p"
+
+#: ../gimmie/gimmie_documents.py:109
+msgid "Attachments"
+msgstr "Přílohy"
+
+#: ../gimmie/gimmie_documents.py:138 ../gimmie/gimmie_documents.py:175
+msgid "New Document"
+msgstr "Nový dokument"
+
+#: ../gimmie/gimmie_documents.py:176
+msgid "Create a new document"
+msgstr "Vytvořit nový dokument"
+
+#: ../gimmie/gimmie_documents.py:212
+msgid "No templates available"
+msgstr "Nejsou dostupné žádné šablony"
+
+#: ../gimmie/gimmie_documents.py:221
+msgid "Empty File"
+msgstr "Prázdný soubor"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_documents.py:228
+msgid "Templates"
+msgstr "Šablony"
+
+#: ../gimmie/gimmie_documents.py:266 ../gimmie/gimmie_documents.py:268
+#: ../gimmie/gimmie_documents.py:289 ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "Koš"
+
+#: ../gimmie/gimmie_documents.py:282
+#, fuzzy
+msgid "Open commonly used locations"
+msgstr "Otevřít běžně používaná umístění dokumentů"
+
+#: ../gimmie/gimmie_documents.py:290
+msgid "Open the deleted files trashcan"
+msgstr ""
+
+#: ../gimmie/gimmie_documents.py:302
+msgid "View printers available for document printing"
+msgstr "Zobrazit dostupné tiskárny pro tisk dokumentů"
+
+#: ../gimmie/gimmie_documents.py:323 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "Knihovna"
+
+#: ../gimmie/gimmie_documents.py:331
+msgid "Documents"
+msgstr "Dokumenty"
+
+#. Tomboy
+#: ../gimmie/gimmie_documents.py:370
+msgid "Music & Movies"
+msgstr "Hudba a filmy"
+
+#: ../gimmie/gimmie_documents.py:375
+msgid "Flickr Photos"
+msgstr "Fotografie na Flickru"
+
+#: ../gimmie/gimmie_documents.py:376
+msgid "Google Office"
+msgstr "Kancelář Google"
+
+#: ../gimmie/gimmie_gaim.py:101
+#, python-format
+msgid "Idle since %s"
+msgstr ""
+
+#: ../gimmie/gimmie_gaim.py:104
+msgid "Idle"
+msgstr "Nečinný"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:86
+msgid "Away"
+msgstr "Pryč"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:77
+msgid "Offline"
+msgstr "Offline"
+
+#: ../gimmie/gimmie_gmail.py:36
+msgid "Gmail Account Settings"
+msgstr "Nastavení účtu Gmail"
+
+#: ../gimmie/gimmie_gmail.py:48 ../gimmie/gimmie_gmail.py:156
+msgid "Account Settings"
+msgstr "Nastavení účtu"
+
+#: ../gimmie/gimmie_gmail.py:62
+msgid "Sign in to Gmail with your Google Account"
+msgstr ""
+
+#: ../gimmie/gimmie_gmail.py:72
+msgid "Username:"
+msgstr ""
+
+#: ../gimmie/gimmie_gmail.py:77
+msgid "Password:"
+msgstr ""
+
+#: ../gimmie/gimmie_gmail.py:277
+#, python-format
+msgid "Failed to login account %s."
+msgstr ""
+
+#: ../gimmie/gimmie_gmail.py:281 ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "_Přeskočit"
+
+#: ../gimmie/gimmie_gmail.py:283 ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "_Zkusit znovu"
+
+#: ../gimmie/gimmie_gui.py:687
+msgid "Calendar"
+msgstr "Kalendář"
+
+#: ../gimmie/gimmie_gui.py:788
+#, python-format
+msgid "Desk %d"
+msgstr "Deska %d"
+
+#: ../gimmie/gimmie_gui.py:871
+msgid "Use Compact Layout"
+msgstr "Používat kompaktní uspořádání"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "Vypnout nyní tento počítač?"
+
+#: ../gimmie/gimmie_logout.py:57 ../gimmie/gimmie_logout.py:61
+#, fuzzy
+msgid "_Sleep"
+msgstr "_Smazat"
+
+#: ../gimmie/gimmie_logout.py:67
+#, fuzzy
+msgid "_Reboot"
+msgstr "_Zkusit znovu"
+
+#: ../gimmie/gimmie_logout.py:73
+#, fuzzy
+msgid "Shut _Down"
+msgstr "_Vypnout"
+
+#: ../gimmie/gimmie_logout.py:80
+msgid "Log out of this computer now?"
+msgstr "Odhlásit se nyní z tohoto počítače?"
+
+#: ../gimmie/gimmie_logout.py:84
+msgid "_Log Out"
+msgstr "_Odhlásit se"
+
+#: ../gimmie/gimmie_logout.py:174
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Tento počítač bude automaticky vypnut během %d sekundy."
+msgstr[1] "Tento počítač bude automaticky vypnut během %d sekund."
+msgstr[2] "Tento počítač bude automaticky vypnut během %d sekund."
+
+#: ../gimmie/gimmie_logout.py:178
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Budete automaticky odhlášeni během %d sekundy."
+msgstr[1] "Budete automaticky odhlášeni během %d sekund."
+msgstr[2] "Budete automaticky odhlášeni během %d sekund."
+
+#: ../gimmie/gimmie_people.py:72 ../gimmie/gimmie_people.py:146
+msgid "Available"
+msgstr "Dostupní"
+
+#: ../gimmie/gimmie_people.py:82
+msgid "Away Messages..."
+msgstr "Zprávy o nepřítomnosti..."
+
+#: ../gimmie/gimmie_people.py:95
+msgid "Accounts..."
+msgstr "Účty..."
+
+#: ../gimmie/gimmie_people.py:126
+msgid "New Person"
+msgstr "Nová osoba"
+
+#: ../gimmie/gimmie_people.py:127
+msgid "Add a new contact person"
+msgstr "Přidat novou kontaktní osobu"
+
+#: ../gimmie/gimmie_people.py:147
+msgid "Set your online status"
+msgstr "Nastavit online stav"
+
+#: ../gimmie/gimmie_people.py:162 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "Lidé"
+
+#: ../gimmie/gimmie_people.py:171
+msgid "Recent People"
+msgstr "Poslední lidé"
+
+#: ../gimmie/gimmie_people.py:172
+msgid "Online Now"
+msgstr "Nyní online"
+
+#: ../gimmie/gimmie_people.py:173
+msgid "Everybody"
+msgstr "Všichni"
+
+#: ../gimmie/gimmie_people.py:178
+#, fuzzy
+msgid "Gmail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:181
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:183
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr ""
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr ""
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr ""
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr ""
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr ""
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr ""
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr ""
+
+#: ../gimmie/gimmie_tomboy.py:90
+msgid "Notes"
+msgstr "Poznámky"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Create New Note"
+msgstr "Vytvořit novou poznámku"
+
+#: ../gimmie/gimmie_tomboy.py:95
+msgid "Make a new Tomboy note"
+msgstr "Vytvořit novou Tomboy poznámku"
+
+#: ../gimmie/gimmie_topicwin.py:160 ../gimmie/gimmie_topicwin.py:382
+msgid "Today"
+msgstr "Dnes"
+
+#: ../gimmie/gimmie_topicwin.py:161 ../gimmie/gimmie_topicwin.py:383
+#, fuzzy
+msgid "This week"
+msgstr "Minulý týden"
+
+#: ../gimmie/gimmie_topicwin.py:162 ../gimmie/gimmie_topicwin.py:384
+msgid "Last 2 weeks"
+msgstr "Poslední 2 týdny"
+
+#: ../gimmie/gimmie_topicwin.py:163 ../gimmie/gimmie_topicwin.py:385
+#, fuzzy
+msgid "This month"
+msgstr "Poslední měsíc"
+
+#: ../gimmie/gimmie_topicwin.py:164 ../gimmie/gimmie_topicwin.py:386
+#, fuzzy
+msgid "Last 2 months"
+msgstr "Poslední měsíc"
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:387
+#, fuzzy
+msgid "Last 3 months"
+msgstr "Poslední měsíc"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:388
+#, fuzzy
+msgid "Last 6 months"
+msgstr "Poslední měsíc"
+
+#: ../gimmie/gimmie_topicwin.py:188
+msgid "Show timeline"
+msgstr "Zobrazit časovou osu"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "Vysypat _koš"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d položka"
+msgstr[1] "%d položky"
+msgstr[2] "%d položek"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "Vysypat všechny položky z koše?"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"Pokud se rozhodnete vyprázdnit koš, budou všechny položky v něm obsažené "
+"nenávratně ztraceny. Položky můžete mazat také jednotlivě."
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "Chyba během přesunu."
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"Položku \"%s\" nelze přesunout do koše, protože nemáte oprávnění položku "
+"nebo její rodičovský adresář měnit."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "Chyba během mazání."
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"Položku \"%s\" nelze smazat, protože nemáte oprávnění měnit její rodičovský "
+"adresář."
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "Chyba během provádění operace."
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Nelze vykonat souborovou operaci %d na \"%s\"."
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Položky nelze přesunout do koše, chcete je smazat okamžitě?"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Žádná z %d vybraných položek nemůže být přesunuta do koše"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Některé položky nelze přesunout do koše, chcete je smazat okamžitě?"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d z vybraných položek nelze přesunout do koše"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_Smazat"
+
+#: ../gimmie/gimmie_util.py:763
+msgid "Home"
+msgstr "Domov"
+
+#: ../gimmie/gimmie_util.py:767
+msgid "Desktop"
+msgstr "Plocha"
+
+#: ../gimmie/gimmie_util.py:962
+msgid "Not Implemented..."
+msgstr "Neimplementováno..."
+
+#: ../gimmie/gimmie_util.py:967
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+"Pomozte nám s implementací této vlastnosti  editací souboru \"%s\" na řádce %"
+"d."
+
+#: ../gimmie/gimmie_util.py:972
+msgid "_Fix It!"
+msgstr "_Opravte to!"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr ""
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr ""

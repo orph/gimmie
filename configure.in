@@ -1,0 +1,118 @@
+AC_INIT(gimmie, 0.2.8, alex@beatniksoftware.com)
+
+AC_CONFIG_SRCDIR(gimmie/__init__.py)
+AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_MACRO_DIR([m4])
+
+AM_INIT_AUTOMAKE
+GNOME_COMMON_INIT
+
+AM_MAINTAINER_MODE
+AM_DISABLE_STATIC
+AM_PROG_LIBTOOL
+AC_SUBST(ACLOCAL_AMFLAGS, "$ACLOCAL_FLAGS -I m4")
+AC_PROG_CC
+AC_PROG_INSTALL
+
+
+#
+# Setup GETTEXT
+#
+ALL_LINGUAS="ar ca cs da de dz el en_GB es fi fr gl hu ja lv mk nb oc pt_BR ru sv vi zh_CN"
+GETTEXT_PACKAGE=gimmie
+AC_PROG_INTLTOOL([0.33])
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package])
+AM_GLIB_GNU_GETTEXT
+
+
+#
+# Find gconftool-2
+#
+AC_PATH_PROG(GCONFTOOL, gconftool-2)
+AM_GCONF_SOURCE_2
+
+
+#
+# Check for Python
+#
+AM_PATH_PYTHON
+AM_CHECK_PYTHON_HEADERS(,[AC_MSG_ERROR(could not find Python headers)])
+
+#
+# Check for pygtk, gnome-python, and gnome-python-extras
+#
+PKG_CHECK_MODULES(GIMMIE, 
+		  gtk+-2.0 >= 2.6
+		  pygtk-2.0 >= 2.6
+		  libgnome-menu >= 2.18)
+AC_SUBST(GIMMIE_CFLAGS)
+AC_SUBST(GIMMIE_LIBS)
+
+PKG_CHECK_MODULES(GNOMECUPS, 
+		  libgnomecups-1.0 >= 0.2.2,
+		  ENABLE_GNOMECUPS="yes",
+		  ENABLE_GNOMECUPS="no")
+AM_CONDITIONAL(ENABLE_GNOMECUPS, test "x$ENABLE_GNOMECUPS" != "xno")
+AC_SUBST(GNOMECUPS_CFLAGS)
+AC_SUBST(GNOMECUPS_LIBS)
+
+
+#
+# Check for needed python modules
+#
+AM_CHECK_PYMOD(gobject)
+AM_CHECK_PYMOD(gtk)
+AM_CHECK_PYMOD(gtk, RecentManager,, AM_CHECK_PYMOD(egg.recent))
+AM_CHECK_PYMOD(pango)
+AM_CHECK_PYMOD(dbus)
+AM_CHECK_PYMOD(gconf)
+AM_CHECK_PYMOD(gnomevfs)
+AM_CHECK_PYMOD(gnome)
+AM_CHECK_PYMOD(gnome.ui)
+AM_CHECK_PYMOD(gnomedesktop)
+AM_CHECK_PYMOD(gnomeapplet)
+AM_CHECK_PYMOD(wnck)
+
+
+#
+# PyGTK Codegen and defs files
+#
+AC_PATH_PROG(PYGTK_CODEGEN, pygtk-codegen-2.0, no)
+if test "x$PYGTK_CODEGEN" = xno; then
+  AC_MSG_ERROR(could not find pygtk-codegen-2.0 script)
+fi
+
+AC_MSG_CHECKING(for pygtk defs)
+PYGTK_DEFSDIR=`$PKG_CONFIG --variable=defsdir pygtk-2.0`
+AC_SUBST(PYGTK_DEFSDIR)
+AC_MSG_RESULT($PYGTK_DEFSDIR)
+
+
+#
+# If libpanelapplet available, use it to find .server install location.
+#
+PANELAPPLET_SERVER_DIR="$libdir/bonobo/servers"
+if test "x$prefix" = "x$ac_default_prefix"; then
+   PANELAPPLET_LIBDIR=`$PKG_CONFIG --variable=libdir libpanelapplet-2.0`
+   if test "x$PANELAPPLET_LIBDIR" != "x"; then
+      PANELAPPLET_SERVER_DIR="$PANELAPPLET_LIBDIR/bonobo/servers"
+   fi
+fi
+AC_SUBST(PANELAPPLET_SERVER_DIR)
+
+
+AC_OUTPUT([
+Makefile
+data/Makefile
+data/images/Makefile
+gimmie/Makefile
+gimmie/gimmie_globals.py
+gimmie/gdmclient/Makefile
+gimmie/gmenu/Makefile
+gimmie/gnomecups/Makefile
+gimmie/iconentry/Makefile
+gimmie/sexy/Makefile
+gimmie/traymanager/Makefile
+po/Makefile.in
+])

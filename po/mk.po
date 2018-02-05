@@ -1,0 +1,583 @@
+# translation of gimmie.HEAD.po to Macedonian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jovan Naumovski <jovan@lugola.net>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie.HEAD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-08-06 10:51+0200\n"
+"PO-Revision-Date: 2006-08-06 14:51+0200\n"
+"Last-Translator: Jovan Naumovski <jovan@lugola.net>\n"
+"Language-Team: Macedonian <ossm-members@hedona.on.net.mk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural= n==1 || n%10==1 ? 0 : 1\n"
+"X-Generator: KBabel 1.11.2\n"
+
+#: ../gimmie_applications.py:423
+msgid "Applications"
+msgstr "Апликации"
+
+#: ../gimmie_applications.py:441 ../gimmie_computer.py:41
+#: ../gimmie_documents.py:30
+msgid "Recently Used"
+msgstr "Скорашно употребувани"
+
+#: ../gimmie_applications.py:463
+msgid "Install & Update"
+msgstr "Инсталирај и ажурирај"
+
+#: ../gimmie_applications.py:464
+msgid "Manage applications on this computer"
+msgstr "Менаџирај со апликациите на овој компјутер"
+
+#: ../gimmie_applications.py:471 ../gimmie_computer.py:764
+#: ../gimmie_computer.py:956
+msgid "Settings"
+msgstr "Поставувања"
+
+#: ../gimmie_applications.py:472
+msgid "Manage settings and preferences"
+msgstr "Менаџирај со поставувањата и преференците"
+
+#: ../gimmie_applications.py:498
+msgid "Show All"
+msgstr "Прикажи сѐ"
+
+#: ../gimmie_applications.py:500
+msgid "Hide All"
+msgstr "Скриј сѐ"
+
+#: ../gimmie_base.py:112
+msgid "Keep Around"
+msgstr "Чувај ги наоколу"
+
+#: ../gimmie_base.py:131
+msgid "%l:%M %p"
+msgstr "%l:%M %p"
+
+#: ../gimmie_base.py:133
+#, python-format
+msgid "Today, %s"
+msgstr "Денес, %s"
+
+#: ../gimmie_base.py:135
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Вчера, %s"
+
+#: ../gimmie_base.py:137
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "пред %d ден, %s"
+msgstr[1] "пред %d дена, %s"
+msgstr[2] "пред %d дена, %s"
+
+#: ../gimmie_base.py:141
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "пред %d ден"
+msgstr[1] "пред %d дена"
+msgstr[2] "пред %d дена"
+
+#: ../gimmie_base.py:145
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie_base.py:147
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie_browser.py:508 ../gimmie_topicwin.py:783
+msgid "Set the zoom level"
+msgstr "Поставете го нивото на зумирање"
+
+#: ../gimmie_browser.py:528 ../gimmie_topicwin.py:37 ../gimmie_topicwin.py:803
+msgid "Search"
+msgstr "Барај"
+
+#: ../gimmie_computer.py:132
+#, python-format
+msgid "Desk %d"
+msgstr "Работна површина %d"
+
+#: ../gimmie_computer.py:190
+msgid "Use Compact Layout"
+msgstr "Користи компактен изглед"
+
+#: ../gimmie_computer.py:241
+msgid "Calendar"
+msgstr "Календар"
+
+#: ../gimmie_computer.py:401
+msgid "Places"
+msgstr "Места"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie_computer.py:432
+msgid "No disk inserted"
+msgstr "Не е внесен диск"
+
+#: ../gimmie_computer.py:451
+#, python-format
+msgid "Free space: %s"
+msgstr "Слободен простор: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie_computer.py:474
+msgid "_Eject"
+msgstr "_Извади"
+
+#: ../gimmie_computer.py:488
+msgid "Devices & Media"
+msgstr "Уреди и медиуми"
+
+#: ../gimmie_computer.py:492
+msgid "Add Bluetooth..."
+msgstr "Додај Bluetooth..."
+
+#: ../gimmie_computer.py:493
+msgid "Access a wireless device"
+msgstr "Пристапи безжичен уред"
+
+#: ../gimmie_computer.py:498
+msgid "Create CD/DVD..."
+msgstr "Креирај CD/DVD..."
+
+#: ../gimmie_computer.py:499
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Сними датотеки на CD или DVD диск"
+
+#: ../gimmie_computer.py:622 ../gimmie_documents.py:459
+#: ../gimmie_documents.py:497
+msgid "Printers"
+msgstr "Печатачи"
+
+#: ../gimmie_computer.py:627
+msgid "Add Printer..."
+msgstr "Додај печатач..."
+
+#: ../gimmie_computer.py:628
+msgid "Setup attached or networked printer"
+msgstr "Постави прикачен или вмрежен печатач"
+
+#: ../gimmie_computer.py:682
+msgid "Nearby Computers"
+msgstr "Компјутери во близина"
+
+#: ../gimmie_computer.py:687
+msgid "Connect to..."
+msgstr "Поврзи се со..."
+
+#: ../gimmie_computer.py:688
+msgid "Access a computer on the network"
+msgstr "Пристапи компјутер на мрежата"
+
+#: ../gimmie_computer.py:693
+msgid "Windows Network"
+msgstr "Windows мрежа"
+
+#: ../gimmie_computer.py:694
+msgid "Browse nearby Windows computers"
+msgstr "Разгледај ги околните Windows мрежи"
+
+#: ../gimmie_computer.py:725
+msgid "Computer"
+msgstr "Компјутер"
+
+#: ../gimmie_computer.py:775
+msgid "Timeline"
+msgstr "Временска линија"
+
+#: ../gimmie_computer.py:820
+msgid "Computer, %l:%M %p"
+msgstr "Компјутер, %l:%M %p"
+
+#: ../gimmie_computer.py:843
+msgid "Switch to another user"
+msgstr "Смени друг корисник"
+
+#: ../gimmie_computer.py:866
+msgid "Volume: 75%"
+msgstr "Јачина на звук: 75%"
+
+#: ../gimmie_computer.py:869
+msgid "Not Implemented"
+msgstr "Не е имплементирано"
+
+#: ../gimmie_computer.py:879 ../gimmie_computer.py:980
+msgid "Shutdown..."
+msgstr "Исклучи се..."
+
+#: ../gimmie_computer.py:880
+msgid "Shutdown or suspend this computer"
+msgstr "Исклучи го или суспендирај го овој компјутер"
+
+#: ../gimmie_computer.py:888
+msgid "About Me"
+msgstr "За мене"
+
+#: ../gimmie_computer.py:894
+msgid "Switch User"
+msgstr "Смени корисник"
+
+#: ../gimmie_computer.py:900
+msgid "Log Out..."
+msgstr "Одјави се..."
+
+#: ../gimmie_computer.py:972
+msgid "Network"
+msgstr "Мрежа"
+
+#: ../gimmie_documents.py:65
+msgid "Recently Seen"
+msgstr "Скорашно видени"
+
+#: ../gimmie_documents.py:187
+msgid "New Smart Folder"
+msgstr "Нова паметна папка"
+
+#: ../gimmie_documents.py:202 ../gimmie_documents.py:419
+#: ../gimmie_documents.py:477
+msgid "New Document"
+msgstr "Нов документ"
+
+#: ../gimmie_documents.py:221
+msgid "Documents"
+msgstr "Документи"
+
+#: ../gimmie_documents.py:239
+msgid "Attachments"
+msgstr "Приврзоци"
+
+#: ../gimmie_documents.py:241
+msgid "Important Email"
+msgstr "Важна е-пошта"
+
+#. Tomboy
+#. RecentlyUsedOfMimeType(
+#. _("Office Documents"),
+#. "stock_new-presentation",
+#. ["application/ms-powerpoint",
+#. "application/vnd.oasis.opendocument.presentation",
+#. "application/vnd.sun.xml.impress",
+#. "application/x-abiword",
+#. "text/plain",
+#. "application/msword",
+#. "application/vnd.ms-excel",
+#. "application/x-gnumeric"]),
+#. RecentlyUsedOfMimeType(_("PDFs"),
+#. "gnome-pdf",
+#. ["application/pdf",
+#. "application/ps"
+#. "application/x-dvi"]),
+#: ../gimmie_documents.py:259
+msgid "Music & Movies"
+msgstr "Музика и видео"
+
+#: ../gimmie_documents.py:271
+msgid "Photos"
+msgstr "Фотографии"
+
+#: ../gimmie_documents.py:315 ../gimmie_documents.py:317
+#: ../gimmie_trash.py:146
+msgid "Trash"
+msgstr "Ѓубре"
+
+#: ../gimmie_documents.py:354
+msgid "No templates available"
+msgstr "Нема достапни шаблони"
+
+#: ../gimmie_documents.py:364
+msgid "Empty File"
+msgstr "Празна датотека"
+
+#. Add a link to the templates directory
+#: ../gimmie_documents.py:373
+msgid "Templates"
+msgstr "Шаблони"
+
+#: ../gimmie_documents.py:420
+msgid "Create a new document"
+msgstr "Креирај нов документ"
+
+#: ../gimmie_documents.py:438 ../gimmie_documents.py:486
+msgid "Go"
+msgstr "Оди"
+
+#: ../gimmie_documents.py:439
+msgid "Open commonly used document locations"
+msgstr "Отвори често употребувани локации на документи"
+
+#: ../gimmie_documents.py:460
+msgid "View printers available for document printing"
+msgstr "Прегледај печатачи достапни за печатење на документ"
+
+#: ../gimmie_gaim.py:95
+msgid "Idle"
+msgstr "Неактивен"
+
+#: ../gimmie_gaim.py:97 ../gimmie_people.py:291
+msgid "Away"
+msgstr "Отсутен"
+
+#: ../gimmie_gaim.py:100 ../gimmie_people.py:282
+msgid "Offline"
+msgstr "Офлајн"
+
+#: ../gimmie_logout.py:51
+msgid "Shut down this computer now?"
+msgstr "Да го исклучам овој компјуетр сега?"
+
+#: ../gimmie_logout.py:53
+msgid "_Restart"
+msgstr "_Рестартирај"
+
+#: ../gimmie_logout.py:60
+msgid "_Shut Down"
+msgstr "_Исклучи се"
+
+#: ../gimmie_logout.py:67
+msgid "Log out of this computer now?"
+msgstr "Да се одјавите од овој компјутер сега?"
+
+#: ../gimmie_logout.py:69
+msgid "_Switch User"
+msgstr "_Смени корисник"
+
+#: ../gimmie_logout.py:72
+msgid "_Log Out"
+msgstr "_Одјави се"
+
+#: ../gimmie_logout.py:151
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Овој компјутер ќе биде автоматски исклучен за %d секунда."
+msgstr[1] "Овој компјутер ќе биде автоматски исклучен за %d секунди."
+msgstr[2] "Овој компјутер ќе биде автоматски исклучен за %d секунди."
+
+#: ../gimmie_logout.py:155
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Ќе бидете автоматски одјавени за %d секунда."
+msgstr[1] "Ќе бидете автоматски одјавени за %d секунди."
+msgstr[2] "Ќе бидете автоматски одјавени за %d секунди."
+
+#: ../gimmie_people.py:242
+msgid "People"
+msgstr "Луѓе"
+
+#. FIXME: Prune for groups at the current zoom level?
+#: ../gimmie_people.py:250
+msgid "Recent People"
+msgstr "Скорашни луѓе"
+
+#: ../gimmie_people.py:251
+msgid "Online Now"
+msgstr "Сега е онлајн"
+
+#: ../gimmie_people.py:252
+msgid "Everybody"
+msgstr "Сите"
+
+#: ../gimmie_people.py:254
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie_people.py:255
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie_people.py:277 ../gimmie_people.py:360 ../gimmie_people.py:372
+msgid "Available"
+msgstr "Достапен"
+
+#: ../gimmie_people.py:287
+msgid "Away Messages..."
+msgstr "Пораки за отсутност..."
+
+#: ../gimmie_people.py:300
+msgid "Accounts..."
+msgstr "Сметки..."
+
+#: ../gimmie_people.py:346
+msgid "New Person"
+msgstr "Нова личност"
+
+#: ../gimmie_people.py:347
+msgid "Add a new contact person"
+msgstr "Додај нова личност за контакт"
+
+#: ../gimmie_people.py:353
+msgid "New Group"
+msgstr "Нова група"
+
+#: ../gimmie_people.py:354
+msgid "Add a new group of people to the sidebar"
+msgstr "Додај нова група со луѓе на страничната лента"
+
+#: ../gimmie_people.py:361
+msgid "Set your online status"
+msgstr "Поставете го Вашиот онлајн статус"
+
+#: ../gimmie_tomboy.py:77
+msgid "Notes"
+msgstr "Белешки"
+
+#: ../gimmie_tomboy.py:81
+msgid "Create New Note"
+msgstr "Креирај нова белешка"
+
+#: ../gimmie_tomboy.py:82
+msgid "Make a new Tomboy note"
+msgstr "Направи нова Tomboy белешка"
+
+#: ../gimmie_topicwin.py:158
+msgid "Today"
+msgstr "Денес"
+
+#: ../gimmie_topicwin.py:159
+msgid "Last 3 days"
+msgstr "Во последните 3 дена"
+
+#: ../gimmie_topicwin.py:160
+msgid "Last week"
+msgstr "Последната недела"
+
+#: ../gimmie_topicwin.py:161
+msgid "Last 2 weeks"
+msgstr "Последните 2 недели"
+
+#: ../gimmie_topicwin.py:162
+msgid "Last month"
+msgstr "Последниот месец"
+
+#: ../gimmie_topicwin.py:163
+msgid "Forever"
+msgstr "Засекогаш"
+
+#: ../gimmie_topicwin.py:185
+msgid "Show timeline"
+msgstr "Прикажи временска лента"
+
+#: ../gimmie_trash.py:169 ../gimmie_trash.py:205
+msgid "_Empty Trash"
+msgstr "_Испразни го ѓубрето"
+
+#: ../gimmie_trash.py:176
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d предмет"
+msgstr[1] "%d предмети"
+msgstr[2] "%d предмети"
+
+#: ../gimmie_trash.py:197
+msgid "Empty all of the items from the trash?"
+msgstr "Да ги испразнам сите предмети од ѓубрето?"
+
+#: ../gimmie_trash.py:198
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"Ако одберете да го испразните ѓубрето, сите предмети во него ќе бидат изгубени засекогаш.  "
+"Забележете дека можете да ги избришете одделно."
+
+#: ../gimmie_trash.py:221
+msgid "Error while moving."
+msgstr "Грешка при поместувањето."
+
+#: ../gimmie_trash.py:222
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"Не можам да го преместам \"%s\" во ѓубрето бидејќи немате дозвола да го променувате "
+"неговата главна папка."
+
+#: ../gimmie_trash.py:224
+msgid "Error while deleting."
+msgstr "Грешка при бришењето."
+
+#: ../gimmie_trash.py:225
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"\"%s\" не може да биде избришан бидејќи немате дозвола за да ја менувате "
+"неговата папка."
+
+#: ../gimmie_trash.py:227
+msgid "Error while performing file operation."
+msgstr "Грешка при извршување на операција врз датотеката."
+
+#: ../gimmie_trash.py:228
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Не можам да ја извршам операцијата %d врз \"%s\"."
+
+#: ../gimmie_trash.py:235
+msgid "_Skip"
+msgstr "_Прескокни"
+
+#: ../gimmie_trash.py:241
+msgid "_Retry"
+msgstr "_Обиди се повторно"
+
+#: ../gimmie_trash.py:295
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Не можам ги преместам предметите во ѓубрето. Дали сакате да ги избришете веднаш?"
+
+#: ../gimmie_trash.py:296
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Никој од избраните %d предмети не може да биде преместен во ѓубрето"
+
+#: ../gimmie_trash.py:298
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Не можам да преместам некои предмети во ѓубрето. Дали сакате да ги избришете веднаш?"
+
+#: ../gimmie_trash.py:299
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d од избраните предмети не може да се преместат во ѓубрето"
+
+#: ../gimmie_trash.py:309
+msgid "_Delete"
+msgstr "_Избриши"
+
+#: ../gimmie_util.py:693
+msgid "Home"
+msgstr "Дома"
+
+#: ../gimmie_util.py:697
+msgid "Desktop"
+msgstr "Работна површина"
+
+#: ../gimmie_util.py:785
+msgid "Not Implemented..."
+msgstr "Не е имплементирано..."
+
+#: ../gimmie_util.py:790
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr "Помогнете ни да ја напишеме оваа карактеристика со уредување на датотеката \"%s\" на линијата број %d."
+
+#: ../gimmie_util.py:795
+msgid "_Fix It!"
+msgstr "_Поправи го!"
+

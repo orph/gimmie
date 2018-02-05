@@ -1,0 +1,596 @@
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Valek Filippov <frob at df dot ru>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-08 18:52+0200\n"
+"PO-Revision-Date: 2006-07-12 23:20+0400\n"
+"Last-Translator: Valek Filippov <frob at df dot ru>\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../gimmie_applications.py:423
+msgid "Applications"
+msgstr "Приложения"
+
+#: ../gimmie_applications.py:441
+#: ../gimmie_computer.py:41
+#: ../gimmie_documents.py:30
+msgid "Recently Used"
+msgstr "Последние использовавшиеся"
+
+#: ../gimmie_applications.py:463
+msgid "Install & Update"
+msgstr "Установить и обновить"
+
+#: ../gimmie_applications.py:464
+msgid "Manage applications on this computer"
+msgstr "Управление приложениями на этом компьютере"
+
+#: ../gimmie_applications.py:471
+#: ../gimmie_computer.py:758
+#: ../gimmie_computer.py:950
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../gimmie_applications.py:472
+msgid "Manage settings and preferences"
+msgstr "Управление настройками и установками"
+
+#: ../gimmie_applications.py:498
+msgid "Show All"
+msgstr "Показать все"
+
+#: ../gimmie_applications.py:500
+msgid "Hide All"
+msgstr "Скрыть все"
+
+#: ../gimmie_base.py:112
+msgid "Keep Around"
+msgstr ""
+
+#: ../gimmie_base.py:131
+msgid "%l:%M %p"
+msgstr "%l:%M %p"
+
+#: ../gimmie_base.py:133
+#, python-format
+msgid "Today, %s"
+msgstr "Сегодня, %s"
+
+#: ../gimmie_base.py:135
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Вчера, %s"
+
+#: ../gimmie_base.py:137
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d день назад, %s"
+msgstr[1] "%d дня назад, %s"
+msgstr[2] "%d дней назад, %s"
+
+#: ../gimmie_base.py:141
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d день назад"
+msgstr[1] "%d дня назад"
+msgstr[2] "%d дней назад"
+
+#: ../gimmie_base.py:145
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie_base.py:147
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie_browser.py:508
+#: ../gimmie_topicwin.py:747
+msgid "Set the zoom level"
+msgstr "Установить масштаб"
+
+#: ../gimmie_browser.py:528
+#: ../gimmie_topicwin.py:36
+#: ../gimmie_topicwin.py:767
+msgid "Search"
+msgstr "Поиск"
+
+#: ../gimmie_computer.py:132
+#, python-format
+msgid "Desk %d"
+msgstr "Стол %d"
+
+#: ../gimmie_computer.py:184
+msgid "Use Compact Layout"
+msgstr "Использовать плотное размещение"
+
+#: ../gimmie_computer.py:235
+msgid "Calendar"
+msgstr "Календарь"
+
+#: ../gimmie_computer.py:395
+msgid "Places"
+msgstr "Места"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie_computer.py:426
+msgid "No disk inserted"
+msgstr "Диск не вставлен"
+
+#: ../gimmie_computer.py:445
+#, python-format
+msgid "Free space: %s"
+msgstr "Своб. место: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie_computer.py:468
+msgid "_Eject"
+msgstr "_Извлечь"
+
+#: ../gimmie_computer.py:482
+msgid "Devices & Media"
+msgstr "Устройства и носители"
+
+#: ../gimmie_computer.py:486
+msgid "Add Bluetooth..."
+msgstr "Добавить Bluetooth..."
+
+#: ../gimmie_computer.py:487
+msgid "Access a wireless device"
+msgstr "Доступ к беспроводному устройству"
+
+#: ../gimmie_computer.py:492
+msgid "Create CD/DVD..."
+msgstr "Создать CD/DVD"
+
+#: ../gimmie_computer.py:493
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Записать файлы на CD или DVD диск"
+
+#: ../gimmie_computer.py:616
+#: ../gimmie_documents.py:459
+#: ../gimmie_documents.py:497
+msgid "Printers"
+msgstr "Принтеры"
+
+#: ../gimmie_computer.py:621
+msgid "Add Printer..."
+msgstr "Добавить принтера..."
+
+#: ../gimmie_computer.py:622
+msgid "Setup attached or networked printer"
+msgstr "Настроить подключённый или сетевой принтер"
+
+#: ../gimmie_computer.py:676
+msgid "Nearby Computers"
+msgstr "Соседние компьютеры"
+
+#: ../gimmie_computer.py:681
+msgid "Connect to..."
+msgstr "Подключиться к..."
+
+#: ../gimmie_computer.py:682
+msgid "Access a computer on the network"
+msgstr "Доступ к компьютеру через сеть"
+
+#: ../gimmie_computer.py:687
+msgid "Windows Network"
+msgstr "Сеть Windows"
+
+#: ../gimmie_computer.py:688
+msgid "Browse nearby Windows computers"
+msgstr "Обзор соседних компьютеров работающих под Windows"
+
+#: ../gimmie_computer.py:719
+msgid "Computer"
+msgstr "Компьютер"
+
+#: ../gimmie_computer.py:769
+msgid "Timeline"
+msgstr "Временная шкала"
+
+#: ../gimmie_computer.py:814
+msgid "Computer, %l:%M %p"
+msgstr "Компьютер, %l:%M %p"
+
+#: ../gimmie_computer.py:837
+msgid "Switch to another user"
+msgstr "Переключиться на другого пользователя"
+
+#: ../gimmie_computer.py:860
+msgid "Volume: 75%"
+msgstr "Уровень: 75%"
+
+#: ../gimmie_computer.py:863
+msgid "Not Implemented"
+msgstr "Не реализовано"
+
+#: ../gimmie_computer.py:873
+#: ../gimmie_computer.py:974
+msgid "Shutdown..."
+msgstr "Выключение..."
+
+#: ../gimmie_computer.py:874
+msgid "Shutdown or suspend this computer"
+msgstr "Выключить или усыпить этот компьютер"
+
+#: ../gimmie_computer.py:882
+msgid "About Me"
+msgstr "Обо мне"
+
+#: ../gimmie_computer.py:888
+msgid "Switch User"
+msgstr "Переключить пользователя"
+
+#: ../gimmie_computer.py:894
+msgid "Log Out..."
+msgstr "Завершить сеанс..."
+
+#: ../gimmie_computer.py:966
+msgid "Network"
+msgstr "Сеть"
+
+#: ../gimmie_documents.py:65
+msgid "Recently Seen"
+msgstr "Недавно виденные"
+
+#: ../gimmie_documents.py:187
+msgid "New Smart Folder"
+msgstr "Создать разумный каталог"
+
+#: ../gimmie_documents.py:202
+#: ../gimmie_documents.py:419
+#: ../gimmie_documents.py:477
+msgid "New Document"
+msgstr "Создать документ"
+
+#: ../gimmie_documents.py:221
+msgid "Documents"
+msgstr "Документы"
+
+#: ../gimmie_documents.py:239
+msgid "Attachments"
+msgstr "Вложения"
+
+#: ../gimmie_documents.py:241
+msgid "Important Email"
+msgstr "Важная электронная почта"
+
+#. Tomboy
+#. RecentlyUsedOfMimeType(
+#. _("Office Documents"),
+#. "stock_new-presentation",
+#. ["application/ms-powerpoint",
+#. "application/vnd.oasis.opendocument.presentation",
+#. "application/vnd.sun.xml.impress",
+#. "application/x-abiword",
+#. "text/plain",
+#. "application/msword",
+#. "application/vnd.ms-excel",
+#. "application/x-gnumeric"]),
+#. RecentlyUsedOfMimeType(_("PDFs"),
+#. "gnome-pdf",
+#. ["application/pdf",
+#. "application/ps"
+#. "application/x-dvi"]),
+#: ../gimmie_documents.py:259
+msgid "Music & Movies"
+msgstr "Музыка и фильмы"
+
+#: ../gimmie_documents.py:271
+msgid "Photos"
+msgstr "Фотографии"
+
+#: ../gimmie_documents.py:315
+#: ../gimmie_documents.py:317
+#: ../gimmie_trash.py:146
+msgid "Trash"
+msgstr "Корзина"
+
+#: ../gimmie_documents.py:354
+msgid "No templates available"
+msgstr "Шаблоны не доступны"
+
+#: ../gimmie_documents.py:364
+msgid "Empty File"
+msgstr "Пустой файл"
+
+#. Add a link to the templates directory
+#: ../gimmie_documents.py:373
+msgid "Templates"
+msgstr "Шаблоны"
+
+#: ../gimmie_documents.py:420
+msgid "Create a new document"
+msgstr "Создать новый документ"
+
+#: ../gimmie_documents.py:438
+#: ../gimmie_documents.py:486
+msgid "Go"
+msgstr "Переход"
+
+#: ../gimmie_documents.py:439
+msgid "Open commonly used document locations"
+msgstr "Открыть обычно используемые для документов места"
+
+#: ../gimmie_documents.py:460
+msgid "View printers available for document printing"
+msgstr "Просмотр принтеров доступных для печати документа"
+
+#: ../gimmie_gaim.py:95
+msgid "Idle"
+msgstr "Неактивен"
+
+#: ../gimmie_gaim.py:97
+#: ../gimmie_people.py:291
+msgid "Away"
+msgstr "Отсутствие"
+
+#: ../gimmie_gaim.py:100
+#: ../gimmie_people.py:282
+msgid "Offline"
+msgstr "Не в сети"
+
+#: ../gimmie_logout.py:51
+msgid "Shut down this computer now?"
+msgstr "Выключить этот компьютер?"
+
+#: ../gimmie_logout.py:53
+msgid "_Restart"
+msgstr "Пе_резагрузить"
+
+#: ../gimmie_logout.py:60
+msgid "_Shut Down"
+msgstr "_Выключить"
+
+#: ../gimmie_logout.py:67
+msgid "Log out of this computer now?"
+msgstr "Завершить сеанс?"
+
+#: ../gimmie_logout.py:69
+msgid "_Switch User"
+msgstr "_Переключить пользователя"
+
+#: ../gimmie_logout.py:72
+msgid "_Log Out"
+msgstr "_Завершить сеанс"
+
+#: ../gimmie_logout.py:151
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Этот компьютер будет выключен автоматически через %d секунду."
+msgstr[1] "Этот компьютер будет выключен автоматически через %d секунды."
+msgstr[2] "Этот компьютер будет выключен автоматически через %d секунд."
+
+#: ../gimmie_logout.py:155
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Сеанс будет автоматически завершен через %d секунду."
+msgstr[1] "Сеанс будет автоматически завершен через %d секунды."
+msgstr[2] "Сеанс будет автоматически завершен через %d секунд."
+
+#: ../gimmie_people.py:242
+msgid "People"
+msgstr "Собеседники"
+
+#. FIXME: Prune for groups at the current zoom level?
+#: ../gimmie_people.py:250
+msgid "Recent People"
+msgstr "Последние собеседники"
+
+#: ../gimmie_people.py:251
+msgid "Online Now"
+msgstr "Сейчас в сети"
+
+#: ../gimmie_people.py:252
+msgid "Everybody"
+msgstr "Каждый"
+
+#: ../gimmie_people.py:254
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie_people.py:255
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie_people.py:277
+#: ../gimmie_people.py:360
+#: ../gimmie_people.py:372
+msgid "Available"
+msgstr "Доступен"
+
+#: ../gimmie_people.py:287
+msgid "Away Messages..."
+msgstr "Сообщения об отсутствии..."
+
+#: ../gimmie_people.py:300
+msgid "Accounts..."
+msgstr "Учётные записи..."
+
+#: ../gimmie_people.py:346
+msgid "New Person"
+msgstr "Новый собеседник"
+
+#: ../gimmie_people.py:347
+msgid "Add a new contact person"
+msgstr "Добавить нового собеседнка"
+
+#: ../gimmie_people.py:353
+msgid "New Group"
+msgstr "Создать группу"
+
+#: ../gimmie_people.py:354
+msgid "Add a new group of people to the sidebar"
+msgstr "Добавить новую группу на боковую панель"
+
+#: ../gimmie_people.py:361
+msgid "Set your online status"
+msgstr "Установить состояние \"в сети\""
+
+#: ../gimmie_tomboy.py:77
+msgid "Notes"
+msgstr "Заметки"
+
+#: ../gimmie_tomboy.py:81
+msgid "Create New Note"
+msgstr "Создать новую заметку"
+
+#: ../gimmie_tomboy.py:82
+msgid "Make a new Tomboy note"
+msgstr "Создать новую заметку для Tomboy"
+
+#: ../gimmie_topicwin.py:157
+msgid "Today"
+msgstr "Сегодня"
+
+#: ../gimmie_topicwin.py:158
+msgid "Last 3 days"
+msgstr "Последние 3 дня"
+
+#: ../gimmie_topicwin.py:159
+msgid "Last week"
+msgstr "Последняя неделя"
+
+#: ../gimmie_topicwin.py:160
+msgid "Last 2 weeks"
+msgstr "Последние 2 недели\t\t"
+
+#: ../gimmie_topicwin.py:161
+msgid "Last month"
+msgstr "Последний месяц:"
+
+#: ../gimmie_topicwin.py:162
+msgid "Forever"
+msgstr "Всегда"
+
+#: ../gimmie_topicwin.py:184
+msgid "Show timeline"
+msgstr "Показать временную шкалу"
+
+#: ../gimmie_trash.py:169
+#: ../gimmie_trash.py:208
+msgid "_Empty Trash"
+msgstr "О_чистить корзину"
+
+#: ../gimmie_trash.py:176
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d элемент"
+msgstr[1] "%d элемента"
+msgstr[2] "%d элементов"
+
+#: ../gimmie_trash.py:197
+msgid "Empty all of the items from the trash?"
+msgstr "Удалить всё из корзины?"
+
+#: ../gimmie_trash.py:198
+msgid "If you choose to empty the trash, all "
+msgstr "Если вы удалите всё из корзины,"
+
+#: ../gimmie_trash.py:199
+msgid "items in it will be permanently lost.  "
+msgstr "то её содержимое будет окончательно утрачено."
+
+#: ../gimmie_trash.py:200
+msgid "Please note that you can also delete "
+msgstr "Обратите внимание, что вы можете удалить"
+
+#: ../gimmie_trash.py:201
+msgid "them separately."
+msgstr "отдельные элементы."
+
+#: ../gimmie_trash.py:224
+msgid "Error while moving."
+msgstr "Ошибка при перемещении."
+
+#: ../gimmie_trash.py:225
+#, python-format
+msgid "Cannot move \"%s\" to the trash because you do not have permissions to change it or its parent folder."
+msgstr "Невозможно переместить \"%s\" в корзину, потому что у вас недостаточно прав для изменения этого элемента или его родительского каталога."
+
+#: ../gimmie_trash.py:227
+msgid "Error while deleting."
+msgstr "Ошибка при удалении."
+
+#: ../gimmie_trash.py:228
+#, python-format
+msgid "\"%s\" cannot be deleted because you do not have permissions to modify its parent folder."
+msgstr "\"%s\" не может быть удален, потому что у вас недостаточно прав для изменения его родительского каталога."
+
+#: ../gimmie_trash.py:230
+msgid "Error while performing file operation."
+msgstr "Ошибка при выполнении операции с файлом."
+
+#: ../gimmie_trash.py:231
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Невозможно выполнить операцию \"%d\" с файлом \"%s\"."
+
+#: ../gimmie_trash.py:238
+msgid "_Skip"
+msgstr "_Пропустить"
+
+#: ../gimmie_trash.py:244
+msgid "_Retry"
+msgstr "_Повторить"
+
+#: ../gimmie_trash.py:298
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Не удалось переместить элементы в корзину, удалить их безвозвратно?"
+
+#: ../gimmie_trash.py:299
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Ни один из %d выделенных элементов не может быть перемещен в корзину"
+
+#: ../gimmie_trash.py:301
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Некоторые элементы не удалось переместить в корзину, удалить их безвозвратно?"
+
+#: ../gimmie_trash.py:302
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d из выделенных элементов не может быть перемещёно в корзину"
+
+#: ../gimmie_trash.py:312
+msgid "_Delete"
+msgstr "_Удалить"
+
+#: ../gimmie_util.py:693
+msgid "Home"
+msgstr "Домашний каталог"
+
+#: ../gimmie_util.py:697
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+#: ../gimmie_util.py:785
+msgid "Not Implemented..."
+msgstr "Не реализовано..."
+
+#: ../gimmie_util.py:790
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr "Помогите нам добавить эту возможность, отредактируйте в файле \"%s\" строку с номером %d."
+
+#: ../gimmie_util.py:795
+msgid "_Fix It!"
+msgstr "Исправить это!"
+

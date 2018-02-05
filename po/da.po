@@ -1,0 +1,574 @@
+# Danish translation of Gimmie.
+# Copyright (C) 2006
+# This file is distributed under the same license as the gimmie package.
+# Martin Willemoes Hansen <mwh@sysrq.dk>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gimmie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-06-26 15:51+0200\n"
+"PO-Revision-Date: 2006-06-26 16:50+0200\n"
+"Last-Translator: Martin Willemoes Hansen <mwh@sysrq.dk>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../gimmie_applications.py:420
+msgid "Applications"
+msgstr "Programmer"
+
+#: ../gimmie_applications.py:438 ../gimmie_computer.py:41
+#: ../gimmie_documents.py:29
+msgid "Recently Used"
+msgstr "Senest brugt"
+
+#: ../gimmie_applications.py:460
+msgid "Install & Update"
+msgstr "Installér og opdatér"
+
+#: ../gimmie_applications.py:461
+msgid "Manage applications on this computer"
+msgstr "Håndtér programmer på denne maskine"
+
+#: ../gimmie_applications.py:468 ../gimmie_computer.py:758
+#: ../gimmie_computer.py:950
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: ../gimmie_applications.py:469
+msgid "Manage settings and preferences"
+msgstr "Håndtér indstillinger"
+
+#: ../gimmie_applications.py:495
+msgid "Show All"
+msgstr "Vis alle"
+
+#: ../gimmie_applications.py:497
+msgid "Hide All"
+msgstr "Skjul alle"
+
+#: ../gimmie_base.py:112
+msgid "Keep Around"
+msgstr "Behold"
+
+#: ../gimmie_base.py:131
+msgid "%l:%M %p"
+msgstr "%H.%M"
+
+#: ../gimmie_base.py:133
+#, python-format
+msgid "Today, %s"
+msgstr "Idag, %s"
+
+#: ../gimmie_base.py:135
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Igår, %s"
+
+#: ../gimmie_base.py:137
+#, python-format
+msgid "%d days ago, %s"
+msgstr "%d dage siden, %s"
+
+#: ../gimmie_base.py:139
+#, python-format
+msgid "%d days ago"
+msgstr "%d dage siden"
+
+#: ../gimmie_base.py:141
+msgid "%B %e"
+msgstr "%B %Y"
+
+#: ../gimmie_base.py:143
+msgid "%B %e, %G"
+msgstr "%A %e %B %Y"
+
+#: ../gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie_browser.py:508 ../gimmie_topicwin.py:743
+msgid "Set the zoom level"
+msgstr "Sæt zoomniveauet"
+
+#: ../gimmie_browser.py:528 ../gimmie_topicwin.py:36 ../gimmie_topicwin.py:763
+msgid "Search"
+msgstr "Søg"
+
+#: ../gimmie_computer.py:132
+#, python-format
+msgid "Desk %d"
+msgstr "Arbejdsområde %d"
+
+#: ../gimmie_computer.py:184
+msgid "Use Compact Layout"
+msgstr "Anvend kompakt layout"
+
+#: ../gimmie_computer.py:235
+msgid "Calendar"
+msgstr "Kalender"
+
+#: ../gimmie_computer.py:395
+msgid "Places"
+msgstr "Steder"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie_computer.py:426
+msgid "No disk inserted"
+msgstr "Ingen disk indsat"
+
+#: ../gimmie_computer.py:445
+#, python-format
+msgid "Free space: %s"
+msgstr "Ledig plads: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie_computer.py:468
+msgid "_Eject"
+msgstr "_Skub ud"
+
+#: ../gimmie_computer.py:482
+msgid "Devices & Media"
+msgstr "Enheder og media"
+
+#: ../gimmie_computer.py:486
+msgid "Add Bluetooth..."
+msgstr "Tilføj Bluetooth..."
+
+#: ../gimmie_computer.py:487
+msgid "Access a wireless device"
+msgstr "Tilgå trådløs enhed"
+
+#: ../gimmie_computer.py:492
+msgid "Create CD/DVD..."
+msgstr "Opret cd/dvd..."
+
+#: ../gimmie_computer.py:493
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Brænd filer på en cd eller dvd"
+
+#: ../gimmie_computer.py:616 ../gimmie_documents.py:315
+#: ../gimmie_documents.py:352
+msgid "Printers"
+msgstr "Printerer"
+
+#: ../gimmie_computer.py:621
+msgid "Add Printer..."
+msgstr "Tilføj printer..."
+
+#: ../gimmie_computer.py:622
+msgid "Setup attached or networked printer"
+msgstr "Opsæt en tilsluttet printer eller en netværksprinter"
+
+#: ../gimmie_computer.py:676
+msgid "Nearby Computers"
+msgstr "Computerer i nærheden"
+
+#: ../gimmie_computer.py:681
+msgid "Connect to..."
+msgstr "Tilslut..."
+
+#: ../gimmie_computer.py:682
+msgid "Access a computer on the network"
+msgstr "Tilgå en maskine på netværket"
+
+#: ../gimmie_computer.py:687
+msgid "Windows Network"
+msgstr "Windows-netværk"
+
+#: ../gimmie_computer.py:688
+msgid "Browse nearby Windows computers"
+msgstr "Gennemse Windows-computer tæt ved"
+
+#: ../gimmie_computer.py:719
+msgid "Computer"
+msgstr "Computer"
+
+#: ../gimmie_computer.py:769
+msgid "Timeline"
+msgstr "Tidslinje"
+
+#: ../gimmie_computer.py:814
+msgid "Computer, %l:%M %p"
+msgstr "Computer, %l.%M %p"
+
+#: ../gimmie_computer.py:837
+msgid "Switch to another user"
+msgstr "Skift til en anden bruger"
+
+#: ../gimmie_computer.py:860
+msgid "Volume: 75%"
+msgstr "Lydstyrke: 75%"
+
+#: ../gimmie_computer.py:863
+msgid "Not Implemented"
+msgstr "Ikke implementeret"
+
+#: ../gimmie_computer.py:873 ../gimmie_computer.py:974
+msgid "Shutdown..."
+msgstr "Luk ned..."
+
+#: ../gimmie_computer.py:874
+msgid "Shutdown or suspend this computer"
+msgstr "Luk maskinen ned"
+
+#: ../gimmie_computer.py:882
+msgid "About Me"
+msgstr "Om mig"
+
+#: ../gimmie_computer.py:888
+msgid "Switch User"
+msgstr "Skift bruger"
+
+#: ../gimmie_computer.py:894
+msgid "Log Out..."
+msgstr "Log ud..."
+
+#: ../gimmie_computer.py:966
+msgid "Network"
+msgstr "Netværk"
+
+#: ../gimmie_documents.py:61
+msgid "Recently Seen"
+msgstr "Senest set"
+
+#: ../gimmie_documents.py:152
+msgid "New Smart Folder"
+msgstr "Ny smartmappe"
+
+#: ../gimmie_documents.py:170
+msgid "Documents"
+msgstr "Dokumenter"
+
+#. DisabledItemSource(_("Bookmarks"), "stock_bookmark"),
+#: ../gimmie_documents.py:181
+msgid "Downloads"
+msgstr "Overførsler"
+
+#: ../gimmie_documents.py:182
+msgid "Attachments"
+msgstr "Bilag"
+
+#: ../gimmie_documents.py:184
+msgid "Important Email"
+msgstr "Vigtig e-post"
+
+#. Tomboy
+#. RecentlyUsedOfMimeType(
+#. _("Office Documents"),
+#. "stock_new-presentation",
+#. ["application/ms-powerpoint",
+#. "application/vnd.oasis.opendocument.presentation",
+#. "application/vnd.sun.xml.impress",
+#. "application/x-abiword",
+#. "text/plain",
+#. "application/msword",
+#. "application/vnd.ms-excel",
+#. "application/x-gnumeric"]),
+#. RecentlyUsedOfMimeType(_("PDFs"),
+#. "gnome-pdf",
+#. ["application/pdf",
+#. "application/ps"
+#. "application/x-dvi"]),
+#: ../gimmie_documents.py:202
+msgid "Music & Movies"
+msgstr "Musik og film"
+
+#: ../gimmie_documents.py:214
+msgid "Photos"
+msgstr "Fotos"
+
+#: ../gimmie_documents.py:258 ../gimmie_documents.py:260
+msgid "Trash"
+msgstr "Papirkurv"
+
+#: ../gimmie_documents.py:278 ../gimmie_documents.py:334
+msgid "New Document"
+msgstr "Nyt dokument"
+
+#: ../gimmie_documents.py:279
+msgid "Create a new document"
+msgstr "Opret et nyt dokument"
+
+#: ../gimmie_documents.py:294 ../gimmie_documents.py:341
+msgid "Go"
+msgstr "Gå"
+
+#: ../gimmie_documents.py:295
+msgid "Open commonly used document locations"
+msgstr "Åbn ofte brugte dokumentsteder"
+
+#: ../gimmie_documents.py:316
+msgid "View printers available for document printing"
+msgstr "Vis tilgængelige printerer for udskrift af dokumenter"
+
+#: ../gimmie_gaim.py:95
+msgid "Idle"
+msgstr "Tomgang"
+
+#: ../gimmie_gaim.py:97 ../gimmie_people.py:291
+msgid "Away"
+msgstr "Fraværende"
+
+#: ../gimmie_gaim.py:100 ../gimmie_people.py:282
+msgid "Offline"
+msgstr "Afkoblet"
+
+#: ../gimmie_logout.py:51
+msgid "Shut down this computer now?"
+msgstr "Luk denne maskine ned nu?"
+
+#: ../gimmie_logout.py:53
+msgid "_Restart"
+msgstr "_Genstart"
+
+#: ../gimmie_logout.py:60
+msgid "_Shut Down"
+msgstr "_Luk ned"
+
+#: ../gimmie_logout.py:67
+msgid "Log out of this computer now?"
+msgstr "Log ud fra denne maskine nu?"
+
+#: ../gimmie_logout.py:69
+msgid "_Switch User"
+msgstr "_Skift bruger"
+
+#: ../gimmie_logout.py:72
+msgid "_Log Out"
+msgstr "Log _ud"
+
+#: ../gimmie_logout.py:151
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Denne computer vil automatisk lukke ned om %d sekund."
+msgstr[1] "Denne computer vil automatisk lukke ned om %d sekunder."
+
+#: ../gimmie_logout.py:155
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Du vil automatisk blive logget ud om %d sekund."
+msgstr[1] "Du vil automatisk blive logget ud om %d sekunder."
+
+#: ../gimmie_people.py:242
+msgid "People"
+msgstr "Personer"
+
+#. FIXME: Prune for groups at the current zoom level?
+#: ../gimmie_people.py:250
+msgid "Recent People"
+msgstr "Seneste personer"
+
+#: ../gimmie_people.py:251
+msgid "Online Now"
+msgstr "Opkoblet nu!"
+
+#: ../gimmie_people.py:252
+msgid "Everybody"
+msgstr "Alle"
+
+#: ../gimmie_people.py:254
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie_people.py:255
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie_people.py:277 ../gimmie_people.py:360 ../gimmie_people.py:372
+msgid "Available"
+msgstr "Tilgængelig"
+
+#: ../gimmie_people.py:287
+msgid "Away Messages..."
+msgstr "Fraværsmeddelelser..."
+
+#: ../gimmie_people.py:300
+msgid "Accounts..."
+msgstr "Kontí..."
+
+#: ../gimmie_people.py:346
+msgid "New Person"
+msgstr "Ny person"
+
+#: ../gimmie_people.py:347
+msgid "Add a new contact person"
+msgstr "Tilføj en ny kontaktperson"
+
+#: ../gimmie_people.py:353
+msgid "New Group"
+msgstr "Ny gruppe"
+
+#: ../gimmie_people.py:354
+msgid "Add a new group of people to the sidebar"
+msgstr "Tilføj en ny gruppe af personer til sidebaren"
+
+#: ../gimmie_people.py:361
+msgid "Set your online status"
+msgstr "Sæt din online-status"
+
+#: ../gimmie_tomboy.py:77
+msgid "Notes"
+msgstr "Noter"
+
+#: ../gimmie_tomboy.py:81
+msgid "Create New Note"
+msgstr "Opret ny note"
+
+#: ../gimmie_tomboy.py:82
+msgid "Make a new Tomboy note"
+msgstr "Opret en ny Tomboy-note"
+
+#: ../gimmie_topicwin.py:157
+msgid "Today"
+msgstr "Idag"
+
+#: ../gimmie_topicwin.py:158
+msgid "Last 3 days"
+msgstr "Seneste 3 dage"
+
+#: ../gimmie_topicwin.py:159
+msgid "Last week"
+msgstr "Seneste uge"
+
+#: ../gimmie_topicwin.py:160
+msgid "Last 2 weeks"
+msgstr "Seneste 2 uger"
+
+#: ../gimmie_topicwin.py:161
+msgid "Last month"
+msgstr "Seneste måned"
+
+#: ../gimmie_topicwin.py:162
+msgid "Forever"
+msgstr "For altid"
+
+#: ../gimmie_topicwin.py:184
+msgid "Show timeline"
+msgstr "Vis tidslinje"
+
+#: ../gimmie_trash.py:169 ../gimmie_trash.py:208
+msgid "_Empty Trash"
+msgstr "_Tøm papirskurven"
+
+#: ../gimmie_trash.py:176
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d element"
+msgstr[1] "%d elementer"
+
+#: ../gimmie_trash.py:197
+msgid "Empty all of the items from the trash?"
+msgstr "Tøm alle elementer i papirskurven?"
+
+#: ../gimmie_trash.py:198
+msgid "If you choose to empty the trash, all "
+msgstr "Hvis du vælger at tømme papirkurven, alle "
+
+#: ../gimmie_trash.py:199
+msgid "items in it will be permanently lost.  "
+msgstr "elementer deri vil blive slettet permanent.  "
+
+#: ../gimmie_trash.py:200
+msgid "Please note that you can also delete "
+msgstr "Bemærk venligst at du også kan slette "
+
+#: ../gimmie_trash.py:201
+msgid "them separately."
+msgstr "dem separat."
+
+#: ../gimmie_trash.py:224
+msgid "Error while moving."
+msgstr "Fejl ved flytning."
+
+#: ../gimmie_trash.py:225
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"Kan ikke flytte \"%s\" til papirkurven fordi du ikke har de nødvendige "
+"rettigheder til at ændre den eller dens forældermappe."
+
+#: ../gimmie_trash.py:227
+msgid "Error while deleting."
+msgstr "Fejl ved sletning."
+
+#: ../gimmie_trash.py:228
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"\"%s\" kan ikke slettes fordi du ikke har de nødvendige rettigheder for at "
+"ændre dens forældermappe."
+
+#: ../gimmie_trash.py:230
+msgid "Error while performing file operation."
+msgstr "Fejl under udførsel af filhandling."
+
+#: ../gimmie_trash.py:231
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Kan ikke udføre fileoperation %d på \"%s\"."
+
+#: ../gimmie_trash.py:238
+msgid "_Skip"
+msgstr "_Spring over"
+
+#: ../gimmie_trash.py:244
+msgid "_Retry"
+msgstr "_Forsøg igen"
+
+#: ../gimmie_trash.py:298
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Kan ikke flytte elementer til papirkurven, vil du slette dem omgående?"
+
+#: ../gimmie_trash.py:299
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Ingen af de %d markerede elementer kan flyttes til papirkurven"
+
+#: ../gimmie_trash.py:301
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr ""
+"Kan ikke flytte nogle elementer til papirkurven. Vil du slette disse umiddelbart?"
+
+#: ../gimmie_trash.py:302
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d af de markerede elementer kan ikke flyttes til papirkurven"
+
+#: ../gimmie_trash.py:312
+msgid "_Delete"
+msgstr "_Slet"
+
+#: ../gimmie_util.py:686
+msgid "Home"
+msgstr "Hjem"
+
+#: ../gimmie_util.py:690
+msgid "Desktop"
+msgstr "Skrivebord"
+
+#: ../gimmie_util.py:775
+msgid "Not Implemented..."
+msgstr "Ikke implementeret..."
+
+#: ../gimmie_util.py:780
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+"Hjælp os med at skrive denne facilitet ved at rette filen \"%s\" ved linje %d."
+
+#: ../gimmie_util.py:785
+msgid "_Fix It!"
+msgstr "_Ret det!"

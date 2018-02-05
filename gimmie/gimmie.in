@@ -1,0 +1,86 @@
+#!@PYTHON@
+
+###
+# Copyright (C) 2007 Alex Graveley <alex@beatniksoftware.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+###
+
+import sys
+import os
+
+
+# FIXME: GtkMozEmbed needs LD_LIBRARY_PATH for Mozilla set in the parent
+#        process, and crashes otherwise, so add it and reexec ourselves.
+FIREFOX_LIBS = "/usr/lib/firefox"
+LIBS_PATH = os.environ.get("LD_LIBRARY_PATH", "")
+
+if os.path.exists(FIREFOX_LIBS) and FIREFOX_LIBS not in LIBS_PATH:
+    print "Replacing current process..."
+    os.environ["LD_LIBRARY_PATH"] = LIBS_PATH + ":" + FIREFOX_LIBS
+    os.execve(__file__, sys.argv, os.environ)
+
+
+#
+# bug-buddy integration from Fernando Herrera <fherrera@onirica.com>
+#
+def bug_catcher(exctype, value, tb):
+    import gtk
+    gtk.gdk.pointer_ungrab()
+    gtk.gdk.keyboard_ungrab()
+
+    import traceback
+    import tempfile
+    if exctype is not KeyboardInterrupt:
+        msg = "Gimmie Version: %s\n\n" % ("@VERSION@")
+        msg += "".join(traceback.format_exception(exctype, value, tb))
+        print >> sys.stderr, msg
+        fd, name = tempfile.mkstemp()
+        try:
+            os.write(fd,msg)
+            os.system("bug-buddy --include=\"%s\" --appname=\"%s\" --package-ver=\"%s\"" % \
+                      (name, "@MODULE@", "@VERSION@"))
+        finally:
+            os.unlink(name)
+    raise SystemExit
+sys.excepthook = bug_catcher
+
+
+# Figure out our working dir, before calling os.chdir
+FILEPATH = os.path.abspath(__file__)
+
+
+# Change to user's home directory by default
+os.chdir(os.path.expanduser("~"))
+
+
+# Find Gimmie sources, regardless of running devel or installed
+pwd, dirname = os.path.split(os.path.dirname(FILEPATH))
+if dirname == "gimmie" and os.path.isfile(os.path.join(pwd, "gimmie", "@MODULE@.py")):
+    print 'Running uninstalled @MODULE@, modifying PYTHONPATH.'
+    sys.path.insert(0, pwd)
+
+    # Need to run gimmie/__init__.py and inject ltihooks.py
+    import gimmie.@MODULE@
+    gimmie.@MODULE@.main(sys.argv[1:])
+else:
+    # Force the bundled version of libraries
+    sys.path.insert(0, os.path.join("@pyexecdir@", "gimmie"))
+    if not "@pyexecdir@" in sys.path:
+        sys.path.insert(1, "@pyexecdir@")
+
+    # We've already added the gimmie install dir, so import directly
+    import @MODULE@
+    @MODULE@.main(sys.argv[1:])

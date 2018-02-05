@@ -1,0 +1,728 @@
+# translation of gimmie.HEAD.po to Spanish
+# This file is distributed under the same license as the gimmie package.
+# Copyright (C) 2006 Free Software Foundation.
+#
+# Carlos Higuera <higuera.carlos@gmail.com>, 2006.
+# Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2006.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie.HEAD.es\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-10-07 20:16+0100\n"
+"PO-Revision-Date: 2007-10-08 07:20+0200\n"
+"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"Language-Team: Spanish <traductores@es.gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "Estilo de los botones de la miniaplicación"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr "Política de pulsación"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr ""
+"Determina cómo se gestionan las pulsaciones del ratón sobre elementos de "
+"Gimmie. Se soportan las siguientes opciones: «sencilla» activa elementos con "
+"una simple pulsación, «doble» los activa con una doble pulsación y "
+"«nautilus» para seguir la política de pulsaciones de Nautilus."
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr "Mostrar el tema «Equipo»"
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr "Mostrar el tema Biblioteca"
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr "Mostrar el tema Gente"
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr "Mostrar el tema Programas"
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr "Mostrar el tema Colores"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr ""
+"En Gimmie cada tema tiene asociado un color. Esta clave determina si el "
+"color se mostrará en el panel de botones."
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr "Incluir el tema «Equipo» en esta lista de temas de la miniaplicación."
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr "Incluir el tema Biblioteca en esta lista de temas de la miniaplicación."
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr "Incluir el tema Gente en esta lista de temas de la miniaplicación."
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr "Incluir el tema Programas en esta lista de temas de la miniaplicación."
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr ""
+"Establezca cómo se mostrarán estos botones de la miniaplicación. Se soportan "
+"las siguientes opciones: «iconos» para mostrar sólo los iconos de temas, "
+"«texto» para mostrar sólo los nombres de los temas, y «ambos» para incluir "
+"ambos."
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "_Acerca de"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Preferences"
+msgstr "Prefere_ncias"
+
+#: ../gimmie/gimmie_applet.py:372
+msgid "Favorite"
+msgstr "Favorito"
+
+#: ../gimmie/gimmie_applet.py:376 ../gimmie/gimmie_base.py:128
+msgid "Add to Favorites"
+msgstr "Añadir a favoritos"
+
+#: ../gimmie/gimmie_applications.py:245
+msgid "Other"
+msgstr "Otro"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Install & Update"
+msgstr "Instalar y actualizar"
+
+#: ../gimmie/gimmie_applications.py:318
+msgid "Manage software on this computer"
+msgstr "Gestiona aplicaciones en este equipo"
+
+#: ../gimmie/gimmie_applications.py:351 ../gimmie/gimmie_computer.py:423
+#: ../gimmie/gimmie_computer.py:688
+msgid "Settings"
+msgstr "Configuración"
+
+#: ../gimmie/gimmie_applications.py:352
+msgid "Manage settings and preferences"
+msgstr "Gestiona configuraciones y preferencias"
+
+#: ../gimmie/gimmie_applications.py:368
+msgid "Show Desktop"
+msgstr "Mostrar el escritorio"
+
+#: ../gimmie/gimmie_applications.py:387 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "Programas"
+
+#: ../gimmie/gimmie_applications.py:409 ../gimmie/gimmie_recent.py:163
+msgid "Recently Used"
+msgstr "Recientemente usado"
+
+#: ../gimmie/gimmie_base.py:153
+msgid "%l:%M %p"
+msgstr "%I:%M %p"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "Today, %s"
+msgstr "Hoy, %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Ayer, %s"
+
+#: ../gimmie/gimmie_base.py:162
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "hace %d día, %s"
+msgstr[1] "hace %d días, %s"
+
+#: ../gimmie/gimmie_base.py:166
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "hace %d día"
+msgstr[1] "hace %d días"
+
+#: ../gimmie/gimmie_base.py:170
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie/gimmie_base.py:172
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "Todos los favoritos"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_library.py:404
+msgid "Places"
+msgstr "Lugares"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "No hay ningún disco insertado"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "Espacio libre: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "_Expulsar"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "Dispositivos y medios"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Añadir Bluetooth…"
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "Acceder a un dispositivo inalámbrico"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "Crear CD/DVD…"
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Graba archivos en un disco CD ó DVD"
+
+#: ../gimmie/gimmie_computer.py:323 ../gimmie/gimmie_library.py:424
+msgid "Printers"
+msgstr "Impresoras"
+
+#: ../gimmie/gimmie_computer.py:328
+msgid "Add Printer..."
+msgstr "Añadir impresora…"
+
+#: ../gimmie/gimmie_computer.py:329
+msgid "Setup attached or networked printer"
+msgstr "Configurar una impresora local o en red"
+
+#: ../gimmie/gimmie_computer.py:385
+msgid "Nearby Computers"
+msgstr "Equipos en las proximidades"
+
+#: ../gimmie/gimmie_computer.py:390
+msgid "Connect to..."
+msgstr "Conectar a…"
+
+#: ../gimmie/gimmie_computer.py:391
+msgid "Access a computer on the network"
+msgstr "Accede a un equipo de la red"
+
+#: ../gimmie/gimmie_computer.py:396
+msgid "Windows Network"
+msgstr "Red de Windows"
+
+#: ../gimmie/gimmie_computer.py:397
+msgid "Browse nearby Windows computers"
+msgstr "Examinar los equipos Windows en las proximidades"
+
+#: ../gimmie/gimmie_computer.py:482
+msgid "Administration"
+msgstr "Administración"
+
+#: ../gimmie/gimmie_computer.py:521
+msgid "About Me"
+msgstr "Acerca de mí"
+
+#: ../gimmie/gimmie_computer.py:527
+msgid "Switch User"
+msgstr "Cambiar de usuario"
+
+#: ../gimmie/gimmie_computer.py:533
+msgid "Log Out..."
+msgstr "Salir…"
+
+#: ../gimmie/gimmie_computer.py:561
+msgid "Switch to another user"
+msgstr "Cambiar a otro usuario"
+
+#: ../gimmie/gimmie_computer.py:578
+msgid "Shutdown..."
+msgstr "Apagar…"
+
+#: ../gimmie/gimmie_computer.py:579
+msgid "Shutdown or suspend this computer"
+msgstr "Apaga o suspende este equipo"
+
+#: ../gimmie/gimmie_computer.py:589
+msgid "Help"
+msgstr "Ayuda"
+
+#: ../gimmie/gimmie_computer.py:594
+msgid "About Gnome"
+msgstr "Acerca de GNOME"
+
+#: ../gimmie/gimmie_computer.py:606
+msgid "Volume: 75%"
+msgstr "Volumen: 75%"
+
+#: ../gimmie/gimmie_computer.py:611 ../gimmie/gimmie_computer.py:627
+msgid "Not Implemented"
+msgstr "No implementado"
+
+#: ../gimmie/gimmie_computer.py:622
+msgid "Change the network location"
+msgstr "Cambiar la ubicación de la red"
+
+#: ../gimmie/gimmie_computer.py:689
+msgid "Preferences & Administration"
+msgstr "Preferencias y administración"
+
+#: ../gimmie/gimmie_computer.py:707 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "Equipo"
+
+#: ../gimmie/gimmie_computer.py:795
+msgid "Computer, %l:%M %p"
+msgstr "Equipo, %I:%M %p"
+
+#: ../gimmie/gimmie_gaim.py:101 ../gimmie/gimmie_pidgin.py:105
+#, python-format
+msgid "Idle since %s"
+msgstr "Inactivo desde %s"
+
+#: ../gimmie/gimmie_gaim.py:104 ../gimmie/gimmie_pidgin.py:108
+msgid "Idle"
+msgstr "Inactivo"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:98
+#: ../gimmie/gimmie_pidgin.py:110
+msgid "Away"
+msgstr "Ausente"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:89
+#: ../gimmie/gimmie_pidgin.py:113
+msgid "Offline"
+msgstr "Desconectado"
+
+#: ../gimmie/gimmie_gmail.py:36 ../gimmie/gimmie_gmail.py:155
+msgid "Login to Gmail"
+msgstr "Inicio de sesión en Gmail"
+
+#: ../gimmie/gimmie_gmail.py:47
+msgid "Account Settings"
+msgstr "Configuración de la cuenta"
+
+#: ../gimmie/gimmie_gmail.py:61
+msgid "Sign in to Gmail with your Google Account"
+msgstr "Iniciar sesión en GMail con su cuenta de Google"
+
+#: ../gimmie/gimmie_gmail.py:71
+msgid "Username:"
+msgstr "Usuario:"
+
+#: ../gimmie/gimmie_gmail.py:76
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: ../gimmie/gimmie_gmail.py:276
+#, python-format
+msgid "Failed to login account %s."
+msgstr "Falló el inicio de sesión para la cuenta %s."
+
+#: ../gimmie/gimmie_gmail.py:280 ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "_Saltar"
+
+#: ../gimmie/gimmie_gmail.py:282 ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "_Reintentar"
+
+#: ../gimmie/gimmie_gui.py:691
+msgid "Calendar"
+msgstr "Calendario"
+
+#: ../gimmie/gimmie_gui.py:792
+#, python-format
+msgid "Desk %d"
+msgstr "Escritorio %d"
+
+#: ../gimmie/gimmie_gui.py:875
+msgid "Use Compact Layout"
+msgstr "Usar distribución compacta"
+
+#: ../gimmie/gimmie_library.py:141
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#: ../gimmie/gimmie_library.py:153
+msgid "Downloads"
+msgstr "Descargas"
+
+#: ../gimmie/gimmie_library.py:211
+msgid "Documents"
+msgstr "Documentos"
+
+#: ../gimmie/gimmie_library.py:230
+msgid "Music & Movies"
+msgstr "Música y películas"
+
+#: ../gimmie/gimmie_library.py:261 ../gimmie/gimmie_library.py:298
+msgid "New Document"
+msgstr "Documento nuevo"
+
+#: ../gimmie/gimmie_library.py:299
+msgid "Create a new document"
+msgstr "Crea un documento nuevo"
+
+#: ../gimmie/gimmie_library.py:335
+msgid "No templates available"
+msgstr "No hay plantillas disponibles"
+
+#: ../gimmie/gimmie_library.py:344
+msgid "Empty File"
+msgstr "Archivo vacío"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_library.py:351
+msgid "Templates"
+msgstr "Plantillas"
+
+#: ../gimmie/gimmie_library.py:389 ../gimmie/gimmie_library.py:391
+#: ../gimmie/gimmie_library.py:412 ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "Papelera"
+
+#: ../gimmie/gimmie_library.py:405
+msgid "Open commonly used locations"
+msgstr "Abrir ubicaciones comúnmente usadas"
+
+#: ../gimmie/gimmie_library.py:413
+msgid "Open the deleted files trashcan"
+msgstr "Abrir los archivos borrados de la papelera"
+
+#: ../gimmie/gimmie_library.py:425
+msgid "View printers available for document printing"
+msgstr "Ver impresoras disponibles para imprimir documentos"
+
+#: ../gimmie/gimmie_library.py:447 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "Biblioteca"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "¿Desea apagar el equipo ahora?"
+
+#: ../gimmie/gimmie_logout.py:57
+msgid "_Sleep"
+msgstr "_Dormir"
+
+#: ../gimmie/gimmie_logout.py:62
+msgid "_Hibernate"
+msgstr "_Hibernar"
+
+#: ../gimmie/gimmie_logout.py:68
+msgid "_Reboot"
+msgstr "_Reiniciar"
+
+#: ../gimmie/gimmie_logout.py:74
+msgid "Shut _Down"
+msgstr "_Apagar"
+
+#: ../gimmie/gimmie_logout.py:81
+msgid "Log out of this computer now?"
+msgstr "¿Desea salir de este equipo ahora?"
+
+#: ../gimmie/gimmie_logout.py:85
+msgid "_Log Out"
+msgstr "_Salir"
+
+#: ../gimmie/gimmie_logout.py:175
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Este equipo se apagará automáticamente en %d segundo."
+msgstr[1] "Este equipo se apagará automáticamente en %d segundos."
+
+#: ../gimmie/gimmie_logout.py:179
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Su sesión terminará automáticamente en %d segundo."
+msgstr[1] "Su sesión terminará automáticamente en %d segundos."
+
+#: ../gimmie/gimmie_people.py:84 ../gimmie/gimmie_people.py:175
+msgid "Available"
+msgstr "Disponibles"
+
+#: ../gimmie/gimmie_people.py:94
+msgid "Away Messages..."
+msgstr "Mensajes de ausencia…"
+
+#: ../gimmie/gimmie_people.py:107
+msgid "Accounts..."
+msgstr "Cuentas…"
+
+#: ../gimmie/gimmie_people.py:145
+msgid "New Person"
+msgstr "Persona nueva"
+
+#: ../gimmie/gimmie_people.py:146
+msgid "Add a new contact person"
+msgstr "Añade un contacto nuevo"
+
+#: ../gimmie/gimmie_people.py:176
+msgid "Set your online status"
+msgstr "Establecer su estado de conexión"
+
+#: ../gimmie/gimmie_people.py:192 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "Gente"
+
+#: ../gimmie/gimmie_people.py:206
+msgid "Recent People"
+msgstr "Gente reciente"
+
+#: ../gimmie/gimmie_people.py:207
+msgid "Online Now"
+msgstr "Conectados ahora"
+
+#: ../gimmie/gimmie_people.py:208
+msgid "Everybody"
+msgstr "Todos"
+
+#: ../gimmie/gimmie_people.py:213
+msgid "Gmail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:216
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:220 ../gimmie/gimmie_people.py:223
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr "Preferencias de Gimmie"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "Sólo texto"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "Sólo iconos"
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr "Texto e iconos"
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr "Etiquetas de los _botones de temas:"
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr "Aspecto"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "Temas"
+
+#: ../gimmie/gimmie_tomboy.py:89
+msgid "Notes"
+msgstr "Notas"
+
+#: ../gimmie/gimmie_tomboy.py:93
+msgid "Create New Note"
+msgstr "Crear nota"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Make a new Tomboy note"
+msgstr "Crea una nota de Tomboy"
+
+#: ../gimmie/gimmie_topicwin.py:44 ../gimmie/gimmie_topicwin.py:1236
+msgid "Search"
+msgstr "Buscar"
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:488
+msgid "Today"
+msgstr "Hoy"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:489
+msgid "This week"
+msgstr "Esta semana"
+
+#: ../gimmie/gimmie_topicwin.py:167 ../gimmie/gimmie_topicwin.py:490
+msgid "Last 2 weeks"
+msgstr "Últimas 2 semanas"
+
+#: ../gimmie/gimmie_topicwin.py:168 ../gimmie/gimmie_topicwin.py:491
+msgid "This month"
+msgstr "Este mes"
+
+#: ../gimmie/gimmie_topicwin.py:169 ../gimmie/gimmie_topicwin.py:492
+msgid "Last 2 months"
+msgstr "Últimos 2 meses"
+
+#: ../gimmie/gimmie_topicwin.py:170 ../gimmie/gimmie_topicwin.py:493
+msgid "Last 3 months"
+msgstr "Últimos 3 meses"
+
+#: ../gimmie/gimmie_topicwin.py:171 ../gimmie/gimmie_topicwin.py:494
+msgid "Last 6 months"
+msgstr "Últimos 6 meses"
+
+#: ../gimmie/gimmie_topicwin.py:193
+msgid "Show timeline"
+msgstr "Mostrar línea temporal"
+
+#: ../gimmie/gimmie_topicwin.py:1291
+msgid "Set the zoom level"
+msgstr "Establecer el nivel de ampliación"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "_Vaciar papelera"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d elemento"
+msgstr[1] "%d elementos"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "¿Quiere vaciar todos los elementos de la papelera?"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"Si elije vaciar la papelera, todos los elementos en ella se perderán para "
+"siempre.  Note que puede borrarlos cada uno por separado."
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "Se produjo un error al mover."
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"No se puede mover «%s» a la papelera porque no tiene permisos para cambiar "
+"su carpeta madre."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "Se produjo un error al borrar."
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"«%s» no se puede borrar porque no tiene permiso para modificar su carpeta "
+"madre."
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "Error al realizar la operación de archivo."
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "No se puede realizar la operación de archivo %d en «%s»."
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr ""
+"No se pueden mover los elementos a la papelera, ¿quiere borrarlos "
+"inmediatamente?"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Ninguno de los %d elementos seleccionados se puede mover la papelera"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr ""
+"No es posible mover algunos elementos a la papelera de reciclaje, ¿Desea "
+"eliminarlos automáticamente?"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d de los elementos seleccionados no se pueden mover a la papelera"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_Borrar"
+
+#: ../gimmie/gimmie_util.py:832
+msgid "Home"
+msgstr "Carpeta personal"
+
+#: ../gimmie/gimmie_util.py:836
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: ../gimmie/gimmie_util.py:893
+msgid "Not Implemented..."
+msgstr "No implementado…"
+
+#: ../gimmie/gimmie_util.py:898
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+"Ayúdenos a escribir esta característica editando el archivo «%s» en el "
+"número de línea %d."
+
+#: ../gimmie/gimmie_util.py:903
+msgid "_Fix It!"
+msgstr "_Arreglar esto!"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr "Orientación"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr "La orientación del panel de notificación."
+

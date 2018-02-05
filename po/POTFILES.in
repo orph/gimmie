@@ -1,0 +1,25 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/gimmie.schemas.in
+data/GNOME_GimmieApplet.server.in.in
+data/GNOME_GimmieApplet.xml
+gimmie/gimmie_applet.py
+gimmie/gimmie_applications.py
+gimmie/gimmie_base.py
+gimmie/gimmie_computer.py
+gimmie/gimmie_file.py
+gimmie/gimmie_gaim.py
+gimmie/gimmie_gui.py
+gimmie/gimmie_library.py
+gimmie/gimmie_logout.py
+gimmie/gimmie_people.py
+gimmie/gimmie.py
+gimmie/gimmie_pidgin.py
+gimmie/gimmie_prefs.py
+gimmie/gimmie_recent.py
+gimmie/gimmie_running.py
+gimmie/gimmie_tomboy.py
+gimmie/gimmie_topicwin.py
+gimmie/gimmie_trash.py
+gimmie/gimmie_util.py
+gimmie/traymanager/eggtraymanager.c

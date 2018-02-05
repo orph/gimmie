@@ -1,0 +1,37 @@
+
+Gimmie README
+
+Copyright (C) 2007 Alex Graveley <alex@beatniksoftware.com>
+
+Please send questions and suggestions to
+<gimmie-list@lists.beatniksoftware.com>.
+
+Please report bugs using
+http://bugzilla.gnome.org/enter_bug.cgi?product=gimmie.
+
+Gimmie is licensed under the LGPL, see COPYING for more details.
+
+See the BUILDING file for instructions on getting Gimmie running.
+
+----
+
+I spend a lot of my time doing the same things over and over with my
+computer, so I wrote an application to try to give me some control over
+that routine.  Maybe you spend time doing the same sorts of things.
+
+Maybe Gimmie can help you take control too.
+
+Gimmie tries to provide a handle on the people you interact with, the
+documents you create, and the applications you use to create them.
+
+----
+
+The Gimmie homepage is located at http://www.beatniksoftware.com/gimmie.
+
+Gimmie source code is stored in the Gnome Subversion repository, in the
+"gimmie" module.  See http://developer.gnome.org/tools/svn.html for more
+information.
+
+If you're interested in discussing Gimmie, consider the Gimmie mailing
+list: To subscribe, visit
+http://lists.beatniksoftware.com/listinfo.cgi/gimmie-list-beatniksoftware.com

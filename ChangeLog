@@ -1,0 +1,2974 @@
+2007-10-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_pidgin.py (PidginAccountReader): Patch from Alex
+	Gabriel to use a non-reload signal, status-changed for account
+	status changes, to avoid a big slow reload for those with a lot of
+	contacts.
+
+2007-10-30  Alex Graveley  <alex@beatniksoftware.com>
+
+        (gimmie-0.2 branch)
+
+	* NEWS: Update for 0.2.8.
+	* AUTHORS: Add Alex & Seif.
+
+	* gimmie/gimmie_people.py (EverybodySource.get_items_uncached):
+	Only list gaim buddies if no pidgin buddies.
+	(AccountMenu.__init__): Make the menu items ImageMenuItems, like
+	pidgin uses in it's status selector.  Comment out list of
+	accounts, since it doesn't do anything for now.
+	(PeopleTopic.do_reload): Only list gaim accounts if no pidgin
+	accounts.
+
+	* gimmie/gimmie_pidgin.py (PidginAccountReader.__init__): Connect
+	to AccountStatusChanged and emit reload. set_status ->
+	set_global_status. Add get_global_status.
+
+2007-10-30  Alex Graveley  <alex@beatniksoftware.com>
+
+        (gimmie-0.2 branch)
+
+	* gimmie/gimmie_util.py (DBusWrapper.__getattr__): Don't force a
+	refetch of the dbus object on every dbus exception.  This can
+	cause CPU spikes if dbus methods that cause exceptions are called
+	in a tight loop.
+
+	* gimmie/gimmie_trash.py (TrashItem.get_can_pin): Don't allow
+	pinning of the trash.  Fixes crash reported by Seif Lotfy.
+
+	* gimmie/gimmie_library.py (DocumentsTopic.do_reload): Only add
+	the Attachments source if the Thunderbird downloads.rdf file
+	exists, and connect to it's reload to the topic's reload signal so
+	that if it gets created later, the category will be shown.
+
+2007-10-24  Alex Graveley  <alex@beatniksoftware.com>
+
+        (gimmie-0.2 branch)
+	
+	* gimmie/gimmie_topicwin.py (ItemIconView._set_item): Workaround
+	icon sizing by basing the size chosen on the total number of
+	items, not just those currently visible. This has the negative
+	consequence of showing smaller icons than is neccessary, but fixes
+	the problem of mixed sizing as async-loaded items become visible.
+
+2007-10-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	(gimmie-0.2 branch)
+
+	* gimmie/gnomecups/_gnomecups.override
+	(_gnomecups_notify_marshal): Use PyObject_CallObject instead of
+	PyEval_CallFunction, which is what the new gmenu bindings use.
+
+2007-10-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	(gimmie-0.2 branch, merged from trunk@482)
+
+	* gimmie/gimmie_applet.py (TopicMenu.__init__): Pack an event box
+	next to the timebar, and set it's bg white (this is broken; should
+	respect style), to take up the empty space from the disabled
+	sparkline.
+	
+	* gimmie/gimmie_topicwin.py (TimeBar): Disable the sparkline due
+	to bugginess.
+
+	* gimmie/gimmie_util.py (DBusWrapper.__getattr__): Reset __obj on
+	dbus.DBusException.  This should hopefully fix D-BUS reconnect
+	issues.
+
+2007-10-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	(gimmie-0.2 branch)
+
+	* configure.in: Drop version to 0.2.8.  Remove checks for
+	firefox-nss.  Remove atom, data, pwdecrypt.
+
+	* gimmie/Makefile.am: Remove facebook.py, flickrapi.py,
+	lgconstants.py, libgmail.py, gimmie_facebook.py, gimmie_flickr.py,
+	gimmie_gmail.py, gimmie_googleoffice.py.  Remove atom, data,
+	pwdecrypt.
+
+	* gimmie/gimmie_people.py: Remove Facebook and Gmail contacts.
+	Fix crasher typo.
+
+	* gimmie/gimmie_library.py: Remove GOffice and Flickr.  Clean up
+	imports a bit.
+
+2007-10-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_computer.py (ComputerTopic.do_reload): Don't show
+	Printers sidebar if gnomecups isn't available.
+
+2007-10-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie.in (FILEPATH): Fix devel runs by getting the
+	abspath of __file__ before changing to the user's homedir.
+
+	* gimmie/gimmie_util.py (DBusWrapper): Handle no bus or no object
+	registered at gimmie init by looking them up as needed.
+
+2007-10-10  Seif Lotfy  <seif@lotfy.com>
+
+	* gimmie/gimmie_flickr.py: Load friends pictures
+
+	* gimmie/gimmie_pidgin.py: Load Alias for MSN Contacts using d-bus
+	to make them viewable in the people dock. Also support IRC
+	contacts (No Chats).
+
+	* gimmie/gimmie_people.py: Change Pidgin status using d-bus.
+
+2007-10-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_googleoffice.py: Fixup gdata imports: only need
+	gdata.service and gdata.docs.service.
+
+	* gimmie/gdata/Makefile.am: Fix to not install the same files in
+	all the subdirectories.  Doh!
+
+2007-10-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_googleoffice.py (GOfficeAccountReader._login): Fix
+	the attribute error causing GOffice login to fail by using the
+	proper Error class (gdata.docs.Error doesn't exist).
+
+2007-10-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie.in: Work around various install and ltihooks.py
+	weirdness to make something which executes from the dev tree or
+	install path.  GOffice is still broken for me though :-(
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* data/GNOME_GimmieApplet.xml: Add EditMenus context menu item.
+
+	* gimmie/gimmie_applet.py (GimmieApplet.__init__): Add EditMenus
+	command, which launches "alacarte". (Fixes bug #419572, patch from
+	maxx@krakoa.dk).
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py (TopicButtonMod._show): Focus the search
+	entry by default when presenting the menu.  Yay! (Fixes bug
+	#431193, patch from Adam Lofts).
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie.in: Fix the bundle-library loading to actually
+	work with installed versions.  Gdata still doesn't work for
+	installed run, due to some AttributeError though.
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gdata/docs/service.py (DocsService.GetDocumentListFeed):
+	Small bugfix to make this work without having the sys.path set up
+	explicitly.
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie.in: Temp hack to make sure we always use the
+	bundled gmenu, atom, and gdata over the system installed versions.
+
+	* gimmie/gmenu/Makefile.am: 
+	* gimmie/gmenu/gmenu.c: Import Python bindings from
+	gnome-menus-2.20.0, licensed LGPL.
+
+	* gimmie/Makefile.am (SUBDIRS): Add gmenu.
+	(gimmie_PYTHON): Add forgotten gimmie_threads.py.
+
+	* configure.in: Depend on libgnome-menu and build the gmenu
+	bindings ourselves.
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_flickr.py: Start loading images after a successful
+	auth, not when asked for photos.
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gdata/Makefile.am: 
+	* gimmie/atom/Makefile.am: Add missing makefiles from last commit.
+
+	* data/images/Makefile.am (uninstall-hook): Pass distcheck by
+	deleting 16x16 img.
+
+2007-10-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_library.py (DocumentsTopic.do_reload): Use
+	GOfficeSource instead of placeholder.
+
+	* gimmie/gimmie_googleoffice.py: Add init Google Office support
+	from Seif Lotfy and Alex Gabriel. Double Yay!
+
+	* gimmie/atom:
+	* gimmie/gdata: Add gdata-1.0.8, licensed as Apache 2.0.
+
+	* gimmie/Makefile.am (gimmie_PYTHON): Add gimmie_googleoffice.py.
+	Add gdata/atom to SUBIRS.
+
+	* configure.in: Add gimmie/atom/Makefile & gimmie/gdata/Makefile.
+
+2007-10-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_library.py (DocumentsTopic.do_reload): Use the
+	FlickrSource instead of the placeholder.
+
+	* gimmie/gimmie_flickr.py: Add initial Flick support from Seif
+	Lotfy and Alex Gabriel. Yay!
+
+	* gimmie/Makefile.am (gimmie_PYTHON): Add gimmie_flickr.py.
+
+2007-10-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/flickrapi.py: Add flickrapi 0.14, using the Python
+	license.
+
+	* gimmie/lgconstants.py: 
+	* gimmie/libgmail.py: Add CVS libgmail, as of Oct5, 07.  libgmail
+	is licensed GPL 2.0.
+
+	* gimmie/Makefile.am (gimmie_PYTHON): Add libgmail, flickrapi.
+
+2007-10-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_computer.py (PrinterItem.__init__): Use the
+	"lambda *args" trick here to hopefully avoid callback bugs.
+
+	* gimmie/gimmie_applications.py (MenuTree.__init__): Reenable
+	gmenu update listening, as this has been fixed in gnome-menus (see
+	bug #442747).
+
+	* gimmie/gimmie_facebook.py (FacebookAccountReader.load_friends):
+	Don't run in a thread, since the auth can still fail on
+	friends.get(), and we want the exception.  Call users.getInfo in
+	load_friends, to better segment the work.
+
+2007-10-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	Add pwdecrypt utility from Mozilla CVS, a standalone utility to
+	decrypt stored password files (signons2.txt) using a key file
+	(key3.db).
+
+2007-10-04  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_running.py (RunningItemSource.queue_reload):
+	Actually fix stupid wnck version arrity mismatches with *args, and
+	passing the function directly (versus lambda).
+	* gimmie/gimmie_gui.py (FriendlyPager._workspace_changed): Ditto.
+
+	* gimmie/gimmie_facebook.py (facebook_threads): Use a single
+	4-thread pool for all async operations. 
+
+2007-10-04  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_facebook.py (FacebookSource): Do all http requests
+	inside worker threads.  Use a 4-thread pool for loading friend
+	data, each processing 10 friends at a time.  Load the favicon in
+	thread, and pass it to the FacebookLogin item.
+
+	* gimmie/gimmie_topicwin.py (SidebarButton): Reload button
+	contents when source reloads.
+
+	* gimmie/gimmie_threads.py: New useful thread decorators.
+
+	* gimmie/gimmie_applet.py (main): Call threads_init earlier.  This
+	was causing standalone gimmie_applet to freeze, as threads weren't
+	initialized before entering the main loop.
+
+2007-10-03  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_running.py: Fixes from Seif Lotfy and Alex Gabriel
+	to avoid lambda arrity errors, and to match "Pidgin" (not
+	"pidgin") window class names.
+
+	* gimmie/gimmie_util.py: Look for a -memdump/--memdump command
+	line arg to print the diff of running objects every 15 seconds.
+
+	* gimmie/gimmie_facebook.py
+	(FacebookAccountReader.load_existing_auth): Handle invalid
+	existing session keys better by resetting facebook object internal
+	data.
+
+2007-10-02  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_gmail.py (GmailAccountReader.get_contacts): Don't
+	login here, which avoids showing the keyring access dialog
+	unexpectedly (e.g. when searching).
+	"Account Settings" -> "Login to Gmail".
+
+	* gimmie/gimmie_facebook.py (FacebookAccountReader.load_friends):
+	Convert uid to string, to avoid problems when using simplejson.
+	Fix from Seif Lotfy.
+
+2007-09-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_facebook.py (FacebookLogin.do_open): Connect to
+	the browser destroy event to finish the authentication and load
+	friends.
+
+2007-09-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_facebook.py: New.  Adds the initial (synchronous)
+	Facebook friend source, using GtkMozEmbed to open a custom web
+	widget to complete the login process.
+
+	* gimmie/facebook.py: Add pyfacebook (LGPL) from
+	http://code.google.com/p/pyfacebook.
+
+	* gimmie/gimmie_people.py (PeopleTopic.do_reload): Add the
+	Facebook source.
+
+	* gimmie/gimmie.in: Gross hack to work around GtkMozEmbed crashing
+	if the firefox libs are not already in LD_LIBRARY_PATH --
+	relauches __file__ with the same args and environ, with
+	/usr/lib/firefox appended to LD_LIBRARY_PATH.
+
+2007-09-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_people.py: Use calendar icon for recent people,
+	and generic "im" icon for Online Now, since one of gaim/pidgin
+	might not be present.
+
+	* gimmie/gimmie_running.py: Treat gaim and pidgin as equals.
+
+	* gimmie/gimmie_gmail.py: Set gmail_keyring_token gconf key as
+	int.  Fixes bug #429518, patch from Thomas HAMEL.
+
+	* gimmie/gimmie_running.py: Fix lambda arity.  Fixes bug #458048,
+	patch from Jesse Hallett.  
+	* gimmie/gimmie_gui.py: Ditto.
+
+2007-08-17  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_library.py: Rename from gimmie_documents.py.
+
+2007-08-17  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_base.py (Topic.get_icon): Add this.
+
+	* gimmie/gimmie_computer.py (ComputerTopic.__init__): Set icon here.
+	* gimmie/gimmie_applications.py (ApplicationsTopic.__init__): Ditto.
+	* gimmie/gimmie_documents.py (DocumentsTopic.__init__): Ditto.
+	* gimmie/gimmie_people.py (PeopleTopic.__init__): Ditto.
+
+	* gimmie/gimmie_applet.py
+	(TopicButtonMod._button_style_pref_changed): Use icon from
+	Topic.get_icon, instead of hardcoding.
+
+2007-08-12  Gabor Kelemen  <kelmeng@gnome.hu>
+
+	* configure.in: Added missing cs, hu, oc, zh_CN to ALL_LINGUAS.
+
+2007-07-27  Raphael Higino  <raphaelh@svn.gnome.org>
+
+	* configure.in: Added pt_BR to ALL_LINGUAS.
+
+2007-07-27  Raivis Dejus  <orvils@gmail.com>
+
+	* configure.in: Added Latvian Translation.
+
+2007-06-09  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (SparkLine._paint_cairo): Handle empty
+	levels_list.
+
+2007-06-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump to 0.3.0 for the unstable release cycle.
+
+	* gimmie/gimmie_topicwin.py (SparkLine._paint_cairo): First pass
+	at cairo-based drawing of the timeline bar.
+
+	* gimmie/*.py: Replace explicit superclass calls in signal
+	handlers with self.chain, at least for the cases where it chooses
+	to work correctly.
+
+2007-06-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump to 0.2.7.
+	* NEWS: Update.
+
+2007-06-06  James Ogley  <james@usr-local-bin.org>
+ 
+	* gimmie/Makefile.am:
+	* gimmie/gimmie_people.py:
+	* gimmie/gimmie_pidgin.py: Add support for Pidgin as well as Gaim2.
+
+2007-06-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py (TopicMenu.set_gravity): Pack the
+	toolbar and sidebar buttons at the top for top/side panels, and
+	bottom for bottom panels, as determined by the window gravity.
+
+	* gimmie/gimmie_topicwin.py (SearchToolItem): Set entry size to 14
+	from 18.
+
+2007-03-26  Tony Tsui  <tsui.tony@gmail.com>
+
+	* AUTHORS
+	* gimmie/gimmie_applet.py (GimmieApplet._show_about): Add me.
+
+2007-05-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_recent.py
+	(RecentlyUsedManagerGtk.get_items_uncached): Use the recent item's
+	modified time, instead of the visited time.  Visited is actually
+	the time of the first visit.  Confusing!
+
+2007-03-24  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie/gimmie_topicwin.py (ItemIconView): Highlight item when
+	mouse pointer is over it. When single click policy is enabled
+	change mouse cursor to hand icon when pointer is over an
+	item. Fixes bug #418036.
+
+2007-04-30  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_logout.py (LogoutDialog.__init__): Show the
+	Hibernate button as well as Sleep if it's supported.  This is
+	lame, but there's not much for it (fixes bug #429394).
+
+	* gimmie/gimmie_documents.py (MozillaDownloadsSource.get_enabled):
+	Fix bug in last commit where enabled status would fail if
+	get_items() had not yet been called.
+
+2007-04-30  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_documents.py (EpiphanyDownloadsSource): New class
+	originally from Tony Tsui (see bug #418015) to list Epiphany's
+	downloads directory files and monitor the gconf key for changes.
+	(MozillaDownloadsSource): Split out downloads.rdf parsing to this
+	new class.
+	(DownloadsSource): Make this a simple RecentAggregate of
+	MozillaDownloadsSource, EpiphanyDownloadsSource and a
+	DirectorySource for ~/Downloads.
+	(ThunderbirdAttachmentsSource): Rename class to reflect that it
+	only deals with Thunderbird.
+
+	* gimmie/gimmie_recent.py (RecentAggregate.__init__): Take
+	name/icon arguments.
+
+	* gimmie/gimmie_tomboy.py: Don't import thread.
+
+2007-04-30  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie.in (bug_catcher): Include gimmie version in bug
+	content, and pass --package-ver="@VERSION@" to bug-buddy.
+
+	* gimmie/Makefile.am (gimmie gimmie_applet): Subst @VERSION@.
+
+2007-04-28  James Ogley  <james@usr-local-bin.org>
+
+	* gimmie/gimmie.py: Remove browser loading
+
+	* gimmie/Makefile.am: Remove reference to gimmie_browser.py
+
+2007-04-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_base.py (Item.get_icon): Use the new Thumbnailer
+	class to lookup Item icons.
+
+	* gimmie/gimmie_util.py (Thumbnailer.get_icon): Move FileItem's
+	get_icon logic to this new class.
+
+	* gimmie/gimmie_recent.py (RecentlyUsed.get_items_uncached): Don't
+	wrap result Items in FileItems, as subclasses now do this.
+
+	* gimmie/gimmie_file.py (FileItem): Remove get_icon et al as
+	this is supplied by Item now.
+
+	* gimmie/gimmie_documents.py (RecentlyUsedDocumentsSource,
+	RecentlyUsedMediaSource): Make document and media sources that
+	create FileItems from recently used Item data.
+
+2007-04-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_recent.py: Move recent handling to here.
+
+	* gimmie/gimmie_base.py (Item): Add add_tag, has_tag, get_tags,
+	and remove_tag.
+
+	* gimmie/gimmie_browser.py: Remove this old and busted code.
+
+2007-04-12  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie/gimmie_gaim.py (GaimAccount.get_dbus_obj): Use get_screenname()
+	instead of get_name(). Fix bug #405598. Patch from Thomas Hamel.
+
+2007-04-08  Claude Paroz  <claude@2xlibre.net>
+
+	* configure.in: Added fr to ALL_LINGUAS.
+
+2007-03-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_computer.py (DevicesSource.get_items_uncached):
+	Catch ValueError.  Fixes bug #421620.
+
+2007-03-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump to 0.2.6.
+
+	* NEWS: Update.
+
+	* gimmie/gimmie_applications.py (MenuTree.__init__): Disable menu
+	change notification for now to avoid crashing all the time.  See
+	bug #419271.
+
+2007-03-21  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_computer.py (DriveItem.__init__): If the drive has
+	no activation URI, try to get one from its first mounted volume.
+
+2007-03-21  Alex Graveley  <alex@beatniksoftware.com>
+
+	Patch for bug #419561 originally from maxx@krakoa.dk.
+	
+	* gimmie/gimmie_applications.py (ApplicationsTopic.do_reload):
+	Show toplevel applications in an "Other" folder.
+
+	* gimmie/gimmie_computer.py (ComputerTopic.do_reload): If using
+	the new gnomecc.menu which doesn't include administrative items,
+	load system-settings.menu in an Administration sidebar source.
+
+2007-03-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_tomboy.py (TomboySource._idle_load_notes): Switch
+	to using a low priority idle handler instead of worker thread to
+	avoid wierd thread crashes.  Possible fix for bugs #419551 and
+	#420594.
+
+2007-03-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_documents.py
+	(AttachmentsSource.get_download_rdf_paths): Glob ~/.*thunderbird:
+	Ubuntu names the directory .mozilla-thunderbird.
+
+	* gimmie/gimmie_tomboy.py (TomboySource.__init__): Start the note
+	parsing thread in an idle handler to avoid allocating gobjects too
+	early.
+
+	* gimmie/gimmie_topicwin.py (SparkLine.do_expose_event): Make up a
+	cute log-of-height heuristic to smooth and multiply the graph.
+	Limit results to oldest zoom-level in days.
+
+	* gimmie/gimmie_documents.py (AttachmentsSource): Quick and dirty
+	new class to use DownloadsSource to parse Thunderbird's
+	downloads.rdf, just like for Mozilla.  Yay!  Why I didn't think of
+	this earlier, I don't know.
+
+	Major cleanup to move Topic toolbar items into discrete classes.
+	This should facilitate toolbar configurability.  A lot of code
+	motion, so probably a lot of breakage too.
+
+	Also remove Topic context menu items and move novel ones to new
+	toolbar item classes.  New options include: jump to printers,
+	trashcan, quick-access settings menu, show desktop, dummy network
+	location switch, and volume control.  These are all commented out
+	by default but can be enabled easily.
+
+2007-03-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_documents.py (DownloadsSource.get_items_uncached):
+	Catch ExpatError when parsing downloads.rdf.  Fixes bug #419830.
+
+	* gimmie/gimmie_tomboy.py (TomboySource._load_notes): Handle
+	~/.tomboy not existing.  Fixes bug #419492.
+
+2007-03-17  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applications.py (MenuTree.__init__): Pass a
+	correct lambda to add_monitor.  Attempts to fix bug #419271.
+
+2007-03-17  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie/gimmie_gui.py (FriendlyPager): Don't hide pager if there is
+	only one workspace but viewports are used. Support cycling of viewports
+	on scroll events.
+
+2007-03-17  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applications.py (MenuLauncherItem.get_icon): Avoid
+	jitting assert loading None for icon if the .desktop file doesn't
+	define an Icon key.  Fixes bug #419239.
+
+2007-03-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump to 0.2.5.
+
+	* NEWS: Update.
+
+	* gimmie/gimmie_topicwin.py (Sidebar.__init__): Attempt to work
+	around PyGtk bug (see #419107).
+
+	* gimmie/gimmie_computer.py (DriveItem.eject): Work around PyGtk
+	bug (see #418667).
+
+2007-03-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_tomboy.py (TomboySource.__init__): Handle note
+	file events by reloading/creating the individual note, not
+	reloading all notes.  Initially load notes in a thread (again).
+
+	* gimmie/gimmie_gaim.py (GaimAccount.__init__): Don't try to
+	support IRC, and strip jabber screenname resources if there's no
+	other alias.
+
+	* gimmie/gimmie_applet.py (main): Call gtk.gdk.threads_init().
+
+2007-03-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (TimeBar): Don't include Forever, add
+	This Year.  Set the label width to longest label char count.  Make
+	sure the sparkline is initialized with _default_zoom.  Fixes bug
+	#416920.
+	(SparkLine.do_button_press_event): Avoid divide by zero, fixes bug
+	#417099.
+
+2007-03-15  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (ItemIconView._compare_item_name):
+	Handle emptry item name in comparison.  Fixes bug #418418.
+
+	* gimmie/gimmie_gui.py (TopicRunningList._reload):
+	source.get_items() can return a generator.  Construct a list from
+	it that we can manipulate.  Fixes bug #418272.
+
+	* gimmie/gimmie_recent.py (RecentlyUsed.__init__): Connect to the
+	changed signal of recent_model using a lambda that supports the
+	different signal signatures between Egg and Gtk.  Fixes #417988.
+
+2007-03-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_base.py (ItemSource): Implement new async caching
+	generator model.
+	(Topic.find_items): Yield found items.
+
+	* gimmie/gimmie_documents.py (DownloadsSource): Switch to the new
+	yeilding model.
+	* gimmie/gimmie_tomboy.py (TomboySource): Ditto.
+	* gimmie/gimmie_applications.py (MenuSource): Ditto.
+	(RecentLaunchers): Ditto.
+	* gimmie/gimmie_gmail.py (GmailSource): Ditto.  Moved here from
+	gimmie_people.py.
+	* gimmie/gimmie_people.py (EverybodySource): Ditto.
+	(OnlineBuddySource): Ditto.
+
+	* gimmie/gimmie_computer.py (FavoritesSource): Ditto.
+	(PlacesSource): Ditto.
+	(DevicesSource): Ditto.	
+	(PrinterSource): Ditto.
+	(BonjourSource): Ditto.
+	(SettingsSource): New class to encapsulate flattened settings
+	tree.  Also, ditto.
+	(ComputerTopic.do_reload): Simplify ItemSource loading logic.
+
+	* gimmie/gimmie_recent.py: Move RecentAggregate to here, so it can
+	be used by the Computer topic, and yield results too.
+
+2007-03-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py (TopicMenu._scroll_get_best_size): Tweak
+	iconview sizing: Queue resize on vadjustment change, and don't
+	change the size request if we would request the current size, or
+	0.  This seems to work a lot better.
+
+2007-03-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_base.py (CachingItemSource): Add new helper class
+	to be used by async-loading ItemSources.
+
+	* gimmie/gimmie_topicwin.py (ItemIconView): Listen for bookmarks
+	changes and call _reload_visible_items.
+
+	* gimmie/gimmie_util.py (FileMonitor): Queue file events for .25
+	seconds, to avoid unneccessary updates.  Add "event" signal to
+	catch all monitor events.  Add queue_changed to creapte a local
+	file monitor "changed" event.
+	(BookmarkManager): Listen to external file changes using
+	FileMonitor.
+
+2007-03-09  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py (TopicMenu._favorite_selection_changed):
+	Desensitize favorite button if selected item cannot be pinned.
+	Fix bug #415898.
+
+2007-03-09  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py (TopicMenu.__init__): Hopefully fix bug
+	#414522.
+
+	* gimmie/gimmie_file.py (FileItem.get_name): Use filesystem
+	encoding to decode local file names.
+
+	* gimmie/gimmie_documents.py (DocumentsTopic.get_toolbar_items):
+	Rename Folders -> Places.
+	(DocumentsTopic.get_context_menu_items): Remove New Document
+	submenu.  Fixes bug #413620.
+
+	* gimmie/gimmie_computer.py (DriveItem.__init__): Handle looking
+	up drive from URI so drives can be favorites too.
+
+2007-03-09  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie/gimmie_logout.py: Destroy logout dialog before
+	suspending/hibernating or else automatic shutdown timer may kick
+	in after resuming.
+
+2007-03-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_documents.py
+	(DownloadsSource._get_download_rdf_paths): Look for mozilla
+	profile paths that have "default" anywhere in the title.
+
+	* gimmie/gimmie_applet.py (TopicMenu): Localize scrolled window
+	resizing here, so that topic windows in standalone dock mode don't
+	resize all the time.
+
+2007-03-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_computer.py (DBusWrapper.__getattr__): Call
+	getattr first, so that builtin object methods don't raise a
+	DBusException.  Fixes bug #413876.
+
+2007-03-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_computer.py (DriveItem.get_comment): Catch
+	generic gnomevfs.Error instead of more specific errors.
+	(DriveItem.get_comment): Ditto.
+	* gimmie/gimmie_file.py (FileItem.ensure_file_info): Ditto.
+	* gimmie/gimmie_util.py (FileMonitor.__init__): Ditto.
+	* gimmie/gimmie_trash.py (TrashDirectory._trash_dir_changed):
+	Ditto, fixes bug #413872.
+
+	* gimmie/gimmie_tomboy.py (NoteItem.do_open): Strip the .note
+	extension from file paths when trying to open note:// URIs.  Fixes
+	bug #413913.  Patch from Sandy Armstrong.
+
+2007-03-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_logout.py (LogoutDialog.__init__): Prevent crash
+	with GTK < 2.10.
+
+2007-03-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump to 0.2.4.
+
+	* NEWS: Update.
+
+	* data/GNOME_GimmieApplet.server.in.in: Set other_binaries to
+	"gimmie_applet;gimmie", so bug-buddy works with the applet and
+	standlone version.
+
+	* gimmie/gimmie.in: Pass @MODULE@ as appname.
+
+2007-03-01  James Ogley  <james@usr-local-bin.org>
+ 
+	* gimmie/gimmie_applications.py: Use YaST to manage software if it
+	exists (ie if on openSUSE).
+
+	* gimmie/gimmie_running.py: Add gnomesu to list of gksu-type
+	commands.
+
+2007-03-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* data/gimmie.schemas.in: Add /apps/gimmie/click_policy schema.
+
+	* gimmie/gimmie_applet.py (GimmieApplet._use_colors_pref_changed):
+	When colors are disabled, make the applet content box
+	not-homogeneous.  Rationale being that colored boxes look strange
+	when differently sized.
+
+	* gimmie/gimmie_prefs.py (Preferences): Try to show the Computer
+	topic name (i.e. the platform name).
+
+2007-03-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	Add Preferences and About dialogs for applet.  Patch originally
+	from Johannes Schmid <jhs@gnome.org>.
+ 
+	* data/GNOME_GimmieApplet.server.in.in: Set the correct keys for
+	bug-buddy to use Gnome Bugzilla when filing Gimmie bugs.
+
+	* data/GNOME_GimmieApplet.xml: XML file describing Panel menu:
+	just Preferences and About for now.
+
+	* data/gimmie.schemas.in: Add this.  Installs schema for the
+	applet preferences keys.
+
+	* data/Makefile.am: Generate and install gimmie.schemas, and
+	install GNOME_GimmieApplet.xml.
+
+	* gimmie/gimmie_applet.py: Added about dialog.  Respect button
+	style and coloring.
+
+	* gimmie/gimmie_prefs.py: New file, adds new preferences window to
+	setup button style and which buttons are shown.
+
+	* gimmie/gimmie_util.py (GConfBridge): Support using arbitrary
+	GConf prefix.  Add change notification when a changed:: signal is
+	connected to.  Determine vtype from default or value, and assert
+	if invalid vtype.
+
+	* autogen.sh: Simplify this.
+
+2007-02-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (SidebarButton._ignore_untoggle):
+	Disable context menu for now.
+
+	* gimmie/gimmie_base.py (Topic.get_running_source): Don't show the
+	topic label as bold/italic when a running item needs attention.
+	(ItemSource): Drop "reload-item" signal.
+	(Item.do_open): Don't try to launch an empty URI.
+
+	* gimmie/gimmie_gui.py (TooltipRaiser.do_raise): Don't do anything
+	if the target widget doesn't have a Gdk window yet. Fixes bug
+	#409928.  
+	Move FriendlyClock, FriendlyPager, and TrayManagerBox to here.
+
+	* gimmie/gimmie_tomboy.py (TomboySource.__init__): Turn on .tomboy
+	FileMonitor.  Duh!  Fixes bug #412065.
+
+	* gimmie/gimmie_gmail.py (GmailAccountReader): Catch
+	gnomekeyring.Error when accessing gnomekeyring.  Fixes bug
+	#409926.
+
+2007-02-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_util.py (DBusWrapper): Support newest dbus-python
+	0.80, which requires a mainloop when creating a bus used for
+	signal connection. Patch from Jan Alonzo <jmalonzo%40gmail.com>,
+	fixes bug #410240.
+
+2007-02-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_running.py: Localize all the running item stuff
+	from all the topics to here.
+
+	* gimmie/gimmie_topicwin.py (ItemIconView.load_items): Use a 0
+	timeout instead of idle to load items.
+
+2007-02-21  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (ItemIconView): Make loading
+	completely async by using ListModel's builtin filtering and
+	sorting, with a final pass to resize icons correctly.  Drop manual
+	sorting from all ItemSources.
+
+	* gimmie/gimmie.in: Chdir to the user's home directory.  Pass
+	--appname="gimmie" to bug-buddy.
+
+	* gimmie/gimmie_file.py (FileItem.get_is_user_visible): Return
+	True if we have file info.
+	(FileItem.ensure_file_info): Always call gnomevfs asyncronous file
+	lookup, to avoid blocking for disconnected NFS paths.
+
+	* gimmie/gimmie_documents.py (DownloadsSource.do_reload): Don't
+	check the FileItem exists before adding.
+	* gimmie/gimmie_recent.py (RecentlyUsed.do_reload): Ditto.
+
+	* gimmie/gimmie_applications.py (DesktopFileItem.__init__): Pass
+	the full location uri from the gnomedesktop item to the
+	LauncherItem cons, so FileItem base methods will have the full
+	path for desktop files.
+
+2007-02-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_documents.py (DownloadsSource): Make this open the
+	default Mozilla profile's downloads.rdf, and read download paths
+	out of it.  Monitor the file for changes and reload as well. Yay.
+	(DocumentsTopic.do_reload): Use video/* and audio/* mimetype
+	regexps for "Music & Movies".  Add "Documents" category, since
+	this the topic is now called Library.  Pass all the created
+	ItemSources to RecentAggregate, so it'll include them all.  Remove
+	"Important Email" category for now. Rename Photos to "F-Spot
+	Photos", and use it's icon.
+	(DownloadsSource): Delete this.
+
+	* gimmie/gimmie_recent.py
+	(RecentlyUsedOfMimeType.include_recent_item): Call match on
+	members of the mimetype_list if defined, to support regex
+	matching.
+	
+2007-02-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_logout.py (LogoutDialog): Show gnome-session icons
+	in shutdown/logout dialogs.
+
+	Play with some new topic naming:
+	* gimmie/gimmie_computer.py: Computer -> output of
+	platform.system_alias() or "Computer" if undetermined.
+	* gimmie/gimmie_documents.py: Documents -> Library.
+	* gimmie/gimmie_applications.py: Applications -> Programs.
+
+2007-02-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (TimeBar._zoomlist): Tweak zoom levels
+	a bit: Today, This week, This month, Last 2 months, Last 3 months,
+	Forever.
+
+	* gimmie/gimmie_base.py (Item.pretty_print_time_since): Add
+	include_today flag to avoid including the "Today" part of dates
+	from today.
+
+	* gimmie/gimmie_gaim.py: Use DBusWrapper.  Connect to dbus signals
+	to notify of buddy status change, and emit reload on the buddy.
+	Do this instead of listing blist.xml changes and reloading
+	everything.  Start tracking idle time when we receive a
+	BuddyIdleChanged signal, and show this time in buddy Item
+	description.
+
+	* gimmie/gimmie_logout.py: More logout dialog awesomeness from
+	maxx@krakoa.dk: use gnome-power-manager's dbus interface to
+	suspend/hibernate. Patch from bug #407673.
+
+	* gimmie/gimmie_util.py (DBusWrapper): New helper to handle
+	raising a dbus.DBusException for older DBUS python bindings which
+	don't use unknown interface proxies.
+
+2007-02-18  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie/sexy/sexy.override: Add "kwargs" to "override
+	sexy_tooltip_position_to_rect" line. Fix bug #348658.
+
+2007-02-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_documents.py
+	(NewDocumentMenuButton._add_template_item): Break out the "New
+	Document" toolbar menu item into it's own subclass, and make
+	NewFromTemplateDialog handle it's own response.
+
+	* gimmie/gimmie_applet.py (TopicMenu._add_toolbar_items): Attach
+	to "clicked" signal on ToolButton items and "activate" on the menu
+	children of ToolMenuButton toolbar items, and in both cases hide
+	the menu to cause an ungrab.
+
+	* gimmie/gimmie_file.py (FileItem.get_mimetype): Return
+	application/octet-stream if no mimetype could be found.
+
+	* gimmie/gimmie_util.py (LaunchManager.make_recent_item): Rename
+	from make_egg_recent, and assert if no mimetype is given.
+
+	* gimmie/gimmie_computer.py (DriveItem.get_comment): Handle
+	gnomevfs.get_volume_free_space raising gnomevfs.NotSupportedError.
+
+	* gimmie/gimmie_util.py (LaunchManager.launch_uri):
+	gtk_recent_manager_add_full requiresa mimetype for the URI, so
+	look it up using xdg.Mime.
+	(ToolMenuButton._get_menu_position): Fix to handle menus that
+	would display off the bottom edge, by using size_request on the
+	menu instead of get_size_request.
+
+	* gimmie/gimmie_logout.py (LogoutDialog): Make the logout dialog
+	match the Gnome default better, and avoid being modal so the menu
+	does not steal the click.
+
+2007-02-15  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_topicwin.py (SparkLine): New class to add simple
+	bar graphing of recent history next to the +/- zoom buttons.
+	(TimeBar.__init__): Pack in a SparkLine.
+	(TopicView.load_items): Resize the window to fit the icon view.
+	This has to work around GtkIconView's bunk size request by looking
+	at the scrolled window's vadjustment upper bound.  Currently the
+	window height is limited to 70% of the screen height.  Partial fix
+	for bug #406269.
+	(ItemIconView._set_item): Adjust sizing a bit to use smaller text
+	size for 40+ items.
+
+	* gimmie/gimmie_applet.py (TopicMenu.show_hide_zoomer): Set
+	TimeBar's item list so the sparkline has correct data.
+
+	* gimmie/gimmie_computer.py (ComputerTopic.__init__): Try to load
+	the new (as of Gnome 2.17.91) gnomecc.menu file.  This is
+	preferred over the old settings.menu file if available.  Fixes
+	bug #398997.
+
+2007-02-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_gmail.py (GmailContact): Open using GMail composer
+	URL instead of a mailto: URL.  Fixes bug #405599.
+
+2007-02-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_gaim.py: If the Gaim DBUS interface cannot be
+	found, use a simple helper class that raises dbus.DBusException on
+	any attribute access.  Fixes #404909.
+
+	* configure.in: Bump to 0.2.3.
+
+	* NEWS: Update.
+
+2007-02-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump to 0.2.2.
+
+	* NEWS: Update for pending 0.2.2.
+
+2007-02-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_tomboy.py (NoteItem): Use file: URIs instead of
+	note: URIs so we can find the file for parsing if created as a
+	bookmark.
+
+	* gimmie/gimmie_trash.py: Simplify trash handling by putting
+	directory monitoring into a TrashDirectory helper class.
+
+	* gimmie/gimmie_applet.py
+	(GrabOnShowWindow.do_button_press_event): Call event on the
+	destination widget, instead of do_button_press_event, as some
+	widgets don't implement it.
+
+	* gimmie/gimmie_file.py (FileItem.ensure_file_info): Pass
+	gnomevfs.FILE_INFO_GET_MIME_TYPE, so mimetypes for directories are
+	returned.  Fixes #398796.
+
+2007-01-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py: Add support for different panel
+	orientations.  Original patch from Markus Jonsson.
+
+2007-01-30  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_util.py (LaunchManager.launch_command): Wait for child
+	process to terminate to prevent zombie processes.
+
+2007-01-29  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_util.py (FileMonitor.event_mapping): Add
+	gnomevfs.MONITOR_EVENT_METADATA_CHANGED to event_mapping dict.
+	Fix bug #398863.
+
+2007-01-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_gaim.py (GaimBuddy.get_name_markup): Append heart
+	last if pinned item.
+	(GaimBuddyUri): Make this horribly complex.  Listen to gaim_reader
+	for changes to refind the buddy for this uri, and emit reload.
+	Override __getattribute__ to implement complex attr lookups:
+	Any attr which exists in object.GObject is returned, to allow for
+	signal connect.  Otherwise, return the attr from the gaim_buddy.
+
+	* gimmie/gimmie_base.py (Item.pin): Emit reload on pin/unpin.
+
+2007-01-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie/gimmie_applet.py: Remove hash-bang initial line, and drop
+	executable perm.  People should run this via the generated wrapper
+	script.
+	* gimmie/gimmie.py: Ditto.
+
+	* gimmie/gimmie.in: If the parent directory contains a
+	gimmie/gimmie[_applet].py file, add parent to PYTHONPATH.  This
+	enables running uninstalled out of the source tree.
+
+2007-01-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicView.find_first_button): Add special
+	case handling for FavoritesSource so that it is always chosen
+	first, despite the number of items it contains.
+
+	* gimmie_base.py (Item.get_name_markup): Append a red unicode
+	heart to the markup name if the item is pinned, as an indicator of
+	favorite items.
+
+2007-01-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (MenuLauncherItem.pin): Override to pin a
+	created DesktopFileItem for the same file URI.  This allows
+	bookmarking application menu items.
+
+	* gimmie_gaim.py (GaimBuddy.pin): Override to pin a created
+	GaimBuddyUri.  GaimBuddyUri locates the GaimBuddy for a given uri,
+	and passes all calls along to it.  This allows bookmarking Gaim
+	buddies.
+
+	* gimmie_base.py: Split set_is_pinned -> pin, unpin to allow
+	easier override of pin.  "Keep Around" -> "Add to Favorites". 
+
+2007-01-26  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_util.py (BookmarkManager.get_bookmarks): Use the correct
+	variable to check if the mime type is in mime_type_list. Fix
+	bug #400149.
+
+2007-01-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_recent.py (RecentlyUsed._model_changed): Work around
+	incompat in "changed" signal args between gtk/egg recent
+	implementations.
+	* gimmie_util.py (RecentlyUsedManager._model_changed): Ditto.
+
+2007-01-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Only check for egg.recent if gtk.RecentManager not
+	available.  This fixes Fedora 5, which doesn't include egg.recent
+	in it's python-gnome-extras package.
+
+	* gimmie_util.py (RecentlyUsedManager): Add GTK 2.10 RecentManager
+	support, with fallback to egg.RecentModel.  Patch from James
+	Bowes.
+
+	* gimmie_computer.py (FavoritesSource.do_reload): Use
+	DisabledItemSource if gnomecups not available.
+
+2007-01-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	Add Gimmie icons from Drew Kerr.
+
+	* data/images/Makefile.am: Install Gimmie icons into
+	/usr/share/pixmaps and hicolor icon dir.  Currently 32x32, 48x48,
+	and the svg are installed.
+
+2007-01-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* data/GNOME_GimmieApplet.server.in.in: Include bugzilla component
+	info.
+
+	* gimmie_applet.py (main): Pass --window to run inside a window by
+	default when not run as an applet.
+
+2007-01-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (BookmarkManager.DEFAULT_BOOKMARKS): Use the
+	classname as it will appear once installed, which includes a
+	"gimmie" prefix.
+
+	* gimmie_computer.py (FavoritesSource.do_reload): Pass a fromlist
+	to __import__ so the correct submodule will be returned in the
+	case of "gimmie.gimmie_applications.DesktopFileItem".
+
+2007-01-23  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Drop pkg-config dependencies drastically: we now
+	only check for gtk+-2.0 and pygtk-2.0.  Make libgnomecups
+	optional.  Use AM_CHECK_PYMOD for all used python modules, so that
+	people don't need to install python dev packages.
+
+	* Makefile.am (SUBDIRS): Conditionally include gnomecups.
+
+	* gimmie_computer.py: Import gnomecups safely, and use an
+	EmptySource in it's place if not available.
+
+	* gimmie_trash.py (TrashMonitor._find_directory): Check for
+	gnomevfs.GenericError which can happen with wonky NFS mounts.
+
+2007-01-23  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (BookmarkManager): Set the classname of the
+	default bookmarks.
+
+2007-01-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (ItemIconView): IconView bug doesn't send
+	selection-changed when setting a new model, so call unselect_all
+	so the Favorite button sensitivity can update.
+	(ItemIconView._set_item): Show pinned/favorite/bookmark items with
+	a larger icon.
+
+	* gimmie_util.py (BookmarkManager): Change the bookmark
+	serialization to include the Item classname used to represent the
+	bookmark (gimmie_file.FileItem by default), add API to support
+	fetching this.  Existing API needs to be reworked, and all the
+	callers updated to use the new version.
+
+	* gimmie_computer.py (FavoritesSource): Add basic support for
+	favorites, by creating a class instance dynamically for the
+	bookmarked URI.
+
+	* gimmie_applet.py (TopicMenu): Make the favorites button work, so
+	that clicking it adds the selected item as a favorite.
+	Desensitize the button when nothing is selected.  Make the icon
+	greyscale for unfavorited items, to make it a little more clear.
+
+2007-01-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (PlacesManager.do_reload): Handle ioerror when
+	loading ~/.gtk-bookmarks.
+
+	* gimmie_file.py (FileItem.ensure_file_info): Handle
+	gnomevfs.NotFoundError.  Should fix bug #398327.
+
+	* gimmie_applet.py (TopicMenu._add_toolbar_items): Show the label
+	"Favorite" next to the heart tool item.
+
+2007-01-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow.__init__): Move TimeBar to here
+	from gimmie_applet.py.  Rename TopicWindowBase to TopicView, and
+	abstract duplicated zoom-related functions from it's two
+	subclasses.
+
+2007-01-19  Christian Hammond <chipx86@chipx86.com>
+
+	* gimmie_applet.py: Mark the background of the applet as transparent.
+
+2007-01-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump version to 0.2.1.
+
+	* gimmie_applet.py (GrabOnShowWindow): Fix nasty bug where
+	submenus shown inside a topic window cause it to never ungrab
+	(without using Escape).
+
+2007-01-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Bump version to 0.2.0.
+
+2006-01-18  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_gmail.py (GMailContact, GMailAccountReader): Add a class
+	for representing a GMail contact.  Add a class for connecting to
+	GMail account and retreiving contact information.
+
+	* gimmie_people.py (GMailSource): Add GMailSource class for GMail
+	contacts.
+
+	* gimmie_utils.py (GConfBridge): Add "gmail_accounts" setting.
+	Support int type.
+
+2007-01-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	Install `gimmie` to start the standalone version.  Install
+	GNOME_GimmieApplet.server to start `gimmie_applet` in libexec.
+	Install all the .py and subdirectories into $(pyexecdir)/gimmie.
+
+	* gimmie_applet.py: Add main(), which can be called by the
+	bug-buddy wrapper script.
+	* gimmie.py: Ditto.
+
+2007-01-17  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applet.py: Add this, the panel applet engine.  Test this
+	with `./gimmie_applet.py window` until we add a .server file.
+
+	* gimmie_computer.py (ComputerTopic.do_reload): Add
+	FavoritesSource to sidebar, which doesn't do much, followed by a
+	separator.
+	(ComputerTopic.get_toolbar_items): Add Help toolbar submenu, hide
+	the Audio item if a panel applet (people already have an applet
+	for this).
+
+	* gimmie_base.py (Topic.set_running_source_factory): Set a lamdba
+	for the running source instead of an instance so we don't create
+	running sources needlessly.
+
+	* gimmie_people.py (PeopleTopic.get_toolbar_items): Remove "Add
+	Group" button: groups are lame.
+
+2007-01-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	Remove egg, wnck, gnomedesktop, since most people have these now,
+	and the bugs have been fixed (I hope).
+	
+	Move egg to traymanager, and remove everything except the
+	TrayManager class.
+
+	* gimmie.py: Don't import pygtk.
+
+	* gimmie_util.py: Use egg.recent, instead of egg, which is what
+	gnome-python2-desktop calls it.
+
+	* gimmie_computer.py (ComputerRunningSource.__init__): Handle
+	failure creating traymanager.TrayManager.
+
+2007-01-10  Pema Geyleg  <pema.geyleg@gmail.com>
+
+	* configure.in: Added 'dz' to ALL_LINGUAS.
+
+2007-01-09  Ignacio Casal Quinteiro  <nacho.resa@gmail.com>
+
+	* configure.in: Added 'gl' to ALL_LINGUAS.
+
+2006-12-20  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_applications.py (RunningApplications):
+	* gimmie_file.py (FileItem, LauncherItem):
+	* gimmie_documents.py (RunningDocuments):
+	* gimmie_running.py (RunningItem): 
+	* gimmie_gaim.py (GaimBuddy):
+	* gimmie_people.py (RunningChat, RunningChats): Add
+	handle_drag_data_received() method to handle drag and drop.
+
+	* gimmie_bar.py (GimmieBarDock.layout): Set drag destination for
+	running_btn widget and connect drag-data-received signal. Also set
+	the window which FocusRaiser watches to running_btn so other drag
+	signals can be hooked into it.
+
+	* gimmie_documents.py (RunningDocuments.get_item_for_uri): Return
+	None if item mime type is None.
+
+	* gimmie_file.py (FileItem.get_mimetype): Only convert return
+	value of xdg.Mime.get_type_by_name() to string if it is not None.
+
+	* gimmie_util.py (FocusRaiser._connect_drag): Don't set drag dest
+	set for watch_win because it is done elsewhere.
+
+	* gimmie_util.py (FocusRaiser._drag_motion): Don't set drag status
+	or else we can't get drag data received signals.
+
+	* gimmie_util.py (BookmarkManager.add_bookmark): Don't bookmark
+	duplicate uris.
+
+	* gimmie_people.py (RunningChats.get_item_for_uri): Return None if
+	self._get_screenname_from_uri() returns None.
+
+2006-11-08  Todd Berman  <tberman@imeem.com>
+
+	* gimme_applications.py: Small fix to window creation to check for
+	the existance of gnome-app-install
+
+2006-10-08  Dav  <dcoeurjo@liris.cnrs.fr>
+
+	* gimmie_documents.py (RecentAggregate.get_items):
+	* gimmie_file.py (FileItem.get_name): Perform UTF-8 decoding for
+	filenames to avoid crashing on badly encoded files.
+
+2006-10-08  David Trowbridge  <trowbrds@gmail.com>
+
+	* gimmie_applications.py (MenuSource): don't assume that gmenu items
+	which aren't directories are entries.  This fixes bug #354415.
+
+2006-10-08  Patrick Wagstrom  <pwagstro@andrew.cmu.edu>
+
+	* gimmie.py: on some (most?) platforms ltihooks.py was not being
+	imported properly.
+
+2006-10-08  David Trowbridge  <trowbrds@gmail.com>
+
+	* po/Makefile.in.in: This file is autogenerated, so it shouldn't be in
+	the CVS repository.
+
+2006-10-08  Patrick Wagstrom  <pwagstro@andrew.cmu.edu>
+
+	* gimmie_computer.py (TrayManagerBox): squashed bug that misplaced
+	multiple icons in the tray.  Sorta looked at by David Trowbridge.
+
+2006-09-13  David Lodge <dave@cirt.net>
+
+	* configure.in: Added "en_GB" to ALL_LINGUAS.
+
+2006-09-04  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_people.py (RunningChat.__init__): Listen to urgency hints
+	and add _win_state_changed() and get_demands_attention() method.
+
+2006-08-21  Clytie Siddall <clytie@riverland.net.au>
+
+	* configure.in	Added vi in ALL_LINGUAS line.
+
+2006-08-06  Jovan Naumovski  <jovan@lugola.net>
+
+	* configure.in: Added "mk" to ALL_LINGUAS.
+
+2006-07-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_trash.py (TrashItem.do_empty): Use a single string for
+	secondary dlg text instead of several split into lines, so we
+	don't confuse the gettext parser.
+
+2006-07-22  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_topicwin.py (ItemIconView): Add support for following
+	Nautilus' click_policy gconf value.
+	* gimmie_util.py (GConfBridge): Add more detailed comment about
+	"click_policy".
+
+2006-07-21  Josep Puigdemont i Casamajó
+
+	* configure.in: Added ca to ALL_LINGUAS.
+
+2006-07-18  Sigurd Gartmann  <sigurdga@yahoo-inc.com>
+
+	* configure.in: Added Norwegian Bokmål (nb) to ALL_LINGUAS.
+
+2006-07-17  Takeshi AIHANA <aihana@gnome.gr.jp>
+
+	* configure.in: Add 'ja' (Japanese) to ALL_LINGUAS.
+
+2006-07-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (Topic.find_items): Do AND matching of all search
+	words.
+
+2006-07-15  Tom Insam  <tom@jerakeen.org>
+
+	* gimmie_computer.py (FriendlyPager._reload_workspaces): Hide the
+	pager if there is only one workspace.
+
+2006-07-11  Francisco Javier F. Serrador  <serrador@openshine.com>
+
+	* configure.in: Added Spanish to ALL_LINGUAS.
+
+2006-07-07  Stu Hood  <stuhood@gmail.com>
+
+	* gimmie_documents.py (DocumentsTopic._add_templates): Fix a crasher
+	when ~/Templates doesn't exist.
+
+2006-07-05  Chris Scobell  <chris.scobell@gmail.com>
+
+	* gimmie_documents.py: Implement "New Document".
+
+2006-07-04  Johan Dahlin  <jdahlin@async.com.br>
+
+	* gimmie_util.py (PlacesManager): Refactoring: Handle bookmark aliases
+	which have a space in them, bookmark files which don't exist, and broken
+	.gtk-bookmarks.  Always rebuild places, so removed bookmarks are
+	properly handled.  Mark instance private variables with a leading
+	underscore (PEP-8).  Do not save a reference to the FileMonitor.
+
+2006-07-03  Ilkka Tuohela  <hile@iki.fi>
+
+	* configure.in: Added Finnish "fi" to ALL_LINGUAS
+
+2006-07-03  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_topicwin.py (ItemIconView): Connect button-release-event for
+	single click activation support.
+	* gimmie_util.py (GConfBridge): Add "click_policy".
+
+2006-06-30  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (BookmarkManager.do_reload): Make the list
+	generator work for other versions of python.
+
+	* README: Update a little bit.
+
+2006-06-29  Hendrik Brandt  <heb@gnome-de.org>
+
+	* configure.in: Added German "de" to ALL_LINGUAS.
+
+2006-06-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_documents.py (RecentAggregate.get_items): Handle
+	UnicodeDecodeError when sorting items by calling decode on each
+	name and trying again.
+
+	* gimmie_tomboy.py (TomboySource.do_reload): Name the error.
+
+	* gimmie_file.py (FileItem.get_name): Use urllib.unquote when
+	falling back to URL for the name.
+
+2006-06-28  Simos Xenitellis  <simos@gnome.org>
+
+	* configure.in: Added el to ALL_LINGUAS.
+
+2006-06-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: Update to 0.1.1.
+
+	* NEWS: Update a bit.
+
+	* gimmie_applications.py (DesktopFileItem.__init__): Call
+	gnomedesktop.item_new_from_basename if uri has no dirname.
+
+	* gimmie_util.py (BookmarkManager.DEFAULT_BOOKMARKS): Add some
+	default bookmarks:  Firefox, Nautilus, Gimmie's README, and
+	my orphennui AIM (me).
+
+2006-06-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (Item.pretty_print_time_since): 
+	* gimmie_trash.py (TrashItem.__init__): gettext fixes from Zygmunt Krynicki.
+
+2006-06-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (EdgeWindow.do_size_request): Use up to 100% of
+	screen size.
+
+	* gimmie_file.py (FileItem.get_location_comment): Use a more
+	public name.
+
+	* gimmie_bar.py (GimmieBarDock.layout): Just use padding between
+	topics, not above/below.
+
+	* TODO: Update a little for release.
+
+	* gimmie_gaim.py (gaim_dbus): Set to None on error.
+
+	* gimmie_documents.py (DirectorySource): Monitor a directory for
+	changes and list all it's contents.
+	(DownloadsDirectorySource): A DirectorySource for $DOWNLOAD_PATH
+	or ~/Downloads.
+	(DocumentsTopic.do_reload): Use a DownloadsDirectorySource at
+	~/Downloads.
+
+2006-06-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow.__init__): Remove one-page
+	notebook only used to create a bevel, after prodding from Karl
+	Lattimer.
+
+2006-06-26  Pedro Villavicencio Garrido  <pvillavi@gnome.org>
+
+	* configure.in: correct the recent Added "da".
+
+2006-06-26  Martin Willemoes Hansen  <mwh@sysrq.dk>
+
+	* configure.in: Addd "da" Danish to ALL_LINGUAS.
+
+2006-06-26  Christian Rose  <menthos@menthos.com>
+
+	* configure.in: Added "sv" to ALL_LINGUAS.
+
+2006-06-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py (RunningChats._get_screenname_from_uri): Be a
+	bit smarter about trimming quotes in URIs.
+	(RunningChats._get_buddy_for_screenname): Lowercase the screenname
+	before looking for a matching buddy.  Fixes bookmarking screenname
+	which are mixed case.
+
+	* gimmie_gui.py (TopicButton.do_clicked): Call
+	do_set_wm_icon_geometry after creating window.  TopicWindows
+	weren't minimizing to the correct location initially.
+
+2006-06-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (DesktopFileItem.__init__): Raise
+	ValueError if gnomedesktop.item_new_from_uri returns None.
+
+2006-06-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py (FriendlyPager._pager_scroll_event): Cycle
+	desktops on scroll event.  Patch originally from Frederic Back.
+
+2006-06-24  David Trowbridge  <trowbrds@gmail.com>
+
+	* gimmie_gui.py (TopicButton.do_button_press_event): Destroy the menu
+	on selection-done, to avoid leaking gtk.MenuItems
+
+2006-06-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (IconFactory.colorshift): Add this to colorshit
+	pixbufs.
+
+	* gimmie_gui.py (RunningItemTile._load_icons): Colorshift the
+	highlight icon for running items.
+	(DockWindow.do_set_wm_strut): Don't set the strut if it would
+	occupy the entire screen.
+	(TopicRunningList._reload): Only append items which are not
+	already present in the running item list.
+
+	* gimmie_computer.py (RunningSettingsApplications): Subclass of
+	RunningApplications, but which masks items which are not settings.
+	Aggregate this into the running computer source.
+	(ComputerRunningSource.__init__): Create the pager, tray mgr, and
+	clock once here.
+	(ComputerTopic.get_toolbar_items): Hide the network item.
+
+	* gimmie_applications.py (RunningNoSettingsApplications): Subclass
+	of RunningApplications, but which masks items which are settings.
+	Use this for the running applications source.
+
+	* Makefile.am (gimmie_PYTHON): Update with missing files.
+	(CLEANFILES): Add gimmie_globals.py.
+	(EXTRA_DIST): Add gimmie_globals.py.in.
+
+	* po/ChangeLog: Add this.  Needed for make dist.
+
+2006-06-21  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (HideOnDeleteWindow.do_delete_event): Hide
+	instead of iconify on delete.  New metacity (2.14.5) will think
+	the window is not responding.
+
+	* gimmie_util.py (IconFactory.load_icon): Don't choke on unfound
+	icons.
+
+2006-06-22  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gnomedesktop/_gnomedesktop.defs: Fix mem leak with GnomeDesktopItem.
+	* egg/_egg.defs: Fix mem leak with EggRecentItem objects.
+	
+2006-06-21  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (IconFactory.load_icon): Work around a Pixbuf
+	leak in gtk.IconTheme. Also work around broken
+	gtk.IconInfo.get_builtin_pixbuf.  Pixbufs no longer leak for me.
+	Yay!
+	(DebugHelper.count_running_objects): Add this helper which can
+	print the number of active objects of a list of types.
+	(DebugHelper.diff_running_objects): This helper prints the count
+	of newly created objects since the last call.
+
+2006-06-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (RunningItemTile): Disconnect the reload
+	connection on destroy, fixes leaking RunningItemTiles.
+	(TooltipRaiser.__init__): Cleanup on widget destroy, fixes leaking
+	RunningItemTiles.
+
+2006-06-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie.py (_setup_session_manager): Set the restart style after
+	the restart command.  I've been seeing two instances of gimmie
+	show up, and this was a random guess and now I don't see it
+	anymore :-)
+
+	* gimmie_running.py (RunningItem.get_is_active): Implement this by
+	looking through the app group's windows for one that is currently
+	active.
+
+2006-06-20  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie.py: Handle broken Fedora gnome-python wrapper for session
+	managment set_restart_command() function.
+
+2006-06-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_tomboy.py (TomboySource.__init__): Call
+	os.path.expanduser for TOMBOY_PATH.
+
+	* gimmie.py: Don't restart after a SIGTERM.
+
+2006-06-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie.py: Recreate the gimmiebar on relevent setting change.
+	Rather broken at the moment.
+
+	* gimmie_bar.py (GimmieBar.destroy): Store the edge window, and
+	destroy it here.
+
+	* gimmie_computer.py (ComputerRunningSource): Manage clockapplet
+	display directly via gconf setting.
+	(ComputerTopic.get_button_content): Listen for clockapplet
+	settings changes, and display the time in the topic button if the
+	clockapplet is disabled.
+
+2006-06-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_bar.py: Kill GimmieBarButtonsOnEdge.
+
+	* gimmie_util.py (GConfBridge.DEFAULTS): Add "clockapplet".
+
+2006-06-19  Chris Lord  <chris@openedhand.com>
+
+	* gimmie_bar.py (GimmieBarDock.layout): Integrate
+	GimmieBarButtonsOnEdge with GimmieBarDock.
+
+	* gimmie.py: Make the clock-applet visibility configurable and use
+	GimmieBarDock instead of GimmieBarButtonsOnEdge.
+
+2006-06-18  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie.py: Setup gnome.ui's session restart stuff, so gimmie is
+	restarted after logout or after a crash.  Ctrl-C on the command
+	line will avoid restarting.  Developers can run with --sm-disable
+	to avoid restart altogether.
+
+	* gimmie_file.py (FileItem.get_comment): Show the hostname and
+	directory name of the file in the comment.
+
+	* gimmie_util.py: egg.recent -> egg.
+	(GConfBridge): Some superficial variable name cleanups.
+
+	* gimmie_computer.py (ComputerRunningSource.do_reload): Add an
+	hbox containing tray icons.
+
+	* configure.in: Remove checks for python-bonobo.  We don't need
+	them any more with a simplified egg-recent.
+
+2006-06-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py (PrinterItem.get_timestamp): Return the
+	recent manager's timestamp, so printers show up in recently used.
+	(PrinterItem.get_icon): Copy the icon before compositing emblems
+	to avoid a crash.
+	(RemoteMountItem): Add basic Item subclass to open a remote
+	mounted volumes.
+
+2006-06-15  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow._find_first_button): Set the
+	zoom level before loading the items.  This fixes the initial
+	auto-zooming of at least 5 items.
+
+2006-06-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_file.py (FileItem.ensure_file_info): Check gnome-vfs can
+	parse the item URI before calling get_file_info.  This avoids the
+	null URI error spew which can exit for glib devel builds.
+
+	* gimmie_computer.py (PrinterItem.get_comment): Don't repeat the
+	printer name in the comment.  The printer name is sometimes set as
+	the location.
+	(PrinterItem.get_uri): Don't call gnome_cups_printer_get_uri if
+	the printer doesn't have attributes yet.
+	(RecentComputerItems._listen_to_source): Use connect_after for
+	reload and reload-item signals.
+
+	* gimmie_gaim.py (GaimBuddy.matches_text): Override
+	Item.matches_text to avoid searching the comment, since it can be
+	slow do fetch with D-BUS, and isn't reliable anyway.
+
+2006-06-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py: Make add bluetooth, cd burner, add printer,
+	connect to, and windows network items special.
+
+	* gimmie_tomboy.py (TomboySource.do_reload): List create note item
+	first, and make it special.
+
+	* gimmie_topicwin.py (TopicWindow._filter_items_num_days_ago):
+	Always include special items.
+
+	* gimmie_base.py (Item.is_special): New, tells if the item is
+	special.
+
+2006-06-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_tomboy.py (TomboySource.do_reload): Sort the notes by
+	title, and lower the body text ahead of time.
+
+	* gimmie_topicwin.py (TopicWindow._search): Sort search results
+	alphabetically.
+
+	* gimmie_base.py (Topic.find_items): Handle items without a URI.
+
+	* gimmie_applications.py (MenuLauncherItem.__init__): Prepend
+	"file://" to the desktop file path to make a real uri, so that
+	searching avoids duplicate launchers correctly.
+
+2006-06-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_documents.py (DocumentsTopic.__init__): Create
+	TomboySource here, so worker thread has a chance to run.
+
+	* gimmie_computer.py (PrinterItem.get_icon): Don't load emblems
+	for small (< 32px) icon sizes, as it crashes pixbuf composite.
+
+2006-06-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow._filter_items_num_days_ago): Do
+	filtering based on item's timestamp here, instead of in ItemSources.
+
+	* gimmie_tomboy.py (TomboySource.__init__): Load NoteItems in a
+	worker thread.
+
+	* gimmie_base.py (ItemSource.get_allow_filter_by_date): Drop
+	get/set_days_filter in favor of this, allowing get_items to be
+	stateless.
+
+	* gimmie_applications.py (RunningApplications.do_reload): Try to
+	clean this up a little and handle a few corner cases.
+
+2006-06-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (PlacesManager.do_reload): Filter duplicate
+	bookmarks.
+
+	* gimmie_topicwin.py (Sidebar.add_sources): Use the ItemSource's
+	URI to reselect the previously active sidebar ItemSource.
+
+	* gimmie_people.py: Add URIs for ItemSources, so they can be
+	reloaded without losing the focused sidebar.
+
+	* gimmie_computer.py (ComputerRunningSource.set_orientation): Use
+	the orientation to set alignment manually.
+	(DevicesSource): Add Item to launch CD Creator.
+
+	* gimmie_documents.py (RecentDocuments.include_recent_item):
+	Filter out "x-tomboy/note" recent entries.
+	(RecentAggregate): New class to aggregate multiple ItemSources
+	into a single listing, used for Recently Used.
+
+2006-06-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* Makefile.am: Update for recently added files.
+
+	* W3CDate.py: Add this little helper to parse the ISO date formats
+	that Tomboy XML uses.  From
+	http://www.shearersoftware.com/software/developers/w3cdate/.
+
+	* gimmie_tomboy.py (TomboySource.do_reload): Don't reload all the
+	notes on set_days_filter, but rather check the date in get_items.
+	Add "Create New Note" item that calls "tomboy --new-note".  Use
+	W3CDate to parse <last-change-date>.
+
+2006-06-11  Tiago Cogumbreiro <cogumbreiro@users.sf.net>
+
+	* gimmie_computer.py (DriveItem.get_comment): When GnomeVfs
+	doesn't know the URI it raises a TypeError, handle it gracefully.
+
+	* gimmie_file.py (FileItem.ensure_file_info): Handle
+	gnomefvs.NotSupportedError.
+
+	* gimmie_tomboy.py: Importing missing reference to 'launcher'.
+	(NoteItem.do_reload):
+	(TomboySource.do_reload): Handle malformed XML files.
+	(NoteItem.do_reload): Handle files with no 'last-change-date'
+	gracefully (use AttributeError when None is returned).
+
+2006-06-11  David Trowbridge  <trowbrds@gmail.com>
+
+	* gimmie_util.py (GConfVariable): Add a helper class for using gconf
+	without schemas
+
+	* gimmie.py (main): Use the GConfBridge for swapbar, autohide and
+	vertical, rather than environment variables.
+
+2006-06-11  David Trowbridge  <trowbrds@gmail.com>
+
+	* gimmie_bar.py (GimmieBarDock): Add size groups for each topic within
+	the gimmiebar to fix sizing issues when running in dock mode.
+
+2006-06-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_tomboy.py: New brute force attempt at a Tomboy
+	ItemSource.  Looks in $TOMBOY_PATH for notes, followed by ~/.tomboy.
+
+	* gimmie_documents.py: Replace "Office Documents" item source with
+	a "Notes" TomboySource.
+
+	* gimmie_applications.py (RecentLaunchers.get_items): Construct
+	DesktopFileItems with uris, not file paths, since the code handles
+	this and it is somewhat more correct.
+
+	* gimmie_gaim.py (GaimBuddy.get_name_markup): Show unavailable
+	buddy names in italic, not grey.
+
+2006-06-06  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (RecentLaunchers.get_items): Handle
+	ValueError when adding items.
+
+2006-06-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py (GaimBuddy.get_icon): Greyscale the icon if a
+	dbus error occurs (or Gaim2 is not running).
+
+2006-06-04  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_file.py (FileItem.is_local): gnome_vfs_uri_is_local can
+	hang, so just look it up in a hardcoded list for now.
+
+	* gimmie_computer.py (FriendlyPager): Set 2px border, and show the
+	pager, silly.
+
+2006-06-04  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (KillFocusPadding): Simple no-method helper class
+	to parse a no-padding style and apply it to the widget.
+
+	* gimmie_gui.py (TopicButton): Use KillFocusPadding.
+	* gimmie_computer.py (FriendlyClock): Ditto.
+
+2006-06-03  Alex Graveley  <alex@beatniksoftware.com>
+
+	Dump lots of GimmieBar and ther changes.
+
+2006-05-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* sexy/sexy.override (_wrap_sexy_tooltip_position_to_rect): Work
+	around segfault in pygdk_rectangle_from_pyobject.  Replace with
+	newer(?) version.
+
+2006-05-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* Makefile.am (SUBDIRS): Include sexy.
+	* configure.in: Ditto.
+
+	* sexy/Makefile.am: Build and bind libsexy's tooltip and icon
+	entry classes.
+
+2006-05-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (FocusRaiser.queue_raise): Simplify gravity
+	checking to support only NSEW.
+
+	* gimmie_gaim.py (GaimBuddy.get_comment): Show Idle/Away if no
+	away message.  Remove last chat date.
+	(GaimBuddy.get_name_markup): Show offline buddies in italics.
+
+	* gimmie_file.py (FileItem.is_local): Handle remote files better
+	by asyncronously loading the file info (for remote files).  Use
+	xdg.Mime to peek at mime-type for remote files, since pygnomevfs
+	does not bind the mime lookup calls yet.
+
+2006-05-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (IOrientationAware): New interface.
+
+	* gimmie_computer.py (FriendlyPager.__init__): Support setting an
+	orientation, and only show labels if horizontal.
+	(FriendlyClock): Add this clock widget which displays the day and
+	time, and allows showing a calendar on click.  No e-d-s
+	integration here yet.
+	(ComputerTopic.get_toolbar_items): Show the ~/.face icon in the
+	toolbar, and monitor it for changes.
+
+2006-05-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py
+	(RunningApplications.munge_command_and_wmclass): Hack around gksu
+	applications.
+	(RunningApplications.do_reload): Skip windows with a non-launcher
+	startup-id set.  Skip gaim conversation windows.
+	(LauncherItem.get_comment_markup): Override to return the command
+	if there is no other comment.
+	(MenuTree): Add reload signal, so the topic window can reload on
+	menu changes.
+
+2006-05-29  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py (GaimBuddy.get_is_opened): Use
+	GaimFindConversationWithAccount.
+	(GaimBuddy.get_name_markup): Grey out name for away buddies, use
+	italic grey for offline buddies.
+	(GaimBuddy.get_comment): Remove away message html tags with a
+	'<.*?>' regexp replacement.
+
+2006-05-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (ItemIconView._set_item): Use
+	Item.get_name/comment_markup to get the display markup.  Clear the
+	search X button when cancelling a search by clicking a sidebar
+	button.
+
+	* gimmie_gaim.py (GaimBuddy): Show the away message in the
+	comment, grey out the icon for offline buddies, markup the name
+	with a green/red dot to hint at availability and color it grey if
+	offline.
+
+	* gimmie_base.py (Item): Add get_comment_markup and
+	get_name_markup to allow subclasses to override the display
+	formatting in the TopicWindow.
+
+2006-05-15  Tony Tsui  <tsui.tony@gmail.com>
+
+	* gimmie_base.py (Item): Add a default drag-recieved handler.
+
+	* gimmie_gui.py (RunningItemTile): Set up drag-recieved handler.
+
+	* gimmie_trash.py: Handle drag-to-trash.
+
+2006-05-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (FocusRaiser): Add support for hiding the raised
+	window, and support fast raising for all gravity settings.
+
+	* gimmie_people.py (OnlineBuddySource): DIRTY -> _DIRTY.
+
+2006-05-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_documents.py (RecentDocuments.include_recent_item): Tweak
+	document filter to avoid octet-streams mimetypes, and ipp and
+	trash URIs.
+
+	* gimmie_topicwin.py (SidebarButton): Let the button set it's own
+	sensitivity.
+
+	* gimmie_people.py (RunningChats.do_reload): Hacky tabbed
+	conversation support.  Look for a new buddy match when the window
+	title changes.
+
+2006-05-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py (OnlineBuddySource.get_items): Avoid long DBUS
+	delays by marking the ItemSource dirty on Gaim file write (via the
+	do_reload signal handler), delaying the actual work of looking up
+	online people on-demand to here.
+	(RunningChats.do_reload): Strip parenthesis from window titles
+	which gaim uses to indicate offline-mode.  Match window titles to
+	bookmarked person's screenname or alias.
+
+2006-05-10  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gnomecups/_gnomecups.override: Don't include
+	gnome-cups-permission.h which is supplied by libgnomecupsui, which
+	we don't use.
+
+2006-05-07  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py (GaimAccountReader.do_reload): Try to be a bit
+	faster when looking for buddy name clashes.
+
+	* gimmie_base.py (Topic.find_items): Handle NotImplementedError,
+	so searching doesn't bork for ItemSources that don't implement
+	do_reload.
+
+2006-05-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gnomecups/_gnomecups.override: Fix kwlist -> kwargs typo in the
+	method descriptors for notify functions, which caused crashes due
+	to using junk argument pointers.
+
+2006-05-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py (PeopleTopic): Disable "GMail" and
+	"Friendster".  Set Availability menu contents insensitive.
+
+	* gimmie_documents.py (DocumentsTopic): Disable "Important Email",
+	"Attachments", "Downloads", and "Photos".
+
+	* gimmie_topicwin.py (Sidebar.add_sources): Desensitize the
+	sidebar button if the sidebar source is not enabled.
+
+	* gimmie_base.py (ItemSource): Add get_enabled.
+	(DisabledItemSource): ItemSource subclass that is always disabled,
+	used for unimplemented features.
+
+2006-05-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (RunningApplications.do_reload): Use
+	WnckWindow.is_on_workspace, since it accounts for pinnded windows.
+	* gimmie_documents.py (RunningDocuments.do_reload): Ditto.
+	* gimmie_people.py (RunningChats.do_reload): Ditto.
+	* gimmie_running.py (RunningItem.do_open): Ditto.
+
+	* gimmie_gaim.py (GaimAccount.get_log_path): Jabber logdirs do not
+	include the jabber account resource, so strip it out.
+	(GaimBuddy): Use alias as the name if it exists, and show the
+	screenname in the comment if there are name clashes.
+
+2006-04-29  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (FocusRaiser): Retweak this code to only queue a
+	raise of the window when the pointer is over the bottom two pixels
+	of the lower window, and drop the raise timeout to 100ms.
+
+2006-04-29  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (FocusRaiser): Fiddle with auto-raising...  
+	- Make raising work when dragging an item over the button bar.
+	- Reset the timeout for raising whenever a motion even occurs,
+	  meaning the pointer must stabalize before raising; hopefully
+	  improving unintended raises when e.g. grabbing a window border.
+	- Up the raise timeout to 300ms.
+
+2006-04-29  Alex Graveley  <alex@beatniksoftware.com>
+
+	Drop libgnomecupsui dependecy, since the auth handling it was
+	being used for is commented out anyway, and printing a test page
+	is present in the Properties dialog.
+
+	* gnomecups/Makefile.am (.defs.c): Don't include gtk defs.
+
+	* gnomecups/_gnomecups.override: Don't include headers.
+
+	* gnomecups/_gnomecupsmodule.c (init_gnomecups): Call
+	gnome_cups_init with a NULL auth function.
+
+	* gnomecups/_gnomecups.defs (CupsPrinter): Remove defs.
+
+	* gimmie_computer.py: Don't call gnomecups.ui_init.
+
+	* configure.in: Require libgnomecups 0.2.2.
+
+2006-04-29  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow._find_first_button): Handle
+	None in the source list.
+
+2006-04-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py: Explicitly check self.items == None before
+	forcing an initial reload, this avoids a possible infinite
+	recursion if the reload sets the items to an empty list.
+
+	* gimmie_computer.py (ComputerTopic._add_user_items): Add "About
+	Me" to username dropdown menu in toolbar.
+
+2006-04-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py (RecentComputerItems): Clean this up by
+	making the item matching logic generic, and make it a subclass of
+	RecentlyUsedOfMimeType.
+	(PrinterItem.do_open): Add an egg.recent item with mime-type of
+	"x-gimmie/printer".
+
+2006-04-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py: Reorganize this code by spliting the sidebar
+	logic into Sidebar and SidebarButton classes, and making the
+	interface between these and the TopicWindow very light.
+
+2006-04-27  Alex Graveley  <alex@beatniksoftware.com>
+
+	Original patch from Tom Insam <tom@jerakeen.org>.
+	
+	* gimmie_gaim.py (GaimBuddy): Look for an "alias" tag, and return
+	it in the comment.
+	* gimmie_people.py (RunningChats._get_buddy_for_screenname):
+	Support matching alias as screenname.
+
+2006-04-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py (BonjourSource): Make this do something by
+	running nautilus-connect-server for the Connect To item, add a
+	Windows Network item which opens smb://, and list any mounted
+	volumes were the volumetype is "connected server".
+
+2006-04-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_running.py (RunningItem._win_state_changed): Always emit
+	reload signal on window state change (don't filter for requesting
+	attention).
+
+	* gimmie_base.py (Item.pretty_print_time_since): Don't include
+	time of day for timestamps older than 3 days, and get the day
+	right.
+
+	* gimmie_file.py (FileItem.get_comment): Don't include "Last
+	seen/changed" in comment.
+
+2006-04-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py: Catch TypeError from older d-bus bindings.
+	* gimmie_gaim.py: Ditto.
+
+	* gimmie_computer.py: Use the volume icon and display name if the
+	drive has only one volume.
+
+2006-04-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (RecentlyUsedManager.add_full): Override
+	RecentModel's add_full call, to replace our cached RecentItem with
+	the newly added one.  This works around egg recent not signalling
+	a change for in-process adds.
+
+2006-04-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (Topic): Cache sidebar sources, which speeds up
+	search considerably since all the sources aren't being recreated.
+	Call Topic.set_sidebar_sources in the reload handler for all
+	subclasses.
+	(Topic.get_topic_window): Creates and caches the TopicWindow for
+	the Topic.
+	(Topic.get_source_for_uri): Returns the source with the matching
+	URI.
+
+	* gimmie_recent.py (RecentlyUsedOfMimeType): Move here from
+	gimmie_documents.py.
+
+	* gimmie_computer.py (RecentComputerItems): New class to collate
+	all the recently used computer items.
+	(DriveItem.get_icon): Transparentize icon if drive not mounted.
+	(PrinterSource): List out printers using the newly added gnomecups
+	bindings.
+	(BonjourSource): Beginnings of Avahi computer listing.
+
+	* gimmie_documents.py: Places -> Go, and list mounted drives using
+	the devices source.  Don't include folders as documents.
+
+	* gimmie_topicwin.py (HideOnDeleteWindow.__init__): Override the
+	key-press-event signal so that handlers can interrupt the
+	escape-to-close behavior.
+	(SearchToolItem._entry_key_press): Implement wicked awesome Escape
+	behavior: clear the search text, or minimize the window if already
+	empty.
+	(TopicWindow._toggle_first_button): Set the
+	zoom level on the first item displayed, so that we avoid showing
+	an empty list if possible.
+	(gimmie_get_topic_window): Remove this and use
+	Topic.get_topic_window instead.
+
+	* gimmie_documents.py (RecentDocuments.include_recent_item): Don't
+	include directories as Documents.  Rename Places tool menu to Go,
+	and list the drives, places, and trash.
+
+	* gimmie_util.py (IconFactory.transparentize, greyscale): Move
+	here from RunningItemTile.
+
+	* gimmie_running.py (RunningItem.get_is_user_visible): Add:
+	returns True if the window group has windows on the current
+	desktop.
+
+	* gimmie_people.py (RunningChats): Don't look for gaim/log
+	bookmarks, since we don't use the log directory hack anymore.
+	People will have to update their ~/.gimmie-bookmarks files.
+
+2006-04-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_file.py (FileItem.get_icon): If the url has a valid
+	failed icon, don't try to generate a new thumbnail.  Fix from Tom
+	Insam.
+
+2006-04-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py: Add Settings toolbar item that opens the
+	Settings sidebar in Computer.
+
+	* gimmie_base.py: Make Item a more abstract base, and most of the
+	file specific bits into FileItem (in gimmie_file.c).  Add an
+	"open" signal.  Add Item get_is_user_visible, get_can_pin,
+	set_screen_position.
+
+	* gimmie_computer.py: Add a TrashItem to places.  Use gnomevfs's
+	Drives to populate the devices list, and make a bunch of bunk
+	guesses at kind of device.  Add URIs to Printers, Timeline, and
+	Settings source.
+
+	* gimmie_documents.py: Use FileItem instead of RecentlyUsedItem.
+	Switch "New Smart Folder" for "New Document".  Open the Printers
+	sidebar when pressing the Printers toolbar button.
+
+	* gimmie_gaim.py (GaimBuddy): Get the last chat time by looking at
+	the mtime of the log directory, use this in get_comment.
+
+	* gimmie_gui.py (RunningItemTile): Call the item's
+	set_screen_position on size allocate.
+
+	* gimmie_people.py: Use the gaim account reader for everything,
+	instead of manually reading the log files.  This makes people more
+	awesome, since search results are now unique.  Make add person and
+	add group just call the gaim dbus calls to present the relevent
+	dialogs.
+
+	* gimmie_recent.py: Kill RecentlyUsedItem and use FileItem
+	instead.
+
+	* gimmie_running.py (RunningItem): Implement set_screen_position()
+	to set the class group window's icon geometry.
+
+	* gimmie_topicwin.py (TopicWindow): block the changed handler when
+	clearing "Seach" text.  Make search go fast by dropping the typing
+	timeout from 400 to 50ms, now that we load (mostly) asyncronously.
+	Don't set a default height.  Make "show timeline" focus the
+	timeline sidebar in Computer.  Reload the sidebar when the topic
+	emits reload.  Don't iconify windows initially.
+
+	* gimmie_trash.py: Use names I can understand, and some code
+	cleanups.  Make TrashItem be awesome.
+
+	* gimmie_util.py (ImplementMe): Helper to show a dialog for
+	unimplemented features, that lets users open an editor to the file
+	needing the feature.
+	(RecentlyUsedManager): Wrapper around egg.recent that supplies a
+	cache-backed get_item for a uri.
+	(IconFactory): Move make_icon_frame here from Item, allow blending
+	a 1 pixel grey border with the image's contents.  Default to
+	forcing icon sizing in load_image/icon.
+	(FocusRaiser): Raise after a 200ms timeout.  This doesn't work
+	quite right.
+
+2006-04-06  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_logout.py (LogoutDialog): Get rid of the silly 10-second
+	quantization, because it was silly.
+
+2006-04-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_logout.py (LogoutDialog): "System" -> "Computer".
+
+2006-04-05  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_logout.py (LogoutDialog.__init__): Use set_markup instead
+	of the text property, since it's not bound properly.
+
+2006-04-04  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_logout.py (LogoutDialog): Don't use a custom icon, as
+	this can crash Gtk (see bug #337306).  Instead use icons on the
+	buttons, where possible.  Set the "text" property instead of the
+	label, since it's really private and a binding bug that it is
+	exposed.  Rename some variables so I don't get confused.  Kill
+	current_logout, since the dialog is modal.
+
+	* gimmie_computer.py (ComputerTopic.get_toolbar_items): Don't
+	switch user on click of the tool menu item.
+
+2006-04-04  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_computer.py: Whoops -- unbreak
+
+2006-04-04  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_logout.py: Add a LogoutDialog, ported from gnome-panel
+	* gdmlient/*: Add a small library for talking to GDM
+	* Makefile.am: Ditto
+	* configure.in: Ditto
+	* gimmie_computer.py: Use LogoutDialog to hook up all the
+	logout/shutdown buttons and context menu items.
+
+2006-04-03  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py (PeopleTopic.get_toolbar_items): Use
+	GaimBlistRequestAddGroup and GaimBlistRequestAddBuddy Gaim2 dbus
+	calls to do simple person adding.  Gaim2 handles presenting the
+	dialog.
+
+2006-04-03  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py: More IconView tweaking...  Don't alter the
+	view's sizing until ready to set the model.  Use non-large text
+	for >60 items, and 24px icons for 31-60 items.
+
+2006-04-03  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py: Create IconView subclass to handle loading
+	items asynchronously using an idle timeout. Alter layout to better
+	match Nautilus's horizonal mode, where icons are right aligned and
+	each column is of a uniform width.
+
+	* gimmie_base.py (Item.make_icon_frame): Don't draw the border if
+	the icon_size is <24.
+
+2006-03-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (TopicRunningList._reload): Call destroy after
+	removing from the parent.
+
+	* gimmie_gaim.py (GaimBuddy.do_open): Call GaimConversationPresent
+	to focus the tab if a conversation is already in progress.
+
+2006-03-31  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py (OnlineBuddySource): New simple online buddy
+	source.
+
+	* gimmie_gaim.py: Bare bones support of Gaim2 through the D-BUS
+	interface.  Use it for getting buddy online status, and opening a
+	conversation.
+
+	* gimmie_gui.py (TopicRunningList._reload): Hack to avoid a
+	memleak by calling destroy() on child items.
+
+	* gimmie_computer.py (PlacesSource._get_timestamp): Quit the loop
+	early.
+
+	* gimmie.py (topics): Use a single bottom bar.
+
+2006-03-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (Item, ItemSource, Topic): Cleanup ungency hints
+	by adding an "reload-item" signal to ItemSource, which the Topic
+	listens to for it's running item source.  When recieved, the Topic
+	looks for a running item with urgency set, using
+	Item.get_demands_attention(), and updates it's label accordingly.
+
+	* gimmie_running.py (RunningItem.get_demands_attention): Look in
+	the app-group's windows for one with urgency set.
+
+	* tests/test_urgent.py: Add Mike's test application.
+
+2006-03-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	Cleanup ungency hints by adding an "reload-item" signal to
+	ItemSource, which the Topic listens to for it's running item
+	source.  When recieved, the Topic iterates the children looking
+	for one with with urgency, and updates it's label accordingly.
+	
+2006-03-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (FileMonitor.__init__): Catch
+	gnomevfs.NotFoundError.
+
+2006-03-23  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py: Use the "gaim" icon for gaim groups.
+
+	* gimmie_computer.py: Shuffle sidebar contents a little.
+
+2006-03-23  Alex Graveley  <alex@beatniksoftware.com>
+
+	Initial urgent notification support from Mike Hearn.
+
+	* AUTHORS: Add Mike.
+
+2006-03-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py (PlacesManager): Rename _reload to do_reload, so
+	it becomes the default signal handler, and emit the reload signal
+	on change.
+
+	* gimmie_people.py (EverybodySource.__init__): Emit reload signal
+	on Gaim account reader reload.
+	(RunningChats.__init__): Ditto.
+
+	* gimmie_gaim.py (GaimAccountReader.__gsignals__): Emit reload
+	signal on ~/.gaim/accounts.xml or ~/.gaim/blist.xml alteration.
+
+	* gimmie_computer.py (PlacesSource.__init__): Emit reload signal
+	on places reload.
+
+2006-03-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py: Random minor cleanups.
+	* gimmie_computer.py: Ditto.
+
+2006-03-22  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_util.py: Add a FileMonitor object which can be used to
+	easily watch files on disk.  Add a PlacesManager object (and
+	associated global) for keeping a list of important places, using
+	~/.gtk-bookmarks
+	* gimmie_documents.py (DocumentsTopic._add_places): Use new
+	PlacesManager to get list of places rather than parsing gtk-bookmarks.
+	* gimmie_computer.py: Add a places category inside the computer topic
+	which just contains places.
+
+2006-03-21  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (LauncherItem.__init__): Raise a
+	ValueError if the path does not exist.
+
+2006-03-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow._set_item): Use 32 as the
+	"normal" icon size.  Cap icon width to 2x the height.  Use icon
+	width and text wrap-width properties set in the model to minimize
+	whitespace.
+
+	* gimmie_gui.py (RunningItemTile): Avoid loading icons twice, and
+	clean up the code somewhat.
+
+	* gimmie.py: Comment out browser loading.
+
+2006-03-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_browser.py (GimmieBrowser): Flush this multi-pane browser
+	view I've had in my tree for a while.  It is very broken, but you
+	get the idea.
+
+	* gimmie.py: Create a GimmieBrowser, minimized, for the hell of it.
+
+2006-03-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py (GaimAccountReader): Clean up accounts.xml DOM immediately.
+	(GaimAccount): Add get_protocol and get_nice_protocol calls.
+
+2006-03-19  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py (FriendlyPager): Add a friendly desktop pager
+	that shows the label "Desk #" above the workspace contents.  It
+	supports a compact layout (accessed from the context menu) which
+	uses 2 rows, and no labels, and defaults to this mode if the
+	number of workspaces exceeds 4.
+
+	* gimmie_topicwin.py (TopicWindow.__init__): Use WORD_CHAR
+	wrap-mode in the icon view.
+
+	* TODO: Update a bit.
+
+2006-03-17  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_applications.py (LauncherItem): Use the recent-files
+	timestamp if available when initializing, and update the timestamp
+	when the launcher is opened.
+	* gimmie_topicwin.py: Listen to reload signals for items, and update
+	the contents of the icon view when they're fired.
+
+2006-03-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py: pygtk before 2.8.4 (maybe 2.8.3?) doesn't
+	expose the CellLayout interface to GtkIconView, so revert to the
+	old buggier usage in this case.
+
+2006-03-16  David Trowbridge <trowbrds@gmail.com>
+
+	* autogen.sh: Fix problem with aclocal sometimes not looking in m4 for
+	macros.
+
+2006-03-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_trash.py: Handle a gnomevfs.NotSupportedError by ignoring
+	the found directory.  Fixes running with my NFS home directory.
+
+2006-03-16  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_topicwin.py (TopicWindow.__init__): Use custom cells rather
+	than gtk.IconView's default ones, to work around some bugs in the
+	layout.
+	(TopicWindow.load_items): Make icon sizes a little more robus.  Load
+	large icons at 48x48 and small icons at 24x24.  If there are more than
+	60 items, load large icons at 32x32 and small ones at 16x16.
+
+2006-03-15  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_trash.py (TrashItem.populate_popup): Always show the
+	"Empty Trash" item, but set it's sensitivity correctly.
+	(TrashItem.do_empty): If dialog is not accepted, don't delete
+	anything, also make it a warning dialog.
+
+2006-03-15  David Trowbridge <trowbrds@gmail.com>
+
+	* gimmie_base.py (Item): Add a "reload" signal which causes the tile
+	in the gimmiebar to update.
+	* gimmie_gui.py (RunningItemTile): Listen for "reload" on Items and
+	re-query the icon when appropriate.
+	* gimmie_trash.py: Add a TrashMonitor object (ported from the
+	gnome-applets trashapplet) and a TrashItem which uses it.
+	* gimmie_computer.py (ComputerItemSource): Use new TrashItem
+	* gimmie_documents.py (DocumentsTopic._add_places): Use TrashMonitor to
+	show the proper icon on the "trash" item in the places menu.
+	* gimmie_recent.py (RecentlyUsedItem): Use TrashMonitor to use the
+	show the proper icon.
+
+2006-03-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (HideOnDeleteWindow): Iconify on delete or on
+	Escape keypress, and hide from the tasklist when unmapped.  This
+	makes topic windows always minimize on close, but never clog up
+	the Alt-Tab list.
+
+2006-03-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (TopicButton.do_set_wm_icon_geometry): Set the
+	icon geometry of topic windows to the dimensions of the topic
+	button.
+
+2006-03-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py (GaimAccountReader): Free the accounts.xml and
+	blist.xml DOM trees after parsing to save memory.
+
+	* gimmie_gui.py (DockWindow): Set _NET_WM_STRUT correctly for
+	east/west windows.
+
+2006-03-10  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie.py, gimmie_gui.py: Initial support for GimmieBars with
+	East/West orientation.
+
+	* gimmie_base.py: Rotate button labels for East/West orientation.
+
+	* gimmie_applications.py: Remove outmoded context Loutout/Shutdown
+	menu items.
+
+	* gimmie_computer.py: Use a single flat "Settings" sidebar entry.
+
+2006-03-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_computer.py (ComputerTopic.get_sidebar_source_list): Move
+	Recently Used to the top.  Eventually this should list all the
+	objects in this topic.
+
+	* gimmie_applications.py: Rename MenuItem to MenuLauncherItem.
+
+2006-03-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (TopicWindow._open_item): Iconfiy the topic
+	window when opening an item.  Not sure about this one.
+
+	* gimmie_gui.py: Adjust icon height based on screensize, 48 for
+	bigger screens, 32 for smaller.  Support edge gravity placement,
+	instead of assuming bottom of screen.
+
+	* gimmie_base.py (Item.pretty_print_time_since): Use gnomevfs to
+	get file mtime.
+
+	* gimmie_applications.py (RunningApplications.do_reload): 
+
+	* gimmie.py: Place computer topic in a separate bar the the south
+	east corner.  Fixup GimmieBar to support different gravities.
+
+	* gimmie_computer.py (ComputerTopic.get_sidebar_source_list): Add
+	Computer topic.
+
+	* gimmie_applications.py: Sort MenuSource items alphabetically.
+	Drop the Settings sidebar items, and the switch-user/logout
+	toolbar items, all moved to gimmie_computer.py.  Add back
+	RecentApplicationLaunchers and RecentSettingsLaunchers classes, so
+	we can split out settings from applications.
+
+	* gimmie_user.py: Delete in favor of Computer topic.  I find this
+	unfortunate, because a topic with a calendar/tasklist would be
+	really nice.
+
+2006-03-02  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie.py: If $GIMMIE_USER_TOPIC is set, show a "user topic",
+	spaced out a little from the other topics.
+
+	* gimmie_user.py (UserTopic): New topic to support catch-all
+	stuff.  Currently this means a trashcan and a window switcher, and
+	soon a tray.  Show the username and date/time in the GimmieButton.
+
+	* gimmie_gui.py (RunningItemTile._button_release): Check press_x
+	exists before checking the drag threshold.
+	(TopicRunningList._reload): If a source's child is a regular
+	widget, just add it.
+	(TopicButton.__init__): Call Topic.get_button_content() to get
+	the button's content.
+
+	* gimmie_applications.py (ApplicationsTopic.get_toolbar_items):
+	Only add "Switch User" and "Log out" if not showing user topic.
+
+	* gimmie_base.py: Add Topic.get_button_content() which can be
+	overridden to supply a custom label widget for the topic's
+	GimmieBar button.
+
+2006-03-01  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_topicwin.py (SearchToolItem): Patch from Mike Hearn:
+	Clear the "Search" string on focus in.
+
+2006-02-28  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (RunningItemTile.greyscale/transparentize): Cast
+	pixel values using int().  This fixes the crash some people found
+	with pygtk, where the pixel values seemed to require an additional
+	1-element array access.
+
+2006-02-26  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (MenuSource.__init__): Use
+	"gnome-fs-directory" for the icon if not defined for the menu
+	directory.
+
+2006-02-25  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_people.py: Add some fixes from Mike Hearn, like opening a
+	chat for any kind of account using aim: URIs, and parsing the
+	screenname from logfile paths.
+
+2006-02-24  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (RunningItemTile): Make button press not interfere
+	with DnD.  Use 40% transparent drag icon.  Set the drag data as
+	uri-list containing the item's URI.
+
+	* gimmie_topicwin.py (TopicWindow._item_drag_data_get): Set the
+	drag data as uri-list, instead of text.
+
+2006-02-23  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (ApplicationsTopic.__init__): Some
+	distros rename applications.menu and settings.menu in
+	/etc/xdg/menus to gnome- prefixed versions.
+
+2006-02-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* BUILDING: Update for simplified building instructions.  They are
+	pretty much drop-dead simple now.
+
+2006-02-22  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py (GaimBuddy.get_icon): Override to return the
+	buddy icon with a border if it exists, or "stock_person" of not.
+
+	* gimmie_running.py: Beginnings of running item support, almost
+	entirely overridden by each topic.
+
+	* gimmie_applications.py (RunningApplications): Subclass
+	RunningItemSource and reimplement do_reload, and add basic
+	bookmark support.
+	* gimmie_documents.py (RunningDocuments): Ditto.
+	
+	* gimmie_gui.py: Rename RunningItem to RunningItemTile.  Use new
+	Item.get_tooltip(), so Item subclasses can override.  If an item
+	is not running (a bookamrk), show it as greyscale and mostly
+	transparent, and switch with only greyscale version on mouseover.
+
+	* gimmie_util.py: Add BookmarkManager class to
+	handle reading/writing bookmarks in ~/.gimmie-bookmarks, and
+	export an instance as "bookmarks".  Add Launcher.parse_startup_id.
+
+2006-02-14  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py: Use gnomedesktop to parse desktop files
+	instead of ConfigParser.  Make LauncherItem baseclass of
+	DesktopFileItem and MenuItem, it provides setting a running app
+	and launching.
+
+2006-02-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (ItemSource.get_items): Return empty list if no
+	items are set.
+
+	* gimmie_util.py (Launcher.launch_command): Return the child pid
+	and startup id as a tuple.
+	* gimmie_people.py (RecentConversations.do_reload): Ditto.
+
+	* gimmie_gaim.py (GaimAccountReader.__init__): Handle failure in
+	parsing ~/.gaim xml files.
+
+2006-02-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_recent.py (RecentlyUsedItem.fixup_thumb): Don't constrain
+	thumbnail dimensions.
+
+	* gimmie_gui.py: Make a RunningItem class, used for all the items
+	in the GimmieBar.
+
+	* gimmie_gaim.py (GaimBuddy.__init__): Quote screennames passed to
+	gaim-remote, because they may contain spaces.
+
+	* gimmie_documents.py (RecentDocumentsByTimestamp.get_items): Hack
+	supporting running documents that works only for documents opened
+	via gimmie.  Change up the sidebar rather drastically.
+
+	* gimmie_applications.py (RunningApp.get_icon): Hard code Gaim's icon.
+
+	* gimmie_people.py (RecentConversation.get_icon): Simplify person
+	icon loading, and quote screennames passed to gaim-remote.  Add a
+	hack to support running Gaim chats, by looking at the window's
+	class group and window title.
+
+	* gimmie_topicwin.py (TopicWindow._show_item_popup): Add item
+	right-click menu, and set up items to be draggable, sending their
+	URIs as a text/uri-list.
+
+	* gimmie_base.py (Item.get_mimetype): Lookup mimetype with
+	gnomevfs if it isn't known.  Drop unused set_mimetype and
+	set_timestamp calls.  Add unused get_is_pinned.  Add
+	populate_popup, which defaults to adding "Open" and "Keep Around"
+	items.
+
+2006-02-10  Alex Graveley  <alex@beatniksoftware.com>
+
+	Import all external python dependencies (gnomedesktop, egg.recent,
+	wnck, iconentry), and generate bindings ourself.  The only
+	external python dependency is now the "gmenu" module.
+
+	Call ltihooks.py from __init__ to allow loading uninstalled
+	libtool libraries.
+
+	Reorg configure.in and autogen.sh, ripping off lots of stuff from
+	deskbar-applet.
+
+2006-02-04  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (ButtonWindow.do_size_request): Clamp gimmiebar
+	width to >50% and <90% of screen width.
+
+	* gimmie_applications.py: Drop separate Settings topicwin and
+	menubutton from toolbar, and add a sidebar source instead.  Add an
+	"Install & Update" toolbar button instead, which runs
+	gnome-app-install.
+
+	* gimmie_topicwin.py: Make parts of the window draggable, like
+	chrome windows in OSX.  Make secondary icon text foreground
+	"darkgrey".  Add unusd code for an "+" button at the bottom of the
+	sidebar.
+
+2006-01-16  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_recent.py (RecentlyUsedItem.get_icon): Handle trash://
+	specially (as usual).  Pass "" to icon_lookup for an item with no
+	mimetype.
+
+	* gimmie_applications.py (LauncherItem.do_open): Use
+	launcher.launch_command_with_uris, which will escape the command.
+
+	* gimmie_topicwin.py (TopicWindow): "Last 1 week" -> "Last week",
+	and never allow a horizontal scrollbar.
+
+	* gimmie_util.py (Launcher): Outfit with simple (read: broken) Exec
+	escape handling, and setting of DESKTOP_STARTUP_ID.
+
+2006-01-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (Item.pretty_print_time_since): Simple datetime
+	pretty printer, similar to the one used in Tomboy.
+	(Item.get_comment): Prefer seen to changed date if seen is more
+	recent.
+
+	* gimmie_people.py (PeopleTopic.make_availability_menu): Move
+	"Accounts..." above the toggleable account items in the
+	Availability menu.
+	(RecentConversation.get_comment): Use
+	Item.pretty_print_time_since.
+
+2006-01-11  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (LauncherItem.__init__): Parse Categories
+	out of .desktop files.
+	(RecentApplicationLaunchers): New RecentLaunchers subclass which
+	lists only launchers which are not in the "Settings" category.
+	(RecentSettingsLaunchers): Ditto, but only launchers which are in
+	the "Settings" category.
+	(ApplicationsTopic): Use a MenuToolButton with the menu being a
+	fancy columned menu and the button opening a TopicWindow listing
+	only the settings launchers.
+	(SettingsTopic): Topic used to display launchers in the
+	settings.menu vfolder.
+
+2006-01-11  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_base.py (Item.make_icon_frame): Only border with 1 pixel.
+	(Item.get_name): Handle trash:// urls specially, since they have
+	no intrinsic name.
+	(Item.get_comment): Show last seen time if last changed time
+	cannot be gotten.
+
+	* gimmie_gaim.py: Fixup a few interface bugs.
+
+	* gimmie_people.py (GroupSource): New class to wrap a Gaim group.
+	(PeopleTopic.get_sidebar_source_list): Add Gaim groups, as long as
+	they contain buddies that belong to accounts which are auto-login
+	(until this is hooked up to the menu items).  Fill out the
+	Availability menu with online status, a list of accounts, and away
+	message submenu, none of which yet do anything.
+	
+2006-01-05  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_util.py: Add Launcher class that handles spawning apps
+	and URIs correctly, and adding them to ~/.recently-used.  Add a
+	global Launcher instance.  Move the global recent_model instance
+	to here.
+
+	* gimmie_topicwin.py: Major changes. Move TopicWindow here, add
+	helper toolbar item classes for a zoom drop-down menu, and a
+	search bar, and hook them up.  Use the iconentry class from
+	desktop, with find and clear icons, if it is installed, otherwise
+	fall back to a gtk.Entry.  Use smaller icons in the iconview for a
+	large number of items.
+
+	* gimmie_recent.py (RecentlyUsed): Support setting a days filter.
+	(RecentlyUsedItem.get_icon): Clean up icon handling a bit.  Move
+	recent_model global to gimmie_utils.py.
+
+	* gimmie_people.py (RecentConversation): Use launcher class to
+	open recent conversations with gaim-remote.  Clean up icon
+	handling a bit.
+	(RecentConversations): Support setting a days filter.
+
+	* gimmie_gui.py: Clean up icon handling for icon list somewhat.
+	Show friendlier tooltips for file-based items in the gimmiebar.
+	(DockWindow): Handle being placed explicitly to track sizing
+	changes, and force the move using override_redirect.
+	(ButtonWindow): Set the _NET_WM_STRUT property to cause the topic
+	buttons to be avoided when a window is maximized.  This rules.
+	(ItemWindow): Track the parent window resize and movements more
+	better.
+
+	* gimmie_gaim.py (GaimBuddy.do_open): Use launcher class to call
+	gaim-remote.
+
+	* gimmie_documents.py (RecentDocumentsByTimestamp): Add this
+	RecentDocuments subclass that sorts Items by timestamp, and use it
+	for listing in the gimmiebar.
+	(DocumentsTopic.get_toolbar_items): Add Trash to the toolbar.  Use
+	the launcher class to start apps and uris.
+
+	* gimmie_base.py (Item): Remove leading slashes in
+	get_local_path().  Use the launcher class to open documents.
+	(Item.matches_text): Default search impl looks for text substring
+	inside name or comment.
+	(ItemSource): Add get/set_days_filter default impls that raise
+	exceptions.
+	(Topic.find_items): Simple search implementation, calls
+	matches_text on each sidebar source's Items, and returns the
+	result list.
+
+	* gimmie_applications.py (ApplicationsTopic): Dock window
+	appearance shouldn't cause a reload.  Use the launcher class to
+	start apps.
+
+	* gimmie.py (GimmieBar): Use separate windows for the icon lists.
+	This allows mousing over a topic button to not obscure the entire
+	bottom of the screen.
+
+2005-12-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py
+	(ApplicationsTopic.get_context_menu_items): Add Show/Hide All to
+	the Applications right-click menu.  This is the same as "Show
+	Desktop".
+
+	* gimmie_documents.py (DocumentsTopic._add_places): Add Trash to Places.
+
+2005-12-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* BUILDING: Add simple build instructions.
+
+2005-12-20  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (TopicButton): Pass a Topic to __init__.  Show a
+	context menu with items populated from the Topic's
+	get_context_menu_items().
+	(TopicWindow): Switch the More/Less tool items to a menu with
+	descriptions, and change the label to reflect the current zoom
+	setting.
+	(TopicWindow.__init__): Grudgingly, change the scroll policy to
+	automatic.  We really want to minimize scrollbar usage, but we
+	can't while GtkIconView is so broken.  Help needed here.
+	(TopicWindow._load_items): If more than 30 items, show only the
+	item name, and use a smaller icon.
+	(TopicWindow.add_sources): Call _reload_source on sidebar
+	ItemSource reload.  If the source has items, this calls
+	_load_items, or desensitizes the sidebar button if not.
+
+	* gimmie_util.py (ToolMenuButton): Add get/set_label() methods.
+
+	* gimmie_recent.py (RecentlyUsed.do_reload): Ignore private recent
+	items (porn).
+
+	* gimmie_people.py (PeopleTopic.get_context_menu_items): Add
+	"Available" placeholder context menu items.  Add "GMail" and
+	"Friendster" sidebar placeholders.  Switch "Accounts" toolbar menu
+	to "Available", which should allow toggling online status.
+
+	* gimmie_documents.py (DocumentsTopic.get_context_menu_items): Add
+	"Places" submenu, "New Document" submenu, and "Printers" context
+	menu items.
+
+	* gimmie_base.py: Add get_context_menu_items() to Topic and Item
+	classes.
+
+	* gimmie_applications.py
+	(ApplicationsTopic.get_context_menu_items): Add "Switch User" and
+	"Log Out" gimmie bar context menu items.
+
+2005-12-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (LauncherItem.do_open): Call popen in a
+	forked process, so apps don't die on Gimmie exit.
+
+2005-12-13  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_applications.py (LauncherItem.__init__): Handle parsing
+	.desktop file a tiny bit better.  Try $LANG variant of Name and
+	Comment, and if Comment doesn't exist, use GenericName.
+
+	* gimmie_documents.py (DocumentsTopic._add_places): Unquote the
+	URLs in ~/.gtk-bookmarks.
+
+2005-12-12  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gui.py (TopicWindow.__init__): Default size of 730x530.
+
+	* gimmie_recent.py (RecentlyUsed.do_reload): Use Python 2.4 "key"
+	sort on lists.  This is such an awesome feature.
+	* gimmie_people.py (EverybodySource.do_reload): Ditto.
+	* gimmie_applications.py (RecentLaunchers.get_items): Ditto.
+
+	* gimmie_gaim.py (GaimBuddy.do_open): Fix typo.
+
+	* gimmie_documents.py: Add gnumeric and ooimpress mime-types.
+
+2005-12-11  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_gaim.py: Initial support for parsing GAIM's accounts.xml
+	and blist.xml files, to get a list of groups, accounts, and
+	contacts to be used in the People topic.
+
+	* Makefile.am (gimmie_PYTHON): Add gimmie_gaim.py.
+
+	* gimmie_people.py: Use the new GaimAccountReader to get a list of
+	all gaim contacts, and populate the "Everybody" source with it.
+	Use the new EmptySource for the other mockup groups, since these
+	don't work yet.  Add a toolbar menu placeholder to allow toggling
+	the accounts whose contacts we are showing.
+
+2005-12-11  Alex Graveley  <alex@beatniksoftware.com>
+
+	* gimmie_recent.py: Rename DocumentItem to RecentlyUsedItem.
+	Since we now rely on gnome-python-extras head, which has the
+	egg.recent bindings fixed, stop using the hand rolled
+	~/.recently-used parser (for now).  The Egg version should be
+	faster, and less buggy.  
+	Pass EggRecentItem to include_recent_item, and if successful,
+	create a RecentlyUsedItem for it.
+
+	* gimmie_documents.py (RecentDocuments.include_recent_item): Item
+	argument is now an EggRecentItem, so use
+	item.in_group("Launchers").
+	(RecentDocumentsOfMimeType): Move this here from gimmie_recent.py.
+	(DocumentsTopic.get_sidebar_source_list): Add
+	application/vnd.oasis.opendocument.presentation and
+	application/vnd.sun.xml.impress mime-types to "Presentations"
+	sidebar.
+
+	* gimmie_applications.py (MenuSource.add_recurse): Fix typo to use
+	self.add_recurse, this was causing a crash for application menus
+	more than one level deep.
+	(RecentLaunchers.include_recent_item): Item argument is now an
+	EggRecentItem, so use item.in_group("Launchers").
+
+2005-12-08  Alex Graveley  <alex@beatniksoftware.com>
+
+	* configure.in: New file.
+

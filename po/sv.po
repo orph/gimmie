@@ -1,0 +1,950 @@
+# Swedish messages for gimmie.
+# Copyright (C) 2006,2007 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007.
+# Christian Rose <menthos@menthos.com>, 2006.
+#
+# $Id: sv.po,v 1.4 2006/09/02 08:25:40 dnylande Exp $
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-10-11 00:49+0200\n"
+"PO-Revision-Date: 2007-10-11 00:49+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "Stil för panelprogramsknapp"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr "Klickpolicy"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid "Determine how to handle clicks on items in Gimmie. The following options are supported: \"single\" activates items with a single click, \"double\" activates with a double click, and \"nautilus\" to follow Nautilus' click policy."
+msgstr "Bestäm hur klickningar på objekt ska hanteras i Gimmie. Följande alternativ stöds: \"single\" aktiverar objekt med ett enda klick, \"double\" aktiverar med ett dubbelklick, och \"nautilus\" för att följa klickpolicyn för Nautilus."
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr "Visa \"Dator\"-ämne"
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr "Visa biblioteksämne"
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr "Visa personämne"
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr "Visa programämne"
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr "Visa ämnesfärger"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid "Each topic in Gimmie has an associated color. This key determines if the color is displayed in panel buttons."
+msgstr "Varje ämne i Gimmie har en tilldelad färg. Den här nyckeln bestämmer om färgen visas i panelknapparna."
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr "Inkludera \"Dator\"-ämnet i ämneslistan för det här panelprogrammet."
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr "Inkludera biblioteksämnet i ämneslistan för det här panelprogrammet."
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr "Inkludera personerämnet i ämneslistan för det här panelprogrammet."
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr "Inkludera programämnet i ämneslistan för det här panelprogrammet."
+
+#: ../data/gimmie.schemas.in.h:14
+msgid "Set how this applet's buttons are displayed. The following options are supported: \"icons\" to show only Topic icons, \"text\" to show only Topic names, and \"both\" to include both."
+msgstr "Ställ in hur panelprogrammets knappar ska visas. Följande alternativ stöds: \"icons\" för att endast visa ämnesikoner, \"text\" för att endast visa ämnesnamn, och \"both\" för att inkludera båda."
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "_Om"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Edit Menus"
+msgstr "R_edigera menyer"
+
+#: ../data/GNOME_GimmieApplet.xml.h:3
+msgid "_Preferences"
+msgstr "_Inställningar"
+
+#: ../gimmie/gimmie_applet.py:372
+msgid "Favorite"
+msgstr "Favorit"
+
+#: ../gimmie/gimmie_applet.py:376
+#: ../gimmie/gimmie_base.py:128
+msgid "Add to Favorites"
+msgstr "Lägg till i favoriter"
+
+#: ../gimmie/gimmie_applications.py:245
+msgid "Other"
+msgstr "Annat"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Install & Update"
+msgstr "Installera och uppdatera"
+
+#: ../gimmie/gimmie_applications.py:318
+msgid "Manage software on this computer"
+msgstr "Hantera programvara på denna dator"
+
+#: ../gimmie/gimmie_applications.py:351
+#: ../gimmie/gimmie_computer.py:423
+#: ../gimmie/gimmie_computer.py:688
+msgid "Settings"
+msgstr "Inställningar"
+
+#: ../gimmie/gimmie_applications.py:352
+msgid "Manage settings and preferences"
+msgstr "Hantera inställningar"
+
+#: ../gimmie/gimmie_applications.py:368
+msgid "Show Desktop"
+msgstr "Visa skrivbord"
+
+#: ../gimmie/gimmie_applications.py:387
+#: ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "Program"
+
+#: ../gimmie/gimmie_applications.py:409
+#: ../gimmie/gimmie_recent.py:163
+msgid "Recently Used"
+msgstr "Senast använda"
+
+#: ../gimmie/gimmie_base.py:153
+msgid "%l:%M %p"
+msgstr "%H.%M"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "Today, %s"
+msgstr "Idag, %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Igår, %s"
+
+#: ../gimmie/gimmie_base.py:162
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d dag sedan, %s"
+msgstr[1] "%d dagar sedan, %s"
+
+#: ../gimmie/gimmie_base.py:166
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d dag sedan"
+msgstr[1] "%d dagar sedan"
+
+#: ../gimmie/gimmie_base.py:170
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie/gimmie_base.py:172
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "Alla favoriter"
+
+#: ../gimmie/gimmie_computer.py:69
+#: ../gimmie/gimmie_library.py:404
+msgid "Places"
+msgstr "Platser"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "Ingen skiva inmatad"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "Ledigt utrymme: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "_Mata ut"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "Enheter och media"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Lägg till Bluetooth..."
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "Kom åt en trådlös enhet"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "Skapa cd/dvd-skiva..."
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Bränn filer på en cd- eller dvd-skiva"
+
+#: ../gimmie/gimmie_computer.py:323
+#: ../gimmie/gimmie_library.py:424
+msgid "Printers"
+msgstr "Skrivare"
+
+#: ../gimmie/gimmie_computer.py:328
+msgid "Add Printer..."
+msgstr "Lägg till skrivare..."
+
+#: ../gimmie/gimmie_computer.py:329
+msgid "Setup attached or networked printer"
+msgstr "Konfigurera en ansluten skrivare eller en nätverksskrivare"
+
+#: ../gimmie/gimmie_computer.py:385
+msgid "Nearby Computers"
+msgstr "Datorer i närheten"
+
+#: ../gimmie/gimmie_computer.py:390
+msgid "Connect to..."
+msgstr "Anslut till..."
+
+#: ../gimmie/gimmie_computer.py:391
+msgid "Access a computer on the network"
+msgstr "Anslut till en dator på nätverket"
+
+#: ../gimmie/gimmie_computer.py:396
+msgid "Windows Network"
+msgstr "Windows-nätverk"
+
+#: ../gimmie/gimmie_computer.py:397
+msgid "Browse nearby Windows computers"
+msgstr "Bläddra nära Windows-datorer"
+
+#: ../gimmie/gimmie_computer.py:482
+msgid "Administration"
+msgstr "Administration"
+
+#: ../gimmie/gimmie_computer.py:521
+msgid "About Me"
+msgstr "Om mig"
+
+#: ../gimmie/gimmie_computer.py:527
+msgid "Switch User"
+msgstr "Byt användare"
+
+#: ../gimmie/gimmie_computer.py:533
+msgid "Log Out..."
+msgstr "Logga ut..."
+
+#: ../gimmie/gimmie_computer.py:561
+msgid "Switch to another user"
+msgstr "Växla till en annan användare"
+
+#: ../gimmie/gimmie_computer.py:578
+msgid "Shutdown..."
+msgstr "Stäng av..."
+
+#: ../gimmie/gimmie_computer.py:579
+msgid "Shutdown or suspend this computer"
+msgstr "Stäng av eller försätt datorn i vänteläge"
+
+#: ../gimmie/gimmie_computer.py:589
+msgid "Help"
+msgstr "Hjälp"
+
+#: ../gimmie/gimmie_computer.py:594
+msgid "About Gnome"
+msgstr "Om Gnome"
+
+#: ../gimmie/gimmie_computer.py:606
+msgid "Volume: 75%"
+msgstr "Volym: 75%"
+
+#: ../gimmie/gimmie_computer.py:611
+#: ../gimmie/gimmie_computer.py:627
+msgid "Not Implemented"
+msgstr "Inte implementerat"
+
+#: ../gimmie/gimmie_computer.py:622
+msgid "Change the network location"
+msgstr "Ändra nätverksplats"
+
+#: ../gimmie/gimmie_computer.py:689
+msgid "Preferences & Administration"
+msgstr "Inställningar och administration"
+
+#: ../gimmie/gimmie_computer.py:707
+#: ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "Dator"
+
+#: ../gimmie/gimmie_computer.py:795
+msgid "Computer, %l:%M %p"
+msgstr "Dator, %H.%M"
+
+#: ../gimmie/gimmie_gaim.py:101
+#: ../gimmie/gimmie_pidgin.py:105
+#, python-format
+msgid "Idle since %s"
+msgstr "Inaktiv sedan %s"
+
+#: ../gimmie/gimmie_gaim.py:104
+#: ../gimmie/gimmie_pidgin.py:108
+msgid "Idle"
+msgstr "Tomgång"
+
+#: ../gimmie/gimmie_gaim.py:106
+#: ../gimmie/gimmie_people.py:98
+#: ../gimmie/gimmie_pidgin.py:110
+msgid "Away"
+msgstr "Borta"
+
+#: ../gimmie/gimmie_gaim.py:109
+#: ../gimmie/gimmie_people.py:89
+#: ../gimmie/gimmie_pidgin.py:113
+msgid "Offline"
+msgstr "Frånkopplad"
+
+#: ../gimmie/gimmie_gmail.py:36
+#: ../gimmie/gimmie_gmail.py:155
+msgid "Login to Gmail"
+msgstr "Logga in på Gmail"
+
+#: ../gimmie/gimmie_gmail.py:47
+msgid "Account Settings"
+msgstr "Kontoinställningar"
+
+#: ../gimmie/gimmie_gmail.py:61
+msgid "Sign in to Gmail with your Google Account"
+msgstr "Logga in på Gmail med ditt Google-konto"
+
+#: ../gimmie/gimmie_gmail.py:71
+msgid "Username:"
+msgstr "Användarnamn:"
+
+#: ../gimmie/gimmie_gmail.py:76
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: ../gimmie/gimmie_gmail.py:276
+#, python-format
+msgid ""
+"Login failed for %s:\n"
+"%s"
+msgstr ""
+"Inloggning misslyckades för %s:\n"
+"%s"
+
+#: ../gimmie/gimmie_gmail.py:280
+msgid "_Ignore"
+msgstr "_Ignorera"
+
+#: ../gimmie/gimmie_gmail.py:282
+#: ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "_Försök igen"
+
+#: ../gimmie/gimmie_gui.py:691
+msgid "Calendar"
+msgstr "Kalender"
+
+# Osäker...
+#
+#: ../gimmie/gimmie_gui.py:792
+#, python-format
+msgid "Desk %d"
+msgstr "Skrivbord %d"
+
+#: ../gimmie/gimmie_gui.py:875
+msgid "Use Compact Layout"
+msgstr "Använd kompakt layout"
+
+#: ../gimmie/gimmie_library.py:141
+msgid "Attachments"
+msgstr "Bilagor"
+
+#: ../gimmie/gimmie_library.py:153
+msgid "Downloads"
+msgstr "Hämtningar"
+
+#: ../gimmie/gimmie_library.py:211
+msgid "Documents"
+msgstr "Dokument"
+
+#: ../gimmie/gimmie_library.py:230
+msgid "Music & Movies"
+msgstr "Musik och filmer"
+
+#: ../gimmie/gimmie_library.py:261
+#: ../gimmie/gimmie_library.py:298
+msgid "New Document"
+msgstr "Nytt dokument"
+
+#: ../gimmie/gimmie_library.py:299
+msgid "Create a new document"
+msgstr "Skapa ett nytt dokument"
+
+#: ../gimmie/gimmie_library.py:335
+msgid "No templates available"
+msgstr "Inga mallar tillgängliga"
+
+#: ../gimmie/gimmie_library.py:344
+msgid "Empty File"
+msgstr "Tom fil"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_library.py:351
+msgid "Templates"
+msgstr "Mallar"
+
+#: ../gimmie/gimmie_library.py:389
+#: ../gimmie/gimmie_library.py:391
+#: ../gimmie/gimmie_library.py:412
+#: ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "Papperskorg"
+
+#: ../gimmie/gimmie_library.py:405
+msgid "Open commonly used locations"
+msgstr "Öppna vanligtvis använda platser"
+
+#: ../gimmie/gimmie_library.py:413
+msgid "Open the deleted files trashcan"
+msgstr "Öppna papperskorgen"
+
+#: ../gimmie/gimmie_library.py:425
+msgid "View printers available for document printing"
+msgstr "Visa skrivare tillgängliga för dokumentutskrift"
+
+#: ../gimmie/gimmie_library.py:447
+#: ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "Bibliotek"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "Stäng av denna dator nu?"
+
+#: ../gimmie/gimmie_logout.py:57
+msgid "_Sleep"
+msgstr "_Sov"
+
+#: ../gimmie/gimmie_logout.py:62
+msgid "_Hibernate"
+msgstr "_Viloläge"
+
+#: ../gimmie/gimmie_logout.py:68
+msgid "_Reboot"
+msgstr "_Starta om"
+
+#: ../gimmie/gimmie_logout.py:74
+msgid "Shut _Down"
+msgstr "Stäng a_v"
+
+#: ../gimmie/gimmie_logout.py:81
+msgid "Log out of this computer now?"
+msgstr "Logga ut från denna dator nu?"
+
+#: ../gimmie/gimmie_logout.py:85
+msgid "_Log Out"
+msgstr "Logga _ut"
+
+#: ../gimmie/gimmie_logout.py:175
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Denna dator kommer att automatiskt stängas av om %d sekund."
+msgstr[1] "Denna dator kommer att automatiskt stängas av om %d sekunder."
+
+#: ../gimmie/gimmie_logout.py:179
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Du kommer att automatiskt loggas ut om %d sekund."
+msgstr[1] "Du kommer att automatiskt loggas ut om %d sekunder."
+
+#: ../gimmie/gimmie_people.py:84
+#: ../gimmie/gimmie_people.py:175
+msgid "Available"
+msgstr "Tillgängliga"
+
+#: ../gimmie/gimmie_people.py:94
+msgid "Away Messages..."
+msgstr "Frånvaromeddelanden..."
+
+#: ../gimmie/gimmie_people.py:107
+msgid "Accounts..."
+msgstr "Konton..."
+
+#: ../gimmie/gimmie_people.py:145
+msgid "New Person"
+msgstr "Ny person"
+
+#: ../gimmie/gimmie_people.py:146
+msgid "Add a new contact person"
+msgstr "Skapa en ny kontaktperson"
+
+#: ../gimmie/gimmie_people.py:176
+msgid "Set your online status"
+msgstr "Ställ in din anslutningsstatus"
+
+#: ../gimmie/gimmie_people.py:192
+#: ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "Personer"
+
+#: ../gimmie/gimmie_people.py:206
+msgid "Recent People"
+msgstr "Senaste personer"
+
+#: ../gimmie/gimmie_people.py:207
+msgid "Online Now"
+msgstr "Ansluten nu"
+
+#: ../gimmie/gimmie_people.py:208
+msgid "Everybody"
+msgstr "Alla"
+
+#: ../gimmie/gimmie_people.py:213
+msgid "Gmail"
+msgstr "Gmail"
+
+#: ../gimmie/gimmie_people.py:216
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:220
+#: ../gimmie/gimmie_people.py:223
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr "Inställningar för Gimmie"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "Endast text"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "Endast ikoner"
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr "Text och ikoner"
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr "Etiketter för ämnes_knappar:"
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr "Utseende"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "Ämnen"
+
+#: ../gimmie/gimmie_tomboy.py:89
+msgid "Notes"
+msgstr "Anteckningar"
+
+#: ../gimmie/gimmie_tomboy.py:93
+msgid "Create New Note"
+msgstr "Skapa en ny anteckning"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Make a new Tomboy note"
+msgstr "Skapa en ny Tomboy-anteckning"
+
+#: ../gimmie/gimmie_topicwin.py:44
+#: ../gimmie/gimmie_topicwin.py:1236
+msgid "Search"
+msgstr "Sök"
+
+#: ../gimmie/gimmie_topicwin.py:165
+#: ../gimmie/gimmie_topicwin.py:488
+msgid "Today"
+msgstr "Idag"
+
+#: ../gimmie/gimmie_topicwin.py:166
+#: ../gimmie/gimmie_topicwin.py:489
+msgid "This week"
+msgstr "Den här veckan"
+
+#: ../gimmie/gimmie_topicwin.py:167
+#: ../gimmie/gimmie_topicwin.py:490
+msgid "Last 2 weeks"
+msgstr "Senaste 2 veckorna"
+
+#: ../gimmie/gimmie_topicwin.py:168
+#: ../gimmie/gimmie_topicwin.py:491
+msgid "This month"
+msgstr "Den här månaden"
+
+#: ../gimmie/gimmie_topicwin.py:169
+#: ../gimmie/gimmie_topicwin.py:492
+msgid "Last 2 months"
+msgstr "Senaste 2 månader"
+
+#: ../gimmie/gimmie_topicwin.py:170
+#: ../gimmie/gimmie_topicwin.py:493
+msgid "Last 3 months"
+msgstr "Senaste 3 månader"
+
+#: ../gimmie/gimmie_topicwin.py:171
+#: ../gimmie/gimmie_topicwin.py:494
+msgid "Last 6 months"
+msgstr "Senaste 6 månader"
+
+#: ../gimmie/gimmie_topicwin.py:193
+msgid "Show timeline"
+msgstr "Visa tidslinje"
+
+#: ../gimmie/gimmie_topicwin.py:1291
+msgid "Set the zoom level"
+msgstr "Ställ in zoomnivån"
+
+#: ../gimmie/gimmie_trash.py:173
+#: ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "_Töm papperskorgen"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d objekt"
+msgstr[1] "%d objekt"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "Töm alla objekt i papperskorgen?"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid "If you choose to empty the trash, all items in it will be permanently lost.  Please note that you can also delete them separately."
+msgstr "Om du väljer att tömma papperskorgen kommer alla objekt där att permanent förloras. Notera att du kan även ta bort dem separat."
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "Fel vid flyttning."
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid "Cannot move \"%s\" to the trash because you do not have permissions to change it or its parent folder."
+msgstr "Kan inte flytta \"%s\" till papperskorgen eftersom du inte har de nödvändiga rättigheterna för att ändra den eller dess föräldermapp."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "Fel vid borttagning."
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid "\"%s\" cannot be deleted because you do not have permissions to modify its parent folder."
+msgstr "\"%s\" kan inte tas bort eftersom du inte har de nödvändiga rättigheterna för att ändra dess föräldermapp."
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "Fel vid genomförandet av filoperation."
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Kan inte genomföra filoperationen %d på \"%s\"."
+
+#: ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "_Hoppa över"
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Kan inte flytta objekt till papperskorgen. Vill du ta bort dem omedelbart?"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Inga av de %d markerade objekten kan flyttas till papperskorgen"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "Kan inte flytta en del objekt till papperskorgen. Vill du ta bort dessa omedelbart?"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d av de markerade objekten kan inte flyttas till papperskorgen"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_Ta bort"
+
+#: ../gimmie/gimmie_util.py:832
+msgid "Home"
+msgstr "Hem"
+
+#: ../gimmie/gimmie_util.py:836
+msgid "Desktop"
+msgstr "Skrivbord"
+
+#: ../gimmie/gimmie_util.py:893
+msgid "Not Implemented..."
+msgstr "Inte implementerat..."
+
+#: ../gimmie/gimmie_util.py:898
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr "Hjälp oss att skriva denna funktion genom att redigera filen \"%s\" på rad nummer %d."
+
+#: ../gimmie/gimmie_util.py:903
+msgid "_Fix It!"
+msgstr "_Rätta till!"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr "Orientering"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr "Orientering på brickan."
+
+#~ msgid "Flickr Photos"
+#~ msgstr "Flickr-foton"
+#~ msgid "Google Office"
+#~ msgstr "Google Office"
+#~ msgid "Gmail Account Settings"
+#~ msgstr "Gmail-kontoinställningar"
+#~ msgid "Failed to login account %s."
+#~ msgstr "Misslyckades med att logga in med kontot %s."
+#~ msgid "Friendster"
+#~ msgstr "Friendster"
+#~ msgid "Gimmie"
+#~ msgstr "Gimmie"
+#~ msgid "Show All"
+#~ msgstr "Visa alla"
+#~ msgid "Hide All"
+#~ msgstr "Dölj alla"
+#~ msgid "Timeline"
+#~ msgstr "Tidslinje"
+#~ msgid "Network"
+#~ msgstr "Nätverk"
+#~ msgid "New Smart Folder"
+#~ msgstr "Ny smart mapp"
+#~ msgid "Folders"
+#~ msgstr "Mappar"
+#~ msgid "Go"
+#~ msgstr "Gå"
+#~ msgid "Forever"
+#~ msgstr "För alltid"
+#~ msgid "Applications"
+#~ msgstr "Program"
+#~ msgid "Keep Around"
+#~ msgstr "Behåll"
+#~ msgid "Recently Seen"
+#~ msgstr "Senast sedda"
+#~ msgid "Important Email"
+#~ msgstr "Viktig e-post"
+#~ msgid "_Restart"
+#~ msgstr "_Starta om"
+#~ msgid "_Switch User"
+#~ msgstr "_Byt användare"
+#~ msgid "Last 3 days"
+#~ msgstr "Senaste 3 dagarna"
+#~ msgid "New Group"
+#~ msgstr "Ny grupp"
+#~ msgid "Add a new group of people to the sidebar"
+#~ msgstr "Lägg till en ny grupp människor på sidoraden"
+#~ msgid "If you choose to empty the trash, all "
+#~ msgstr "Om du väljer att tömma papperskorgen, kommer "
+#~ msgid "items in it will be permanently lost.  "
+#~ msgstr "alla objekt i den att permanent förloras.  "
+#~ msgid "Please note that you can also delete "
+#~ msgstr "Notera att du också kan ta bort "
+#~ msgid "them separately."
+#~ msgstr "dem separat."
+#~ msgid "Install and Update"
+#~ msgstr "Installera och uppdatera"
+#~ msgid "Install"
+#~ msgstr "Installera"
+#~ msgid "Update"
+#~ msgstr "Uppdatera"
+#~ msgid "Yesterday"
+#~ msgstr "Igår"
+#~ msgid "_Use Compact Layout"
+#~ msgstr "_Använd kompakt layout"
+#~ msgid "Devices"
+#~ msgstr "Enheter"
+#~ msgid "Media"
+#~ msgstr "Media"
+#~ msgid "Devices and Media"
+#~ msgstr "Enheter och media"
+#~ msgid "Volume: d%%"
+#~ msgstr "Volym: d%%"
+#~ msgid "Volume:"
+#~ msgstr "Volym:"
+#~ msgid "Music and Movies"
+#~ msgstr "Musik och filmer"
+#~ msgid "Movies"
+#~ msgstr "Filmer"
+#~ msgid "Music"
+#~ msgstr "Musik"
+#~ msgid "Document"
+#~ msgstr "Dokument"
+#~ msgid "Accessibility"
+#~ msgstr "Tillgänglighet"
+#~ msgid "Accessories"
+#~ msgstr "Tillbehör"
+#~ msgid "Desktop accessories"
+#~ msgstr "Skrivbordstillbehör"
+#~ msgid "Tools for software development"
+#~ msgstr "Verktyg för programutveckling"
+#~ msgid "Education"
+#~ msgstr "Utbildning"
+#~ msgid "Games"
+#~ msgstr "Spel"
+#~ msgid "Games and amusements"
+#~ msgstr "Spel och underhållning"
+#~ msgid "Graphics"
+#~ msgstr "Grafik"
+#~ msgid "Graphics applications"
+#~ msgstr "Grafikprogram"
+#~ msgid "Internet"
+#~ msgstr "Internet"
+#~ msgid "Programs for Internet access such as web and email"
+#~ msgstr "Program för Internetåtkomst som till exempel webben och e-post"
+#~ msgid "Multimedia menu"
+#~ msgstr "Multimediameny"
+#~ msgid "Sound & Video"
+#~ msgstr "Ljud och video"
+#~ msgid "Office Applications"
+#~ msgstr "Kontorsprogram"
+#~ msgid "Applications that did not fit in other categories"
+#~ msgstr "Program som inte passade in i någon annan kategori"
+#~ msgid "Personal preferences"
+#~ msgstr "Personliga inställningar"
+#~ msgid "Accessibility related preferences"
+#~ msgstr "Tillgänglighetsrelaterade inställningar"
+#~ msgid "Personal preferences and settings"
+#~ msgstr "Personliga inställningar"
+#~ msgid "Change systemwide settings (affects all users)"
+#~ msgstr "Ändra globala systeminställningar (påverkar alla användare)"
+#~ msgid "System Tools"
+#~ msgstr "Systemverktyg"
+#~ msgid "System configuration and monitoring"
+#~ msgstr "Systemkonfiguration och systemövervakning"
+#~ msgid "Menu Editor"
+#~ msgstr "Menyredigerare"
+#~ msgid "_Applications:"
+#~ msgstr "_Program"
+#~ msgid "_Defaults"
+#~ msgstr "_Standardalternativ"
+#~ msgid "_Menus:"
+#~ msgstr "_Menyer:"
+#~ msgid "Name"
+#~ msgstr "Namn"
+#~ msgid "Show"
+#~ msgstr "Visa"
+#~ msgid ""
+#~ "Cannot find home directory: not set in /etc/passwd and no value for $HOME "
+#~ "in environment"
+#~ msgstr ""
+#~ "Kan inte hitta hemkatalogen: inte angiven i /etc/passwd och inget värde "
+#~ "på $HOME i miljön"
+#~ msgid "Menu file"
+#~ msgstr "Menyfil"
+#~ msgid "MENU_FILE"
+#~ msgstr "MENYFIL"
+#~ msgid "Monitor for menu changes"
+#~ msgstr "Övervaka menyändringar"
+#~ msgid "Include <Exclude>d entries"
+#~ msgstr "Inkludera exkluderade poster"
+#~ msgid "Include NoDisplay=true entries"
+#~ msgstr "Inkludera poster med NoDisplay=true"
+#~ msgid "Invalid desktop file ID"
+#~ msgstr "Ogiltigt id på desktopfil"
+#~ msgid "[Invalid Filename]"
+#~ msgstr "[Ogiltigt filnamn]"
+#~ msgid " <excluded>"
+#~ msgstr " <exkluderad>"
+#~ msgid ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menu changed, reloading ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\n"
+#~ "\n"
+#~ "\n"
+#~ "==== Menyn ändrad, läser om ====\n"
+#~ "\n"
+#~ "\n"
+#~ msgid "Menu tree is empty"
+#~ msgstr "Menyträdet är tomt"
+#~ msgid "- test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr ""
+#~ "- testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
+#~ msgid "Personal Preferences"
+#~ msgstr "Personliga inställningar"
+#~ msgid "Applications:"
+#~ msgstr "Program"
+#~ msgid "Invalid Filename"
+#~ msgstr "Ogiltigt filnamn"
+#~ msgid "<excluded>"
+#~ msgstr "<exkluderad>"
+#~ msgid "excluded"
+#~ msgstr "exkluderad"
+#~ msgid "Excluded"
+#~ msgstr "Exkluderad"
+#~ msgid "==== Menu changed, reloading ===="
+#~ msgstr "==== Menyn ändrad, läser om ===="
+#~ msgid "Menu changed, reloading"
+#~ msgstr "Menyn ändrad, läser om"
+#~ msgid "test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
+#~ msgid "Test GNOME's implementation of the Desktop Menu Specification"
+#~ msgstr "Testa GNOMEs implementation av specifikationen för skrivbordsmenyer"
+#~ msgid "System Settings"
+#~ msgstr "Systeminställningar"
+#~ msgid "Desktop Accessories"
+#~ msgstr "Skrivbordstillbehör"
+#~ msgid "System"
+#~ msgstr "System"
+#~ msgid "Software development"
+#~ msgstr "Programutveckling"
+#~ msgid "Software Development"
+#~ msgstr "Programutveckling"
+#~ msgid "Games and Amusements"
+#~ msgstr "Spel och underhållning"
+#~ msgid "Graphics Applications"
+#~ msgstr "Grafikprogram"
+#~ msgid "Multimedia"
+#~ msgstr "Multimedia"
+#~ msgid "Office applications"
+#~ msgstr "Kontorsprogram"
+

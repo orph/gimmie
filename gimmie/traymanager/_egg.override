@@ -1,0 +1,18 @@
+/* -*- Mode: C; c-basic-offset: 4 -*- */
+%%
+headers
+#define NO_IMPORT_PYGOBJECT
+#include <pygobject.h>
+
+#include "eggtraymanager.h"
+
+%%
+modulename _egg
+%%
+ignore-glob
+  *_get_type
+%%
+import gobject.GObject as PyGObject_Type
+import gtk.Widget as PyGtkWidget_Type
+import gtk.gdk.Screen as PyGdkScreen_Type
+

@@ -1,0 +1,825 @@
+# Arabic translations for THIS package.
+# Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as THIS package.
+# Automatically generated, 2007.
+# Djihed Afifi <djihed@gmail.com>, 2007
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-04-21 22:52+0100\n"
+"PO-Revision-Date: 2007-04-14 18:49+0100\n"
+"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
+"Language-Team: Arabeyes <doc@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : n>=3 && "
+"n<=10 ? 2 : 3\n"
+
+#: ../data/gimmie.schemas.in.h:1
+#, fuzzy
+msgid "Applet button style"
+msgstr "نوع زر العمل"
+
+#: ../data/gimmie.schemas.in.h:2
+#, fuzzy
+msgid "Click policy"
+msgstr "التقاط فقط"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:4
+#, fuzzy
+msgid "Display \"Computer\" topic"
+msgstr "اعرض خواطر الحاسوب"
+
+#: ../data/gimmie.schemas.in.h:5
+#, fuzzy
+msgid "Display Library topic"
+msgstr "اعرض خريطة الرادار"
+
+#: ../data/gimmie.schemas.in.h:6
+#, fuzzy
+msgid "Display People topic"
+msgstr "عرض خيارات أخرى"
+
+#: ../data/gimmie.schemas.in.h:7
+#, fuzzy
+msgid "Display Programs topic"
+msgstr "عرض خيارات أخرى"
+
+#: ../data/gimmie.schemas.in.h:8
+#, fuzzy
+msgid "Display topic colors"
+msgstr "عرض X الذي سيستعمل"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr ""
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr ""
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+#, fuzzy
+msgid "_About"
+msgstr "_6 عن البرنامج"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+#, fuzzy
+msgid "_Preferences"
+msgstr "ت_فضيلات"
+
+#: ../gimmie/gimmie_applet.py:344
+msgid "Favorite"
+msgstr "مفضّل"
+
+#: ../gimmie/gimmie_applet.py:348 ../gimmie/gimmie_base.py:122
+msgid "Add to Favorites"
+msgstr "أضِف للمفضّلة"
+
+#: ../gimmie/gimmie_applications.py:244
+#, fuzzy
+msgid "Other"
+msgstr "أخ_رى"
+
+#: ../gimmie/gimmie_applications.py:316
+#, fuzzy
+msgid "Install & Update"
+msgstr "تاريخ التثبيت:"
+
+#: ../gimmie/gimmie_applications.py:317
+#, fuzzy
+msgid "Manage software on this computer"
+msgstr "أعد تشغيل الحاسوب"
+
+#: ../gimmie/gimmie_applications.py:350 ../gimmie/gimmie_computer.py:425
+#: ../gimmie/gimmie_computer.py:690
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: ../gimmie/gimmie_applications.py:351
+#, fuzzy
+msgid "Manage settings and preferences"
+msgstr "شروحات و إحالات"
+
+#: ../gimmie/gimmie_applications.py:367
+msgid "Show Desktop"
+msgstr "اظهر سطح المكتب"
+
+#: ../gimmie/gimmie_applications.py:385 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "برامج"
+
+#: ../gimmie/gimmie_applications.py:405 ../gimmie/gimmie_recent.py:62
+#, fuzzy
+msgid "Recently Used"
+msgstr "مضاف حديثاُ"
+
+#: ../gimmie/gimmie_base.py:147
+#, fuzzy
+msgid "%l:%M %p"
+msgstr "%I:%M %p"
+
+#: ../gimmie/gimmie_base.py:150
+#, fuzzy, python-format
+msgid "Today, %s"
+msgstr "اليوم:"
+
+#: ../gimmie/gimmie_base.py:154
+#, fuzzy, python-format
+msgid "Yesterday, %s"
+msgstr "أمس، {0}"
+
+#: ../gimmie/gimmie_base.py:156
+#, fuzzy, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "منذ يوم واحد"
+msgstr[1] "منذ يومين"
+msgstr[2] "منذ %d أيام"
+msgstr[3] "منذ %d يوما"
+
+#: ../gimmie/gimmie_base.py:160
+#, fuzzy, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "منذ يوم واحد"
+msgstr[1] "منذ يومين"
+msgstr[2] "منذ %d أيام"
+msgstr[3] "منذ %d يوما"
+
+#: ../gimmie/gimmie_base.py:164
+#, fuzzy
+msgid "%B %e"
+msgstr "%B %Y"
+
+#: ../gimmie/gimmie_base.py:166
+#, fuzzy
+msgid "%B %e, %G"
+msgstr "%A, %B %e, %Y"
+
+#: ../gimmie/gimmie_browser.py:28
+#, fuzzy
+msgid "Gimmie"
+msgstr "جلمر "
+
+#: ../gimmie/gimmie_browser.py:508 ../gimmie/gimmie_topicwin.py:1118
+#, fuzzy
+msgid "Set the zoom level"
+msgstr "عدّل مستوى التكبير"
+
+#: ../gimmie/gimmie_browser.py:528 ../gimmie/gimmie_topicwin.py:39
+#: ../gimmie/gimmie_topicwin.py:1063
+msgid "Search"
+msgstr "ابحث"
+
+#: ../gimmie/gimmie_computer.py:40
+#, fuzzy
+msgid "All Favorites"
+msgstr "مفضّلات"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_documents.py:281
+msgid "Places"
+msgstr "أماكن"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+#, fuzzy
+msgid "No disk inserted"
+msgstr "لا أشرطة جانبية مثبتة"
+
+#: ../gimmie/gimmie_computer.py:141
+#, fuzzy, python-format
+msgid "Free space: %s"
+msgstr "الفضاء المطلق:"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "ا_طرد"
+
+#: ../gimmie/gimmie_computer.py:186
+#, fuzzy
+msgid "Devices & Media"
+msgstr "استخدام قرص الجهاز"
+
+#: ../gimmie/gimmie_computer.py:191
+#, fuzzy
+msgid "Add Bluetooth..."
+msgstr "دفتر عناوين..."
+
+#: ../gimmie/gimmie_computer.py:192
+#, fuzzy
+msgid "Access a wireless device"
+msgstr "انفُذ لموقع وِب"
+
+#: ../gimmie/gimmie_computer.py:197
+#, fuzzy
+msgid "Create CD/DVD..."
+msgstr "لا يمكن انشاء CD/DVD"
+
+#: ../gimmie/gimmie_computer.py:198
+#, fuzzy
+msgid "Burn files onto a CD or DVD disk"
+msgstr "اكتب المحتويات إلى قرص مدمج أو قرص DVD"
+
+#: ../gimmie/gimmie_computer.py:324 ../gimmie/gimmie_documents.py:301
+#, fuzzy
+msgid "Printers"
+msgstr "مؤشرات"
+
+#: ../gimmie/gimmie_computer.py:329
+#, fuzzy
+msgid "Add Printer..."
+msgstr "أ_ضف جديد..."
+
+#: ../gimmie/gimmie_computer.py:330
+#, fuzzy
+msgid "Setup attached or networked printer"
+msgstr "النهاية الخلفية للطابعة"
+
+#: ../gimmie/gimmie_computer.py:387
+#, fuzzy
+msgid "Nearby Computers"
+msgstr "أعد تشغيل الحاسوب"
+
+#: ../gimmie/gimmie_computer.py:392
+#, fuzzy
+msgid "Connect to..."
+msgstr "اتّصل بـ %s..."
+
+#: ../gimmie/gimmie_computer.py:393
+#, fuzzy
+msgid "Access a computer on the network"
+msgstr "أقل من دقيقة حتى الإستراحة القادمة"
+
+#: ../gimmie/gimmie_computer.py:398
+msgid "Windows Network"
+msgstr "شبكة ويندوز"
+
+#: ../gimmie/gimmie_computer.py:399
+msgid "Browse nearby Windows computers"
+msgstr ""
+
+#: ../gimmie/gimmie_computer.py:484
+msgid "Administration"
+msgstr "إدارة"
+
+#: ../gimmie/gimmie_computer.py:523
+msgid "About Me"
+msgstr "عنّي"
+
+#: ../gimmie/gimmie_computer.py:529
+msgid "Switch User"
+msgstr "بدّل المستخدم"
+
+#: ../gimmie/gimmie_computer.py:535
+msgid "Log Out..."
+msgstr "سجّل خروج..."
+
+#: ../gimmie/gimmie_computer.py:563
+#, fuzzy
+msgid "Switch to another user"
+msgstr "_بدّل المستخدم:"
+
+#: ../gimmie/gimmie_computer.py:580
+#, fuzzy
+msgid "Shutdown..."
+msgstr "أطفيء..."
+
+#: ../gimmie/gimmie_computer.py:581
+#, fuzzy
+msgid "Shutdown or suspend this computer"
+msgstr "أطفيء الحاسوب"
+
+#: ../gimmie/gimmie_computer.py:591
+msgid "Help"
+msgstr "مساعدة"
+
+#: ../gimmie/gimmie_computer.py:596
+#, fuzzy
+msgid "About Gnome"
+msgstr "حول راديو جينوم"
+
+#: ../gimmie/gimmie_computer.py:608
+#, fuzzy
+msgid "Volume: 75%"
+msgstr "الحجم:"
+
+#: ../gimmie/gimmie_computer.py:613 ../gimmie/gimmie_computer.py:629
+msgid "Not Implemented"
+msgstr "غير مطبق"
+
+#: ../gimmie/gimmie_computer.py:624
+#, fuzzy
+msgid "Change the network location"
+msgstr "يجري تغيير موضع الشبكة"
+
+#: ../gimmie/gimmie_computer.py:691
+#, fuzzy
+msgid "Preferences & Administration"
+msgstr "تفضيلات شخصيّة و تعيينات الإدارة"
+
+#: ../gimmie/gimmie_computer.py:709 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "الحاسوب"
+
+#: ../gimmie/gimmie_computer.py:794
+#, fuzzy
+msgid "Computer, %l:%M %p"
+msgstr "غدا %l:%M %p"
+
+#: ../gimmie/gimmie_documents.py:109
+#, fuzzy
+msgid "Attachments"
+msgstr "مُرفق"
+
+#: ../gimmie/gimmie_documents.py:138 ../gimmie/gimmie_documents.py:175
+#, fuzzy
+msgid "New Document"
+msgstr "_المستند التالي"
+
+#: ../gimmie/gimmie_documents.py:176
+msgid "Create a new document"
+msgstr "انشيء مستند جديد"
+
+#: ../gimmie/gimmie_documents.py:212
+#, fuzzy
+msgid "No templates available"
+msgstr "لا قوالب مثبتة"
+
+#: ../gimmie/gimmie_documents.py:221
+#, fuzzy
+msgid "Empty File"
+msgstr "ملف _فارغ"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_documents.py:228
+msgid "Templates"
+msgstr "قوالب"
+
+#: ../gimmie/gimmie_documents.py:266 ../gimmie/gimmie_documents.py:268
+#: ../gimmie/gimmie_documents.py:289 ../gimmie/gimmie_trash.py:152
+#, fuzzy
+msgid "Trash"
+msgstr "_المهملات"
+
+#: ../gimmie/gimmie_documents.py:282
+#, fuzzy
+msgid "Open commonly used locations"
+msgstr "افتح الموقع %s"
+
+#: ../gimmie/gimmie_documents.py:290
+#, fuzzy
+msgid "Open the deleted files trashcan"
+msgstr "افتح المجلد المنتقى"
+
+#: ../gimmie/gimmie_documents.py:302
+#, fuzzy
+msgid "View printers available for document printing"
+msgstr "تتوفر تحديثات جديدة من"
+
+#: ../gimmie/gimmie_documents.py:323 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "مكتبة"
+
+# #-#-#-#-#  gnome-icon-theme.gnome-2-18.ar.po (gnome-icon-theme.gnome-2-16.ar)  #-#-#-#-#
+# 48x48/emblems/emblem-documents.icon.in.h:1
+#: ../gimmie/gimmie_documents.py:331
+msgid "Documents"
+msgstr "مستندات"
+
+#. Tomboy
+#: ../gimmie/gimmie_documents.py:370
+#, fuzzy
+msgid "Music & Movies"
+msgstr "<b>موسيقى و أفلام</b>"
+
+#: ../gimmie/gimmie_documents.py:375
+msgid "Flickr Photos"
+msgstr ""
+
+#: ../gimmie/gimmie_documents.py:376
+#, fuzzy
+msgid "Google Office"
+msgstr "خارج المكتب"
+
+#: ../gimmie/gimmie_gaim.py:101
+#, fuzzy, python-format
+msgid "Idle since %s"
+msgstr "أزح السّطور"
+
+#: ../gimmie/gimmie_gaim.py:104
+msgid "Idle"
+msgstr "عاطل"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:86
+#, fuzzy
+msgid "Away"
+msgstr "دائماً"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:77
+msgid "Offline"
+msgstr "غير متّصلل"
+
+#: ../gimmie/gimmie_gmail.py:36
+#, fuzzy
+msgid "Gmail Account Settings"
+msgstr "حسابات البريد الإلكتروني"
+
+#: ../gimmie/gimmie_gmail.py:48 ../gimmie/gimmie_gmail.py:156
+#, fuzzy
+msgid "Account Settings"
+msgstr "إعدادات الخط"
+
+#: ../gimmie/gimmie_gmail.py:62
+msgid "Sign in to Gmail with your Google Account"
+msgstr ""
+
+#: ../gimmie/gimmie_gmail.py:72
+#, fuzzy
+msgid "Username:"
+msgstr "اسم المستخدم: "
+
+#: ../gimmie/gimmie_gmail.py:77
+#, fuzzy
+msgid "Password:"
+msgstr "_كلمة السر:"
+
+#: ../gimmie/gimmie_gmail.py:277
+#, fuzzy, python-format
+msgid "Failed to login account %s."
+msgstr "فشل ضبط العدّ: %s"
+
+#: ../gimmie/gimmie_gmail.py:281 ../gimmie/gimmie_trash.py:239
+#, fuzzy
+msgid "_Skip"
+msgstr "_تخطّي إلى:"
+
+#: ../gimmie/gimmie_gmail.py:283 ../gimmie/gimmie_trash.py:245
+#, fuzzy
+msgid "_Retry"
+msgstr "أعِد المحاولة"
+
+#: ../gimmie/gimmie_gui.py:687
+#, fuzzy
+msgid "Calendar"
+msgstr "التقويمات"
+
+#: ../gimmie/gimmie_gui.py:788
+#, fuzzy, python-format
+msgid "Desk %d"
+msgstr "مكتب"
+
+#: ../gimmie/gimmie_gui.py:871
+#, fuzzy
+msgid "Use Compact Layout"
+msgstr "ا_ستخدم نسق متضام"
+
+#: ../gimmie/gimmie_logout.py:53
+#, fuzzy
+msgid "Shut down this computer now?"
+msgstr "أطفيء الحاسوب"
+
+#: ../gimmie/gimmie_logout.py:57 ../gimmie/gimmie_logout.py:61
+#, fuzzy
+msgid "_Sleep"
+msgstr "نوم"
+
+#: ../gimmie/gimmie_logout.py:67
+#, fuzzy
+msgid "_Reboot"
+msgstr "الجذر"
+
+#: ../gimmie/gimmie_logout.py:73
+msgid "Shut _Down"
+msgstr "إطفا_ء"
+
+#: ../gimmie/gimmie_logout.py:80
+#, fuzzy
+msgid "Log out of this computer now?"
+msgstr "تسجيل الخروج من النظام الآن؟"
+
+#: ../gimmie/gimmie_logout.py:84
+#, fuzzy
+msgid "_Log Out"
+msgstr "اخرج"
+
+#: ../gimmie/gimmie_logout.py:174
+#, fuzzy, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "سيتم إطفاء النظام آليا في ثانية."
+msgstr[1] "سيتم إطفاء النظام آليا في ثانيتين."
+msgstr[2] "سيتم إطفاء النظام آليا في %d ثواني."
+msgstr[3] "سيتم إطفاء النظام آليا في %d ثانية."
+
+#: ../gimmie/gimmie_logout.py:178
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "سيتم تسجيل الخروج آليا في ثانية."
+msgstr[1] "سيتم تسجيل الخروج آليا في ثانيتين."
+msgstr[2] "سيتم تسجيل الخروج آليا في %d ثواني."
+msgstr[3] "سيتم تسجيل الخروج آليا في %d ثانية."
+
+#: ../gimmie/gimmie_people.py:72 ../gimmie/gimmie_people.py:146
+msgid "Available"
+msgstr "متوفر"
+
+#: ../gimmie/gimmie_people.py:82
+#, fuzzy
+msgid "Away Messages..."
+msgstr "_رسالة جديدة..."
+
+#: ../gimmie/gimmie_people.py:95
+#, fuzzy
+msgid "Accounts..."
+msgstr "حسابات"
+
+#: ../gimmie/gimmie_people.py:126
+#, fuzzy
+msgid "New Person"
+msgstr "نيوبرن"
+
+#: ../gimmie/gimmie_people.py:127
+#, fuzzy
+msgid "Add a new contact person"
+msgstr "أضف اتصال VPN جديد"
+
+#: ../gimmie/gimmie_people.py:147
+#, fuzzy
+msgid "Set your online status"
+msgstr "اظهر أو خفي شريط الحالة"
+
+# #-#-#-#-#  gnome-icon-theme.gnome-2-18.ar.po (gnome-icon-theme.gnome-2-16.ar)  #-#-#-#-#
+# 48x48/emblems/emblem-people.icon.in.h:1
+#: ../gimmie/gimmie_people.py:162 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "أناس"
+
+#: ../gimmie/gimmie_people.py:171
+#, fuzzy
+msgid "Recent People"
+msgstr "الملفات الحديثة"
+
+#: ../gimmie/gimmie_people.py:172
+#, fuzzy
+msgid "Online Now"
+msgstr "متصل"
+
+#: ../gimmie/gimmie_people.py:173
+#, fuzzy
+msgid "Everybody"
+msgstr "كل يوم"
+
+#: ../gimmie/gimmie_people.py:178
+#, fuzzy
+msgid "Gmail"
+msgstr "بريد"
+
+#: ../gimmie/gimmie_people.py:181
+#, fuzzy
+msgid "GMail"
+msgstr "_بريد"
+
+#: ../gimmie/gimmie_people.py:183
+#, fuzzy
+msgid "Friendster"
+msgstr "أصدقاء"
+
+#: ../gimmie/gimmie_prefs.py:14
+#, fuzzy
+msgid "Gimmie Preferences"
+msgstr "تفضيلات عيون جنوم"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "نص فقط"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "أيقونات فقط"
+
+#: ../gimmie/gimmie_prefs.py:25
+#, fuzzy
+msgid "Text and icons"
+msgstr "_نص و أيقونة"
+
+#: ../gimmie/gimmie_prefs.py:38
+#, fuzzy
+msgid "Topic _button labels:"
+msgstr "اسماء أزرار شريط الأدوات"
+
+#: ../gimmie/gimmie_prefs.py:60
+#, fuzzy
+msgid "Appearance"
+msgstr "ال_مظهر:"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "المواضيع"
+
+#: ../gimmie/gimmie_tomboy.py:90
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: ../gimmie/gimmie_tomboy.py:94
+#, fuzzy
+msgid "Create New Note"
+msgstr "أ_نشيء ملاحظة جديدة"
+
+#: ../gimmie/gimmie_tomboy.py:95
+#, fuzzy
+msgid "Make a new Tomboy note"
+msgstr "اصنع ملاحظة جديدة"
+
+#: ../gimmie/gimmie_topicwin.py:160 ../gimmie/gimmie_topicwin.py:382
+msgid "Today"
+msgstr "اليوم"
+
+#: ../gimmie/gimmie_topicwin.py:161 ../gimmie/gimmie_topicwin.py:383
+#, fuzzy
+msgid "This week"
+msgstr "أسبوع واحد"
+
+#: ../gimmie/gimmie_topicwin.py:162 ../gimmie/gimmie_topicwin.py:384
+#, fuzzy
+msgid "Last 2 weeks"
+msgstr "آخر وصول"
+
+#: ../gimmie/gimmie_topicwin.py:163 ../gimmie/gimmie_topicwin.py:385
+#, fuzzy
+msgid "This month"
+msgstr "شهر واحد"
+
+#: ../gimmie/gimmie_topicwin.py:164 ../gimmie/gimmie_topicwin.py:386
+#, fuzzy
+msgid "Last 2 months"
+msgstr "الدقائق ال 30 الأخيرة"
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:387
+#, fuzzy
+msgid "Last 3 months"
+msgstr "الدقائق ال 30 الأخيرة"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:388
+#, fuzzy
+msgid "Last 6 months"
+msgstr "الدقائق ال 30 الأخيرة"
+
+#: ../gimmie/gimmie_topicwin.py:188
+#, fuzzy
+msgid "Show timeline"
+msgstr "اظهر الوقت"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+#, fuzzy
+msgid "_Empty Trash"
+msgstr "افرغ المهملات"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "عنصر %d"
+msgstr[1] "عنصران %d"
+msgstr[2] "%d عناصر "
+msgstr[3] "%d عنصر "
+
+#: ../gimmie/gimmie_trash.py:201
+#, fuzzy
+msgid "Empty all of the items from the trash?"
+msgstr "احذف كل العناصر في المهملات"
+
+#: ../gimmie/gimmie_trash.py:202
+#, fuzzy
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"في حال رغبتك في حذف الناقل والملفات سيتم حذفهم بشكل دائم بامكانك حذف الناقل "
+"والاحتفاظ بالملفات المنزلة باختارك حذف الناقل فقط"
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "خطأ أثناء النقل."
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"لا يمكن نقل \"%s\" للمهملات لأنك لا تملك التصاريح الكافية لتغييره أو تغيير "
+"المجلد الأب."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "خطأ أثناء الحذف."
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr "لا يمكن حذف \"%s\" لأنك لا تملك التصاريح الكافية لتعديل المجلد الأب."
+
+#: ../gimmie/gimmie_trash.py:231
+#, fuzzy
+msgid "Error while performing file operation."
+msgstr "حدث خطأ أثناء القيام بالعملية."
+
+#: ../gimmie/gimmie_trash.py:232
+#, fuzzy, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "غير قادر على أداء العملية"
+
+#: ../gimmie/gimmie_trash.py:299
+#, fuzzy
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "لا يمكن نقل بعض العناصر إلى المهملات، هل تريد حذفها فورا؟"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "لا يمكن نقل أي من العناصر المختارة %d إلى المهملات"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr "لا يمكن نقل بعض العناصر إلى المهملات، هل تريد حذفها فورا؟"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "لا يمكن نقل الملف \"%d\" إلى المهملات."
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_فسخ"
+
+#: ../gimmie/gimmie_util.py:763
+msgid "Home"
+msgstr "المنزل"
+
+#: ../gimmie/gimmie_util.py:767
+msgid "Desktop"
+msgstr "سطح المكتب"
+
+#: ../gimmie/gimmie_util.py:962
+#, fuzzy
+msgid "Not Implemented..."
+msgstr "غير مطبق"
+
+#: ../gimmie/gimmie_util.py:967
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+
+#: ../gimmie/gimmie_util.py:972
+#, fuzzy
+msgid "_Fix It!"
+msgstr "_تقريبي"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+#, fuzzy
+msgid "Orientation"
+msgstr "الإتجاه:"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+#, fuzzy
+msgid "The orientation of the tray."
+msgstr "إتجاه الطبق."
+

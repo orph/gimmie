@@ -1,0 +1,729 @@
+# gimmie ja.po.
+# Copyright (C) 2006,2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the 'gimmie' package.
+# Takeshi AIHANA <takeshi.aihana@gmail.com>, 2006,2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie trunk\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-06-20 22:38+0900\n"
+"PO-Revision-Date: 2007-06-20 21:47+0900\n"
+"Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "アプレットのボタンのスタイル"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr "クリック時のポリシー"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr ""
+"Gimmie でアイテムを起動する際に使用するクリックの種類を指定します。指定可能な"
+"値: \"single\" (シングル・クリックでアイテムを起動する)、\"double\" (ダブル・"
+"クリックでアイテムを起動する)、\"nautilus\" (Nautilus のポリシーに従う)"
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr "\"コンピュータ\" のトピックを表示する"
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr "\"ライブラリ\" のトピックを表示する"
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr "\"仲間\" のトピックを表示する"
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr "\"プログラム\" のトピックを表示する"
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr "トピックに色を付ける"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr ""
+"Gimmie の各トピックには色が関連付けられています。このキーでは、パネル中にある"
+"各トピックに色を付けて表示するかどうかを指定します。"
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr ""
+"アプレットの一覧の中に \"コンピュータ\" というトピックを含めるかどうかです。"
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr ""
+"アプレットの一覧の中に \"ライブラリ\" というトピックを含めるかどうかです。"
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr "アプレットの一覧の中に \"仲間\" というトピックを含めるかどうかです。"
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr ""
+"アプレットの一覧の中に \"プログラム\" というトピックを含めるかどうかです。"
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr ""
+"アプレットのボタンの表示方法を指定します。指定可能な値: \"icons\" (トピックの"
+"アイコンのみ表示する)、\"text\" (トピックのラベルのみ表示する)、\"both\" (ア"
+"イコンとラベルの両方を表示する)"
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "情報(_A)"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Preferences"
+msgstr "設定(_P)"
+
+#: ../gimmie/gimmie_applet.py:372
+msgid "Favorite"
+msgstr "お気に入り"
+
+#: ../gimmie/gimmie_applet.py:376 ../gimmie/gimmie_base.py:128
+msgid "Add to Favorites"
+msgstr "お気に入りに追加する"
+
+#: ../gimmie/gimmie_applications.py:244
+msgid "Other"
+msgstr "その他"
+
+#: ../gimmie/gimmie_applications.py:316
+msgid "Install & Update"
+msgstr "インストール＆アップデート"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Manage software on this computer"
+msgstr "このコンピュータにあるソフトウェアを管理します"
+
+#: ../gimmie/gimmie_applications.py:350 ../gimmie/gimmie_computer.py:422
+#: ../gimmie/gimmie_computer.py:687
+msgid "Settings"
+msgstr "設定"
+
+#: ../gimmie/gimmie_applications.py:351
+msgid "Manage settings and preferences"
+msgstr "このデスクトップの設定を管理します"
+
+#: ../gimmie/gimmie_applications.py:367
+msgid "Show Desktop"
+msgstr "デスクトップの表示"
+
+#: ../gimmie/gimmie_applications.py:385 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "プログラム"
+
+#: ../gimmie/gimmie_applications.py:405 ../gimmie/gimmie_recent.py:163
+msgid "Recently Used"
+msgstr "最近使用したモノ"
+
+#: ../gimmie/gimmie_base.py:153
+msgid "%l:%M %p"
+msgstr "%p%l:%M"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "Today, %s"
+msgstr "今日の %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "Yesterday, %s"
+msgstr "昨日の %s"
+
+#: ../gimmie/gimmie_base.py:162
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d日前の %s"
+msgstr[1] "%d日前の %s"
+
+#: ../gimmie/gimmie_base.py:166
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d日前"
+msgstr[1] "%d日前"
+
+#: ../gimmie/gimmie_base.py:170
+msgid "%B %e"
+msgstr "%B%e日"
+
+#: ../gimmie/gimmie_base.py:172
+msgid "%B %e, %G"
+msgstr "%G年%B%e日"
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "全てのお気に入り"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_documents.py:402
+msgid "Places"
+msgstr "場所"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "ディスクが挿入されていません"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "フリーな空間: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "取り出し(_E)"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "デバイスとメディア"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Bluetooth の追加..."
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "無線デバイスへのアクセスを追加します"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "CD/DVD の作成..."
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "ファイルを CD または DVD ディスクに書き込みます"
+
+#: ../gimmie/gimmie_computer.py:322 ../gimmie/gimmie_documents.py:422
+msgid "Printers"
+msgstr "プリンタ"
+
+#: ../gimmie/gimmie_computer.py:327
+msgid "Add Printer..."
+msgstr "プリンタの追加..."
+
+#: ../gimmie/gimmie_computer.py:328
+msgid "Setup attached or networked printer"
+msgstr "コンピュータやネットワーク上にあるプリンタを設定します"
+
+#: ../gimmie/gimmie_computer.py:384
+msgid "Nearby Computers"
+msgstr "近くのコンピュータ"
+
+#: ../gimmie/gimmie_computer.py:389
+msgid "Connect to..."
+msgstr "接続..."
+
+#: ../gimmie/gimmie_computer.py:390
+msgid "Access a computer on the network"
+msgstr "ネットワーク上のコンピュータに接続します"
+
+#: ../gimmie/gimmie_computer.py:395
+msgid "Windows Network"
+msgstr "Windows ネットワーク"
+
+#: ../gimmie/gimmie_computer.py:396
+msgid "Browse nearby Windows computers"
+msgstr "近くの Windows コンピュータを参照します"
+
+#: ../gimmie/gimmie_computer.py:481
+msgid "Administration"
+msgstr "システム管理者"
+
+#: ../gimmie/gimmie_computer.py:520
+msgid "About Me"
+msgstr "個人情報"
+
+#: ../gimmie/gimmie_computer.py:526
+msgid "Switch User"
+msgstr "ユーザの切り替え"
+
+#: ../gimmie/gimmie_computer.py:532
+msgid "Log Out..."
+msgstr "ログアウト..."
+
+#: ../gimmie/gimmie_computer.py:560
+msgid "Switch to another user"
+msgstr "他のユーザに切り替えます"
+
+#: ../gimmie/gimmie_computer.py:577
+msgid "Shutdown..."
+msgstr "シャットダウン..."
+
+#: ../gimmie/gimmie_computer.py:578
+msgid "Shutdown or suspend this computer"
+msgstr "このコンピュータをシャットダウンしたりサスペンドにします"
+
+#: ../gimmie/gimmie_computer.py:588
+msgid "Help"
+msgstr "ヘルプ"
+
+#: ../gimmie/gimmie_computer.py:593
+msgid "About Gnome"
+msgstr "GNOME について"
+
+#: ../gimmie/gimmie_computer.py:605
+msgid "Volume: 75%"
+msgstr "音量: 75%"
+
+#: ../gimmie/gimmie_computer.py:610 ../gimmie/gimmie_computer.py:626
+msgid "Not Implemented"
+msgstr "*未実装です*"
+
+#: ../gimmie/gimmie_computer.py:621
+msgid "Change the network location"
+msgstr "ネットワークの場所を変更します"
+
+#: ../gimmie/gimmie_computer.py:688
+msgid "Preferences & Administration"
+msgstr "設定とシステム管理"
+
+#: ../gimmie/gimmie_computer.py:706 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "コンピュータ"
+
+#: ../gimmie/gimmie_computer.py:791
+msgid "Computer, %l:%M %p"
+msgstr "コンピュータ (%p%l:%M)"
+
+#: ../gimmie/gimmie_documents.py:139
+msgid "Attachments"
+msgstr "添付ファイル"
+
+#: ../gimmie/gimmie_documents.py:151
+msgid "Downloads"
+msgstr "ダウンロード"
+
+#: ../gimmie/gimmie_documents.py:209
+msgid "Documents"
+msgstr "ドキュメント"
+
+#: ../gimmie/gimmie_documents.py:228
+msgid "Music & Movies"
+msgstr "楽曲＆動画"
+
+#: ../gimmie/gimmie_documents.py:259 ../gimmie/gimmie_documents.py:296
+msgid "New Document"
+msgstr "新しいドキュメント"
+
+#: ../gimmie/gimmie_documents.py:297
+msgid "Create a new document"
+msgstr "新しいドキュメントを作成します"
+
+#: ../gimmie/gimmie_documents.py:333
+msgid "No templates available"
+msgstr "*テンプレートは利用できません*"
+
+#: ../gimmie/gimmie_documents.py:342
+msgid "Empty File"
+msgstr "空のファイル"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_documents.py:349
+msgid "Templates"
+msgstr "テンプレート"
+
+#: ../gimmie/gimmie_documents.py:387 ../gimmie/gimmie_documents.py:389
+#: ../gimmie/gimmie_documents.py:410 ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "ゴミ箱"
+
+#: ../gimmie/gimmie_documents.py:403
+msgid "Open commonly used locations"
+msgstr "よく利用する場所を開きます"
+
+#: ../gimmie/gimmie_documents.py:411
+msgid "Open the deleted files trashcan"
+msgstr "ゴミ箱の中にある削除済みのファイルを開きます"
+
+#: ../gimmie/gimmie_documents.py:423
+msgid "View printers available for document printing"
+msgstr "印刷の準備が整ったプリンタを表示します"
+
+#: ../gimmie/gimmie_documents.py:444 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "ライブラリ"
+
+#: ../gimmie/gimmie_documents.py:454
+msgid "Flickr Photos"
+msgstr "Flickr のフォト"
+
+#: ../gimmie/gimmie_documents.py:455
+msgid "Google Office"
+msgstr "Google オフィス"
+
+#: ../gimmie/gimmie_gaim.py:101
+#, python-format
+msgid "Idle since %s"
+msgstr "待機時間: %s"
+
+#: ../gimmie/gimmie_gaim.py:104
+msgid "Idle"
+msgstr "待機中"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:98
+msgid "Away"
+msgstr "離席中"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:89
+msgid "Offline"
+msgstr "オフライン"
+
+#: ../gimmie/gimmie_gmail.py:36
+msgid "Gmail Account Settings"
+msgstr "Gmail のアカウント設定"
+
+#: ../gimmie/gimmie_gmail.py:48 ../gimmie/gimmie_gmail.py:156
+msgid "Account Settings"
+msgstr "アカウントの設定"
+
+#: ../gimmie/gimmie_gmail.py:62
+msgid "Sign in to Gmail with your Google Account"
+msgstr "Google アカウントで Gmail にログインします:"
+
+#: ../gimmie/gimmie_gmail.py:72
+msgid "Username:"
+msgstr "ユーザ名:"
+
+#: ../gimmie/gimmie_gmail.py:77
+msgid "Password:"
+msgstr "パスワード:"
+
+#: ../gimmie/gimmie_gmail.py:277
+#, python-format
+msgid "Failed to login account %s."
+msgstr "アカウント %s にログインできませんでした"
+
+#: ../gimmie/gimmie_gmail.py:281 ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "スキップ(_S)"
+
+#: ../gimmie/gimmie_gmail.py:283 ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "再試行(_R)"
+
+#: ../gimmie/gimmie_gui.py:691
+msgid "Calendar"
+msgstr "カレンダ"
+
+#: ../gimmie/gimmie_gui.py:792
+#, python-format
+msgid "Desk %d"
+msgstr "デスク %d"
+
+#: ../gimmie/gimmie_gui.py:875
+msgid "Use Compact Layout"
+msgstr "コンパクトな表示にする"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "このコンピュータを今すぐシャットダウンしますか？"
+
+#: ../gimmie/gimmie_logout.py:57
+msgid "_Sleep"
+msgstr "スリープ(_S)"
+
+#: ../gimmie/gimmie_logout.py:62
+msgid "_Hibernate"
+msgstr "ハイバーネート(_H)"
+
+#: ../gimmie/gimmie_logout.py:68
+msgid "_Reboot"
+msgstr "再起動(_R)"
+
+#: ../gimmie/gimmie_logout.py:74
+msgid "Shut _Down"
+msgstr "シャットダウン(_D)"
+
+#: ../gimmie/gimmie_logout.py:81
+msgid "Log out of this computer now?"
+msgstr "このコンピュータからログアウトしますか？"
+
+#: ../gimmie/gimmie_logout.py:85
+msgid "_Log Out"
+msgstr "ログアウト(_L)"
+
+#: ../gimmie/gimmie_logout.py:175
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "このコンピュータは %d秒後に自動的にシャットダウンします。"
+msgstr[1] "このコンピュータは %d秒後に自動的にシャットダウンします。"
+
+#: ../gimmie/gimmie_logout.py:179
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] " %d秒後に自動的にログアウトします。"
+msgstr[1] " %d秒後に自動的にログアウトします。"
+
+#: ../gimmie/gimmie_people.py:84 ../gimmie/gimmie_people.py:175
+msgid "Available"
+msgstr "在席しています"
+
+#: ../gimmie/gimmie_people.py:94
+msgid "Away Messages..."
+msgstr "離席メッセージ..."
+
+#: ../gimmie/gimmie_people.py:107
+msgid "Accounts..."
+msgstr "アカウント..."
+
+#: ../gimmie/gimmie_people.py:145
+msgid "New Person"
+msgstr "新しい仲間"
+
+#: ../gimmie/gimmie_people.py:146
+msgid "Add a new contact person"
+msgstr "新しい連絡先を追加します"
+
+#: ../gimmie/gimmie_people.py:176
+msgid "Set your online status"
+msgstr "オンラインの状態をセットします"
+
+#: ../gimmie/gimmie_people.py:191 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "仲間"
+
+#: ../gimmie/gimmie_people.py:203
+msgid "Recent People"
+msgstr "最近の仲間"
+
+#: ../gimmie/gimmie_people.py:204
+msgid "Online Now"
+msgstr "サインインする"
+
+#: ../gimmie/gimmie_people.py:205
+msgid "Everybody"
+msgstr "全ての仲間"
+
+#: ../gimmie/gimmie_people.py:210
+msgid "Gmail"
+msgstr "Gmail"
+
+#: ../gimmie/gimmie_people.py:213
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:215
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr "Gimmie の設定"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "ラベルのみ"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "アイコンのみ"
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr "ラベルとアイコン"
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr "トピック・ボタンのラベル(_B):"
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr "外観"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "トピック"
+
+#: ../gimmie/gimmie_tomboy.py:89
+msgid "Notes"
+msgstr "メモ"
+
+#: ../gimmie/gimmie_tomboy.py:93
+msgid "Create New Note"
+msgstr "新しいメモを作成します"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Make a new Tomboy note"
+msgstr "新しい Tomboy メモを作成します"
+
+#: ../gimmie/gimmie_topicwin.py:44 ../gimmie/gimmie_topicwin.py:1233
+msgid "Search"
+msgstr "検索..."
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:488
+msgid "Today"
+msgstr "今日"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:489
+msgid "This week"
+msgstr "今週"
+
+#: ../gimmie/gimmie_topicwin.py:167 ../gimmie/gimmie_topicwin.py:490
+msgid "Last 2 weeks"
+msgstr "２週間前"
+
+#: ../gimmie/gimmie_topicwin.py:168 ../gimmie/gimmie_topicwin.py:491
+msgid "This month"
+msgstr "今月"
+
+#: ../gimmie/gimmie_topicwin.py:169 ../gimmie/gimmie_topicwin.py:492
+msgid "Last 2 months"
+msgstr "ここ二ヶ月"
+
+#: ../gimmie/gimmie_topicwin.py:170 ../gimmie/gimmie_topicwin.py:493
+msgid "Last 3 months"
+msgstr "ここ三ヶ月"
+
+#: ../gimmie/gimmie_topicwin.py:171 ../gimmie/gimmie_topicwin.py:494
+msgid "Last 6 months"
+msgstr "ここ半年"
+
+#: ../gimmie/gimmie_topicwin.py:193
+msgid "Show timeline"
+msgstr "履歴を表示する"
+
+#: ../gimmie/gimmie_topicwin.py:1288
+msgid "Set the zoom level"
+msgstr "表示レベルをセットします"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "ゴミ箱を空にする(_E)"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] " %d個のアイテム"
+msgstr[1] " %d個のアイテム"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "ゴミ箱にあるアイテムを全て削除しますか？"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"ゴミ箱を空にすると、ゴミ箱の中にある全てのアイテムを完全に失うことになりま"
+"す。それらのアイテムを別々に削除することも可能です。"
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "移動する際にエラーが発生しました"
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"\"%s\" またはその親フォルダに対する権限を所有していないのでゴミ箱に移動できま"
+"せんでした。"
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "削除する際にエラーが発生しました"
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"\"%s\" またはその親フォルダに対する権限を所有していないので削除できませんでし"
+"た。"
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "ファイル操作中にエラーが発生しました"
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "ファイル操作 %d を \"%s\" に対して実行できませんでした。"
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "アイテムをゴミ箱に移動できません。今すぐ削除してもよろしいですか？"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "選択した %d個のアイテムをゴミ箱へ移動できません"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr ""
+"いくつかのアイテムをゴミ箱へ移動できません。今すぐ削除してもよろしいですか？"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "選択した %d個のアイテムをゴミ箱へ移動できません"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "削除(_D)"
+
+#: ../gimmie/gimmie_util.py:831
+msgid "Home"
+msgstr "ホーム"
+
+#: ../gimmie/gimmie_util.py:835
+msgid "Desktop"
+msgstr "デスクトップ"
+
+#: ../gimmie/gimmie_util.py:892
+msgid "Not Implemented..."
+msgstr "*未実装です*"
+
+#: ../gimmie/gimmie_util.py:897
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+"どなたかファイル \"%s\" (行番号: %d) を編集して、この機能を実装しれくれません"
+"か？"
+
+#: ../gimmie/gimmie_util.py:902
+msgid "_Fix It!"
+msgstr "編集する!(_F)"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr "向き"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr "トレイの向きです"

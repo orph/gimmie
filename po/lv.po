@@ -1,0 +1,737 @@
+# translation of lv.po to Latvian
+# translation of gimmie.HEAD.po to
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Raivis Dejus <orvils@gmail.com>, 2007.
+# Edgars Ozlonieks <hoo123@inbox.lv>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: lv\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-27 15:24+0300\n"
+"PO-Revision-Date: 2007-07-27 15:27+0300\n"
+"Last-Translator: Raivis Dejus <orvils@gmail.com>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../data/gimmie.schemas.in.h:1
+msgid "Applet button style"
+msgstr "Palīgprogrammu pogu izskats"
+
+#: ../data/gimmie.schemas.in.h:2
+msgid "Click policy"
+msgstr "Pales klikšķa nosacījumi"
+
+#: ../data/gimmie.schemas.in.h:3
+msgid ""
+"Determine how to handle clicks on items in Gimmie. The following options are "
+"supported: \"single\" activates items with a single click, \"double\" "
+"activates with a double click, and \"nautilus\" to follow Nautilus' click "
+"policy."
+msgstr ""
+"Definē kā peles klikšķis uz lietas Gimmie programmā tiks apstrādāts. Ir "
+"atbalstītas skojošas iespējas: \"single\" aktivizē lietas ar vienu peles "
+"klikšķi, \"double\" ktivizē lietas ar dubultklikšķi, un \"nautilus\", lai "
+"sekotu Nautilus programmas peles klikšķa nosacījumiem."
+
+#: ../data/gimmie.schemas.in.h:4
+msgid "Display \"Computer\" topic"
+msgstr "Rādīt \"Computer\" nosaukumus"
+
+#: ../data/gimmie.schemas.in.h:5
+msgid "Display Library topic"
+msgstr "Rādīt bibliotēku nosaukumus"
+
+#: ../data/gimmie.schemas.in.h:6
+msgid "Display People topic"
+msgstr "Rādīt cilvēku nosaukumus"
+
+#: ../data/gimmie.schemas.in.h:7
+msgid "Display Programs topic"
+msgstr "Rādīt programmu nosaukumus"
+
+#: ../data/gimmie.schemas.in.h:8
+msgid "Display topic colors"
+msgstr "Rādīt nosaukumu krāsas"
+
+#: ../data/gimmie.schemas.in.h:9
+msgid ""
+"Each topic in Gimmie has an associated color. This key determines if the "
+"color is displayed in panel buttons."
+msgstr ""
+"Katram nosaukumam Gimmie programmā ir piesaistīta krāsa. Šī poga definē vai "
+"krāsa tiks rādīta pie paneļa pogām."
+
+#: ../data/gimmie.schemas.in.h:10
+msgid "Include the \"Computer\" topic in this applet's list of topics."
+msgstr "Iekļaut \"Computer\" nosaukumus palīgprogrammu nosaukumu sarakstā."
+
+#: ../data/gimmie.schemas.in.h:11
+msgid "Include the Library topic in this applet's list of topics."
+msgstr "Iekļaut bibliotēku nosaukumus palīgprogrammu nosaukumu sarakstā."
+
+#: ../data/gimmie.schemas.in.h:12
+msgid "Include the People topic in this applet's list of topics."
+msgstr "Iekļaut cilvēku nosaukumus palīgprogrammu nosaukumu sarakstā."
+
+#: ../data/gimmie.schemas.in.h:13
+msgid "Include the Programs topic in this applet's list of topics."
+msgstr "Iekļaut programmu nosaukumus palīgprogrammu nosaukumu sarakstā."
+
+#: ../data/gimmie.schemas.in.h:14
+msgid ""
+"Set how this applet's buttons are displayed. The following options are "
+"supported: \"icons\" to show only Topic icons, \"text\" to show only Topic "
+"names, and \"both\" to include both."
+msgstr ""
+"Uzstādīt kā šī palīgprogrammas poga tiks parādīta. Ir atbalstītas sekjošas "
+"iespējas: \"icons\" lai rādītu tikai virsrakstu ikonas, \"text\" lai rādītu "
+"tikai virsrakstu nosaukumus, un \"both\" lai rādītu abus iepriekšējos."
+
+#: ../data/GNOME_GimmieApplet.xml.h:1
+msgid "_About"
+msgstr "_Par"
+
+#: ../data/GNOME_GimmieApplet.xml.h:2
+msgid "_Preferences"
+msgstr "_Iestatījumi"
+
+#: ../gimmie/gimmie_applet.py:372
+msgid "Favorite"
+msgstr "Iecienīts"
+
+#: ../gimmie/gimmie_applet.py:376 ../gimmie/gimmie_base.py:128
+msgid "Add to Favorites"
+msgstr "Pievienot Favorītiem"
+
+#: ../gimmie/gimmie_applications.py:244
+msgid "Other"
+msgstr "Cits"
+
+#: ../gimmie/gimmie_applications.py:316
+msgid "Install & Update"
+msgstr "Uzstādt un atjaunināt"
+
+#: ../gimmie/gimmie_applications.py:317
+msgid "Manage software on this computer"
+msgstr "Pārvaldīt programmatūru uz šī datora"
+
+#: ../gimmie/gimmie_applications.py:350 ../gimmie/gimmie_computer.py:422
+#: ../gimmie/gimmie_computer.py:687
+msgid "Settings"
+msgstr "Uzstādījumi"
+
+#: ../gimmie/gimmie_applications.py:351
+msgid "Manage settings and preferences"
+msgstr "Pārvaldīt uzstādījumi un iestatūjumus "
+
+#: ../gimmie/gimmie_applications.py:367
+msgid "Show Desktop"
+msgstr "Parādīt Darba virsmu"
+
+#: ../gimmie/gimmie_applications.py:385 ../gimmie/gimmie_prefs.py:72
+msgid "Programs"
+msgstr "Programmas"
+
+#: ../gimmie/gimmie_applications.py:405 ../gimmie/gimmie_recent.py:163
+msgid "Recently Used"
+msgstr "Nesen izmantots"
+
+#: ../gimmie/gimmie_base.py:153
+msgid "%l:%M %p"
+msgstr "%l:%M %p"
+
+#: ../gimmie/gimmie_base.py:156
+#, python-format
+msgid "Today, %s"
+msgstr "Šodien, %s"
+
+#: ../gimmie/gimmie_base.py:160
+#, python-format
+msgid "Yesterday, %s"
+msgstr "Vakar, %s"
+
+#: ../gimmie/gimmie_base.py:162
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "Pirms %d dienas, %s"
+msgstr[1] "Pirms %d dienām, %s"
+msgstr[2] "Pirms %d dienām, %s"
+
+#: ../gimmie/gimmie_base.py:166
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "Pirms %d dienas"
+msgstr[1] "Pirms %d dienām"
+msgstr[2] "Pirms %d dienām"
+
+#: ../gimmie/gimmie_base.py:170
+msgid "%B %e"
+msgstr "%B %e"
+
+#: ../gimmie/gimmie_base.py:172
+msgid "%B %e, %G"
+msgstr "%B %e, %G"
+
+#: ../gimmie/gimmie_computer.py:40
+msgid "All Favorites"
+msgstr "Visi iecienītākie"
+
+#: ../gimmie/gimmie_computer.py:69 ../gimmie/gimmie_documents.py:402
+msgid "Places"
+msgstr "Vietas"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie/gimmie_computer.py:122
+msgid "No disk inserted"
+msgstr "Nav ievietota matrica"
+
+#: ../gimmie/gimmie_computer.py:141
+#, python-format
+msgid "Free space: %s"
+msgstr "Brīva vieta: %s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie/gimmie_computer.py:171
+msgid "_Eject"
+msgstr "_Izgrūst"
+
+#: ../gimmie/gimmie_computer.py:186
+msgid "Devices & Media"
+msgstr "Iekārtas un mēdija"
+
+#: ../gimmie/gimmie_computer.py:191
+msgid "Add Bluetooth..."
+msgstr "Pievienot Zilzobi..."
+
+#: ../gimmie/gimmie_computer.py:192
+msgid "Access a wireless device"
+msgstr "Piekļūt bezvadu iekārtai"
+
+#: ../gimmie/gimmie_computer.py:197
+msgid "Create CD/DVD..."
+msgstr "Izveidot CD/DVD..."
+
+#: ../gimmie/gimmie_computer.py:198
+msgid "Burn files onto a CD or DVD disk"
+msgstr "Ierakstīt failus CD vai DVD matricā"
+
+#: ../gimmie/gimmie_computer.py:322 ../gimmie/gimmie_documents.py:422
+msgid "Printers"
+msgstr "Drukas iekārtas"
+
+#: ../gimmie/gimmie_computer.py:327
+msgid "Add Printer..."
+msgstr "Pievienot Drukas Iekārtu..."
+
+#: ../gimmie/gimmie_computer.py:328
+msgid "Setup attached or networked printer"
+msgstr "Pievinota uzstādīšana vai arī drukas iekārta pa tīklu"
+
+#: ../gimmie/gimmie_computer.py:384
+msgid "Nearby Computers"
+msgstr "Netālu esošie datori"
+
+#: ../gimmie/gimmie_computer.py:389
+msgid "Connect to..."
+msgstr "Pieslēgties pie..."
+
+#: ../gimmie/gimmie_computer.py:390
+msgid "Access a computer on the network"
+msgstr "Piekļūt datoram, kurš ir tīklā"
+
+#: ../gimmie/gimmie_computer.py:395
+msgid "Windows Network"
+msgstr "Windows tīkls"
+
+#: ../gimmie/gimmie_computer.py:396
+msgid "Browse nearby Windows computers"
+msgstr "Meklāt netāli esošos Windows datorus"
+
+#: ../gimmie/gimmie_computer.py:481
+msgid "Administration"
+msgstr "Administrēšana"
+
+#: ../gimmie/gimmie_computer.py:520
+msgid "About Me"
+msgstr "Par mani"
+
+#: ../gimmie/gimmie_computer.py:526
+msgid "Switch User"
+msgstr "Mainīt lietotāju"
+
+#: ../gimmie/gimmie_computer.py:532
+msgid "Log Out..."
+msgstr "Iziet..."
+
+#: ../gimmie/gimmie_computer.py:560
+msgid "Switch to another user"
+msgstr "Pārslēgties uz citu lietotāju"
+
+#: ../gimmie/gimmie_computer.py:577
+msgid "Shutdown..."
+msgstr "Izslēgt..."
+
+#: ../gimmie/gimmie_computer.py:578
+msgid "Shutdown or suspend this computer"
+msgstr "Izslēgt šo datoru"
+
+#: ../gimmie/gimmie_computer.py:588
+msgid "Help"
+msgstr "Palīdzība"
+
+#: ../gimmie/gimmie_computer.py:593
+msgid "About Gnome"
+msgstr "Par Gnome"
+
+#: ../gimmie/gimmie_computer.py:605
+msgid "Volume: 75%"
+msgstr "Apjoms: 75%"
+
+#: ../gimmie/gimmie_computer.py:610 ../gimmie/gimmie_computer.py:626
+msgid "Not Implemented"
+msgstr "Nav izveidots"
+
+#: ../gimmie/gimmie_computer.py:621
+msgid "Change the network location"
+msgstr "Mainīt tiklā atrašanās vietu"
+
+#: ../gimmie/gimmie_computer.py:688
+msgid "Preferences & Administration"
+msgstr "Iestatījumi un administrācija"
+
+#: ../gimmie/gimmie_computer.py:706 ../gimmie/gimmie_prefs.py:69
+msgid "Computer"
+msgstr "Dators"
+
+#: ../gimmie/gimmie_computer.py:791
+msgid "Computer, %l:%M %p"
+msgstr "Dators, %l:%M %p"
+
+#: ../gimmie/gimmie_documents.py:139
+msgid "Attachments"
+msgstr "Pielikumi"
+
+#: ../gimmie/gimmie_documents.py:151
+msgid "Downloads"
+msgstr "Lejupielādes"
+
+#: ../gimmie/gimmie_documents.py:209
+msgid "Documents"
+msgstr "Dokumenti"
+
+#: ../gimmie/gimmie_documents.py:228
+msgid "Music & Movies"
+msgstr "Mūzika un filams"
+
+#: ../gimmie/gimmie_documents.py:259 ../gimmie/gimmie_documents.py:296
+msgid "New Document"
+msgstr "Jauns dokuments"
+
+#: ../gimmie/gimmie_documents.py:297
+msgid "Create a new document"
+msgstr "Izveidot jaunu dokumentu"
+
+#: ../gimmie/gimmie_documents.py:333
+msgid "No templates available"
+msgstr "Nav pieejami šabloni"
+
+#: ../gimmie/gimmie_documents.py:342
+msgid "Empty File"
+msgstr "Tukšs fails"
+
+#. Add a link to the templates directory
+#: ../gimmie/gimmie_documents.py:349
+msgid "Templates"
+msgstr "Sagataves"
+
+#: ../gimmie/gimmie_documents.py:387 ../gimmie/gimmie_documents.py:389
+#: ../gimmie/gimmie_documents.py:410 ../gimmie/gimmie_trash.py:152
+msgid "Trash"
+msgstr "Miskaste"
+
+#: ../gimmie/gimmie_documents.py:403
+msgid "Open commonly used locations"
+msgstr "Atvērt parasti izmantotās vietas"
+
+#: ../gimmie/gimmie_documents.py:411
+msgid "Open the deleted files trashcan"
+msgstr "Atvērt izdzēsto failu atkritni"
+
+#: ../gimmie/gimmie_documents.py:423
+msgid "View printers available for document printing"
+msgstr "Rādīt pieejamās drukas iekārtas priekš šī dokumenta izdrukāšanas"
+
+#: ../gimmie/gimmie_documents.py:444 ../gimmie/gimmie_prefs.py:73
+msgid "Library"
+msgstr "Biblotēka"
+
+#: ../gimmie/gimmie_documents.py:454
+msgid "Flickr Photos"
+msgstr "Flickr bildes"
+
+#: ../gimmie/gimmie_documents.py:455
+msgid "Google Office"
+msgstr "Google ofiss"
+
+#: ../gimmie/gimmie_gaim.py:101
+#, python-format
+msgid "Idle since %s"
+msgstr "Gaida kopš %s"
+
+#: ../gimmie/gimmie_gaim.py:104
+msgid "Idle"
+msgstr "Gaida"
+
+#: ../gimmie/gimmie_gaim.py:106 ../gimmie/gimmie_people.py:98
+msgid "Away"
+msgstr "Projām"
+
+#: ../gimmie/gimmie_gaim.py:109 ../gimmie/gimmie_people.py:89
+msgid "Offline"
+msgstr "Bezsaistē"
+
+#: ../gimmie/gimmie_gmail.py:36
+msgid "Gmail Account Settings"
+msgstr "Gmail profila iestatījumi"
+
+#: ../gimmie/gimmie_gmail.py:48 ../gimmie/gimmie_gmail.py:156
+msgid "Account Settings"
+msgstr "Profila iestatījumi"
+
+#: ../gimmie/gimmie_gmail.py:62
+msgid "Sign in to Gmail with your Google Account"
+msgstr "Pieslēgties Gmail ar Jūsu Google profilu"
+
+#: ../gimmie/gimmie_gmail.py:72
+msgid "Username:"
+msgstr "Lietotājvārds:"
+
+#: ../gimmie/gimmie_gmail.py:77
+msgid "Password:"
+msgstr "Parole:"
+
+#: ../gimmie/gimmie_gmail.py:277
+#, python-format
+msgid "Failed to login account %s."
+msgstr "Neizdevās pieslēgties profilam %s."
+
+#: ../gimmie/gimmie_gmail.py:281 ../gimmie/gimmie_trash.py:239
+msgid "_Skip"
+msgstr "_Izlaist"
+
+#: ../gimmie/gimmie_gmail.py:283 ../gimmie/gimmie_trash.py:245
+msgid "_Retry"
+msgstr "Vēl_reiz"
+
+#: ../gimmie/gimmie_gui.py:691
+msgid "Calendar"
+msgstr "Kalendārs"
+
+#: ../gimmie/gimmie_gui.py:792
+#, python-format
+msgid "Desk %d"
+msgstr "Darbavirsma %d"
+
+#: ../gimmie/gimmie_gui.py:875
+msgid "Use Compact Layout"
+msgstr "Izmantot kompaktu izskatu"
+
+#: ../gimmie/gimmie_logout.py:53
+msgid "Shut down this computer now?"
+msgstr "Tulīt izslēgt šo datoru?"
+
+#: ../gimmie/gimmie_logout.py:57
+msgid "_Sleep"
+msgstr "_Gaidstāve"
+
+#: ../gimmie/gimmie_logout.py:62
+msgid "_Hibernate"
+msgstr "_Iemidzināt"
+
+#: ../gimmie/gimmie_logout.py:68
+msgid "_Reboot"
+msgstr "_Pārstartēt"
+
+#: ../gimmie/gimmie_logout.py:74
+msgid "Shut _Down"
+msgstr "Izslēgt (_d)"
+
+#: ../gimmie/gimmie_logout.py:81
+msgid "Log out of this computer now?"
+msgstr "Tagad atslēgites no šī datora?"
+
+#: ../gimmie/gimmie_logout.py:85
+msgid "_Log Out"
+msgstr "_Atteikties"
+
+#: ../gimmie/gimmie_logout.py:175
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "Šis dators tiks automatiski izslēgts pēc %d sekundes."
+msgstr[1] "Šis dators tiks automatiski izslēgts pēc %d sekundēm."
+msgstr[2] "Šis dators tiks automatiski izslēgts pēc %d sekundēm."
+
+#: ../gimmie/gimmie_logout.py:179
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "Jūs tiksiet automātiski atslēgti no sistēmas pēc %d sekundēm."
+msgstr[1] "Jūs tiksiet automātiski atslēgti no sistēmas pēc %d sekundes."
+msgstr[2] "Jūs tiksiet automātiski atslēgti no sistēmas pēc %d sekundes."
+
+#: ../gimmie/gimmie_people.py:84 ../gimmie/gimmie_people.py:175
+msgid "Available"
+msgstr "Pieejams"
+
+#: ../gimmie/gimmie_people.py:94
+msgid "Away Messages..."
+msgstr "Prombūtnes ziņas..."
+
+#: ../gimmie/gimmie_people.py:107
+msgid "Accounts..."
+msgstr "Profili..."
+
+#: ../gimmie/gimmie_people.py:145
+msgid "New Person"
+msgstr "Jauna persona"
+
+#: ../gimmie/gimmie_people.py:146
+msgid "Add a new contact person"
+msgstr "Pievienot jaunu kontaktu"
+
+#: ../gimmie/gimmie_people.py:176
+msgid "Set your online status"
+msgstr "Uzstādīt savu tīkla statusu"
+
+#: ../gimmie/gimmie_people.py:191 ../gimmie/gimmie_prefs.py:74
+msgid "People"
+msgstr "Tauta"
+
+#: ../gimmie/gimmie_people.py:203
+msgid "Recent People"
+msgstr "Pašreizējā tauta"
+
+#: ../gimmie/gimmie_people.py:204
+msgid "Online Now"
+msgstr "Pašlaik tīklā"
+
+#: ../gimmie/gimmie_people.py:205
+msgid "Everybody"
+msgstr "Jebkurš"
+
+#: ../gimmie/gimmie_people.py:210
+msgid "Gmail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:213
+msgid "GMail"
+msgstr "GMail"
+
+#: ../gimmie/gimmie_people.py:215
+msgid "Friendster"
+msgstr "Friendster"
+
+#: ../gimmie/gimmie_prefs.py:14
+msgid "Gimmie Preferences"
+msgstr "Gimmie iestatījumi"
+
+#: ../gimmie/gimmie_prefs.py:23
+msgid "Text only"
+msgstr "Vienīgi teksts"
+
+#: ../gimmie/gimmie_prefs.py:24
+msgid "Icons only"
+msgstr "Tikai ikonas"
+
+#: ../gimmie/gimmie_prefs.py:25
+msgid "Text and icons"
+msgstr "Teksts un ikonas"
+
+#: ../gimmie/gimmie_prefs.py:38
+msgid "Topic _button labels:"
+msgstr "Tameti_pogas izskati:"
+
+#: ../gimmie/gimmie_prefs.py:60
+msgid "Appearance"
+msgstr "Izskats"
+
+#: ../gimmie/gimmie_prefs.py:81
+msgid "Topics"
+msgstr "Temati"
+
+#: ../gimmie/gimmie_tomboy.py:89
+msgid "Notes"
+msgstr "Piezīmes"
+
+#: ../gimmie/gimmie_tomboy.py:93
+msgid "Create New Note"
+msgstr "Izveidot jaunu piezīmi"
+
+#: ../gimmie/gimmie_tomboy.py:94
+msgid "Make a new Tomboy note"
+msgstr "Izveidot jaunu Tomboy piezīmi"
+
+#: ../gimmie/gimmie_topicwin.py:44 ../gimmie/gimmie_topicwin.py:1233
+msgid "Search"
+msgstr "Meklēt"
+
+#: ../gimmie/gimmie_topicwin.py:165 ../gimmie/gimmie_topicwin.py:488
+msgid "Today"
+msgstr "Šodien"
+
+#: ../gimmie/gimmie_topicwin.py:166 ../gimmie/gimmie_topicwin.py:489
+msgid "This week"
+msgstr "Šī nedēļa"
+
+#: ../gimmie/gimmie_topicwin.py:167 ../gimmie/gimmie_topicwin.py:490
+msgid "Last 2 weeks"
+msgstr "Pēdējās 2 nedēļas"
+
+#: ../gimmie/gimmie_topicwin.py:168 ../gimmie/gimmie_topicwin.py:491
+msgid "This month"
+msgstr "Šis mēnesis"
+
+#: ../gimmie/gimmie_topicwin.py:169 ../gimmie/gimmie_topicwin.py:492
+msgid "Last 2 months"
+msgstr "Pēdējie 2 mēneši"
+
+#: ../gimmie/gimmie_topicwin.py:170 ../gimmie/gimmie_topicwin.py:493
+msgid "Last 3 months"
+msgstr "Pēdējie 3 mēneši"
+
+#: ../gimmie/gimmie_topicwin.py:171 ../gimmie/gimmie_topicwin.py:494
+msgid "Last 6 months"
+msgstr "Pēdējie 6 mēneši"
+
+#: ../gimmie/gimmie_topicwin.py:193
+msgid "Show timeline"
+msgstr "Parādīt laikajoslu"
+
+#: ../gimmie/gimmie_topicwin.py:1288
+msgid "Set the zoom level"
+msgstr "Uzstādīt pievilkšanas pakāpi"
+
+#: ../gimmie/gimmie_trash.py:173 ../gimmie/gimmie_trash.py:209
+msgid "_Empty Trash"
+msgstr "_Iztīrīt atkritumus"
+
+#: ../gimmie/gimmie_trash.py:180
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d vienība"
+msgstr[1] "%d vienības"
+msgstr[2] "%d vienības"
+
+#: ../gimmie/gimmie_trash.py:201
+msgid "Empty all of the items from the trash?"
+msgstr "Iztukšot visas vienības no miskastes?"
+
+#: ../gimmie/gimmie_trash.py:202
+msgid ""
+"If you choose to empty the trash, all items in it will be permanently lost.  "
+"Please note that you can also delete them separately."
+msgstr ""
+"Ja jūs izvēlēsities iztukšot atkritni, visi faili, kas būs atkritnā, "
+"pazudīs. Lūdzu atcerieties, ka Jūs varat šos failus dzēst atsevišķi pa "
+"vienam."
+
+#: ../gimmie/gimmie_trash.py:225
+msgid "Error while moving."
+msgstr "Kļūda pārvietojot."
+
+#: ../gimmie/gimmie_trash.py:226
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+"\"%s\" nevar tikt pārvietota uz miskasti tāpēc, ka jums nav atļaujas mainīt "
+"mapi, kur tā atrodas."
+
+#: ../gimmie/gimmie_trash.py:228
+msgid "Error while deleting."
+msgstr "Kļūda dzēšot."
+
+#: ../gimmie/gimmie_trash.py:229
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+"\"%s\" nevar tikt idzēsta tāpēc, ka jums nav atļaujas mainīt mapi, kur tā "
+"atrodas."
+
+#: ../gimmie/gimmie_trash.py:231
+msgid "Error while performing file operation."
+msgstr "Kļūda izpildot faila operāciju."
+
+#: ../gimmie/gimmie_trash.py:232
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr "Failam nevar pielietot operāciju %d uz \"%s\"."
+
+#: ../gimmie/gimmie_trash.py:299
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr "Nevar pārvietot vienības uz miskasti, vai jūs vēlaties dzēst tās uzreiz?"
+
+#: ../gimmie/gimmie_trash.py:300
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr "Nevienu no %d izvēlētajām vienībām nevar pārvietot uz Atkritumkasti"
+
+#: ../gimmie/gimmie_trash.py:302
+msgid "Cannot move some items to trash, do you want to delete these immediately?"
+msgstr ""
+"Nevar pārvietot dažas vienības uz miskasti, vai jūs vēlaties dzēst tās "
+"uzreiz?"
+
+#: ../gimmie/gimmie_trash.py:303
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "%d no izvēlētajām vienībām nevar pārvietot uz Atkritumkasti"
+
+#: ../gimmie/gimmie_trash.py:313
+msgid "_Delete"
+msgstr "_Dzēst"
+
+#: ../gimmie/gimmie_util.py:831
+msgid "Home"
+msgstr "Mājas"
+
+#: ../gimmie/gimmie_util.py:835
+msgid "Desktop"
+msgstr "Darbvirsma"
+
+#: ../gimmie/gimmie_util.py:892
+msgid "Not Implemented..."
+msgstr "Nav izveidots..."
+
+#: ../gimmie/gimmie_util.py:897
+#, python-format
+msgid "Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+"Palīdziet mums uzrkastīt šo iespēju izeidojot failu \"%s\" ar vismaz %d "
+"skaitu rindiņām."
+
+#: ../gimmie/gimmie_util.py:902
+msgid "_Fix It!"
+msgstr "_Salabo to!"
+
+#: ../gimmie/traymanager/eggtraymanager.c:146
+msgid "Orientation"
+msgstr "Novietojums"
+
+#: ../gimmie/traymanager/eggtraymanager.c:147
+msgid "The orientation of the tray."
+msgstr "Paplātes novietojums."
+

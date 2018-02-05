@@ -1,0 +1,563 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Funda Wang <fundawang@linux.net.cn>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gimmie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-02 02:47+0200\n"
+"PO-Revision-Date: 2006-07-02 14:46+0800\n"
+"Last-Translator: Funda Wang <fundawang@linux.net.cn>\n"
+"Language-Team: zh_CN <i18n-translation@lists.linux.net.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../gimmie_applications.py:423
+msgid "Applications"
+msgstr "应用程序"
+
+#: ../gimmie_applications.py:441 ../gimmie_computer.py:41
+#: ../gimmie_documents.py:29
+msgid "Recently Used"
+msgstr "最近使用"
+
+#: ../gimmie_applications.py:463
+msgid "Install & Update"
+msgstr "安装和更新"
+
+#: ../gimmie_applications.py:464
+msgid "Manage applications on this computer"
+msgstr "管理此计算机上的应用程序"
+
+#: ../gimmie_applications.py:471 ../gimmie_computer.py:758
+#: ../gimmie_computer.py:950
+msgid "Settings"
+msgstr "设置"
+
+#: ../gimmie_applications.py:472
+msgid "Manage settings and preferences"
+msgstr "管理设置和首选项"
+
+#: ../gimmie_applications.py:498
+msgid "Show All"
+msgstr "全部显示"
+
+#: ../gimmie_applications.py:500
+msgid "Hide All"
+msgstr "全部隐藏"
+
+#: ../gimmie_base.py:112
+msgid "Keep Around"
+msgstr "保留"
+
+#: ../gimmie_base.py:131
+msgid "%l:%M %p"
+msgstr "%H:%M"
+
+#: ../gimmie_base.py:133
+#, python-format
+msgid "Today, %s"
+msgstr "今天 %s"
+
+#: ../gimmie_base.py:135
+#, python-format
+msgid "Yesterday, %s"
+msgstr "昨天 %s"
+
+#: ../gimmie_base.py:137
+#, python-format
+msgid "%d day ago, %s"
+msgid_plural "%d days ago, %s"
+msgstr[0] "%d 天前 %s"
+
+#: ../gimmie_base.py:141
+#, python-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] "%d 天前"
+
+#: ../gimmie_base.py:145
+msgid "%B %e"
+msgstr ""
+
+#: ../gimmie_base.py:147
+msgid "%B %e, %G"
+msgstr ""
+
+#: ../gimmie_browser.py:28
+msgid "Gimmie"
+msgstr "Gimmie"
+
+#: ../gimmie_browser.py:508 ../gimmie_topicwin.py:735
+msgid "Set the zoom level"
+msgstr "设定缩放级别"
+
+#: ../gimmie_browser.py:528 ../gimmie_topicwin.py:36 ../gimmie_topicwin.py:755
+msgid "Search"
+msgstr "搜索"
+
+#: ../gimmie_computer.py:132
+#, python-format
+msgid "Desk %d"
+msgstr ""
+
+#: ../gimmie_computer.py:184
+msgid "Use Compact Layout"
+msgstr "使用紧凑布局"
+
+#: ../gimmie_computer.py:235
+msgid "Calendar"
+msgstr "日历"
+
+#: ../gimmie_computer.py:395
+msgid "Places"
+msgstr "位置"
+
+#. FIXME: Check if drive is set to auto-mount, and if not show "Not Mounted"
+#: ../gimmie_computer.py:426
+msgid "No disk inserted"
+msgstr "未插入磁盘"
+
+#: ../gimmie_computer.py:445
+#, python-format
+msgid "Free space: %s"
+msgstr "剩余空间：%s"
+
+#. FIXME: Add mount/unmount toggle?  Need to track nautilus.
+#: ../gimmie_computer.py:468
+msgid "_Eject"
+msgstr "弹出(_E)"
+
+#: ../gimmie_computer.py:482
+msgid "Devices & Media"
+msgstr "设备和介质"
+
+#: ../gimmie_computer.py:486
+msgid "Add Bluetooth..."
+msgstr "添加蓝牙..."
+
+#: ../gimmie_computer.py:487
+msgid "Access a wireless device"
+msgstr "访问无线设备"
+
+#: ../gimmie_computer.py:492
+msgid "Create CD/DVD..."
+msgstr "创建 CD/DVD..."
+
+#: ../gimmie_computer.py:493
+msgid "Burn files onto a CD or DVD disk"
+msgstr "将文件刻录到 CD 或 DVD 光盘"
+
+#: ../gimmie_computer.py:616 ../gimmie_documents.py:351
+#: ../gimmie_documents.py:388
+msgid "Printers"
+msgstr "打印机"
+
+#: ../gimmie_computer.py:621
+msgid "Add Printer..."
+msgstr "添加打印机..."
+
+#: ../gimmie_computer.py:622
+msgid "Setup attached or networked printer"
+msgstr "设置直联或联网的打印机"
+
+#: ../gimmie_computer.py:676
+msgid "Nearby Computers"
+msgstr "附近的计算机"
+
+#: ../gimmie_computer.py:681
+msgid "Connect to..."
+msgstr "连接到..."
+
+#: ../gimmie_computer.py:682
+msgid "Access a computer on the network"
+msgstr "访问网络中的计算机"
+
+#: ../gimmie_computer.py:687
+msgid "Windows Network"
+msgstr "Windows 网络"
+
+#: ../gimmie_computer.py:688
+msgid "Browse nearby Windows computers"
+msgstr "浏览附近的 Windows 计算机"
+
+#: ../gimmie_computer.py:719
+msgid "Computer"
+msgstr "计算机"
+
+#: ../gimmie_computer.py:769
+msgid "Timeline"
+msgstr "时间线"
+
+#: ../gimmie_computer.py:814
+msgid "Computer, %l:%M %p"
+msgstr "计算机，%H:%M"
+
+#: ../gimmie_computer.py:837
+msgid "Switch to another user"
+msgstr "切换到另一用户"
+
+#: ../gimmie_computer.py:860
+msgid "Volume: 75%"
+msgstr "音量：75%"
+
+#: ../gimmie_computer.py:863
+msgid "Not Implemented"
+msgstr "未实现"
+
+#: ../gimmie_computer.py:873 ../gimmie_computer.py:974
+msgid "Shutdown..."
+msgstr "关机..."
+
+#: ../gimmie_computer.py:874
+msgid "Shutdown or suspend this computer"
+msgstr "关机或将此计算机转入待机"
+
+#: ../gimmie_computer.py:882
+msgid "About Me"
+msgstr "关于我"
+
+#: ../gimmie_computer.py:888
+msgid "Switch User"
+msgstr "切换用户"
+
+#: ../gimmie_computer.py:894
+msgid "Log Out..."
+msgstr "注销..."
+
+#: ../gimmie_computer.py:966
+msgid "Network"
+msgstr "网络"
+
+#: ../gimmie_documents.py:64
+msgid "Recently Seen"
+msgstr ""
+
+#: ../gimmie_documents.py:186
+msgid "New Smart Folder"
+msgstr "新建智能文件夹"
+
+#: ../gimmie_documents.py:204
+msgid "Documents"
+msgstr "文档"
+
+#: ../gimmie_documents.py:218
+msgid "Attachments"
+msgstr "附件"
+
+#: ../gimmie_documents.py:220
+msgid "Important Email"
+msgstr "重要的邮件"
+
+#. Tomboy
+#. RecentlyUsedOfMimeType(
+#. _("Office Documents"),
+#. "stock_new-presentation",
+#. ["application/ms-powerpoint",
+#. "application/vnd.oasis.opendocument.presentation",
+#. "application/vnd.sun.xml.impress",
+#. "application/x-abiword",
+#. "text/plain",
+#. "application/msword",
+#. "application/vnd.ms-excel",
+#. "application/x-gnumeric"]),
+#. RecentlyUsedOfMimeType(_("PDFs"),
+#. "gnome-pdf",
+#. ["application/pdf",
+#. "application/ps"
+#. "application/x-dvi"]),
+#: ../gimmie_documents.py:238
+msgid "Music & Movies"
+msgstr "音乐和电影"
+
+#: ../gimmie_documents.py:250
+msgid "Photos"
+msgstr "照片"
+
+#: ../gimmie_documents.py:294 ../gimmie_documents.py:296
+#: ../gimmie_trash.py:146
+msgid "Trash"
+msgstr "回收站"
+
+#: ../gimmie_documents.py:314 ../gimmie_documents.py:370
+msgid "New Document"
+msgstr "新建文档"
+
+#: ../gimmie_documents.py:315
+msgid "Create a new document"
+msgstr "创建新文档"
+
+#: ../gimmie_documents.py:330 ../gimmie_documents.py:377
+msgid "Go"
+msgstr "转到"
+
+#: ../gimmie_documents.py:331
+msgid "Open commonly used document locations"
+msgstr "打开最近使用的文档位置"
+
+#: ../gimmie_documents.py:352
+msgid "View printers available for document printing"
+msgstr "查看可进行文档打印的打印机"
+
+#: ../gimmie_gaim.py:95
+msgid "Idle"
+msgstr "发呆"
+
+#: ../gimmie_gaim.py:97 ../gimmie_people.py:291
+msgid "Away"
+msgstr "离开"
+
+#: ../gimmie_gaim.py:100 ../gimmie_people.py:282
+msgid "Offline"
+msgstr "脱机"
+
+#: ../gimmie_logout.py:51
+msgid "Shut down this computer now?"
+msgstr "立即关闭此计算机吗？"
+
+#: ../gimmie_logout.py:53
+msgid "_Restart"
+msgstr "重新启动(_R)"
+
+#: ../gimmie_logout.py:60
+msgid "_Shut Down"
+msgstr "关机(_S)"
+
+#: ../gimmie_logout.py:67
+msgid "Log out of this computer now?"
+msgstr "立即注销此计算机吗？"
+
+#: ../gimmie_logout.py:69
+msgid "_Switch User"
+msgstr "切换用户(_S)"
+
+#: ../gimmie_logout.py:72
+msgid "_Log Out"
+msgstr "注销(_L)"
+
+#: ../gimmie_logout.py:151
+#, python-format
+msgid "This computer will be automatically shut down in %d second."
+msgid_plural "This computer will be automatically shut down in %d seconds."
+msgstr[0] "此计算机即将在 %d 秒后自动关闭。"
+
+#: ../gimmie_logout.py:155
+#, python-format
+msgid "You will be automatically logged out in %d second."
+msgid_plural "You will be automatically logged out in %d seconds."
+msgstr[0] "您将在 %d 秒后自动注销。"
+
+#: ../gimmie_people.py:242
+msgid "People"
+msgstr "联系人"
+
+#. FIXME: Prune for groups at the current zoom level?
+#: ../gimmie_people.py:250
+msgid "Recent People"
+msgstr "最近的联系人"
+
+#: ../gimmie_people.py:251
+msgid "Online Now"
+msgstr "立即在线"
+
+#: ../gimmie_people.py:252
+msgid "Everybody"
+msgstr "每人"
+
+#: ../gimmie_people.py:254
+msgid "GMail"
+msgstr "Gmail"
+
+#: ../gimmie_people.py:255
+msgid "Friendster"
+msgstr ""
+
+#: ../gimmie_people.py:277 ../gimmie_people.py:360 ../gimmie_people.py:372
+msgid "Available"
+msgstr "空闲"
+
+#: ../gimmie_people.py:287
+msgid "Away Messages..."
+msgstr "离开消息..."
+
+#: ../gimmie_people.py:300
+msgid "Accounts..."
+msgstr "账户..."
+
+#: ../gimmie_people.py:346
+msgid "New Person"
+msgstr "新建联系人"
+
+#: ../gimmie_people.py:347
+msgid "Add a new contact person"
+msgstr "添加新的联系人"
+
+#: ../gimmie_people.py:353
+msgid "New Group"
+msgstr "新建组"
+
+#: ../gimmie_people.py:354
+msgid "Add a new group of people to the sidebar"
+msgstr ""
+
+#: ../gimmie_people.py:361
+msgid "Set your online status"
+msgstr "设定您的在线状态"
+
+#: ../gimmie_tomboy.py:77
+msgid "Notes"
+msgstr "备忘"
+
+#: ../gimmie_tomboy.py:81
+msgid "Create New Note"
+msgstr "创建新的备忘"
+
+#: ../gimmie_tomboy.py:82
+msgid "Make a new Tomboy note"
+msgstr ""
+
+#: ../gimmie_topicwin.py:157
+msgid "Today"
+msgstr "今天"
+
+#: ../gimmie_topicwin.py:158
+msgid "Last 3 days"
+msgstr "前三天"
+
+#: ../gimmie_topicwin.py:159
+msgid "Last week"
+msgstr "上周"
+
+#: ../gimmie_topicwin.py:160
+msgid "Last 2 weeks"
+msgstr ""
+
+#: ../gimmie_topicwin.py:161
+msgid "Last month"
+msgstr ""
+
+#: ../gimmie_topicwin.py:162
+msgid "Forever"
+msgstr "永远"
+
+#: ../gimmie_topicwin.py:184
+msgid "Show timeline"
+msgstr "显示时间线"
+
+#: ../gimmie_trash.py:169 ../gimmie_trash.py:208
+msgid "_Empty Trash"
+msgstr "清空回收站(_E)"
+
+#: ../gimmie_trash.py:176
+#, python-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d 项"
+
+#: ../gimmie_trash.py:197
+msgid "Empty all of the items from the trash?"
+msgstr "清空回收站中的全部项目吗？"
+
+#: ../gimmie_trash.py:198
+msgid "If you choose to empty the trash, all "
+msgstr "如果您选择清空回收站，其中的"
+
+#: ../gimmie_trash.py:199
+msgid "items in it will be permanently lost.  "
+msgstr "都将永久丢失。"
+
+#: ../gimmie_trash.py:200
+msgid "Please note that you can also delete "
+msgstr ""
+
+#: ../gimmie_trash.py:201
+msgid "them separately."
+msgstr ""
+
+#: ../gimmie_trash.py:224
+msgid "Error while moving."
+msgstr ""
+
+#: ../gimmie_trash.py:225
+#, python-format
+msgid ""
+"Cannot move \"%s\" to the trash because you do not have permissions to "
+"change it or its parent folder."
+msgstr ""
+
+#: ../gimmie_trash.py:227
+msgid "Error while deleting."
+msgstr ""
+
+#: ../gimmie_trash.py:228
+#, python-format
+msgid ""
+"\"%s\" cannot be deleted because you do not have permissions to modify its "
+"parent folder."
+msgstr ""
+
+#: ../gimmie_trash.py:230
+msgid "Error while performing file operation."
+msgstr ""
+
+#: ../gimmie_trash.py:231
+#, python-format
+msgid "Cannot perform file operation %d on \"%s\"."
+msgstr ""
+
+#: ../gimmie_trash.py:238
+msgid "_Skip"
+msgstr "跳过(_S)"
+
+#: ../gimmie_trash.py:244
+msgid "_Retry"
+msgstr "重试(_R)"
+
+#: ../gimmie_trash.py:298
+msgid "Cannot move items to trash, do you want to delete them immediately?"
+msgstr ""
+
+#: ../gimmie_trash.py:299
+#, python-format
+msgid "None of the %d selected items can be moved to the Trash"
+msgstr ""
+
+#: ../gimmie_trash.py:301
+msgid ""
+"Cannot move some items to trash, do you want to delete these immediately?"
+msgstr ""
+
+#: ../gimmie_trash.py:302
+#, python-format
+msgid "%d of the selected items cannot be moved to the Trash"
+msgstr "无法将 %d 个选中项移入回收站"
+
+#: ../gimmie_trash.py:312
+msgid "_Delete"
+msgstr "删除(_D)"
+
+#: ../gimmie_util.py:693
+msgid "Home"
+msgstr "主目录"
+
+#: ../gimmie_util.py:697
+msgid "Desktop"
+msgstr "桌面"
+
+#: ../gimmie_util.py:782
+msgid "Not Implemented..."
+msgstr "尚未实现..."
+
+#: ../gimmie_util.py:787
+#, python-format
+msgid ""
+"Help us to write this feature by editing the file \"%s\" at line number %d."
+msgstr ""
+
+#: ../gimmie_util.py:792
+msgid "_Fix It!"
+msgstr "修复(_F)"
